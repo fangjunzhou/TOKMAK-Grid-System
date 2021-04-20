@@ -1,0 +1,6 @@
+Library/
+Logs/
+obj/
+Temp/
+.vs/
+.idea/
