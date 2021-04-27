@@ -133,4 +133,19 @@ public class TestVertex : MonoBehaviour
         Debug.Log("Vertex 2:");
         Debug.Log(vertex2);
     }
+
+    [Button("Test using Coordinate as key nevigate Vertex in a hash table")]
+    private void TestHashTable()
+    {
+        Dictionary<GridCoordinate, Vertex<string>> verticies = new Dictionary<GridCoordinate, Vertex<string>>();
+
+        Vertex<string> ver1 = new Vertex<string>(new GridCoordinate(0, 1), 0, "ver1");
+        verticies.Add(ver1.coordinate, ver1);
+        Vertex<string> ver2 = new Vertex<string>(new GridCoordinate(0, 2), 0, "ver2");
+        verticies.Add(ver2.coordinate, ver2);
+        //Vertex<string> ver3 = new Vertex<string>(new GridCoordinate(0, 1));
+        //verticies.Add(ver3.coordinate, ver3);                                 // failed
+
+        Debug.Log(verticies[new GridCoordinate(0, 2)]);
+    }
 }
