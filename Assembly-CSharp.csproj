@@ -64,11 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\fangjun\GridSystem\Scripts\Edge.cs" />
-    <Compile Include="Assets\fangjun\GridSystem\Scripts\GridCoordinate.cs" />
-    <Compile Include="Assets\fangjun\GridSystem\Scripts\IGridSystem.cs" />
-    <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestGridCoordinate.cs" />
-    <Compile Include="Assets\fangjun\GridSystem\Scripts\Vertex.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\Edge.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridCoordinate.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridSystem.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\Vertex.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridSystem.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridVertex.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridVertex.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestGridCoordinate.cs" />
+    <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestVertex.cs" />
     <None Include="Assets\fangjun\GridSystem\README.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
