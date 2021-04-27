@@ -69,6 +69,21 @@
 
         #endregion
 
+        #region Private Methods
+
+        /// <summary>
+        /// Generate a new hash code from two hash code
+        /// </summary>
+        /// <param name="hash1">first hash code</param>
+        /// <param name="hash2">second hash code</param>
+        /// <returns>new hash code</returns>
+        private int HashCodeHelper(int hash1, int hash2)
+        {
+            return (((hash1 << 5) + hash1) ^ hash2);
+        }
+
+        #endregion
+
         /// <summary>
         /// Override the ToString method for GridCoordinate
         /// </summary>
@@ -82,6 +97,31 @@
             res += m_y.ToString();
             res += ")";
             return res;
+        }
+
+        /// <summary>
+        /// Override the Equals method of GridCoordinate
+        /// </summary>
+        /// <param name="obj">the target object to compare</param>
+        /// <returns>true if two coordinate have the same x and y</returns>
+        public override bool Equals(object obj)
+        {
+            if (!(obj is GridCoordinate))
+                return false;
+
+            GridCoordinate target = (GridCoordinate)obj;
+            if (this.m_x == target.m_x && this.m_y == target.m_y)
+                return true;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = m_x.GetHashCode();
+            hash = HashCodeHelper(hash, m_y.GetHashCode());
+
+            return hash;
         }
     }
 
