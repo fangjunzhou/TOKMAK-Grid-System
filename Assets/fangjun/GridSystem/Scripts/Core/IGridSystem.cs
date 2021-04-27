@@ -12,7 +12,9 @@ namespace GridSystem
         /// Add a new vertex to the current grids
         /// </summary>
         /// <param name="coordinate">the coordinate of the new vertex</param>
-        void AddVertex(GridCoordinate coordinate);
+        /// <param name="cost">the cost of passing specific vertex</param>
+        /// <param name="data">the data stored in the vertex</param>
+        void AddVertex(GridCoordinate coordinate, float cost, DataType data);
 
         /// <summary>
         /// Remove a vertex from the current grids
