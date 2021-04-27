@@ -29,7 +29,7 @@ namespace GridSystem
             throw new System.NotImplementedException();
         }
 
-        public void AddVertex(GridCoordinate coordinate)
+        public void AddVertex(GridCoordinate coordinate, float cost, DataType data)
         {
             throw new System.NotImplementedException();
         }
