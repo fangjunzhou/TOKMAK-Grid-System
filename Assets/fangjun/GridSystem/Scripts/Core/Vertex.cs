@@ -296,7 +296,10 @@ namespace GridSystem
             res += "\n";
             res += "Connections: \n";
             res += string.Join(Environment.NewLine, connection);
-            res += "\nData: " + this.m_data.ToString();
+            if (m_data != null)
+                res += "\nData: " + this.m_data.ToString();
+            else
+                res += "\nData: null";
 
             return res;
         }
