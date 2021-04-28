@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridSystem
+namespace GridSystem.Square
 {
     public class SquareGridSystem<DataType> : IGridSystem<DataType>
     {
@@ -158,13 +158,13 @@ namespace GridSystem
         /// Get and return the Vertex with certain coordinate
         /// </summary>
         /// <param name="coordinate">the target coordinate to get</param>
-        /// <returns>the vertex with specific coordinate</returns>
-        /// <exception cref="ArgumentException">if the vertex with certain coordinate do not exist</exception>
+        /// <returns>the vertex with specific coordinate, 
+        /// null when the vertex with certain coordinate do not exist</returns>
         public Vertex<DataType> GetVertex(GridCoordinate coordinate)
         {
             // if the Vertex with certain coordinate do not exist
             if (!_vertices.ContainsKey(coordinate))
-                throw new ArgumentException("The Vertex with certain coordinate do not exist.");
+                return null;
 
             SquareGridVertex<DataType> res = _vertices[coordinate];
             return res;
