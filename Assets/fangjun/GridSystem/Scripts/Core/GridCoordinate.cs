@@ -5,8 +5,8 @@
         #region Private Field
 
         // The x and y components of the coordinate
-        private int m_x;
-        private int m_y;
+        private int _x;
+        private int _y;
 
         #endregion
 
@@ -19,11 +19,11 @@
         {
             get
             {
-                return m_x;
+                return _x;
             }
             set
             {
-                m_x = value;
+                _x = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return m_y;
+                return _y;
             }
             set
             {
-                m_y = value;
+                _y = value;
             }
         }
 
@@ -52,8 +52,8 @@
         /// </summary>
         public GridCoordinate()
         {
-            this.m_x = 0;
-            this.m_y = 0;
+            this._x = 0;
+            this._y = 0;
         }
 
         /// <summary>
@@ -63,8 +63,8 @@
         /// <param name="y">the y component of the GridCoordinate</param>
         public GridCoordinate(int x, int y)
         {
-            this.m_x = x;
-            this.m_y = y;
+            this._x = x;
+            this._y = y;
         }
 
         #endregion
@@ -92,9 +92,9 @@
         {
             string res = "";
             res += "(";
-            res += m_x.ToString();
+            res += _x.ToString();
             res += ", ";
-            res += m_y.ToString();
+            res += _y.ToString();
             res += ")";
             return res;
         }
@@ -110,16 +110,20 @@
                 return false;
 
             GridCoordinate target = (GridCoordinate)obj;
-            if (this.m_x == target.m_x && this.m_y == target.m_y)
+            if (this._x == target._x && this._y == target._y)
                 return true;
 
             return false;
         }
 
+        /// <summary>
+        /// Override the GetHashCode method of GridCoordinate so that it can be used in hash table
+        /// </summary>
+        /// <returns>the hash code calculated from x and y values</returns>
         public override int GetHashCode()
         {
-            int hash = m_x.GetHashCode();
-            hash = HashCodeHelper(hash, m_y.GetHashCode());
+            int hash = _x.GetHashCode();
+            hash = HashCodeHelper(hash, _y.GetHashCode());
 
             return hash;
         }

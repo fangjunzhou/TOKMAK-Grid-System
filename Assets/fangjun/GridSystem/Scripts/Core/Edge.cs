@@ -9,9 +9,9 @@ namespace GridSystem
         #region Private Field
 
         // the basic info of the edge
-        private Vertex<DataType> m_from;
-        private Vertex<DataType> m_to;
-        private float m_cost;
+        private Vertex<DataType> _from;
+        private Vertex<DataType> _to;
+        private float _cost;
 
         #endregion
 
@@ -24,11 +24,11 @@ namespace GridSystem
         {
             get
             {
-                return m_from;
+                return _from;
             }
             set
             {
-                m_from = value;
+                _from = value;
             }
         }
 
@@ -39,11 +39,11 @@ namespace GridSystem
         {
             get
             {
-                return m_to;
+                return _to;
             }
             set
             {
-                m_to = value;
+                _to = value;
             }
         }
 
@@ -54,11 +54,11 @@ namespace GridSystem
         {
             get
             {
-                return m_cost;
+                return _cost;
             }
             set
             {
-                m_cost = value;
+                _cost = value;
             }
         }
 
@@ -74,9 +74,9 @@ namespace GridSystem
         /// <param name="cost">the cost of current edge</param>
         public Edge(Vertex<DataType> from, Vertex<DataType> to, float cost)
         {
-            m_from = from;
-            m_to = to;
-            m_cost = cost;
+            _from = from;
+            _to = to;
+            _cost = cost;
         }
 
         #endregion

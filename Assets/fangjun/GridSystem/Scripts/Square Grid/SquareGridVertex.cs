@@ -19,11 +19,11 @@ namespace GridSystem
         public SquareGridVertex()
         {
             // set the coordinate to (0, 0)
-            m_coordinate = new GridCoordinate();
+            _coordinate = new GridCoordinate();
             // set the cost to 0
-            m_cost = 0;
+            _cost = 0;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
 
             // initialize the connection
             SquareGridSetup();
@@ -37,11 +37,11 @@ namespace GridSystem
         {
 
             // set the coordinate
-            this.m_coordinate = coordinate;
+            this._coordinate = coordinate;
             // set the cost to 0
-            m_cost = 0;
+            _cost = 0;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
 
             // initialize the connection
             SquareGridSetup();
@@ -54,11 +54,11 @@ namespace GridSystem
         public SquareGridVertex(float cost)
         {
             // set the coordinate to (0, 0)
-            m_coordinate = new GridCoordinate();
+            _coordinate = new GridCoordinate();
             // set the cost
-            this.m_cost = cost;
+            this._cost = cost;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
 
             // initialize the connection
             SquareGridSetup();
@@ -72,13 +72,32 @@ namespace GridSystem
         public SquareGridVertex(GridCoordinate coordinate, float cost)
         {
             // set the coordinate
-            this.m_coordinate = coordinate;
+            this._coordinate = coordinate;
             // set the cost
-            this.m_cost = cost;
+            this._cost = cost;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
 
             // initialize the connection
+            SquareGridSetup();
+        }
+
+        /// <summary>
+        /// The constructor with coordinate, cost and data initialized
+        /// </summary>
+        /// <param name="coordinate">the coordinate of current vertex</param>
+        /// <param name="cost">the cost of passing current vertex</param>
+        /// <param name="data">the data stored in current vertex</param>
+        public SquareGridVertex(GridCoordinate coordinate, float cost, DataType data)
+        {
+            // set the coordinate
+            this._coordinate = coordinate;
+            // set the cost
+            this._cost = cost;
+            // set the data
+            this._data = data;
+            
+            // initialize connections
             SquareGridSetup();
         }
 

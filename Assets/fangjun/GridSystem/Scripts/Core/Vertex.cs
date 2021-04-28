@@ -14,24 +14,35 @@ namespace GridSystem
         /// <summary>
         /// The coordinate of the grid
         /// </summary>
-        private protected GridCoordinate m_coordinate;
+        private protected GridCoordinate _coordinate;
         /// <summary>
         /// The cost to pass through this grid
         /// </summary>
-        private protected float m_cost;
+        private protected float _cost;
         /// <summary>
         /// The connections with other vertecies
         /// </summary>
-        private protected Dictionary<string, Edge<DataType>> connection;
+        private protected Dictionary<string, Edge<DataType>> _connection;
 
         /// <summary>
         /// The data stored in current vertex
         /// </summary>
-        private protected DataType m_data;
+        private protected DataType _data;
 
         #endregion
 
         #region Public Field
+
+        /// <summary>
+        /// All the connections between current Vertex and other verticies
+        /// </summary>
+        public Dictionary<string, Edge<DataType>> connection
+        {
+            get
+            {
+                return _connection;
+            }
+        }
 
         /// <summary>
         /// The coordinate of current Vertex
@@ -40,7 +51,7 @@ namespace GridSystem
         {
             get
             {
-                return m_coordinate;
+                return _coordinate;
             }
         }
 
@@ -51,11 +62,11 @@ namespace GridSystem
         {
             get
             {
-                return m_cost;
+                return _cost;
             }
             set
             {
-                m_cost = value;
+                _cost = value;
             }
         }
 
@@ -66,11 +77,11 @@ namespace GridSystem
         {
             get
             {
-                return m_data;
+                return _data;
             }
             set
             {
-                m_data = value;
+                _data = value;
             }
         }
 
@@ -86,11 +97,11 @@ namespace GridSystem
         public Vertex()
         {
             // set the coordinate to (0, 0)
-            m_coordinate = new GridCoordinate();
+            _coordinate = new GridCoordinate();
             // set the cost to 0
-            m_cost = 0;
+            _cost = 0;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
         }
 
         /// <summary>
@@ -101,11 +112,11 @@ namespace GridSystem
         public Vertex(GridCoordinate coordinate)
         {
             // set the coordinate
-            this.m_coordinate = coordinate;
+            this._coordinate = coordinate;
             // set the cost to 0
-            m_cost = 0;
+            _cost = 0;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
         }
 
         /// <summary>
@@ -116,11 +127,11 @@ namespace GridSystem
         public Vertex(float cost)
         {
             // set the coordinate to (0, 0)
-            m_coordinate = new GridCoordinate();
+            _coordinate = new GridCoordinate();
             // set the cost
-            this.m_cost = cost;
+            this._cost = cost;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
         }
 
         /// <summary>
@@ -131,11 +142,11 @@ namespace GridSystem
         public Vertex(GridCoordinate coordinate, float cost)
         {
             // set the coordinate
-            this.m_coordinate = coordinate;
+            this._coordinate = coordinate;
             // set the cost
-            this.m_cost = cost;
+            this._cost = cost;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
         }
 
         /// <summary>
@@ -148,13 +159,13 @@ namespace GridSystem
         public Vertex(GridCoordinate coordinate, float cost, DataType data)
         {
             // set the coordinate
-            this.m_coordinate = coordinate;
+            this._coordinate = coordinate;
             // set the cost
-            this.m_cost = cost;
+            this._cost = cost;
             // initialize the connection dic to be empty
-            connection = new Dictionary<string, Edge<DataType>>();
+            _connection = new Dictionary<string, Edge<DataType>>();
             // store the data in current Vertex
-            this.m_data = data;
+            this._data = data;
         }
 
         #endregion
@@ -176,11 +187,11 @@ namespace GridSystem
             if (target == null)
                 throw new ArgumentNullException("target", "The target cannot be null.");
             // if the direction is not the the key collection of connection dictionary
-            if (!connection.ContainsKey(direction))
+            if (!_connection.ContainsKey(direction))
                 throw new ArgumentOutOfRangeException("direction", "The direction is not in the connection dictionary");
 
             // set the connection of the specific direction to the new target
-            connection[direction] = new Edge<DataType>(this, target, cost);
+            _connection[direction] = new Edge<DataType>(this, target, cost);
         }
 
         /// <summary>
@@ -203,14 +214,14 @@ namespace GridSystem
             if (targetDirection == null)
                 throw new ArgumentNullException("targetDirection", "The targetDirection cannot be null");
             // if the direction is not the the key collection of connection dictionary
-            if (!connection.ContainsKey(direction))
+            if (!_connection.ContainsKey(direction))
                 throw new ArgumentOutOfRangeException("direction", "The direction is not in the connection dictionary, try AddConnectionDir()");
-            if (!target.connection.ContainsKey(targetDirection))
+            if (!target._connection.ContainsKey(targetDirection))
                 throw new ArgumentOutOfRangeException("targetDirection", "The targetDirection is not in the connection dictionary of target vertex, try AddConnectionDir()");
 
             // set the double connection between current vertex and target vertex
-            connection[direction] = new Edge<DataType>(this, target, cost);
-            target.connection[targetDirection] = new Edge<DataType>(target, this, cost);
+            _connection[direction] = new Edge<DataType>(this, target, cost);
+            target._connection[targetDirection] = new Edge<DataType>(target, this, cost);
         }
 
         /// <summary>
@@ -224,9 +235,9 @@ namespace GridSystem
             if (direction == null)
                 throw new ArgumentNullException("direction", "The direction cannot be null.");
 
-            if (connection.ContainsKey(direction))
+            if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
-            connection.Add(direction, null);
+            _connection.Add(direction, null);
         }
 
         /// <summary>
@@ -244,9 +255,9 @@ namespace GridSystem
             if (target == null)
                 throw new ArgumentNullException("target", "The target cannot be null.");
 
-            if (connection.ContainsKey(direction))
+            if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
-            connection.Add(direction, new Edge<DataType>(this, target, cost));
+            _connection.Add(direction, new Edge<DataType>(this, target, cost));
         }
 
         /// <summary>
@@ -268,9 +279,9 @@ namespace GridSystem
             if (targetDirection == null)
                 throw new ArgumentNullException("targetDirection", "The targetDirection cannot be null");
 
-            if (connection.ContainsKey(direction))
+            if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
-            connection.Add(direction, new Edge<DataType>(this, target, cost));
+            _connection.Add(direction, new Edge<DataType>(this, target, cost));
             // try to add connection to the target vertex
             try
             {
@@ -291,13 +302,13 @@ namespace GridSystem
         public override string ToString()
         {
             string res = "";
-            res += "Vertex coordinate: " + m_coordinate.ToString() + "\n";
-            res += "Cost: " + m_cost.ToString();
+            res += "Vertex coordinate: " + _coordinate.ToString() + "\n";
+            res += "Cost: " + _cost.ToString();
             res += "\n";
             res += "Connections: \n";
-            res += string.Join(Environment.NewLine, connection);
-            if (m_data != null)
-                res += "\nData: " + this.m_data.ToString();
+            res += string.Join(Environment.NewLine, _connection);
+            if (_data != null)
+                res += "\nData: " + this._data.ToString();
             else
                 res += "\nData: null";
 
