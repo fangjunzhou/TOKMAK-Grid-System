@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace GridSystem
 {
+    /// <summary>
+    /// The base class for an Edge between Verteces
+    /// </summary>
+    /// <typeparam name="DataType">The data type of vertices</typeparam>
     public class Edge<DataType>
     {
 
