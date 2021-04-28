@@ -7,11 +7,6 @@ using GridSystem;
 
 public class TestVertex : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     [Button("Test the default constructor for Vertex")]
     private void TestBasicConstructor()
     {

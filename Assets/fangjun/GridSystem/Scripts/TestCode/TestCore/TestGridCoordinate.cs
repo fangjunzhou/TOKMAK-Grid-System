@@ -9,11 +9,6 @@ using GridSystem;
 /// </summary>
 public class TestGridCoordinate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     [Button("Test default constructor for GridCoordinate")]
     /// <summary>
     /// Test the default constructor for the GridCoordinate class

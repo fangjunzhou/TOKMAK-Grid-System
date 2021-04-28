@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using GridSystem;
+using GridSystem.Square;
 
 public class TestSquareGridVertex : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     [Button("Test the default constructor of SquareGridVertex")]
     private void TestDefaultConstructor()
     {

@@ -4,14 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using GridSystem;
+using GridSystem.Square;
 
 public class TestSquareGridSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     [Button("Test the constructor of SquareGridSystem")]
     private void TestConstructor()
     {
