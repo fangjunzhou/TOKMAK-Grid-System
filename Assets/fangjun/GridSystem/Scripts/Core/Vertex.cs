@@ -7,6 +7,7 @@ namespace GridSystem
     /// <summary>
     /// The base class for a Vertex
     /// </summary>
+    /// <typeparam name="DataType">The data type of data stored in the Vertex</typeparam>
     public class Vertex<DataType>
     {
         #region Private Field
@@ -45,7 +46,8 @@ namespace GridSystem
         }
 
         /// <summary>
-        /// The coordinate of current Vertex
+        /// The virtual coordinate of current Vertex
+        /// Help the algorithm and system to navigate
         /// </summary>
         public GridCoordinate coordinate
         {
@@ -56,7 +58,7 @@ namespace GridSystem
         }
 
         /// <summary>
-        /// The cost of passing throgh current vertex
+        /// The cost of passing through current vertex
         /// </summary>
         public float cost
         {
