@@ -4,6 +4,12 @@ using System.Collections.Generic;
 
 namespace GridSystem
 {
+    /// <summary>
+    /// The interface for a basic grid system
+    /// including basic operation such as adding and removing vertex
+    /// adding and removing edges
+    /// </summary>
+    /// <typeparam name="DataType">The data type of data that stores in each vertices</typeparam>
     public interface IGridSystem<DataType>
     {
         #region Vertext Operation
