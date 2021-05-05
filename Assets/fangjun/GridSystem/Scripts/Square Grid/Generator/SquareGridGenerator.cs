@@ -4,6 +4,7 @@ using UnityEngine;
 using GridSystem;
 using GridSystem.Square;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// The square grid generator that uses SquareGridSystem
@@ -20,7 +21,7 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     /// <summary>
     /// A list that stores all the GridElements
     /// </summary>
-    private List<GridElement> _gridElements = new List<GridElement>();
+    private List<SquareGridElement> _gridElements = new List<SquareGridElement>();
 
     #endregion
 
@@ -35,8 +36,8 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     /// <summary>
     /// The GridElement prefab for all the grid to be generate
     /// </summary>
-    [BoxGroup("Grid generation prefab & root")]
-    public GridElement gridElementPrefab;
+    [FormerlySerializedAs("gridElementPrefab")] [BoxGroup("Grid generation prefab & root")]
+    public SquareGridElement squareGridElementPrefab;
 
     /// <summary>
     /// The SquareGridSystem in this generator
@@ -77,14 +78,14 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
                 
                 // Generate a GridElement GameObject
                 Vector3 position = new Vector3(x * 115, y * 115, 0);
-                GridElement gridElement = Instantiate(gridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
-                gridElement.coordinate = coordinate;
+                SquareGridElement squareGridElement = Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
+                squareGridElement.coordinate = coordinate;
                 
                 // add the grid element to the _gridElements
-                _gridElements.Add(gridElement);
+                _gridElements.Add(squareGridElement);
                 
                 // add the Vertex to the GridSystem
-                _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(gridElement.gameObject));
+                _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(squareGridElement.gameObject));
                 // add the connection with right grid
                 if (x < width - 1 && _squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
                 {
@@ -112,7 +113,7 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     public void ClearMap()
     {
         // Traverse all the GridElement in _gridElements
-        foreach (GridElement gridElement in _gridElements)
+        foreach (SquareGridElement gridElement in _gridElements)
         {
             // remove the vertex in the GridSystem
             _squareGridSystem.RemoveVertex(gridElement.coordinate);

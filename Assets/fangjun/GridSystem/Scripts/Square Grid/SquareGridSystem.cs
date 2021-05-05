@@ -235,7 +235,7 @@ namespace GridSystem.Square
         {
             // if the target vertex do not exist
             if (!_vertices.ContainsKey(coordinate))
-                throw new ArgumentException("The Vertex with certain coordinate do not exist.");
+                throw new ArgumentException("The Vertex with certain coordinate" + coordinate.ToString() + " do not exist.");
             
             // if the target exist, remove the target
             _vertices.Remove(coordinate);

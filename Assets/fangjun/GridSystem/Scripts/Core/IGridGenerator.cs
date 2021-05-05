@@ -12,5 +12,11 @@ namespace GridSystem
         /// <param name="width">the width of the map</param>
         /// <param name="height">the height of the map</param>
         void GenerateMap(int width, int height);
+
+        /// <summary>
+        /// Remove all the vertices in the GridSystem
+        /// Remove all the corresponding GameObjects
+        /// </summary>
+        void ClearMap();
     }
 }

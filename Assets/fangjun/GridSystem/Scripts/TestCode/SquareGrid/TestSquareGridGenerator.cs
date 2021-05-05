@@ -22,6 +22,12 @@ public class TestSquareGridGenerator : MonoBehaviour
         squareGridGenerator.GenerateMap(width, height);
     }
 
+    [Button("Test the Clear method")]
+    private void TestClear()
+    {
+        squareGridGenerator.ClearMap();
+    }
+
     private void Start()
     {
         TestGenerate();
