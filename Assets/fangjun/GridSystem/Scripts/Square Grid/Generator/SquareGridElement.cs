@@ -2,17 +2,8 @@ using UnityEngine;
 using GridSystem;
 using TMPro;
 
-public class GridElement : MonoBehaviour
+public class SquareGridElement : GridElement
 {
-    #region Private Field
-
-    /// <summary>
-    /// the coordinate of current grid
-    /// </summary>
-    private GridCoordinate _coordinate;
-
-    #endregion
-
     #region Public Field
 
     /// <summary>

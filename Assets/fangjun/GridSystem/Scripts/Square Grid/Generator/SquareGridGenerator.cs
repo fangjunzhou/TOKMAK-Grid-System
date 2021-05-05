@@ -17,6 +17,11 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     /// </summary>
     private SquareGridSystem<GridDataContainer> _squareGridSystem = new SquareGridSystem<GridDataContainer>();
 
+    /// <summary>
+    /// A list that stores all the GridElements
+    /// </summary>
+    private List<GridElement> _gridElements = new List<GridElement>();
+
     #endregion
 
     #region Public Field
@@ -75,6 +80,9 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
                 GridElement gridElement = Instantiate(gridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
                 gridElement.coordinate = coordinate;
                 
+                // add the grid element to the _gridElements
+                _gridElements.Add(gridElement);
+                
                 // add the Vertex to the GridSystem
                 _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(gridElement.gameObject));
                 // add the connection with right grid
@@ -99,6 +107,21 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
                 }
             }
         }
+    }
+
+    public void ClearMap()
+    {
+        // Traverse all the GridElement in _gridElements
+        foreach (GridElement gridElement in _gridElements)
+        {
+            // remove the vertex in the GridSystem
+            _squareGridSystem.RemoveVertex(gridElement.coordinate);
+            
+            // destroy the GameObject
+            Destroy(gridElement.gameObject);
+        }
+        // Clear the _gridElement List
+        _gridElements.Clear();
     }
 
     #endregion

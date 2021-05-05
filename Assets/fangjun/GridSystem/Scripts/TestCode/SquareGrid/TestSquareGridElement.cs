@@ -14,7 +14,7 @@ public class TestSquareGridElement : MonoBehaviour
     public int y;
 
     [BoxGroup("GridElement prefab")]
-    public GridElement prefab;
+    public SquareGridElement prefab;
 
     [BoxGroup("GridElelent root")]
     public GameObject root;
@@ -25,7 +25,7 @@ public class TestSquareGridElement : MonoBehaviour
     private void TestGridElementGenerate()
     {
         Vector3 position = new Vector3(x * 115, y * 115, 0);
-        GridElement gridElement = Instantiate(prefab, position, Quaternion.identity, root.transform);
-        gridElement.coordinate = new GridCoordinate(x, y);
+        SquareGridElement squareGridElement = Instantiate(prefab, position, Quaternion.identity, root.transform);
+        squareGridElement.coordinate = new GridCoordinate(x, y);
     }
 }
