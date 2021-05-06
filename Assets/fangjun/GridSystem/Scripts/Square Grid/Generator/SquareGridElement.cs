@@ -1,9 +1,24 @@
+using System;
 using UnityEngine;
 using GridSystem;
 using TMPro;
+using UnityEngine.UI;
+
+public enum GridSelectState
+{
+    Blank,
+    Start,
+    End
+}
 
 public class SquareGridElement : GridElement
 {
+    #region Private Field
+
+    private GridSelectState _selectState;
+
+    #endregion
+    
     #region Public Field
 
     /// <summary>
@@ -23,10 +38,50 @@ public class SquareGridElement : GridElement
     }
 
     /// <summary>
+    /// the GridEventHandler of the current grid element
+    /// </summary>
+    public SquareGridEventHandler squareGridEventHandler
+    {
+        get
+        {
+            return (SquareGridEventHandler)_gridEventHandler;
+        }
+        set
+        {
+            _gridEventHandler = value;
+        }
+    }
+
+    /// <summary>
     /// The text that display the coordinate of current grid
     /// </summary>
     public TMP_Text coordinateText;
 
+    /// <summary>
+    /// The background image of the GridElement
+    /// </summary>
+    public Image backgroundImg;
+
+    #endregion
+    
+    #region Hide Public Field
+
+    /// <summary>
+    /// The SelectState of current Grid
+    /// </summary>
+    public GridSelectState selectState
+    {
+        get
+        {
+            return _selectState;
+        }
+        set
+        {
+            _selectState = value;
+            OnChangeSelectState();
+        }
+    }
+    
     #endregion
 
     #region Private Methods
@@ -39,6 +94,37 @@ public class SquareGridElement : GridElement
         coordinateText.text = coordinate.ToString();
     }
 
+    /// <summary>
+    /// Call when the SelectState is changed
+    /// </summary>
+    private void OnChangeSelectState()
+    {
+        // change the background color to different color in different cases
+        switch (_selectState)
+        {
+            case GridSelectState.Blank:
+                backgroundImg.color = Color.white;
+                break;
+            case GridSelectState.Start:
+                backgroundImg.color = Color.yellow;
+                break;
+            case GridSelectState.End:
+                backgroundImg.color = Color.green;
+                break;
+        }
+    }
+
     #endregion
 
+    #region Public Field
+
+    /// <summary>
+    /// Set the current object 
+    /// </summary>
+    public void SetCurrentObject()
+    {
+        _gridEventHandler.currentGridObject = gameObject;
+    }
+
+    #endregion
 }
