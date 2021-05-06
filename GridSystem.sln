@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Test", "NaughtyAttributes.Test.csproj", "{B5846D5D-0ED5-066C-2E54-0E426D0DE6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Core", "NaughtyAttributes.Core.csproj", "{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{267DDD27-3B99-1F0D-010E-0F97A6C81877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Core", "NaughtyAttributes.Core.csproj", "{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Editor", "NaughtyAttributes.Editor.csproj", "{5F03AFD6-A139-CE87-F71D-5157894B6BDA}"
 EndProject
@@ -19,14 +19,14 @@ Global
 		{B5846D5D-0ED5-066C-2E54-0E426D0DE6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5846D5D-0ED5-066C-2E54-0E426D0DE6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5846D5D-0ED5-066C-2E54-0E426D0DE6C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F03AFD6-A139-CE87-F71D-5157894B6BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F03AFD6-A139-CE87-F71D-5157894B6BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F03AFD6-A139-CE87-F71D-5157894B6BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU

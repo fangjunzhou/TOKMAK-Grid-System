@@ -62,13 +62,17 @@
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridCoordinate.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridDataContainer.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridElement.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridEventHandler.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridGenerator.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridSystem.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\MainCamTracker.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\Vertex.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridElement.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridEventHandler.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridGenerator.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridSystem.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridVertex.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\ChooseStart.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridElement.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridGenerator.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridSystem.cs" />
