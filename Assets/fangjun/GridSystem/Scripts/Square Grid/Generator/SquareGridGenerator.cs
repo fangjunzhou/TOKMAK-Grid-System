@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GridSystem;
@@ -11,12 +12,27 @@ using UnityEngine.Serialization;
 /// </summary>
 public class SquareGridGenerator : MonoBehaviour, IGridGenerator
 {
+    #region Singleton
+
+    /// <summary>
+    /// The singleton of SquareGridGenerator
+    /// </summary>
+    public static SquareGridGenerator Instance;
+
+    #endregion
+    
     #region Private Field
 
     /// <summary>
     /// The SquareGridSystem in this generator
     /// </summary>
     private SquareGridSystem<GridDataContainer> _squareGridSystem = new SquareGridSystem<GridDataContainer>();
+
+    /// <summary>
+    /// The SquareGridEventHandler which will be instantiate in current object
+    /// This MonoBehavior component will be added to the current MapGenerator GameObject
+    /// </summary>
+    private SquareGridEventHandler _squareGridEventHandler;
 
     /// <summary>
     /// A list that stores all the GridElements
@@ -27,6 +43,8 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
 
     #region Public Field
 
+    #region SquareGridGenerator Field
+    
     /// <summary>
     /// The root object that all the GridElements will be generate in
     /// </summary>
@@ -50,12 +68,32 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
         }
     }
 
-    #endregion
+    /// <summary>
+    /// The action called when SquareGridGenerator finish the initialization of all the other child components
+    /// </summary>
+    public Action finishInitialize;
     
-    // Start is called before the first frame update
-    void Start()
+    #endregion
+
+    #region SquareGridEventHandler Field
+
+    [BoxGroup("SquareGridEventHandler Field")]
+    public float handlerMaxRayLength;
+
+    #endregion
+
+    #endregion
+
+    private void Awake()
     {
+        // initialize the singleton
+        Instance = this;
         
+        // create and initialize GridEventHandler
+        _squareGridEventHandler = gameObject.AddComponent<SquareGridEventHandler>();
+        SquareGridEventHandlerInit();
+        // call the finishInitialize delegate
+        finishInitialize?.Invoke();
     }
 
     // Update is called once per frame
@@ -63,6 +101,19 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     {
         
     }
+
+    #region Private Methods
+
+    /// <summary>
+    /// Initialize the GridEventHandler
+    /// </summary>
+    private void SquareGridEventHandlerInit()
+    {
+        // initialize the maxRayLength
+        _squareGridEventHandler.maxRayLength = handlerMaxRayLength;
+    }
+
+    #endregion
 
     #region IGridGenerator inteface
 
@@ -80,6 +131,7 @@ public class SquareGridGenerator : MonoBehaviour, IGridGenerator
                 Vector3 position = new Vector3(x * 115, y * 115, 0);
                 SquareGridElement squareGridElement = Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
                 squareGridElement.coordinate = coordinate;
+                squareGridElement.squareGridEventHandler = _squareGridEventHandler;
                 
                 // add the grid element to the _gridElements
                 _gridElements.Add(squareGridElement);
