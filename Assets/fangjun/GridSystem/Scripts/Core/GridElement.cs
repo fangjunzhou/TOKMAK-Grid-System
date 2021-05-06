@@ -11,6 +11,8 @@ namespace GridSystem
         /// </summary>
         private protected GridCoordinate _coordinate;
 
+        private protected IGridEventHandler _gridEventHandler;
+
         #endregion
 
         #region Public Field
