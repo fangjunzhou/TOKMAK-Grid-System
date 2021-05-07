@@ -45,14 +45,12 @@ namespace GridSystem.Square.Generator
         /// <summary>
         /// A list that stores all the GridElements
         /// </summary>
-        private List<GridElement> _gridElements = new List<GridElement>();
+        private Dictionary<GridCoordinate, GridElement> _gridElements = new Dictionary<GridCoordinate, GridElement>();
 
         #endregion
 
         #region Public Field
 
-        #region SquareGridGenerator Field
-        
         /// <summary>
         /// The root object that all the GridElements will be generate in
         /// </summary>
@@ -76,18 +74,19 @@ namespace GridSystem.Square.Generator
             }
         }
 
+        public Dictionary<GridCoordinate, GridElement> gridElements
+        {
+            get
+            {
+                return _gridElements;
+            }
+        }
+
         /// <summary>
         /// The action called when SquareGridGenerator finish the initialization of all the other child components
         /// </summary>
         public Action finishInitialize;
         
-        #endregion
-
-        #region SquareGridEventHandler Field
-
-        
-
-        #endregion
 
         #endregion
 
@@ -133,7 +132,7 @@ namespace GridSystem.Square.Generator
                     squareGridElement.gridEventHandler = _squareGridEventHandler;
                     
                     // add the grid element to the _gridElements
-                    _gridElements.Add(squareGridElement);
+                    _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                     // add the Vertex to the GridSystem
                     _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(squareGridElement.gameObject));
@@ -169,7 +168,7 @@ namespace GridSystem.Square.Generator
         public void ClearMap()
         {
             // Traverse all the GridElement in _gridElements
-            foreach (SampleSquareGridElement gridElement in _gridElements)
+            foreach (SampleSquareGridElement gridElement in _gridElements.Values)
             {
                 // remove the vertex in the GridSystem
                 _squareGridSystem.RemoveVertex(gridElement.gridCoordinate);

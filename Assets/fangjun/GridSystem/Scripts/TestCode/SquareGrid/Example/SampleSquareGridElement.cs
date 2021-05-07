@@ -11,7 +11,10 @@ public enum SampleSquareGridSelectState
 {
     Blank,
     Start,
-    End
+    End,
+    Start_End,
+    Obstacle,
+    Path
 }
 
 public class SampleSquareGridElement : GridElement
@@ -20,9 +23,66 @@ public class SampleSquareGridElement : GridElement
 
     private SampleSquareGridSelectState _selectState;
 
+    private bool _isStart;
+    private bool _isEnd;
+    private bool _isObstacle;
+    private bool _isPath;
+
     #endregion
     
     #region Public Field
+
+    public bool isStart
+    {
+        get
+        {
+            return _isStart;
+        }
+        set
+        {
+            _isStart = value;
+            OnChangeSelectBool();
+        }
+    }
+
+    public bool isEnd
+    {
+        get
+        {
+            return _isEnd;
+        }
+        set
+        {
+            _isEnd = value;
+            OnChangeSelectBool();
+        }
+    }
+
+    public bool isObstacle
+    {
+        get
+        {
+            return _isObstacle;
+        }
+        set
+        {
+            _isObstacle = value;
+            OnChangeSelectBool();
+        }
+    }
+
+    public bool isPath
+    {
+        get
+        {
+            return _isPath;
+        }
+        set
+        {
+            _isPath = value;
+            OnChangeSelectBool();
+        }
+    }
 
     /// <summary>
     /// the GridEventHandler of the current grid element
@@ -56,7 +116,7 @@ public class SampleSquareGridElement : GridElement
     /// <summary>
     /// The SelectState of current Grid
     /// </summary>
-    public SampleSquareGridSelectState selectState
+    private SampleSquareGridSelectState selectState
     {
         get
         {
@@ -90,6 +150,49 @@ public class SampleSquareGridElement : GridElement
             case SampleSquareGridSelectState.End:
                 backgroundImg.color = Color.green;
                 break;
+            case SampleSquareGridSelectState.Start_End:
+                backgroundImg.color = Color.blue;
+                break;
+            case SampleSquareGridSelectState.Obstacle:
+                backgroundImg.color = Color.black;
+                break;
+            case SampleSquareGridSelectState.Path:
+                backgroundImg.color = Color.magenta;
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Call when select bool changes
+    /// </summary>
+    private void OnChangeSelectBool()
+    {
+        if (_isStart && isEnd)
+        {
+            selectState = SampleSquareGridSelectState.Start_End;
+        }
+        else if (_isStart)
+        {
+            selectState = SampleSquareGridSelectState.Start;
+        }
+        else if (_isEnd)
+        {
+            selectState = SampleSquareGridSelectState.End;
+        }
+        else
+        {
+            if (_isPath)
+            {
+                selectState = SampleSquareGridSelectState.Path;
+            }
+            else if (_isObstacle)
+            {
+                selectState = SampleSquareGridSelectState.Obstacle;
+            }
+            else
+            {
+                selectState = SampleSquareGridSelectState.Blank;
+            }
         }
     }
 

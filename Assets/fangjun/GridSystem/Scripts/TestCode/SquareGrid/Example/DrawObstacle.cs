@@ -4,15 +4,15 @@ using GridSystem.Square.Generator;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
+public class DrawObstacle : MonoBehaviour, ISquareGridEventResponsor
 {
     #region Private Field
 
     /// <summary>
-    /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
+    /// The singleton of SquareGridEventHandler
     /// </summary>
     private SquareGridEventHandler _squareGridEventHandler;
-    
+        
     /// <summary>
     /// The GameObject which is currently selected
     /// </summary>
@@ -24,18 +24,20 @@ public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
     private SampleSquareGridElement _selectedGridElement;
 
     /// <summary>
-    /// The state of ChooseStart button
-    /// when the button is waiting user to choose a new grid, isWaitingSelect is true
+    /// The state of Drawing button
+    /// when the button is waiting user to draw, _isDrawing is true
     /// </summary>
-    private bool _isWaitingSelect = false;
+    private bool _isDrawing = false;
 
     #endregion
-    
-    #region Public Field
 
+    #region Public Field
+    
     /// <summary>
-    /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
+    /// The text showing current state
     /// </summary>
+    public Text showText;
+
     public SquareGridEventHandler squareGridEventHandler
     {
         get
@@ -45,23 +47,6 @@ public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
         set
         {
             _squareGridEventHandler = value;
-        }
-    }
-    
-    /// <summary>
-    /// The text showing current state
-    /// </summary>
-    public Text showText;
-
-    #endregion
-
-    #region Hide Public Field
-
-    public SampleSquareGridElement selectedGridElement
-    {
-        get
-        {
-            return _selectedGridElement;
         }
     }
 
@@ -79,45 +64,43 @@ public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
         
     }
 
-    #region ISquareGridEventResponsor Interface
-
     public void OnSelectedGridUpdated()
     {
         // if the start button is waiting for the newly selected Grid
-        if (_isWaitingSelect)
+        if (_isDrawing)
         {
-            // Change the select state of old Object
-            if (_selectedGridElement != null)
-                _selectedGridElement.isEnd = false;
-            
             // update the selected GameObject
             _selectedGameObject = _squareGridEventHandler.currentGridObject;
             _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler.currentGridElement;
             
             // change the select state of new Object
-            _selectedGridElement.isEnd = true;
+            _selectedGridElement.isObstacle = !_selectedGridElement.isObstacle;
+            if (_selectedGridElement.isObstacle)
+            {
+                SquareGridGenerator.Instance.squareGridSystem.GetVertex(_selectedGridElement.gridCoordinate)
+                    .cost = 20;
+            }
+            else
+            {
+                SquareGridGenerator.Instance.squareGridSystem.GetVertex(_selectedGridElement.gridCoordinate)
+                    .cost = 0;
+            }
         }
     }
-
-    #endregion
-
-    #region Public Methods
-
+    
     /// <summary>
-    /// Change the state of ChooseStart button
+    /// Change the state of Drawing button
     /// </summary>
     public void OnChangeWaitingState()
     {
-        _isWaitingSelect = !_isWaitingSelect;
-        if (_isWaitingSelect)
+        _isDrawing = !_isDrawing;
+        if (_isDrawing)
         {
-            showText.text = "Choose end...";
+            showText.text = "Drawing Obstacles.";
         }
         else
         {
-            showText.text = "End have been chosen.";
+            showText.text = "Stop Drawing.";
         }
     }
-
-    #endregion
 }
