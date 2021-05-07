@@ -79,6 +79,26 @@ namespace GridSystem.Square
             {
                 startVertex.SetConnection("down", endVertex, weight);
             }
+            // end Vertex is on the top left of the start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            {
+                startVertex.SetConnection("upLeft", endVertex, weight);
+            }
+            // end Vertex is on the top right of the start Vertex
+            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            {
+                startVertex.SetConnection("upRight", endVertex, weight);
+            }
+            // end Vertex is on the bottom left of the start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            {
+                startVertex.SetConnection("downLeft", endVertex, weight);
+            }
+            // end Vertex is on the bottom right of the start Vertex
+            else if (end.x == start.x + 1 && end.y == start.y - 1)
+            {
+                startVertex.SetConnection("downRight", endVertex, weight);
+            }
             else
             {
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
@@ -141,6 +161,26 @@ namespace GridSystem.Square
             else if (end.x == start.x && end.y == start.y - 1)
             {
                 edge = startConnections["down"];
+            }
+            // end Vertex is on the top left of the start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            {
+                edge = startConnections["upLeft"];
+            }
+            // end Vertex is on the top right of the start Vertex
+            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            {
+                edge = startConnections["upRight"];
+            }
+            // end Vertex is on the Bottom left of the start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            {
+                edge = startConnections["downLeft"];
+            }
+            // end Vertex is on the Bottom right of the start Vertex
+            else if (end.x == start.x + 1 && end.y == start.y - 1)
+            {
+                edge = startConnections["downRight"];
             }
             else
             {
@@ -220,6 +260,38 @@ namespace GridSystem.Square
                 else
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
+            // end Vertex is on the top left of start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            {
+                if (startVertex.connection["upLeft"] != null)
+                    startVertex.connection["upLeft"] = null;
+                else
+                    throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
+            }
+            // end Vertex is on the top right of start Vertex
+            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            {
+                if (startVertex.connection["upRight"] != null)
+                    startVertex.connection["upRight"] = null;
+                else
+                    throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
+            }
+            // end Vertex is on the bottom left of start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            {
+                if (startVertex.connection["downLeft"] != null)
+                    startVertex.connection["downLeft"] = null;
+                else
+                    throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
+            }
+            // end Vertex is on the bottom right of start Vertex
+            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            {
+                if (startVertex.connection["downRight"] != null)
+                    startVertex.connection["downRight"] = null;
+                else
+                    throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
+            }
             else
             {
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
@@ -239,6 +311,8 @@ namespace GridSystem.Square
             
             // if the target exist, remove the target
             _vertices.Remove(coordinate);
+            
+            // TODO: Remove the edges between target Vertex and Vertices nearby
         }
 
         #endregion

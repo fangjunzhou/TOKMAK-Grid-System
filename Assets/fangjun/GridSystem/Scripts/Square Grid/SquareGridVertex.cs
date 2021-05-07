@@ -8,6 +8,7 @@ namespace GridSystem.Square
     /// The SquareGridVertex extention of Vertex class
     /// each SquareGridVertex have four dirction
     /// up, down, left, and right
+    /// upLeft, upRight, downLeft, and downRight
     /// </summary>
     public class SquareGridVertex<DataType> : Vertex<DataType>
     {
@@ -114,6 +115,10 @@ namespace GridSystem.Square
             AddConnectionDir("down");
             AddConnectionDir("left");
             AddConnectionDir("right");
+            AddConnectionDir("upLeft");
+            AddConnectionDir("upRight");
+            AddConnectionDir("downLeft");
+            AddConnectionDir("downRight");
         }
 
         #endregion
