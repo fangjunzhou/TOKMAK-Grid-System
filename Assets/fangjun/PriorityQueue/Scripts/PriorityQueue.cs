@@ -220,6 +220,11 @@ namespace fangjun.PriorityQueue
             return priorityQueueNodes[0].data;
         }
 
+        public bool ContainsElement(DataT data)
+        {
+            return dataIndexPairs.ContainsKey(data);
+        }
+
         public override string ToString()
         {
             string res = "";
