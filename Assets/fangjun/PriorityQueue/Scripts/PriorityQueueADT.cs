@@ -35,6 +35,13 @@ namespace fangjun.PriorityQueue
         T Peek();
 
         /// <summary>
+        /// Check if the PriorityQueue contain certain element
+        /// </summary>
+        /// <param name="data">the data to check</param>
+        /// <returns>true if the PriorityQueue contains certain element</returns>
+        bool ContainsElement(T data);
+
+        /// <summary>
         /// Check if the PriorityQueue is empty
         /// </summary>
         /// <returns>return true if empty</returns>
