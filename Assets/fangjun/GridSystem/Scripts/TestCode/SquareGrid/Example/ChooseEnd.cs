@@ -2,12 +2,56 @@
 using System.Collections.Generic;
 using GridSystem.Square.Generator;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
 {
+    #region Private Field
+
+    /// <summary>
+    /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
+    /// </summary>
+    private SquareGridEventHandler _squareGridEventHandler;
+    
+    /// <summary>
+    /// The GameObject which is currently selected
+    /// </summary>
+    private GameObject _selectedGameObject;
+
+    /// <summary>
+    /// The GridElement of _selectedGameObject
+    /// </summary>
+    private SampleSquareGridElement _selectedGridElement;
+
+    /// <summary>
+    /// The state of ChooseStart button
+    /// when the button is waiting user to choose a new grid, isWaitingSelect is true
+    /// </summary>
+    private bool _isWaitingSelect = false;
+
+    #endregion
+    
     #region Public Field
 
-    public SquareGridEventHandler squareGridEventHandler { get; set; }
+    /// <summary>
+    /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
+    /// </summary>
+    public SquareGridEventHandler squareGridEventHandler
+    {
+        get
+        {
+            return _squareGridEventHandler;
+        }
+        set
+        {
+            _squareGridEventHandler = value;
+        }
+    }
+    
+    /// <summary>
+    /// The text showing current state
+    /// </summary>
+    public Text showText;
 
     #endregion
     
@@ -27,7 +71,40 @@ public class ChooseEnd : MonoBehaviour, ISquareGridEventResponsor
 
     public void OnSelectedGridUpdated()
     {
-        throw new System.NotImplementedException();
+        // if the start button is waiting for the newly selected Grid
+        if (_isWaitingSelect)
+        {
+            // Change the select state of old Object
+            if (_selectedGridElement != null)
+                _selectedGridElement.selectState = SampleSquareGridSelectState.Blank;
+            
+            // update the selected GameObject
+            _selectedGameObject = _squareGridEventHandler.currentGridObject;
+            _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler.currentGridElement;
+            
+            // change the select state of new Object
+            _selectedGameObject.GetComponent<SampleSquareGridElement>().selectState = SampleSquareGridSelectState.End;
+        }
+    }
+
+    #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// Change the state of ChooseStart button
+    /// </summary>
+    public void OnChangeWaitingState()
+    {
+        _isWaitingSelect = !_isWaitingSelect;
+        if (_isWaitingSelect)
+        {
+            showText.text = "Choose end...";
+        }
+        else
+        {
+            showText.text = "End have been chosen.";
+        }
     }
 
     #endregion
