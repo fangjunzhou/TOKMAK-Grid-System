@@ -39,7 +39,7 @@ namespace fangjun.PriorityQueue
         /// </summary>
         /// <param name="data">the data to check</param>
         /// <returns>true if the PriorityQueue contains certain element</returns>
-        bool ContainsElement(T data);
+        T GetElement(T data);
 
         /// <summary>
         /// Check if the PriorityQueue is empty

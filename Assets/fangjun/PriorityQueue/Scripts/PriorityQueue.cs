@@ -10,7 +10,7 @@ namespace fangjun.PriorityQueue
         #region Private Field
         // all the nodes in the PriorityQueue
         private List<PriorityQueueNode<DataT>> priorityQueueNodes = new List<PriorityQueueNode<DataT>>();
-        private Dictionary<DataT, PriorityQueueNode<DataT>> dataIndexPairs = new Dictionary<DataT, PriorityQueueNode<DataT>>();
+        private Dictionary<DataT, PriorityQueueNode<DataT>> dataNodePairs = new Dictionary<DataT, PriorityQueueNode<DataT>>();
         #endregion
 
         #region Public Field
@@ -151,7 +151,7 @@ namespace fangjun.PriorityQueue
 
         public bool Push(DataT data, float priority)
         {
-            if (data == null || dataIndexPairs.ContainsKey(data))
+            if (data == null || dataNodePairs.ContainsKey(data))
             {
                 return false;
             }
@@ -169,18 +169,18 @@ namespace fangjun.PriorityQueue
             PerculateUp(priorityQueueNodes.Count - 1);
             
             // add the index to dataIndexPairs
-            dataIndexPairs.Add(data, wrapperData);
+            dataNodePairs.Add(data, wrapperData);
 
             return true;
         }
         
         public bool ChangePriority(DataT data, float priority)
         {
-            if (!dataIndexPairs.ContainsKey(data))
+            if (!dataNodePairs.ContainsKey(data))
                 return false;
             
             // get the index
-            int index = dataIndexPairs[data].index;
+            int index = dataNodePairs[data].index;
             PriorityQueueNode<DataT> wrapperData = priorityQueueNodes[index];
             // record the old priority
             float oldPriority = wrapperData.priority;
@@ -220,9 +220,12 @@ namespace fangjun.PriorityQueue
             return priorityQueueNodes[0].data;
         }
 
-        public bool ContainsElement(DataT data)
+        public DataT GetElement(DataT data)
         {
-            return dataIndexPairs.ContainsKey(data);
+            if (!dataNodePairs.ContainsKey(data))
+                return default;
+            
+            return dataNodePairs[data].data;
         }
 
         public override string ToString()
