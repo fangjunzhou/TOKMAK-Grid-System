@@ -7,175 +7,171 @@ using GridSystem.Square;
 using NaughtyAttributes;
 using UnityEngine.Serialization;
 
-/// <summary>
-/// The square grid generator that uses SquareGridSystem
-/// </summary>
-public class SquareGridGenerator : MonoBehaviour, IGridGenerator
+namespace GridSystem.Square.Generator
 {
-    #region Singleton
-
-    /// <summary>
-    /// The singleton of SquareGridGenerator
-    /// </summary>
-    public static SquareGridGenerator Instance;
-
-    #endregion
-    
-    #region Private Field
-
-    /// <summary>
-    /// The SquareGridSystem in this generator
-    /// </summary>
-    private SquareGridSystem<GridDataContainer> _squareGridSystem = new SquareGridSystem<GridDataContainer>();
-
-    /// <summary>
-    /// The SquareGridEventHandler which will be instantiate in current object
-    /// This MonoBehavior component will be added to the current MapGenerator GameObject
-    /// </summary>
-    private SquareGridEventHandler _squareGridEventHandler;
-
-    /// <summary>
-    /// A list that stores all the GridElements
-    /// </summary>
-    private List<SquareGridElement> _gridElements = new List<SquareGridElement>();
-
-    #endregion
-
-    #region Public Field
-
-    #region SquareGridGenerator Field
     
     /// <summary>
-    /// The root object that all the GridElements will be generate in
+    /// The square grid generator that uses SquareGridSystem
     /// </summary>
-    [BoxGroup("Grid generation prefab & root")]
-    public GameObject sceneObjectRoot;
-
-    /// <summary>
-    /// The GridElement prefab for all the grid to be generate
-    /// </summary>
-    [FormerlySerializedAs("gridElementPrefab")] [BoxGroup("Grid generation prefab & root")]
-    public SquareGridElement squareGridElementPrefab;
-
-    /// <summary>
-    /// The SquareGridSystem in this generator
-    /// </summary>
-    public SquareGridSystem<GridDataContainer> squareGridSystem
+    public class SquareGridGenerator : MonoBehaviour, IGridGenerator
     {
-        get
-        {
-            return _squareGridSystem;
-        }
-    }
+        #region Singleton
 
-    /// <summary>
-    /// The action called when SquareGridGenerator finish the initialization of all the other child components
-    /// </summary>
-    public Action finishInitialize;
-    
-    #endregion
+        /// <summary>
+        /// The singleton of SquareGridGenerator
+        /// </summary>
+        public static SquareGridGenerator Instance;
 
-    #region SquareGridEventHandler Field
-
-    [BoxGroup("SquareGridEventHandler Field")]
-    public float handlerMaxRayLength;
-
-    #endregion
-
-    #endregion
-
-    private void Awake()
-    {
-        // initialize the singleton
-        Instance = this;
+        #endregion
         
-        // create and initialize GridEventHandler
-        _squareGridEventHandler = gameObject.AddComponent<SquareGridEventHandler>();
-        SquareGridEventHandlerInit();
-        // call the finishInitialize delegate
-        finishInitialize?.Invoke();
-    }
+        #region Private Field
 
-    // Update is called once per frame
-    void Update()
-    {
+        /// <summary>
+        /// The SquareGridSystem in this generator
+        /// </summary>
+        private SquareGridSystem<GridDataContainer> _squareGridSystem = new SquareGridSystem<GridDataContainer>();
+
+        /// <summary>
+        /// The SquareGridEventHandler which will be instantiate in current object
+        /// This MonoBehavior component will be added to the current MapGenerator GameObject
+        /// </summary>
+        private SquareGridEventHandler _squareGridEventHandler;
+
+        /// <summary>
+        /// A list that stores all the GridElements
+        /// </summary>
+        private List<GridElement> _gridElements = new List<GridElement>();
+
+        #endregion
+
+        #region Public Field
+
+        #region SquareGridGenerator Field
         
-    }
+        /// <summary>
+        /// The root object that all the GridElements will be generate in
+        /// </summary>
+        [BoxGroup("Grid generation prefab & root")]
+        public GameObject sceneObjectRoot;
 
-    #region Private Methods
+        /// <summary>
+        /// The GridElement prefab for all the grid to be generate
+        /// </summary>
+        [FormerlySerializedAs("gridElementPrefab")] [BoxGroup("Grid generation prefab & root")]
+        public GridElement squareGridElementPrefab;
 
-    /// <summary>
-    /// Initialize the GridEventHandler
-    /// </summary>
-    private void SquareGridEventHandlerInit()
-    {
-        // initialize the maxRayLength
-        _squareGridEventHandler.maxRayLength = handlerMaxRayLength;
-    }
-
-    #endregion
-
-    #region IGridGenerator inteface
-
-    public void GenerateMap(int width, int height)
-    {
-        // traverse all the grid
-        for (int y = 0; y < height; y++)
+        /// <summary>
+        /// The SquareGridSystem in this generator
+        /// </summary>
+        public SquareGridSystem<GridDataContainer> squareGridSystem
         {
-            for (int x = 0; x < width; x++)
+            get
             {
-                // current coordinate
-                GridCoordinate coordinate = new GridCoordinate(x, y);
-                
-                // Generate a GridElement GameObject
-                Vector3 position = new Vector3(x * 115, y * 115, 0);
-                SquareGridElement squareGridElement = Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
-                squareGridElement.coordinate = coordinate;
-                squareGridElement.squareGridEventHandler = _squareGridEventHandler;
-                
-                // add the grid element to the _gridElements
-                _gridElements.Add(squareGridElement);
-                
-                // add the Vertex to the GridSystem
-                _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(squareGridElement.gameObject));
-                // add the connection with right grid
-                if (x < width - 1 && _squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
+                return _squareGridSystem;
+            }
+        }
+
+        /// <summary>
+        /// The action called when SquareGridGenerator finish the initialization of all the other child components
+        /// </summary>
+        public Action finishInitialize;
+        
+        #endregion
+
+        #region SquareGridEventHandler Field
+
+        
+
+        #endregion
+
+        #endregion
+
+        private void Awake()
+        {
+            // initialize the singleton
+            Instance = this;
+            
+            // create and initialize GridEventHandler
+            _squareGridEventHandler = gameObject.AddComponent<SquareGridEventHandler>();
+            // call the finishInitialize delegate
+            finishInitialize?.Invoke();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            
+        }
+
+        #region Private Methods
+
+        
+
+        #endregion
+
+        #region IGridGenerator inteface
+
+        public void GenerateMap(int width, int height)
+        {
+            // traverse all the grid
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
                 {
-                    _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x + 1, y), 2);
-                }
-                // add the connection with left grid
-                if (x > 0 && _squareGridSystem.GetVertex(new GridCoordinate(x - 1, y)) != null)
-                {
-                    _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x - 1, y), 2);
-                }
-                // add the connection with top grid
-                if (y < height - 1 && _squareGridSystem.GetVertex(new GridCoordinate(x, y + 1)) != null)
-                {
-                    _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y + 1), 2);
-                }
-                // add the connection with bottom grid
-                if (y > 0 && _squareGridSystem.GetVertex(new GridCoordinate(x, y - 1)) != null)
-                {
-                    _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y - 1), 2);
+                    // current coordinate
+                    GridCoordinate coordinate = new GridCoordinate(x, y);
+                    
+                    // Generate a GridElement GameObject
+                    Vector3 position = new Vector3(x * 115, y * 115, 0);
+                    GridElement squareGridElement = Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
+                    squareGridElement.gridCoordinate = coordinate;
+                    squareGridElement.gridEventHandler = _squareGridEventHandler;
+                    
+                    // add the grid element to the _gridElements
+                    _gridElements.Add(squareGridElement);
+                    
+                    // add the Vertex to the GridSystem
+                    _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(squareGridElement.gameObject));
+                    // add the connection with right grid
+                    if (x < width - 1 && _squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
+                    {
+                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x + 1, y), 2);
+                    }
+                    // add the connection with left grid
+                    if (x > 0 && _squareGridSystem.GetVertex(new GridCoordinate(x - 1, y)) != null)
+                    {
+                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x - 1, y), 2);
+                    }
+                    // add the connection with top grid
+                    if (y < height - 1 && _squareGridSystem.GetVertex(new GridCoordinate(x, y + 1)) != null)
+                    {
+                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y + 1), 2);
+                    }
+                    // add the connection with bottom grid
+                    if (y > 0 && _squareGridSystem.GetVertex(new GridCoordinate(x, y - 1)) != null)
+                    {
+                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y - 1), 2);
+                    }
                 }
             }
         }
-    }
 
-    public void ClearMap()
-    {
-        // Traverse all the GridElement in _gridElements
-        foreach (SquareGridElement gridElement in _gridElements)
+        public void ClearMap()
         {
-            // remove the vertex in the GridSystem
-            _squareGridSystem.RemoveVertex(gridElement.coordinate);
-            
-            // destroy the GameObject
-            Destroy(gridElement.gameObject);
+            // Traverse all the GridElement in _gridElements
+            foreach (SampleSquareGridElement gridElement in _gridElements)
+            {
+                // remove the vertex in the GridSystem
+                _squareGridSystem.RemoveVertex(gridElement.gridCoordinate);
+                
+                // destroy the GameObject
+                Destroy(gridElement.gameObject);
+            }
+            // Clear the _gridElement List
+            _gridElements.Clear();
         }
-        // Clear the _gridElement List
-        _gridElements.Clear();
-    }
 
-    #endregion
+        #endregion
+    }
+    
 }

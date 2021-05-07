@@ -1,21 +1,24 @@
 using System;
 using UnityEngine;
-using GridSystem;
 using TMPro;
 using UnityEngine.UI;
 
-public enum GridSelectState
+using GridSystem;
+using GridSystem.Square;
+using GridSystem.Square.Generator;
+
+public enum SampleSquareGridSelectState
 {
     Blank,
     Start,
     End
 }
 
-public class SquareGridElement : GridElement
+public class SampleSquareGridElement : GridElement
 {
     #region Private Field
 
-    private GridSelectState _selectState;
+    private SampleSquareGridSelectState _selectState;
 
     #endregion
     
@@ -69,7 +72,7 @@ public class SquareGridElement : GridElement
     /// <summary>
     /// The SelectState of current Grid
     /// </summary>
-    public GridSelectState selectState
+    public SampleSquareGridSelectState selectState
     {
         get
         {
@@ -102,13 +105,13 @@ public class SquareGridElement : GridElement
         // change the background color to different color in different cases
         switch (_selectState)
         {
-            case GridSelectState.Blank:
+            case SampleSquareGridSelectState.Blank:
                 backgroundImg.color = Color.white;
                 break;
-            case GridSelectState.Start:
+            case SampleSquareGridSelectState.Start:
                 backgroundImg.color = Color.yellow;
                 break;
-            case GridSelectState.End:
+            case SampleSquareGridSelectState.End:
                 backgroundImg.color = Color.green;
                 break;
         }
