@@ -76,6 +76,8 @@
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\ChooseEnd.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\ChooseStart.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\DebugChoose.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\DrawObstacle.cs" />
+     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\FindPath.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\SampleSquareGridElement.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridElement.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridGenerator.cs" />

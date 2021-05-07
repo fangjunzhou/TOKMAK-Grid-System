@@ -52,6 +52,18 @@ public class ChooseStart : MonoBehaviour, ISquareGridEventResponsor
     }
 
     #endregion
+
+    #region Hide Public Field
+
+    public SampleSquareGridElement selectedGridElement
+    {
+        get
+        {
+            return _selectedGridElement;
+        }
+    }
+
+    #endregion
     
     // Start is called before the first frame update
     void Start()
@@ -74,14 +86,14 @@ public class ChooseStart : MonoBehaviour, ISquareGridEventResponsor
         {
             // Change the select state of old Object
             if (_selectedGridElement != null)
-                _selectedGridElement.selectState = SampleSquareGridSelectState.Blank;
+                _selectedGridElement.isStart = false;
             
             // update the selected GameObject
             _selectedGameObject = _squareGridEventHandler.currentGridObject;
             _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler.currentGridElement;
             
             // change the select state of new Object
-            _selectedGameObject.GetComponent<SampleSquareGridElement>().selectState = SampleSquareGridSelectState.Start;
+            _selectedGridElement.isStart = true;
         }
     }
 
