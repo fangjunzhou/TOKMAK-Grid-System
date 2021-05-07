@@ -25,22 +25,6 @@ public class SampleSquareGridElement : GridElement
     #region Public Field
 
     /// <summary>
-    /// the coordinate of current grid
-    /// </summary>
-    public GridCoordinate gridCoordinate
-    {
-        get
-        {
-            return _coordinate;
-        }
-        set
-        {
-            _coordinate = value;
-            UpdateCoordinateText(_coordinate);
-        }
-    }
-
-    /// <summary>
     /// the GridEventHandler of the current grid element
     /// </summary>
     public SquareGridEventHandler gridEventHandler
@@ -90,14 +74,6 @@ public class SampleSquareGridElement : GridElement
     #region Private Methods
 
     /// <summary>
-    /// Update the text that display current coordinate
-    /// </summary>
-    private void UpdateCoordinateText(GridCoordinate coordinate)
-    {
-        coordinateText.text = coordinate.ToString();
-    }
-
-    /// <summary>
     /// Call when the SelectState is changed
     /// </summary>
     private void OnChangeSelectState()
@@ -127,6 +103,15 @@ public class SampleSquareGridElement : GridElement
     public void SetCurrentObject()
     {
         _gridEventHandler.currentGridObject = gameObject;
+    }
+
+    #endregion
+
+    #region GridElement
+
+    protected override void OnCoordinateChange()
+    {
+        coordinateText.text = _coordinate.ToString();
     }
 
     #endregion
