@@ -1,19 +1,22 @@
 ﻿using GridSystem.Square.Generator;
 
-public interface ISquareGridEventResponsor
+namespace GridSystem.Square.Generator
 {
-    #region Public Field
+    public interface ISquareGridEventResponsor
+    {
+        #region Public Field
 
-    SquareGridEventHandler squareGridEventHandler { get; set; }
+        SquareGridEventHandler squareGridEventHandler { get; set; }
 
-    #endregion
+        #endregion
 
-    #region Callback Functions
+        #region Callback Functions
     
-    /// <summary>
-    /// Call when the selected GridElement and the GameObject in SquareGridEventHandler changes
-    /// </summary>
-    void OnSelectedGridUpdated();
+        /// <summary>
+        /// Call when the selected GridElement and the GameObject in SquareGridEventHandler changes
+        /// </summary>
+        void OnSelectedGridUpdated();
 
-    #endregion
+        #endregion
+    }
 }
