@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace fangjun.PriorityQueue
 {
-    public class PriorityQueue<DataT> : PriorityQueueADT<PriorityQueueNode<DataT>>
+    public class PriorityQueue<DataT> : PriorityQueueADT<DataT>
     {
         #region Private Field
         // all the nodes in the PriorityQueue
         private List<PriorityQueueNode<DataT>> priorityQueueNodes = new List<PriorityQueueNode<DataT>>();
+        private Dictionary<DataT, PriorityQueueNode<DataT>> dataIndexPairs = new Dictionary<DataT, PriorityQueueNode<DataT>>();
         #endregion
 
         #region Public Field
@@ -40,6 +42,7 @@ namespace fangjun.PriorityQueue
         /// Perculate up at specific index
         /// </summary>
         /// <param name="index">the index of new node added</param>
+        /// <returns>the new index of the node</returns>
         private void PerculateUp(int index)
         {
             while(index > 0)
@@ -52,7 +55,9 @@ namespace fangjun.PriorityQueue
                     int parentIndex = (index - 1) / 2;
                     PriorityQueueNode<DataT> temp = priorityQueueNodes[index];
                     priorityQueueNodes[index] = priorityQueueNodes[parentIndex];
+                    priorityQueueNodes[index].index = index;
                     priorityQueueNodes[parentIndex] = temp;
+                    priorityQueueNodes[parentIndex].index = parentIndex;
 
                     // update index
                     index = parentIndex;
@@ -93,6 +98,7 @@ namespace fangjun.PriorityQueue
         /// Perculate Down at the specific index
         /// </summary>
         /// <param name="index">the root of the array(List)</param>
+        /// <returns>the new index of the node</returns>
         private void PerculateDown(int index)
         {
             int maxIndex = CompareChildren(index);
@@ -101,7 +107,9 @@ namespace fangjun.PriorityQueue
                 // exchange
                 PriorityQueueNode<DataT> temp = priorityQueueNodes[index];
                 priorityQueueNodes[index] = priorityQueueNodes[maxIndex];
+                priorityQueueNodes[index].index = index;
                 priorityQueueNodes[maxIndex] = temp;
+                priorityQueueNodes[maxIndex].index = maxIndex;
 
                 // update index
                 index = maxIndex;
@@ -141,34 +149,75 @@ namespace fangjun.PriorityQueue
         }
         #endregion
 
-        public bool Push(PriorityQueueNode<DataT> data)
+        public bool Push(DataT data, float priority)
         {
-            if (data == null)
+            if (data == null || dataIndexPairs.ContainsKey(data))
             {
                 return false;
             }
+            
+            PriorityQueueNode<DataT> wrapperData = new PriorityQueueNode<DataT>()
+            {
+                data = data,
+                priority = priority,
+                index = priorityQueueNodes.Count
+            };
 
             // add to the end of the list
-            priorityQueueNodes.Add(data);
+            priorityQueueNodes.Add(wrapperData);
             // perculate up
             PerculateUp(priorityQueueNodes.Count - 1);
+            
+            // add the index to dataIndexPairs
+            dataIndexPairs.Add(data, wrapperData);
+
+            return true;
+        }
+        
+        public bool ChangePriority(DataT data, float priority)
+        {
+            if (!dataIndexPairs.ContainsKey(data))
+                return false;
+            
+            // get the index
+            int index = dataIndexPairs[data].index;
+            PriorityQueueNode<DataT> wrapperData = priorityQueueNodes[index];
+            // record the old priority
+            float oldPriority = wrapperData.priority;
+            wrapperData.priority = priority;
+            // if the new priority is larger
+            if (priority > oldPriority)
+            {
+                // perculate up
+                PerculateUp(index);
+            }
+            else if (priority < oldPriority)
+            {
+                // perculate down
+                PerculateDown(index);
+            }
 
             return true;
         }
 
-        public PriorityQueueNode<DataT> Pop()
+        public DataT Pop()
         {
+            // remove the first element in the list
             PriorityQueueNode<DataT> res = priorityQueueNodes[0];
+            // move the last element to the first
             priorityQueueNodes[0] = priorityQueueNodes[priorityQueueNodes.Count - 1];
+            priorityQueueNodes[0].index = 0;
+            
             priorityQueueNodes.RemoveAt(priorityQueueNodes.Count - 1);
+            
             PerculateDown(0);
 
-            return res;
+            return res.data;
         }
 
-        public PriorityQueueNode<DataT> Peek()
+        public DataT Peek()
         {
-            return priorityQueueNodes[0];
+            return priorityQueueNodes[0].data;
         }
 
         public override string ToString()
@@ -176,7 +225,7 @@ namespace fangjun.PriorityQueue
             string res = "";
             foreach (PriorityQueueNode<DataT> node in priorityQueueNodes)
             {
-                res += node.data + "," + node.priority + ";";
+                res += node.data + ", " + node.priority + ", " + node.index + "|||";
             }
             return res;
         }

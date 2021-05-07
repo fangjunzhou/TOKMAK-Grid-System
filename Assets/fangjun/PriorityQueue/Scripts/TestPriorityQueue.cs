@@ -12,6 +12,9 @@ namespace fangjun.PriorityQueue
         public TMP_Text text;
         public TMP_InputField inputString;
         public TMP_InputField inputPriority;
+
+        public TMP_InputField updateString;
+        public TMP_InputField updatePriority;
         #endregion
 
         #region Private Field
@@ -32,16 +35,17 @@ namespace fangjun.PriorityQueue
         #region Public Methods
         public void Push()
         {
-            priorityQueue.Push(new PriorityQueueNode<string>()
-            {
-                data = inputString.text,
-                priority = int.Parse(inputPriority.text)
-            });
+            priorityQueue.Push(inputString.text, int.Parse(inputPriority.text));
         }
 
         public void Pop()
         {
             Debug.Log(priorityQueue.Pop());
+        }
+
+        public void ChangePriority()
+        {
+            priorityQueue.ChangePriority(updateString.text, int.Parse(updatePriority.text));
         }
         #endregion
     }
