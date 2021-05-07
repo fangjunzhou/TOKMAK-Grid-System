@@ -5,6 +5,7 @@ namespace GridSystem
 {
     public interface IGridEventHandler
     {
+        
         #region Public Field
 
         /// <summary>
@@ -13,7 +14,7 @@ namespace GridSystem
         GameObject currentGridObject { get; set; }
         
         /// <summary>
-        /// The event triggered when currentGridObject changes
+        /// The action triggered when currentGridObject changes
         /// </summary>
         Action updateSelectedGrid { get; set; }
 

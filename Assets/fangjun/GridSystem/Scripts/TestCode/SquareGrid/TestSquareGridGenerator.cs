@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using NaughtyAttributes;
+using GridSystem.Square.Generator;
 
 public class TestSquareGridGenerator : MonoBehaviour
 {

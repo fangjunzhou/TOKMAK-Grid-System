@@ -12,10 +12,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{267DDD27-3B99-1F0D-010E-0F97A6C81877}</ProjectGuid>
+    <ProjectGuid>{C98F9D40-E519-4D56-E1F8-C94B4EAFE977}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>UnityInterfaceSupport</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -58,85 +58,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\Edge.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridCoordinate.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridDataContainer.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\GridElement.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridEventHandler.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridGenerator.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\IGridSystem.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\MainCamTracker.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Core\Vertex.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\ISquareGridEventResponsor.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridEventHandler.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridEventView.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\Generator\SquareGridGenerator.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridSystem.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\Square Grid\SquareGridVertex.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\ChooseEnd.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\ChooseStart.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\Example\SampleSquareGridElement.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridElement.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridGenerator.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridSystem.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\SquareGrid\TestSquareGridVertex.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestGridCoordinate.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestGridDataContainer.cs" />
-     <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestVertex.cs" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-     <None Include="Assets\fangjun\GridSystem\README.txt" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
+     <Compile Include="D:\Unity_Resource\Unity-Interface-Support-1.0.0\Unity-Interface-Support-1.0.0\Packages\net.wraithavengames.unityinterfacesupport\Runtime\InterfaceTypeAttribute.cs" />
+     <None Include="D:\Unity_Resource\Unity-Interface-Support-1.0.0\Unity-Interface-Support-1.0.0\Packages\net.wraithavengames.unityinterfacesupport\Runtime\UnityInterfaceSupport.asmdef" />
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
- </Reference>
- <Reference Include="UnityInterfaceSupport.Editor">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.Editor.dll</HintPath>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -314,6 +242,15 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -660,20 +597,6 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{5F03AFD6-A139-CE87-F71D-5157894B6BDA}</Project>
-      <Name>NaughtyAttributes.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{DF5F7C7B-865D-BD27-D56C-E765D3BAEAFC}</Project>
-      <Name>NaughtyAttributes.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{B5846D5D-0ED5-066C-2E54-0E426D0DE6C2}</Project>
-      <Name>NaughtyAttributes.Test</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
