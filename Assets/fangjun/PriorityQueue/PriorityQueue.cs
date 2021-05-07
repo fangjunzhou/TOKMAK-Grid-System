@@ -11,16 +11,40 @@ namespace fangjun.PriorityQueue
         private List<PriorityQueueNode<DataT>> priorityQueueNodes = new List<PriorityQueueNode<DataT>>();
         #endregion
 
+        #region Public Field
+
+        public bool isEmpty
+        {
+            get
+            {
+                if (priorityQueueNodes.Count == 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public int length
+        {
+            get
+            {
+                return priorityQueueNodes.Count;
+            }
+        }
+
+        #endregion
+
         #region Private Methods
         /// <summary>
         /// Perculate up at specific index
         /// </summary>
         /// <param name="index">the index of new node added</param>
-        private void perculateUp(int index)
+        private void PerculateUp(int index)
         {
             while(index > 0)
             {
-                bool res = compareParent(index);
+                bool res = CompareParent(index);
                 // exchange
                 if (res)
                 {
@@ -46,7 +70,7 @@ namespace fangjun.PriorityQueue
         /// <param name="index">the target index of node to compare</param>
         /// <returns>return true if is greater than its parent;
         /// false if is less or equal than its prarent</returns>
-        private bool compareParent(int index)
+        private bool CompareParent(int index)
         {
             // get the node
             PriorityQueueNode<DataT> priorityQueueNode = priorityQueueNodes[index];
@@ -69,9 +93,9 @@ namespace fangjun.PriorityQueue
         /// Perculate Down at the specific index
         /// </summary>
         /// <param name="index">the root of the array(List)</param>
-        private void perculateDown(int index)
+        private void PerculateDown(int index)
         {
-            int maxIndex = compareChildren(index);
+            int maxIndex = CompareChildren(index);
             while(maxIndex != index)
             {
                 // exchange
@@ -82,7 +106,7 @@ namespace fangjun.PriorityQueue
                 // update index
                 index = maxIndex;
                 // update max index
-                maxIndex = compareChildren(index);
+                maxIndex = CompareChildren(index);
             }
         }
 
@@ -91,7 +115,7 @@ namespace fangjun.PriorityQueue
         /// </summary>
         /// <param name="index">the target index to check</param>
         /// <returns>the index with max priority</returns>
-        private int compareChildren(int index)
+        private int CompareChildren(int index)
         {
             // left child and right child index
             int leftChildIndex = index * 2 + 1;
@@ -117,7 +141,7 @@ namespace fangjun.PriorityQueue
         }
         #endregion
 
-        public bool push(PriorityQueueNode<DataT> data)
+        public bool Push(PriorityQueueNode<DataT> data)
         {
             if (data == null)
             {
@@ -127,41 +151,24 @@ namespace fangjun.PriorityQueue
             // add to the end of the list
             priorityQueueNodes.Add(data);
             // perculate up
-            perculateUp(priorityQueueNodes.Count - 1);
+            PerculateUp(priorityQueueNodes.Count - 1);
 
             return true;
         }
 
-        public PriorityQueueNode<DataT> pop()
+        public PriorityQueueNode<DataT> Pop()
         {
             PriorityQueueNode<DataT> res = priorityQueueNodes[0];
             priorityQueueNodes[0] = priorityQueueNodes[priorityQueueNodes.Count - 1];
             priorityQueueNodes.RemoveAt(priorityQueueNodes.Count - 1);
-            perculateDown(0);
+            PerculateDown(0);
 
             return res;
         }
 
-        public PriorityQueueNode<DataT> peek()
+        public PriorityQueueNode<DataT> Peek()
         {
             return priorityQueueNodes[0];
-        }
-
-        public bool isEmpty()
-        {
-            if (priorityQueueNodes.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public int getLength()
-        {
-            return priorityQueueNodes.Count;
         }
 
         public override string ToString()

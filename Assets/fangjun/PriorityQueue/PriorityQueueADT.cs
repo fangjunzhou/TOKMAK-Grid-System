@@ -11,30 +11,30 @@ namespace fangjun.PriorityQueue
         /// </summary>
         /// <param name="data">the data you want to store</param>
         /// <returns>return true if success</returns>
-        bool push(T data);
+        bool Push(T data);
 
         /// <summary>
         /// Return and remove the largest node in the PriorityQueue
         /// </summary>
         /// <returns>the largest node in the PriorityQueue</returns>
-        T pop();
+        T Pop();
 
         /// <summary>
         /// Return but not remove the largest node in the PriorityQueue
         /// </summary>
         /// <returns>the largest node in the PriorityQueue</returns>
-        T peek();
+        T Peek();
 
         /// <summary>
         /// Check if the PriorityQueue is empty
         /// </summary>
         /// <returns>return true if empty</returns>
-        bool isEmpty();
+        bool isEmpty { get; }
 
         /// <summary>
         /// Get the length of the whole PriorityQueue
         /// </summary>
         /// <returns>the length of the whole PriorityQueue</returns>
-        int getLength();
+        int length { get; }
     }
 }
