@@ -32,7 +32,7 @@ namespace fangjun.PriorityQueue
         #region Public Methods
         public void Push()
         {
-            priorityQueue.push(new PriorityQueueNode<string>()
+            priorityQueue.Push(new PriorityQueueNode<string>()
             {
                 data = inputString.text,
                 priority = int.Parse(inputPriority.text)
@@ -41,7 +41,7 @@ namespace fangjun.PriorityQueue
 
         public void Pop()
         {
-            Debug.Log(priorityQueue.pop());
+            Debug.Log(priorityQueue.Pop());
         }
         #endregion
     }
