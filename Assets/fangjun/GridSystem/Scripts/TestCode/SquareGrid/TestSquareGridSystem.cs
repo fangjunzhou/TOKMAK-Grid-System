@@ -5,9 +5,14 @@ using UnityEngine;
 using NaughtyAttributes;
 using GridSystem;
 using GridSystem.Square;
+using GridSystem.Square.Generator;
 
 public class TestSquareGridSystem : MonoBehaviour
 {
+    public SquareGridGenerator generator;
+    public GridCoordinate startCoordinate;
+    public GridCoordinate endCoordinate;
+    
     [Button("Test the constructor of SquareGridSystem")]
     private void TestConstructor()
     {
@@ -159,5 +164,16 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
         Debug.Log("Get (3, 5): " + squareGridSystem.GetVertex(new GridCoordinate(3, 5)));
+    }
+
+    [Button("Test the Pathfinding algorithm")]
+    private void TestPathfinding()
+    {
+        LinkedList<Vertex<GridDataContainer>> path = generator.squareGridSystem.
+            FindShortestPath(startCoordinate, endCoordinate);
+        foreach (Vertex<GridDataContainer> vertex in path)
+        {
+            Debug.Log(vertex);
+        }
     }
 }

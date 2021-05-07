@@ -84,6 +84,11 @@
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestGridCoordinate.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestGridDataContainer.cs" />
      <Compile Include="Assets\fangjun\GridSystem\Scripts\TestCode\TestCore\TestVertex.cs" />
+     <Compile Include="Assets\fangjun\PriorityQueue\Scripts\PriorityQueue.cs" />
+     <Compile Include="Assets\fangjun\PriorityQueue\Scripts\PriorityQueueADT.cs" />
+     <Compile Include="Assets\fangjun\PriorityQueue\Scripts\PriorityQueueNode.cs" />
+     <Compile Include="Assets\fangjun\PriorityQueue\Scripts\TestPriorityQueue.cs" />
+     <Compile Include="Assets\fangjun\PriorityQueue\Scripts\TestQueueNode.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
