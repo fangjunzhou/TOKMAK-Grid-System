@@ -112,6 +112,9 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityInterfaceSupport">
+ <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -130,14 +133,11 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
- </Reference>
  <Reference Include="UnityInterfaceSupport.Editor">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

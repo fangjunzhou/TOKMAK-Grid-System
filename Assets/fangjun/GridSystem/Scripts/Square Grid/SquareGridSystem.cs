@@ -308,11 +308,47 @@ namespace GridSystem.Square
             // if the target vertex do not exist
             if (!_vertices.ContainsKey(coordinate))
                 throw new ArgumentException("The Vertex with certain coordinate" + coordinate.ToString() + " do not exist.");
+
+            // Remove the edges between target Vertex and Vertices nearby
             
+            // get all the edges starting from current Vertex
+            SquareGridVertex<DataType> currentVertex = (SquareGridVertex<DataType>) GetVertex(coordinate);
+            
+            // remove the connection with top Vertex
+            GridCoordinate targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y + 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with bottom Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y - 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with left Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with the right Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with the top left Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y + 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with top right Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y + 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with bottom left Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y - 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+            // remove the connection with bottom right Vertex
+            targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y - 1);
+            if (GetVertex(targetCoordinate) != null)
+                RemoveDoubleEdge(coordinate, targetCoordinate);
+
             // if the target exist, remove the target
             _vertices.Remove(coordinate);
-            
-            // TODO: Remove the edges between target Vertex and Vertices nearby
         }
 
         #endregion
