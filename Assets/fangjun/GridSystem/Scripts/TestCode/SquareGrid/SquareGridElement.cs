@@ -24,7 +24,7 @@ public class SquareGridElement : GridElement
     /// <summary>
     /// the coordinate of current grid
     /// </summary>
-    public GridCoordinate coordinate
+    public GridCoordinate gridCoordinate
     {
         get
         {
@@ -40,7 +40,7 @@ public class SquareGridElement : GridElement
     /// <summary>
     /// the GridEventHandler of the current grid element
     /// </summary>
-    public SquareGridEventHandler squareGridEventHandler
+    public SquareGridEventHandler gridEventHandler
     {
         get
         {
