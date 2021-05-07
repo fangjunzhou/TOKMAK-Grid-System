@@ -40,6 +40,26 @@ public class TestSquareGridSystem : MonoBehaviour
             Debug.Log("Successfully removed");
         }
     }
+
+    [Button("Test the RemoveVertex method")]
+    private void TestRemoveVertex()
+    {
+        // add two vertices and edge between them
+        SquareGridSystem<string> squareGridSystem = new SquareGridSystem<string>();
+        squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10, "ver1");
+        squareGridSystem.AddVertex(new GridCoordinate(0, 2), 12, "ver2");
+        squareGridSystem.AddDoubleEdge(new GridCoordinate(0, 1), new GridCoordinate(0, 2), 1);
+        
+        // print out the info of two vertices
+        Debug.Log("Vertex (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
+        Debug.Log("Vertex (0, 2): " + squareGridSystem.GetVertex(new GridCoordinate(0, 2)));
+        
+        // remove one vertex
+        squareGridSystem.RemoveVertex(new GridCoordinate(0, 2));
+        
+        // print out the info of Vertex (0, 1)
+        Debug.Log("Vertex (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
+    }
     
     [Button("Test AddEdge and AddDoubleEdge")]
     private void TestAddEdge()
