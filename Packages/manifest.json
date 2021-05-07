@@ -7,6 +7,7 @@
     "com.unity.textmeshpro": "2.1.1",
     "com.unity.timeline": "1.2.15",
     "com.unity.ugui": "1.0.0",
+    "net.wraithavengames.unityinterfacesupport": "https://github.com/TheDudeFromCI/Unity-Interface-Support.git?path=/Packages/net.wraithavengames.unityinterfacesupport",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
