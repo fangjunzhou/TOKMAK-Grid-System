@@ -11,7 +11,9 @@ namespace GridSystem
         /// </summary>
         /// <param name="width">the width of the map</param>
         /// <param name="height">the height of the map</param>
-        void GenerateMap(int width, int height);
+        /// <param name="cost">the cost of edges</param>
+        /// <typeparam name="ElementType"> The Generic type of GridElement for method to cast</typeparam>
+        void GenerateMap<ElementType>(int width, int height, float cost) where ElementType : GridElement;
 
         /// <summary>
         /// Remove all the vertices in the GridSystem

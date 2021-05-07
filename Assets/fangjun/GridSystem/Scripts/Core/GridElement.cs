@@ -37,6 +37,7 @@ namespace GridSystem
             set
             {
                 _coordinate = value;
+                OnCoordinateChange();
             }
         }
 
@@ -53,6 +54,24 @@ namespace GridSystem
             {
                 _gridEventHandler = value;
             }
+        }
+
+        #endregion
+
+        #region Private Methods
+        
+        
+        
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Call this method when the coordinate changes
+        /// </summary>
+        protected virtual void OnCoordinateChange()
+        {
+            
         }
 
         #endregion
