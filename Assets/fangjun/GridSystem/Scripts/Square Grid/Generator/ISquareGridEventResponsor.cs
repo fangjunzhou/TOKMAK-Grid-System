@@ -6,6 +6,10 @@ namespace GridSystem.Square.Generator
     {
         #region Public Field
 
+        /// <summary>
+        /// The squareGridEventHandler which stored the selected GameObject and GridElement
+        /// initialized by the EventView
+        /// </summary>
         SquareGridEventHandler squareGridEventHandler { get; set; }
 
         #endregion
