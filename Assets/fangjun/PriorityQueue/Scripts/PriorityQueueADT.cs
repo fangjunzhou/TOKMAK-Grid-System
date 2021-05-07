@@ -10,8 +10,17 @@ namespace fangjun.PriorityQueue
         /// Push a new element into the PriorityQueue
         /// </summary>
         /// <param name="data">the data you want to store</param>
+        /// <param name="priority">the priority of the node</param>
         /// <returns>return true if success</returns>
-        bool Push(T data);
+        bool Push(T data, float priority);
+
+        /// <summary>
+        /// Change the priority of an Object
+        /// </summary>
+        /// <param name="data">the Object to change priority</param>
+        /// <param name="priority">the priority to change</param>
+        /// <returns></returns>
+        bool ChangePriority(T data, float priority);
 
         /// <summary>
         /// Return and remove the largest node in the PriorityQueue

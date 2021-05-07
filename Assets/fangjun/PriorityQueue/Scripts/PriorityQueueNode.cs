@@ -10,7 +10,7 @@ namespace fangjun.PriorityQueue
         // data stored in the wrapper class
         private DataT m_Data;
         // priority of this node
-        private int m_Priority;
+        private float m_Priority;
         #endregion
 
         #region Public Field
@@ -20,11 +20,17 @@ namespace fangjun.PriorityQueue
             set { m_Data = value; }
         }
 
-        public int priority
+        public float priority
         {
             get { return m_Priority; }
             set { m_Priority = value; }
         }
+
+        /// <summary>
+        /// the index of current node
+        /// </summary>
+        public int index;
+
         #endregion
     }
 }
