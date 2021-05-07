@@ -88,7 +88,9 @@ namespace GridSystem
         /// <param name="start">the coordinate of the start vertex</param>
         /// <param name="end">the coordinate of the end vertex</param>
         /// <returns>a list of verticies that lies on the shortest path from the start vertex to the end vertex</returns>
-        List<Vertex<DataType>> FindShortestPath(GridCoordinate start, GridCoordinate end);
+        /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
+        /// or the endVertex with the end coordinate do not exist</exception>
+        LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, GridCoordinate end);
 
         #endregion
     }

@@ -5,7 +5,11 @@
         {
             "src": "../Assets/fangjun/GridSystem/Scripts",
             "files":["**/**.cs"]
-        }
+        },
+		{
+            "src": "../Assets/fangjun/PriorityQueue",
+            "files":["**/**.cs"]
+		}
       ],
       "dest": "api",
       "disableGitFeatures": false,

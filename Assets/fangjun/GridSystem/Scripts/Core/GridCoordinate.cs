@@ -1,11 +1,17 @@
-﻿namespace GridSystem
+﻿using System;
+using UnityEngine;
+
+namespace GridSystem
 {
+    [System.Serializable]
     public class GridCoordinate
     {
         #region Private Field
 
         // The x and y components of the coordinate
+        [SerializeField]
         private int _x;
+        [SerializeField]
         private int _y;
 
         #endregion
