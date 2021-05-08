@@ -1,6 +1,6 @@
 {
   "name": "com.fintokmak.priorityqueue",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "displayName": "Priority Queue",
   "description": "This is the Priority Queue implemented by FinTOKMAK Studio",
   "unity": "2019.4",
