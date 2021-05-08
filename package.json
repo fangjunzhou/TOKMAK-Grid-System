@@ -1,6 +1,6 @@
 {
   "name": "com.fintokmak.priorityqueue",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "displayName": "Priority Queue",
   "description": "This is the Priority Queue implemented by FinTOKMAK Studio",
   "unity": "2019.4",
@@ -11,7 +11,7 @@
   "keywords": [
   ],
   "author": {
-    "name": "Fangjun Zhou",
+    "name": "FinTOKMAK Studio",
     "email": "fangjun.zhou02@gmail.com"
   }
 }

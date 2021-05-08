@@ -42,6 +42,11 @@ namespace FinTOKMAK.PriorityQueue
         T GetElement(T data);
 
         /// <summary>
+        /// Clear all the nodes in the PriorityQueue
+        /// </summary>
+        void Clear();
+
+        /// <summary>
         /// Check if the PriorityQueue is empty
         /// </summary>
         /// <returns>return true if empty</returns>
