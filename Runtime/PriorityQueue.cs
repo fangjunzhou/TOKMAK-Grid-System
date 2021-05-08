@@ -211,6 +211,9 @@ namespace FinTOKMAK.PriorityQueue
             priorityQueueNodes.RemoveAt(priorityQueueNodes.Count - 1);
             
             PerculateDown(0);
+            
+            // remove the key-value pair in the hash table
+            dataNodePairs.Remove(res.data);
 
             return res.data;
         }
@@ -226,6 +229,12 @@ namespace FinTOKMAK.PriorityQueue
                 return default;
             
             return dataNodePairs[data].data;
+        }
+
+        public void Clear()
+        {
+            priorityQueueNodes = new List<PriorityQueueNode<DataT>>();
+            dataNodePairs = new Dictionary<DataT, PriorityQueueNode<DataT>>();
         }
 
         public override string ToString()
