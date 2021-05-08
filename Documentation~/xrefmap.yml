@@ -1,0 +1,367 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: FinTOKMAK.PriorityQueue
+  name: FinTOKMAK.PriorityQueue
+  href: api/FinTOKMAK.PriorityQueue.html
+  commentId: N:FinTOKMAK.PriorityQueue
+  fullName: FinTOKMAK.PriorityQueue
+  nameWithType: FinTOKMAK.PriorityQueue
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1
+  name: PriorityQueue<DataT>
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html
+  commentId: T:FinTOKMAK.PriorityQueue.PriorityQueue`1
+  name.vb: PriorityQueue(Of DataT)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT)
+  nameWithType: PriorityQueue<DataT>
+  nameWithType.vb: PriorityQueue(Of DataT)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.ChangePriority(`0,System.Single)
+  name: ChangePriority(DataT, Single)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_ChangePriority__0_System_Single_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.ChangePriority(`0,System.Single)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.ChangePriority(DataT, System.Single)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).ChangePriority(DataT, System.Single)
+  nameWithType: PriorityQueue<DataT>.ChangePriority(DataT, Single)
+  nameWithType.vb: PriorityQueue(Of DataT).ChangePriority(DataT, Single)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.ChangePriority*
+  name: ChangePriority
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_ChangePriority_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.ChangePriority
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.ChangePriority
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).ChangePriority
+  nameWithType: PriorityQueue<DataT>.ChangePriority
+  nameWithType.vb: PriorityQueue(Of DataT).ChangePriority
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Clear
+  name: Clear()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Clear
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.Clear
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Clear()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Clear()
+  nameWithType: PriorityQueue<DataT>.Clear()
+  nameWithType.vb: PriorityQueue(Of DataT).Clear()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Clear*
+  name: Clear
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Clear_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.Clear
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Clear
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Clear
+  nameWithType: PriorityQueue<DataT>.Clear
+  nameWithType.vb: PriorityQueue(Of DataT).Clear
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.GetElement(`0)
+  name: GetElement(DataT)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_GetElement__0_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.GetElement(`0)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.GetElement(DataT)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).GetElement(DataT)
+  nameWithType: PriorityQueue<DataT>.GetElement(DataT)
+  nameWithType.vb: PriorityQueue(Of DataT).GetElement(DataT)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.GetElement*
+  name: GetElement
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_GetElement_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.GetElement
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.GetElement
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).GetElement
+  nameWithType: PriorityQueue<DataT>.GetElement
+  nameWithType.vb: PriorityQueue(Of DataT).GetElement
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.isEmpty
+  name: isEmpty
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_isEmpty
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueue`1.isEmpty
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.isEmpty
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).isEmpty
+  nameWithType: PriorityQueue<DataT>.isEmpty
+  nameWithType.vb: PriorityQueue(Of DataT).isEmpty
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.isEmpty*
+  name: isEmpty
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_isEmpty_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.isEmpty
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.isEmpty
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).isEmpty
+  nameWithType: PriorityQueue<DataT>.isEmpty
+  nameWithType.vb: PriorityQueue(Of DataT).isEmpty
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.length
+  name: length
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_length
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueue`1.length
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.length
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).length
+  nameWithType: PriorityQueue<DataT>.length
+  nameWithType.vb: PriorityQueue(Of DataT).length
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.length*
+  name: length
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_length_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.length
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.length
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).length
+  nameWithType: PriorityQueue<DataT>.length
+  nameWithType.vb: PriorityQueue(Of DataT).length
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Peek
+  name: Peek()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Peek
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.Peek
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Peek()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Peek()
+  nameWithType: PriorityQueue<DataT>.Peek()
+  nameWithType.vb: PriorityQueue(Of DataT).Peek()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Peek*
+  name: Peek
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Peek_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.Peek
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Peek
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Peek
+  nameWithType: PriorityQueue<DataT>.Peek
+  nameWithType.vb: PriorityQueue(Of DataT).Peek
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Pop
+  name: Pop()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Pop
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.Pop
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Pop()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Pop()
+  nameWithType: PriorityQueue<DataT>.Pop()
+  nameWithType.vb: PriorityQueue(Of DataT).Pop()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Pop*
+  name: Pop
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Pop_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.Pop
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Pop
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Pop
+  nameWithType: PriorityQueue<DataT>.Pop
+  nameWithType.vb: PriorityQueue(Of DataT).Pop
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Push(`0,System.Single)
+  name: Push(DataT, Single)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Push__0_System_Single_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.Push(`0,System.Single)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Push(DataT, System.Single)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Push(DataT, System.Single)
+  nameWithType: PriorityQueue<DataT>.Push(DataT, Single)
+  nameWithType.vb: PriorityQueue(Of DataT).Push(DataT, Single)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.Push*
+  name: Push
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_Push_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.Push
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.Push
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).Push
+  nameWithType: PriorityQueue<DataT>.Push
+  nameWithType.vb: PriorityQueue(Of DataT).Push
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.ToString
+  name: ToString()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_ToString
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueue`1.ToString
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.ToString()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).ToString()
+  nameWithType: PriorityQueue<DataT>.ToString()
+  nameWithType.vb: PriorityQueue(Of DataT).ToString()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueue`1.ToString*
+  name: ToString
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueue-1.html#FinTOKMAK_PriorityQueue_PriorityQueue_1_ToString_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueue`1.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueue<DataT>.ToString
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueue(Of DataT).ToString
+  nameWithType: PriorityQueue<DataT>.ToString
+  nameWithType.vb: PriorityQueue(Of DataT).ToString
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1
+  name: PriorityQueueADT<T>
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html
+  commentId: T:FinTOKMAK.PriorityQueue.PriorityQueueADT`1
+  name.vb: PriorityQueueADT(Of T)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T)
+  nameWithType: PriorityQueueADT<T>
+  nameWithType.vb: PriorityQueueADT(Of T)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.ChangePriority(`0,System.Single)
+  name: ChangePriority(T, Single)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_ChangePriority__0_System_Single_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.ChangePriority(`0,System.Single)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.ChangePriority(T, System.Single)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).ChangePriority(T, System.Single)
+  nameWithType: PriorityQueueADT<T>.ChangePriority(T, Single)
+  nameWithType.vb: PriorityQueueADT(Of T).ChangePriority(T, Single)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.ChangePriority*
+  name: ChangePriority
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_ChangePriority_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.ChangePriority
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.ChangePriority
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).ChangePriority
+  nameWithType: PriorityQueueADT<T>.ChangePriority
+  nameWithType.vb: PriorityQueueADT(Of T).ChangePriority
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Clear
+  name: Clear()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Clear
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Clear
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Clear()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Clear()
+  nameWithType: PriorityQueueADT<T>.Clear()
+  nameWithType.vb: PriorityQueueADT(Of T).Clear()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Clear*
+  name: Clear
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Clear_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Clear
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Clear
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Clear
+  nameWithType: PriorityQueueADT<T>.Clear
+  nameWithType.vb: PriorityQueueADT(Of T).Clear
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.GetElement(`0)
+  name: GetElement(T)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_GetElement__0_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.GetElement(`0)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.GetElement(T)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).GetElement(T)
+  nameWithType: PriorityQueueADT<T>.GetElement(T)
+  nameWithType.vb: PriorityQueueADT(Of T).GetElement(T)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.GetElement*
+  name: GetElement
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_GetElement_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.GetElement
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.GetElement
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).GetElement
+  nameWithType: PriorityQueueADT<T>.GetElement
+  nameWithType.vb: PriorityQueueADT(Of T).GetElement
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.isEmpty
+  name: isEmpty
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_isEmpty
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.isEmpty
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.isEmpty
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).isEmpty
+  nameWithType: PriorityQueueADT<T>.isEmpty
+  nameWithType.vb: PriorityQueueADT(Of T).isEmpty
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.isEmpty*
+  name: isEmpty
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_isEmpty_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.isEmpty
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.isEmpty
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).isEmpty
+  nameWithType: PriorityQueueADT<T>.isEmpty
+  nameWithType.vb: PriorityQueueADT(Of T).isEmpty
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.length
+  name: length
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_length
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.length
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.length
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).length
+  nameWithType: PriorityQueueADT<T>.length
+  nameWithType.vb: PriorityQueueADT(Of T).length
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.length*
+  name: length
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_length_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.length
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.length
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).length
+  nameWithType: PriorityQueueADT<T>.length
+  nameWithType.vb: PriorityQueueADT(Of T).length
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Peek
+  name: Peek()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Peek
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Peek
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Peek()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Peek()
+  nameWithType: PriorityQueueADT<T>.Peek()
+  nameWithType.vb: PriorityQueueADT(Of T).Peek()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Peek*
+  name: Peek
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Peek_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Peek
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Peek
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Peek
+  nameWithType: PriorityQueueADT<T>.Peek
+  nameWithType.vb: PriorityQueueADT(Of T).Peek
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Pop
+  name: Pop()
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Pop
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Pop
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Pop()
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Pop()
+  nameWithType: PriorityQueueADT<T>.Pop()
+  nameWithType.vb: PriorityQueueADT(Of T).Pop()
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Pop*
+  name: Pop
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Pop_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Pop
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Pop
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Pop
+  nameWithType: PriorityQueueADT<T>.Pop
+  nameWithType.vb: PriorityQueueADT(Of T).Pop
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Push(`0,System.Single)
+  name: Push(T, Single)
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Push__0_System_Single_
+  commentId: M:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Push(`0,System.Single)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Push(T, System.Single)
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Push(T, System.Single)
+  nameWithType: PriorityQueueADT<T>.Push(T, Single)
+  nameWithType.vb: PriorityQueueADT(Of T).Push(T, Single)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Push*
+  name: Push
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueADT-1.html#FinTOKMAK_PriorityQueue_PriorityQueueADT_1_Push_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueADT`1.Push
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueADT<T>.Push
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueADT(Of T).Push
+  nameWithType: PriorityQueueADT<T>.Push
+  nameWithType.vb: PriorityQueueADT(Of T).Push
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1
+  name: PriorityQueueNode<DataT>
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html
+  commentId: T:FinTOKMAK.PriorityQueue.PriorityQueueNode`1
+  name.vb: PriorityQueueNode(Of DataT)
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT)
+  nameWithType: PriorityQueueNode<DataT>
+  nameWithType.vb: PriorityQueueNode(Of DataT)
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1.data
+  name: data
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html#FinTOKMAK_PriorityQueue_PriorityQueueNode_1_data
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueueNode`1.data
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>.data
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT).data
+  nameWithType: PriorityQueueNode<DataT>.data
+  nameWithType.vb: PriorityQueueNode(Of DataT).data
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1.data*
+  name: data
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html#FinTOKMAK_PriorityQueue_PriorityQueueNode_1_data_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueNode`1.data
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>.data
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT).data
+  nameWithType: PriorityQueueNode<DataT>.data
+  nameWithType.vb: PriorityQueueNode(Of DataT).data
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1.index
+  name: index
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html#FinTOKMAK_PriorityQueue_PriorityQueueNode_1_index
+  commentId: F:FinTOKMAK.PriorityQueue.PriorityQueueNode`1.index
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>.index
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT).index
+  nameWithType: PriorityQueueNode<DataT>.index
+  nameWithType.vb: PriorityQueueNode(Of DataT).index
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1.priority
+  name: priority
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html#FinTOKMAK_PriorityQueue_PriorityQueueNode_1_priority
+  commentId: P:FinTOKMAK.PriorityQueue.PriorityQueueNode`1.priority
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>.priority
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT).priority
+  nameWithType: PriorityQueueNode<DataT>.priority
+  nameWithType.vb: PriorityQueueNode(Of DataT).priority
+- uid: FinTOKMAK.PriorityQueue.PriorityQueueNode`1.priority*
+  name: priority
+  href: api/FinTOKMAK.PriorityQueue.PriorityQueueNode-1.html#FinTOKMAK_PriorityQueue_PriorityQueueNode_1_priority_
+  commentId: Overload:FinTOKMAK.PriorityQueue.PriorityQueueNode`1.priority
+  isSpec: "True"
+  fullName: FinTOKMAK.PriorityQueue.PriorityQueueNode<DataT>.priority
+  fullName.vb: FinTOKMAK.PriorityQueue.PriorityQueueNode(Of DataT).priority
+  nameWithType: PriorityQueueNode<DataT>.priority
+  nameWithType.vb: PriorityQueueNode(Of DataT).priority
