@@ -39,6 +39,8 @@ public class DrawObstacle : MonoBehaviour, ISquareGridEventResponsor
     #endregion
 
     #region Public Field
+
+    public int obstacleCost;
     
     /// <summary>
     /// The text showing current state
@@ -88,7 +90,7 @@ public class DrawObstacle : MonoBehaviour, ISquareGridEventResponsor
                     (SquareGridVertex<GridDataContainer>)SquareGridGenerator.Instance.squareGridSystem.
                         GetVertex(_selectedGridElement.gridCoordinate);
                 // change the cost of current selected Vertex
-                currentVertex.cost = 20;
+                currentVertex.cost = obstacleCost;
 
                 GridCoordinate currentCoordinate = currentVertex.coordinate;
                 // travers four corner Vertices
@@ -131,7 +133,7 @@ public class DrawObstacle : MonoBehaviour, ISquareGridEventResponsor
                                 break;
                         }
                         SquareGridGenerator.Instance.squareGridSystem.
-                            SetDoubleEdge(edgeTargetA, edgeTargetB, 20 * SQRT_2);
+                            SetDoubleEdge(edgeTargetA, edgeTargetB, obstacleCost * SQRT_2);
                     }
                 }
             }
@@ -141,7 +143,7 @@ public class DrawObstacle : MonoBehaviour, ISquareGridEventResponsor
                     (SquareGridVertex<GridDataContainer>)SquareGridGenerator.Instance.squareGridSystem.
                         GetVertex(_selectedGridElement.gridCoordinate);
                 // change the cost of current selected Vertex
-                currentVertex.cost = 0;
+                currentVertex.cost = 1;
 
                 GridCoordinate currentCoordinate = currentVertex.coordinate;
                 // travers four corner Vertices
