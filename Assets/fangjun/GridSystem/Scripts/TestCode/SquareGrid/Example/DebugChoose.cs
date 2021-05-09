@@ -1,5 +1,5 @@
-﻿using GridSystem;
-using GridSystem.Square.Generator;
+﻿using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square.Generator;
 using UnityEngine;
 
 public class DebugChoose : MonoBehaviour, ISquareGridEventResponsor

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GridSystem;
-using GridSystem.Square.Generator;
+using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square.Generator;
 using UnityEngine;
 using UnityEngine.UI;
 

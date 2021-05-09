@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GridSystem;
+using FinTOKMAK.GridSystem;
 
-namespace GridSystem.Square.Generator
+namespace FinTOKMAK.GridSystem.Square.Generator
 {
     /// <summary>
     /// The event handler of various of grid event

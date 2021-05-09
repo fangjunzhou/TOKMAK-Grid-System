@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The base class for an Edge between Verteces

@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 using NaughtyAttributes;
-using GridSystem;
-using GridSystem.Square;
+using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square;
 
 public class TestSquareGridElement : MonoBehaviour
 {

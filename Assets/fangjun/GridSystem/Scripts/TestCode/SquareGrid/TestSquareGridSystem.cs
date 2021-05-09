@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using GridSystem;
-using GridSystem.Square;
-using GridSystem.Square.Generator;
+using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square;
+using FinTOKMAK.GridSystem.Square.Generator;
 
 public class TestSquareGridSystem : MonoBehaviour
 {
@@ -53,7 +53,7 @@ public class TestSquareGridSystem : MonoBehaviour
         SquareGridSystem<string> squareGridSystem = new SquareGridSystem<string>();
         squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10, "ver1");
         squareGridSystem.AddVertex(new GridCoordinate(0, 2), 12, "ver2");
-        squareGridSystem.AddDoubleEdge(new GridCoordinate(0, 1), new GridCoordinate(0, 2), 1);
+        squareGridSystem.SetDoubleEdge(new GridCoordinate(0, 1), new GridCoordinate(0, 2), 1);
         
         // print out the info of two vertices
         Debug.Log("Vertex (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
@@ -79,7 +79,7 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.LogWarning("ADD EDGE");
         // add edge
-        squareGridSystem.AddEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+        squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
         
         Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
         Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
@@ -92,7 +92,7 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.LogWarning("ADD DOUBLE EDGE");
         // add double edge
-        squareGridSystem.AddDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
+        squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
         
         Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
         Debug.Log("Get (3, 5): " + squareGridSystem.GetVertex(new GridCoordinate(3, 5)));
@@ -111,7 +111,7 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.LogWarning("ADD EDGE");
         // add edge
-        squareGridSystem.AddEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+        squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
         
         Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
         Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
@@ -133,7 +133,7 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.LogWarning("ADD EDGE");
         // add edge
-        squareGridSystem.AddEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+        squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
         
         Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
         Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
@@ -146,7 +146,7 @@ public class TestSquareGridSystem : MonoBehaviour
         
         Debug.LogWarning("ADD DOUBLE EDGE");
         // add double edge
-        squareGridSystem.AddDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
+        squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
         
         Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
         Debug.Log("Get (3, 5): " + squareGridSystem.GetVertex(new GridCoordinate(3, 5)));

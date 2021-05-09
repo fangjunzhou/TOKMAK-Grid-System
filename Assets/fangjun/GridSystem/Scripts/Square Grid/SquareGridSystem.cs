@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using fangjun.PriorityQueue;
+using FinTOKMAK.PriorityQueue;
 
-namespace GridSystem.Square
+namespace FinTOKMAK.GridSystem.Square
 {
     public class SquareGridSystem<DataType> : IGridSystem<DataType>
     {
@@ -304,25 +304,25 @@ namespace GridSystem.Square
         #region IGridSystem interface
 
         /// <summary>
-        /// Add a non-directional Edge between coordinate1 and coordinate2
+        /// Set a non-directional Edge between coordinate1 and coordinate2
         /// </summary>
         /// <param name="coordinate1">the coordinate of first Vertex</param>
         /// <param name="coordinate2">the coordinate of second Vertex</param>
         /// <param name="weight">the weight of Edge between two vertices</param>
-        public void AddDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight)
+        public void SetDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight)
         {
-            AddEdge(coordinate1, coordinate2, weight);
-            AddEdge(coordinate2, coordinate1, weight);
+            SetEdge(coordinate1, coordinate2, weight);
+            SetEdge(coordinate2, coordinate1, weight);
         }
 
         /// <summary>
-        /// Add a directional Edge from start coordinate to end coordinate
+        /// Set a directional Edge from start coordinate to end coordinate
         /// </summary>
         /// <param name="start">the coordinate of start Vertex</param>
         /// <param name="end">the coordinate of end Vertex</param>
         /// <param name="weight">the weight of Edge between two vertices</param>
         /// <exception cref="ArgumentException">if the start coordinate and the end coordinate are not neighbor</exception>
-        public void AddEdge(GridCoordinate start, GridCoordinate end, float weight)
+        public void SetEdge(GridCoordinate start, GridCoordinate end, float weight)
         {
             // Get the start and end Vertex
             SquareGridVertex<DataType> startVertex = _vertices[start];

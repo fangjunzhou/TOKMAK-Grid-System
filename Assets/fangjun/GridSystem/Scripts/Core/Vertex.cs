@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The base class for a Vertex
