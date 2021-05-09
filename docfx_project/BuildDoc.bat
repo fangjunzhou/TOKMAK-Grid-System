@@ -1,3 +1,3 @@
 ::项目目录
 SET PPath=%~dp0
-docfx "%PPath%docfx.json"
+C:\ProgramData\chocolatey\bin\docfx.exe "%PPath%docfx.json"
