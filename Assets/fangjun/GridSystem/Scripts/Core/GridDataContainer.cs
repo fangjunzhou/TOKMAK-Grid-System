@@ -17,12 +17,18 @@ namespace FinTOKMAK.GridSystem
         /// </summary>
         private GameObject _gameObject;
 
+        /// <summary>
+        /// The GridElement component of _gameObject
+        /// </summary>
+        private GridElement _gridElement;
+
         #endregion
 
         #region Public Field
 
         /// <summary>
         /// The GameObject representation in the scene
+        /// When use the set method of this property, anyGameObject can be passed in
         /// </summary>
         public GameObject gameObject
         {
@@ -32,7 +38,19 @@ namespace FinTOKMAK.GridSystem
             }
             set
             {
+                // set the _gameObject
                 _gameObject = value;
+            }
+        }
+
+        /// <summary>
+        /// The GridElement component of _gameObject
+        /// </summary>
+        public GridElement gridElement
+        {
+            get
+            {
+                return _gridElement;
             }
         }
 
@@ -57,6 +75,17 @@ namespace FinTOKMAK.GridSystem
         public GridDataContainer(GameObject gameObject)
         {
             this._gameObject = gameObject;
+        }
+
+        /// <summary>
+        /// The one parameter constructor that initialize gameObject field and the gridElement field
+        /// for GridDataContainer
+        /// </summary>
+        /// <param name="gridElement">the GridElement of the GameObject stored in the DataContainer</param>
+        public GridDataContainer(GridElement gridElement)
+        {
+            this._gameObject = gridElement.gameObject;
+            this._gridElement = gridElement;
         }
 
         #endregion
