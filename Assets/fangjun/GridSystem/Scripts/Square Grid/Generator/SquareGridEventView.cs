@@ -23,7 +23,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// <summary>
         /// The GridElement of _selectedGameObject
         /// </summary>
-        private SampleSquareGridElement _selectedGridElement;
+        private GridElement _selectedGridElement;
 
         #endregion
 

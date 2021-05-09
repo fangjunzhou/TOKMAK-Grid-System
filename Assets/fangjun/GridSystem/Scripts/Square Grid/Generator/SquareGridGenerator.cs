@@ -168,7 +168,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         public void ClearMap()
         {
             // Traverse all the GridElement in _gridElements
-            foreach (SampleSquareGridElement gridElement in _gridElements.Values)
+            foreach (GridElement gridElement in _gridElements.Values)
             {
                 // remove the vertex in the GridSystem
                 _squareGridSystem.RemoveVertex(gridElement.gridCoordinate);

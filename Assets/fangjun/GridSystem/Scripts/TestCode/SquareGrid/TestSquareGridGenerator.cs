@@ -2,35 +2,39 @@ using System;
 using UnityEngine;
 using NaughtyAttributes;
 using FinTOKMAK.GridSystem.Square.Generator;
+using FinTOKMAK.GridSystem.Square.Sample;
 
-public class TestSquareGridGenerator : MonoBehaviour
+namespace FinTOKMAK.GridSystem.Square.Test
 {
-    #region Public Field
+    public class TestSquareGridGenerator : MonoBehaviour
+    {
+        #region Public Field
     
-    [BoxGroup("Generator")]
-    public SquareGridGenerator squareGridGenerator;
+        [BoxGroup("Generator")]
+        public SquareGridGenerator squareGridGenerator;
     
-    [BoxGroup("Map size")]
-    public int width;
-    [BoxGroup("Map size")]
-    public int height;
+        [BoxGroup("Map size")]
+        public int width;
+        [BoxGroup("Map size")]
+        public int height;
 
-    #endregion
+        #endregion
 
-    [Button("Test the GenerateMap method")]
-    private void TestGenerate()
-    {
-        squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1);
-    }
+        [Button("Test the GenerateMap method")]
+        private void TestGenerate()
+        {
+            squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1);
+        }
 
-    [Button("Test the Clear method")]
-    private void TestClear()
-    {
-        squareGridGenerator.ClearMap();
-    }
+        [Button("Test the Clear method")]
+        private void TestClear()
+        {
+            squareGridGenerator.ClearMap();
+        }
 
-    private void Start()
-    {
-        TestGenerate();
+        private void Start()
+        {
+            TestGenerate();
+        }
     }
 }
