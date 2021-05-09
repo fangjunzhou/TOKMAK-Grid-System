@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bf09948bcab85f0d1c30ad438e7f6d1d590823fb"
+    },
+    "com.fintokmak.priorityqueue": {
+      "version": "http://anw.noip.cn:8010/Fangjun_Zhou/priority-queue.git#priorityqueue-0.1.7",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d1fe37ce3c9f8870fd3eb3870e846c1f7be0b9c9"
+    },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
       "depth": 0,
