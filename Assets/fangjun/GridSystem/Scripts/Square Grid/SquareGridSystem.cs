@@ -209,6 +209,19 @@ namespace FinTOKMAK.GridSystem.Square
             // While not get to the endVertex and openQue is not empty
             while (currentVertex.vertex != endVertex && !openQueue.isEmpty)
             {
+                #region Debug Path
+                
+                // String pathStr = "";
+                // foreach (Vertex<DataType> vertex in currentVertex.path)
+                // {
+                //     pathStr += vertex.coordinate + "=>";
+                // }
+                // Debug.Log("Vertex: " + currentVertex.vertex.coordinate + "\n" + 
+                //           "F Cost: " + currentVertex.fCost+ "\n" + 
+                //           "Path: " + pathStr);
+
+                #endregion
+
                 closeList.Add(currentVertex.vertex.coordinate, currentVertex.vertex);
                 // pop the front of the openQueue
                 currentVertex = openQueue.Pop();
@@ -239,6 +252,9 @@ namespace FinTOKMAK.GridSystem.Square
                             openQueue.ChangePriority(newVertex, -newVertex.fCost);
                             // change the path of the PathFindingVertex
                             queVertex.path = newVertex.path;
+                            // update the cost of newVertex
+                            queVertex.gCost = newVertex.gCost;
+                            queVertex.hCost = newVertex.hCost;
                         }
                         else if (queVertex == null)
                         {
