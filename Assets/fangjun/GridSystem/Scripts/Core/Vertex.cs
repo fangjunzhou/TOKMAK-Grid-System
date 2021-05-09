@@ -192,6 +192,16 @@ namespace FinTOKMAK.GridSystem
             if (!_connection.ContainsKey(direction))
                 throw new ArgumentOutOfRangeException("direction", "The direction is not in the connection dictionary");
 
+            // check if the connection exist
+            if (_connection[direction] != null)
+            {
+                // change the property of the old Edge
+                _connection[direction].to = target;
+                _connection[direction].cost = cost;
+                return;
+            }
+            
+            // if the connection does not exist
             // set the connection of the specific direction to the new target
             _connection[direction] = new Edge<DataType>(this, target, cost);
         }
