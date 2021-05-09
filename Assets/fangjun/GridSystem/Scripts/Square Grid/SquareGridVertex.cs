@@ -6,7 +6,7 @@ namespace FinTOKMAK.GridSystem.Square
 {
     /// <summary>
     /// The SquareGridVertex extention of Vertex class
-    /// each SquareGridVertex have four dirction
+    /// each SquareGridVertex have eight dirction
     /// up, down, left, and right
     /// upLeft, upRight, downLeft, and downRight
     /// </summary>

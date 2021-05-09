@@ -135,7 +135,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                     // add the Vertex to the GridSystem
-                    _squareGridSystem.AddVertex(coordinate, cost, new GridDataContainer(squareGridElement.gameObject));
+                    _squareGridSystem.AddVertex(coordinate, cost, new GridDataContainer(squareGridElement));
                     
                     // add the connection with the right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
