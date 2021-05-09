@@ -1,4 +1,4 @@
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The interface for a basic grid generate system

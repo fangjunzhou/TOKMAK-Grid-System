@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The container of all the data stored in a Vertex

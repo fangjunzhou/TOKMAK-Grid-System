@@ -3,9 +3,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-using GridSystem;
-using GridSystem.Square;
-using GridSystem.Square.Generator;
+using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square;
+using FinTOKMAK.GridSystem.Square.Generator;
 
 public enum SampleSquareGridSelectState
 {

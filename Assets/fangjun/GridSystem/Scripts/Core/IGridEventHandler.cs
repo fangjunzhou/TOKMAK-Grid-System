@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     public interface IGridEventHandler
     {

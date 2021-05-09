@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using NaughtyAttributes;
-using GridSystem;
+using FinTOKMAK.GridSystem;
 
 public class TestVertex : MonoBehaviour
 {

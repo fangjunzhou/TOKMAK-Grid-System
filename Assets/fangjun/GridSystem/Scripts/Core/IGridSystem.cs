@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The interface for a basic grid system
@@ -46,7 +46,7 @@ namespace GridSystem
         /// <param name="start">the coordinate of star vertex</param>
         /// <param name="end">the coordinate of end vertex</param>
         /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
-        void AddEdge(GridCoordinate start, GridCoordinate end, float weight);
+        void SetEdge(GridCoordinate start, GridCoordinate end, float weight);
 
         /// <summary>
         /// Add a new edge between two vertecies
@@ -54,7 +54,7 @@ namespace GridSystem
         /// <param name="coordinate1">coordiante of one vertex</param>
         /// <param name="coordinate2">coordiante of another vertex</param>
         /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
-        void AddDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight);
+        void SetDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight);
 
         /// <summary>
         /// Remove an edge from the start vertex to the end vertex

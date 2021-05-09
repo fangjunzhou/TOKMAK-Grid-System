@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     /// <summary>
     /// The GridElement class that attach to GameObject representation of Vertex

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using NaughtyAttributes;
 
-namespace GridSystem.Square.Generator
+namespace FinTOKMAK.GridSystem.Square.Generator
 {
     public class SquareGridEventView : MonoBehaviour
     {

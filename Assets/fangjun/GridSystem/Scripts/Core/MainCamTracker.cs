@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridSystem
+namespace FinTOKMAK.GridSystem
 {
     public class MainCamTracker : MonoBehaviour
     {

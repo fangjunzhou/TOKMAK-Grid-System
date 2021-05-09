@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GridSystem;
-using GridSystem.Square;
+using FinTOKMAK.GridSystem;
+using FinTOKMAK.GridSystem.Square;
 using NaughtyAttributes;
 using UnityEngine.Serialization;
 
-namespace GridSystem.Square.Generator
+namespace FinTOKMAK.GridSystem.Square.Generator
 {
     
     /// <summary>
@@ -135,32 +135,32 @@ namespace GridSystem.Square.Generator
                     _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                     // add the Vertex to the GridSystem
-                    _squareGridSystem.AddVertex(coordinate, 0, new GridDataContainer(squareGridElement.gameObject));
+                    _squareGridSystem.AddVertex(coordinate, cost, new GridDataContainer(squareGridElement.gameObject));
                     
                     // add the connection with the right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x + 1, y), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y), cost);
                     // add the connection with the left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x - 1, y), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y), cost);
                     // add the connection with top grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x, y + 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y + 1), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x, y + 1), cost);
                     // add the connection with bottom grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x, y - 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x, y - 1), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x, y - 1), cost);
                     // add the connection with the top left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y + 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x - 1, y + 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y + 1), cost * SQRT_2);
                     // add the connection with the top right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y + 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x + 1, y + 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y + 1), cost * SQRT_2);
                     // add the connection with the down left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y - 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x - 1, y - 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y - 1), cost * SQRT_2);
                     // add the connection with the down right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y - 1)) != null)
-                        _squareGridSystem.AddDoubleEdge(coordinate, new GridCoordinate(x + 1, y - 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y - 1), cost * SQRT_2);
                 }
             }
         }

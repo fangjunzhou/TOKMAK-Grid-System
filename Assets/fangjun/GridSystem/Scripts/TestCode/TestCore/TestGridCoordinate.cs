@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using GridSystem;
+using FinTOKMAK.GridSystem;
 
 /// <summary>
 /// The test class for the GridCoordinate class

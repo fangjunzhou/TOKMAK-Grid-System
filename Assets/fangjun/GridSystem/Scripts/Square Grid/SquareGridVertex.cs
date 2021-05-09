@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridSystem.Square
+namespace FinTOKMAK.GridSystem.Square
 {
     /// <summary>
     /// The SquareGridVertex extention of Vertex class

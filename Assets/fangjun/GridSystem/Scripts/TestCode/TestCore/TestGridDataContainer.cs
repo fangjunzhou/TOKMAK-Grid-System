@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GridSystem;
+using FinTOKMAK.GridSystem;
 using UnityEngine;
 using NaughtyAttributes;
 

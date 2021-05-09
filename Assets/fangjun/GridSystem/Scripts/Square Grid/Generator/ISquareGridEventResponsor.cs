@@ -1,6 +1,6 @@
-﻿using GridSystem.Square.Generator;
+﻿using FinTOKMAK.GridSystem.Square.Generator;
 
-namespace GridSystem.Square.Generator
+namespace FinTOKMAK.GridSystem.Square.Generator
 {
     public interface ISquareGridEventResponsor
     {
