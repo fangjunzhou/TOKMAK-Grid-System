@@ -20,7 +20,7 @@ public class TestSquareGridGenerator : MonoBehaviour
     [Button("Test the GenerateMap method")]
     private void TestGenerate()
     {
-        squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 2);
+        squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1);
     }
 
     [Button("Test the Clear method")]
