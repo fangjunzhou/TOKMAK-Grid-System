@@ -195,6 +195,12 @@ namespace FinTOKMAK.GridSystem.Square
                     float hCost = CalculateHCost(to, endVertex);
                     float gCost = CalculateGCostForward(currentVertex, to);
                     PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
+                    // deep copy of current path
+                    newVertex.path = new LinkedList<Vertex<DataType>>();
+                    foreach (Vertex<DataType> vertex in currentVertex.path)
+                    {
+                        newVertex.path.AddLast(vertex);
+                    }
                     newVertex.path.AddLast(to);
                     // push the newVertex into the openQueue
                     openQueue.Push(newVertex, -newVertex.fCost);
@@ -227,9 +233,12 @@ namespace FinTOKMAK.GridSystem.Square
                         
                         // check if the openQueue already contains newVertex. If so, update it
                         PathFindingVertex queVertex = openQueue.GetElement(newVertex);
-                        if (queVertex != null && queVertex.fCost < -newVertex.fCost)
+                        if (queVertex != null && -queVertex.fCost < -newVertex.fCost)
                         {
+                            // change the priority of the newly found path
                             openQueue.ChangePriority(newVertex, -newVertex.fCost);
+                            // change the path of the PathFindingVertex
+                            queVertex.path = newVertex.path;
                         }
                         else if (queVertex == null)
                         {
