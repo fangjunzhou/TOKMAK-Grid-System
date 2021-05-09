@@ -1,0 +1,6 @@
+doc_job_1:
+  tags:
+    - ci
+  script:
+    - cmd /c .\docfx_project\build.bat
+    - cmd /c .\docfx_project\AutoUpdate.bat
