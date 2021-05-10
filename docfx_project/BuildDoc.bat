@@ -1,3 +1,3 @@
 ::项目目录
 SET PPath=%~dp0
-docfx "%PPath%docfx.json" >>log.txt
+docfx "%PPath%docfx.json"
