@@ -1,0 +1,20 @@
+{
+  "name": "com.fintokmak.gridsystem",
+  "version": "0.0.1",
+  "displayName": "Grid System",
+  "description": "This is the Grid System developed by FinTOKMAK Studio. Grid System provide basic function of generating grids and pathfinding",
+  "unity": "2019.4",
+  "unityRelease": "0b5",
+  "license": "GPL",
+  "dependencies": {
+    "com.dbrizov.naughtyattributes" : "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+	"com.fintokmak.priorityqueue": "http://anw.noip.cn:8010/Fangjun_Zhou/priority-queue.git#priorityqueue-0.1.7",
+	"net.wraithavengames.unityinterfacesupport": "https://github.com/TheDudeFromCI/Unity-Interface-Support.git?path=/Packages/net.wraithavengames.unityinterfacesupport"
+  },
+  "keywords": [
+  ],
+  "author": {
+    "name": "FinTOKMAK Studio",
+    "email": "fangjun.zhou02@gmail.com"
+  }
+}
