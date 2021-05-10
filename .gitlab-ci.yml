@@ -2,6 +2,7 @@ doc_job_1:
   tags:
     - fjci
   script:
-    - cmd /c .\docfx_project\BuildDoc.bat
-    - cmd /c .\docfx_project\AutoUpdate.bat
+    - echo Test
+    - docfx 
+
 
