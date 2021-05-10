@@ -7,9 +7,9 @@
   "unityRelease": "0b5",
   "license": "GPL",
   "dependencies": {
-    "com.dbrizov.naughtyattributes" : "https://github.com/dbrizov/NaughtyAttributes.git#upm",
-    "com.fintokmak.priorityqueue": "http://anw.noip.cn:8010/Fangjun_Zhou/priority-queue.git#priorityqueue-0.1.7",
-    "net.wraithavengames.unityinterfacesupport": "https://github.com/TheDudeFromCI/Unity-Interface-Support.git?path=/Packages/net.wraithavengames.unityinterfacesupport"
+    "com.dbrizov.naughtyattributes" : "2.1.0",
+    "com.fintokmak.priorityqueue" : "0.1.7",
+    "net.wraithavengames.unityinterfacesupport" : "1.0.0"
   },
   "keywords": [
   ],
