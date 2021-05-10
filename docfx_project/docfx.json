@@ -3,11 +3,15 @@
     {
       "src": [
         {
-            "src": "../Assets/fangjun/GridSystem/Scripts",
+            "src": "../Assets/Package/Runtime",
             "files":["**/**.cs"]
         },
 		{
-            "src": "../Assets/fangjun/PriorityQueue",
+            "src": "../Assets/Package/Sample",
+            "files":["**/**.cs"]
+		},
+		{
+            "src": "../Assets/Package/Tests",
             "files":["**/**.cs"]
 		}
       ],
