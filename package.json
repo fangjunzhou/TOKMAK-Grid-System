@@ -6,10 +6,17 @@
   "unity": "2019.4",
   "unityRelease": "0b5",
   "license": "GPL",
+  "scopedRegistries": [
+    {
+      "name": "Naughty Attribute",
+      "url": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "scopes": [
+        "com.dbrizov.naughtyattributes"
+      ]
+    }
+  ],
   "dependencies": {
-    "com.dbrizov.naughtyattributes" : "2.1.0",
-    "com.fintokmak.priorityqueue" : "0.1.7",
-    "net.wraithavengames.unityinterfacesupport" : "1.0.0"
+    "com.dbrizov.naughtyattributes" : "2.1.0"
   },
   "keywords": [
   ],
