@@ -1,3 +1,3 @@
 open sftp://uploader:an123456@anw.noip.cn/ -hostkey="ssh-ed25519 255 Ove7aJ2FwQP++qbJNEK8CilsnU/MVXhYJ7glubchqBE="
-put ./_site/* /var/www/html/doc/gridsystem/
+put ./docfx_project/_site/* /var/www/html/doc/gridsystem/
 exit
