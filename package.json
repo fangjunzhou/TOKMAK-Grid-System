@@ -9,7 +9,7 @@
   "scopedRegistries": [
     {
       "name": "Naughty Attribute",
-      "url": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "url": "https://github.com/dbrizov/NaughtyAttributes.git",
       "scopes": [
         "com.dbrizov.naughtyattributes"
       ]
