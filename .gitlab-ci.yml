@@ -1,6 +1,6 @@
 doc_job_1:
   tags:
-    - fjci
+    - ci
   script:
     - cmd /c .\docfx_project\BuildDoc.bat
     - cmd /c .\docfx_project\AutoUpdate.bat
