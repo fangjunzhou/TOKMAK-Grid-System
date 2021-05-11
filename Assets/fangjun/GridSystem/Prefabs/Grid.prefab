@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f209da082be446bab359d951bd6fa636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  width: 115
   coordinateText: {fileID: 2418140224099528651}
   backgroundImg: {fileID: 8298141680368235281}
 --- !u!114 &-619634094019740840
