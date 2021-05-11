@@ -142,12 +142,13 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
                     squareGridElement.gridCoordinate = coordinate;
                     squareGridElement.gridEventHandler = _squareGridEventHandler;
+                    squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement);
                     
                     // add the grid element to the _gridElements
                     _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                     // add the Vertex to the GridSystem
-                    _squareGridSystem.AddVertex(coordinate, cost, new GridDataContainer(squareGridElement));
+                    _squareGridSystem.AddVertex(coordinate, cost, squareGridElement.gridDataContainer);
                     
                     // add the connection with the right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
@@ -207,12 +208,14 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     Quaternion.identity, sceneObjectRoot.transform);
                 squareGridElement.gridCoordinate = coordinate;
                 squareGridElement.gridEventHandler = _squareGridEventHandler;
+                squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement, vertexData.serializableData);
                 
                 // add the grid element to the _gridElements
                 _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                 // add the Vertex to the GridSystem
-                _squareGridSystem.AddVertex(coordinate, vertexData.cost, new GridDataContainer(squareGridElement));
+                _squareGridSystem.AddVertex(coordinate, vertexData.cost, 
+                    squareGridElement.gridDataContainer);
             }
             // add Edges
             foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
