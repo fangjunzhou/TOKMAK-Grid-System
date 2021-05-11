@@ -12,6 +12,10 @@ namespace FinTOKMAK.GridSystem
     /// <typeparam name="DataType">The data type of data that stores in each vertices</typeparam>
     public interface IGridSystem<DataType>
     {
+        #region Public Field
+
+        #endregion
+        
         #region Vertext Operation
 
         /// <summary>
