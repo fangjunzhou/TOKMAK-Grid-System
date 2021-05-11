@@ -7,7 +7,7 @@ namespace FinTOKMAK.GridSystem
     /// <summary>
     /// The class that serialize and deserialize VertexData
     /// </summary>
-    public class VertexSerializer
+    public static class VertexSerializer
     {
         #region Static Public Methods
 
