@@ -12,6 +12,7 @@ namespace FinTOKMAK.GridSystem.Square
     {
 
         #region Public Field
+
         #endregion
 
         #region Private Field
