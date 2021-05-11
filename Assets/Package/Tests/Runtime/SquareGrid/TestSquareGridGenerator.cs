@@ -9,7 +9,12 @@ namespace FinTOKMAK.GridSystem.Square.Test
     public class TestSquareGridGenerator : MonoBehaviour
     {
         #region Public Field
-    
+
+        [BoxGroup("Generate Method")]
+        public bool useMapFile;
+        [BoxGroup("Generate Method")]
+        public string filePath;
+        
         [BoxGroup("Generator")]
         public SquareGridGenerator squareGridGenerator;
     
@@ -21,10 +26,17 @@ namespace FinTOKMAK.GridSystem.Square.Test
         #endregion
 
         [Button("Test the GenerateMap method")]
-        private void TestGenerateVerticle()
+        private void TestGenerateVertical()
         {
             squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1, 
                 GridGenerationDirection.Vertical);
+        }
+
+        [Button("Test the GenerateMap method with map data file")]
+        private void TestGenerateVerticalFromFile()
+        {
+            squareGridGenerator.GenerateMap<SampleSquareGridElement>
+                (Application.dataPath + "\\TestData\\" + filePath, GridGenerationDirection.Vertical);
         }
 
         [Button("Test the Clear method")]
@@ -35,7 +47,10 @@ namespace FinTOKMAK.GridSystem.Square.Test
 
         private void Start()
         {
-            TestGenerateVerticle();
+            if (!useMapFile)
+                TestGenerateVertical();
+            else
+                TestGenerateVerticalFromFile();
         }
     }
 }

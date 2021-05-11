@@ -1,9 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FinTOKMAK.GridSystem
 {
     public class GridSystemSerializer
     {
+        /// <summary>
+        /// Serialize an IGridSystem into a map file
+        /// </summary>
+        /// <param name="gridSystem">the IGridSystem to serialize</param>
+        /// <param name="filePath">the target file path</param>
+        /// <typeparam name="DataType">the data type of Vertex</typeparam>
         public static void Serialize<DataType>(IGridSystem<DataType> gridSystem, string filePath)
         {
             // get all the vertices in the GridSystem
