@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -17,6 +18,50 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         Start_End,
         Obstacle,
         Path
+    }
+
+    [Serializable]
+    public class SampleSquareGridElementData : ISerializable
+    {
+        #region Public Field
+        
+        public bool isObstacle;
+
+        #endregion
+        
+        #region Constructor
+
+        /// <summary>
+        /// The default constructor needed for compile
+        /// </summary>
+        public SampleSquareGridElementData()
+        {
+            
+        }
+
+        #endregion
+
+        #region ISerializable
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("obstacle", isObstacle);
+        }
+
+        public SampleSquareGridElementData(SerializationInfo info, StreamingContext context)
+        {
+            isObstacle = info.GetBoolean("obstacle");
+        }
+
+        #endregion
+
+        public override string ToString()
+        {
+            string res = "";
+            res += "isObstacle: " + isObstacle + "\n";
+
+            return res;
+        }
     }
 
     public class SampleSquareGridElement : GridElement
@@ -181,6 +226,23 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                     selectState = SampleSquareGridSelectState.Blank;
                 }
             }
+
+            CreateOrChangeSerializedData();
+        }
+
+        private void CreateOrChangeSerializedData()
+        {
+            if (gridDataContainer.serializableData == null)
+            {
+                gridDataContainer.serializableData = new SampleSquareGridElementData()
+                {
+                    isObstacle = _isObstacle,
+                };
+
+                return;
+            }
+
+            ((SampleSquareGridElementData) gridDataContainer.serializableData).isObstacle = _isObstacle;
         }
 
         #endregion
@@ -202,6 +264,15 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         protected override void OnCoordinateChange()
         {
             coordinateText.text = gridCoordinate.ToString();
+        }
+
+        protected override void OnGridDataContainerChange()
+        {
+            if (gridDataContainer.serializableData != null)
+            {
+                _isObstacle = ((SampleSquareGridElementData) gridDataContainer.serializableData).isObstacle;
+                OnChangeSelectBool();
+            }
         }
 
         #endregion

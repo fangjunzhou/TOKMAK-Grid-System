@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 namespace FinTOKMAK.GridSystem
@@ -54,6 +55,11 @@ namespace FinTOKMAK.GridSystem
             }
         }
 
+        /// <summary>
+        /// Serializable data that stores in the GridDataContainer
+        /// </summary>
+        public ISerializable serializableData { get; set; }
+
         #endregion
 
         #region Constructor
@@ -88,6 +94,19 @@ namespace FinTOKMAK.GridSystem
             this._gridElement = gridElement;
         }
 
+        /// <summary>
+        /// The two parameter constructor that initialize gameObject field, gridElement field,
+        /// and serializableData field
+        /// </summary>
+        /// <param name="gridElement">the GridElement of the GameObject stored in the DataContainer</param>
+        /// <param name="serializableData">serializable data that will store in the GridDataContainer</param>
+        public GridDataContainer(GridElement gridElement, ISerializable serializableData)
+        {
+            this._gameObject = gridElement.gameObject;
+            this._gridElement = gridElement;
+            this.serializableData = serializableData;
+        }
+
         #endregion
 
         /// <summary>
@@ -103,11 +122,20 @@ namespace FinTOKMAK.GridSystem
             if (_gameObject != null)
             {
                 info += "Name of gameObject in scene: " + _gameObject.name + "\n";
-                info += "Position: " + _gameObject.transform.position;
+                info += "Position: " + _gameObject.transform.position + "\n";
             }
             else
             {
                 info += "There's no GameObject representation in the scene";
+            }
+
+            if (serializableData != null)
+            {
+                info += "Serializable Data: " + serializableData.ToString();
+            }
+            else
+            {
+                info += "Serializable Data: null";
             }
 
             return info;

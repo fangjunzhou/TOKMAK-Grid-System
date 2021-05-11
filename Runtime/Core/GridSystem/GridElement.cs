@@ -21,6 +21,11 @@ namespace FinTOKMAK.GridSystem
         /// </summary>
         private protected IGridEventHandler _gridEventHandler;
 
+        /// <summary>
+        /// The GridDataContainer Object in the Vertex
+        /// </summary>
+        private protected GridDataContainer _gridDataContainer;
+
         #endregion
 
         #region Public Field
@@ -56,6 +61,27 @@ namespace FinTOKMAK.GridSystem
             }
         }
 
+        /// <summary>
+        /// The GridDataContainer Object in the Vertex
+        /// </summary>
+        public GridDataContainer gridDataContainer
+        {
+            get
+            {
+                return _gridDataContainer;
+            }
+            set
+            {
+                _gridDataContainer = value;
+                OnGridDataContainerChange();
+            }
+        }
+
+        /// <summary>
+        /// The width of the GameObject representation of the Vertex in the scene
+        /// </summary>
+        public float width;
+
         #endregion
 
         #region Private Methods
@@ -64,12 +90,20 @@ namespace FinTOKMAK.GridSystem
         
         #endregion
 
-        #region Public Methods
+        #region Proteced Methods
 
         /// <summary>
         /// Call this method when the coordinate changes
         /// </summary>
         protected virtual void OnCoordinateChange()
+        {
+            
+        }
+
+        /// <summary>
+        /// Call this method when gridDataContainer changes
+        /// </summary>
+        protected virtual void OnGridDataContainerChange()
         {
             
         }

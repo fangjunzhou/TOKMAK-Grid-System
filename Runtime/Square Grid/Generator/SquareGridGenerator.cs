@@ -115,7 +115,8 @@ namespace FinTOKMAK.GridSystem.Square.Generator
 
         #region IGridGenerator inteface
 
-        public void GenerateMap<ElementType> (int width, int height, float cost) where ElementType: GridElement
+        public void GenerateMap<ElementType> (int width, int height, float cost, GridGenerationDirection direction) 
+            where ElementType: GridElement
         {
             // traverse all the grid
             for (int y = 0; y < height; y++)
@@ -126,16 +127,28 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     GridCoordinate coordinate = new GridCoordinate(x, y);
                     
                     // Generate a GridElement GameObject
-                    Vector3 position = new Vector3(x * 115, y * 115, 0);
+                    Vector3 position;
+                    // Vertical generation
+                    if (direction == GridGenerationDirection.Vertical)
+                    {
+                        position = new Vector3(x * squareGridElementPrefab.width, 
+                            y * squareGridElementPrefab.width, 0);
+                    }
+                    else
+                    {
+                        position = new Vector3(x * squareGridElementPrefab.width, 
+                            0, y * squareGridElementPrefab.width);
+                    }
                     ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
                     squareGridElement.gridCoordinate = coordinate;
                     squareGridElement.gridEventHandler = _squareGridEventHandler;
+                    squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement);
                     
                     // add the grid element to the _gridElements
                     _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
                     
                     // add the Vertex to the GridSystem
-                    _squareGridSystem.AddVertex(coordinate, cost, new GridDataContainer(squareGridElement));
+                    _squareGridSystem.AddVertex(coordinate, cost, squareGridElement.gridDataContainer);
                     
                     // add the connection with the right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
@@ -161,6 +174,62 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     // add the connection with the down right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y - 1)) != null)
                         _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y - 1), cost * SQRT_2);
+                }
+            }
+        }
+
+        public void GenerateMap<ElementType>(string filePath, GridGenerationDirection direction) 
+            where ElementType : GridElement
+        {
+            // get the list of VertexData
+            List<VertexData<GridDataContainer>> vertexDatas = VertexSerializer.Deserialize<GridDataContainer>(filePath);
+            // add Vertices
+            foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
+            {
+                int x = vertexData.coordinate[0];
+                int y = vertexData.coordinate[1];
+                // current coordinate
+                GridCoordinate coordinate = new GridCoordinate(x, y);
+                    
+                // Generate a GridElement GameObject
+                Vector3 position;
+                // Vertical generation
+                if (direction == GridGenerationDirection.Vertical)
+                {
+                    position = new Vector3(x * squareGridElementPrefab.width, 
+                        y * squareGridElementPrefab.width, 0);
+                }
+                else
+                {
+                    position = new Vector3(x * squareGridElementPrefab.width, 
+                        0, y * squareGridElementPrefab.width);
+                }
+                ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position,
+                    Quaternion.identity, sceneObjectRoot.transform);
+                squareGridElement.gridCoordinate = coordinate;
+                squareGridElement.gridEventHandler = _squareGridEventHandler;
+                squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement, vertexData.serializableData);
+                
+                // add the grid element to the _gridElements
+                _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
+                    
+                // add the Vertex to the GridSystem
+                _squareGridSystem.AddVertex(coordinate, vertexData.cost, 
+                    squareGridElement.gridDataContainer);
+            }
+            // add Edges
+            foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
+            {
+                GridCoordinate currentCoordinate = new GridCoordinate(vertexData.coordinate[0],
+                    vertexData.coordinate[1]);
+                for (int i = 0; i < vertexData.edgeCost.Length; i++)
+                {
+                    if (vertexData.edgeCost[i] != -1)
+                    {
+                        _squareGridSystem.SetEdge(currentCoordinate, 
+                            new GridCoordinate(vertexData.edgeTargets[i][0], vertexData.edgeTargets[i][1]), 
+                            vertexData.edgeCost[i]);
+                    }
                 }
             }
         }

@@ -7,7 +7,7 @@ namespace FinTOKMAK.GridSystem
     /// The base class for an Edge between Verteces
     /// </summary>
     /// <typeparam name="DataType">The data type of vertices</typeparam>
-    public class Edge<DataType>
+    public class Edge<DataType> where DataType : GridDataContainer
     {
 
         #region Private Field

@@ -8,10 +8,19 @@ using FinTOKMAK.PriorityQueue;
 
 namespace FinTOKMAK.GridSystem.Square
 {
-    public class SquareGridSystem<DataType> : IGridSystem<DataType>
+    public class SquareGridSystem<DataType> : IGridSystem<DataType> where DataType : GridDataContainer
     {
 
         #region Public Field
+
+        public List<Vertex<DataType>> vertices
+        {
+            get
+            {
+                return _vertices.Values.Cast<Vertex<DataType>>().ToList();
+            }
+        }
+
         #endregion
 
         #region Private Field
@@ -404,7 +413,7 @@ namespace FinTOKMAK.GridSystem.Square
         /// </summary>
         /// <param name="coordinate">the coordinate of the new vertex</param>
         /// <param name="cost">the cost of passing specific vertex</param>
-        /// <param name="data">the data stored in the vertex</param>
+        /// <param name="data">the data stored in the vertex, suggest use GridDataContainer</param>
         /// <exception cref="ArgumentException">if coordinate already exist</exception>
         public void AddVertex(GridCoordinate coordinate, float cost, DataType data)
         {
