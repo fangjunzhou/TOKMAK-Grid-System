@@ -4,24 +4,27 @@ using FinTOKMAK.GridSystem;
 using UnityEngine;
 using NaughtyAttributes;
 
-public class TestGridDataContainer : MonoBehaviour
+namespace FinTOKMAK.GridSystem.Core.Test
 {
-    #region Public Field
-
-    [BoxGroup("Exposed public field")]
-    public GameObject testObject;
-
-    #endregion
-
-    [Button("Test the constructor of the GridDataContainer class")]
-    private void TestConstructor()
+    public class TestGridDataContainer : MonoBehaviour
     {
-        // test the default constructor of GridDataContainer
-        GridDataContainer dataContainer = new GridDataContainer();
-        Debug.Log(dataContainer.ToString());
+        #region Public Field
+
+        [BoxGroup("Exposed public field")]
+        public GameObject testObject;
+
+        #endregion
+
+        [Button("Test the constructor of the GridDataContainer class")]
+        private void TestConstructor()
+        {
+            // test the default constructor of GridDataContainer
+            GridDataContainer dataContainer = new GridDataContainer();
+            Debug.Log(dataContainer.ToString());
         
-        // test the constructor with GameObject representation
-        GridDataContainer dataContainer2 = new GridDataContainer(testObject);
-        Debug.Log(dataContainer2.ToString());
+            // test the constructor with GameObject representation
+            GridDataContainer dataContainer2 = new GridDataContainer(testObject);
+            Debug.Log(dataContainer2.ToString());
+        }
     }
 }
