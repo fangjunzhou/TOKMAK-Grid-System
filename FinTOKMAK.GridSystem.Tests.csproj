@@ -58,11 +58,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Package\Tests\Runtime\Core\GridSystem\TestGridDataContainer.cs" />
+     <Compile Include="Assets\Package\Tests\Runtime\Core\GridSystem\TestVertex.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\TestGridCoordinate.cs" />
-     <Compile Include="Assets\Package\Tests\Runtime\Core\TestGridDataContainer.cs" />
-     <Compile Include="Assets\Package\Tests\Runtime\Core\TestVertex.cs" />
-     <Compile Include="Assets\Package\Tests\Runtime\Core\TestVertexData.cs" />
-     <Compile Include="Assets\Package\Tests\Runtime\Core\TestVertexDataSerialization.cs" />
+     <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexData.cs" />
+     <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexDataSerialization.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridElement.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridGenerator.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridSystem.cs" />
