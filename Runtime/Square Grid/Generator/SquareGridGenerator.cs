@@ -115,7 +115,8 @@ namespace FinTOKMAK.GridSystem.Square.Generator
 
         #region IGridGenerator inteface
 
-        public void GenerateMap<ElementType> (int width, int height, float cost) where ElementType: GridElement
+        public void GenerateMap<ElementType> (int width, int height, float cost, GridGenerationDirection direction) 
+            where ElementType: GridElement
         {
             // traverse all the grid
             for (int y = 0; y < height; y++)
@@ -126,7 +127,18 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     GridCoordinate coordinate = new GridCoordinate(x, y);
                     
                     // Generate a GridElement GameObject
-                    Vector3 position = new Vector3(x * 115, y * 115, 0);
+                    Vector3 position;
+                    // Vertical generation
+                    if (direction == GridGenerationDirection.Vertical)
+                    {
+                        position = new Vector3(x * squareGridElementPrefab.width, 
+                            y * squareGridElementPrefab.width, 0);
+                    }
+                    else
+                    {
+                        position = new Vector3(x * squareGridElementPrefab.width, 
+                            0, y * squareGridElementPrefab.width);
+                    }
                     ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
                     squareGridElement.gridCoordinate = coordinate;
                     squareGridElement.gridEventHandler = _squareGridEventHandler;
@@ -163,6 +175,12 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                         _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y - 1), cost * SQRT_2);
                 }
             }
+        }
+
+        public void GenerateMap<ElementType>(string filePath, GridGenerationDirection direction) 
+            where ElementType : GridElement
+        {
+            throw new NotImplementedException();
         }
 
         public void ClearMap()

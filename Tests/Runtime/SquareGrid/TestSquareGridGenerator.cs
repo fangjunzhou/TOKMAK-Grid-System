@@ -21,9 +21,10 @@ namespace FinTOKMAK.GridSystem.Square.Test
         #endregion
 
         [Button("Test the GenerateMap method")]
-        private void TestGenerate()
+        private void TestGenerateVerticle()
         {
-            squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1);
+            squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1, 
+                GridGenerationDirection.Vertical);
         }
 
         [Button("Test the Clear method")]
@@ -34,7 +35,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
 
         private void Start()
         {
-            TestGenerate();
+            TestGenerateVerticle();
         }
     }
 }
