@@ -92,13 +92,15 @@ namespace FinTOKMAK.GridSystem
             res += "Edge targets: \n";
             foreach (int[] targetCoordinate in edgeTargets)
             {
-                res += "(" + targetCoordinate[0] + ", " + targetCoordinate[1] + ")\n";
+                if (targetCoordinate != null)
+                    res += "(" + targetCoordinate[0] + ", " + targetCoordinate[1] + ")\n";
             }
 
             res += "Edge costs: \n";
             foreach (float cost in edgeCost)
             {
-                res += cost + "\n";
+                if (cost != -1)
+                    res += cost + "\n";
             }
 
             return res;

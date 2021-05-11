@@ -14,6 +14,11 @@ namespace FinTOKMAK.GridSystem
     {
         #region Public Field
 
+        /// <summary>
+        /// All the vertices in the GridSystem
+        /// </summary>
+        List<Vertex<DataType>> vertices { get; }
+
         #endregion
         
         #region Vertext Operation

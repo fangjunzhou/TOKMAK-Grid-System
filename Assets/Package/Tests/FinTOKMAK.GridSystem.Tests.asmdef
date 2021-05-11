@@ -3,7 +3,8 @@
     "references": [
         "FinTOKMAK.GridSystem.Runtime",
         "FinTOKMAK.GridSystem.Samples",
-        "NaughtyAttributes.Core"
+        "NaughtyAttributes.Core",
+        "UnityInterfaceSupport"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

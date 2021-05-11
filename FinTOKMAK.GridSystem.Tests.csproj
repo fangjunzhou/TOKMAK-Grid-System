@@ -61,6 +61,7 @@
      <Compile Include="Assets\Package\Tests\Runtime\Core\GridSystem\TestGridDataContainer.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\GridSystem\TestVertex.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\TestGridCoordinate.cs" />
+     <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestGridSystemSerialization.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexData.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexDataSerialization.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridElement.cs" />
@@ -70,6 +71,9 @@
      <None Include="Assets\Package\Tests\FinTOKMAK.GridSystem.Tests.asmdef" />
  <Reference Include="NaughtyAttributes.Core">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityInterfaceSupport">
+ <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

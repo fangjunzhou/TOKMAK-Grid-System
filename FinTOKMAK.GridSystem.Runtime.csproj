@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Package\Runtime\Core\GridCoordinate.cs" />
+     <Compile Include="Assets\Package\Runtime\Core\GridDataIO\GridSystemSerializer.cs" />
      <Compile Include="Assets\Package\Runtime\Core\GridDataIO\VertexData.cs" />
      <Compile Include="Assets\Package\Runtime\Core\GridDataIO\VertexSerializer.cs" />
      <Compile Include="Assets\Package\Runtime\Core\GridManager\IGridEventHandler.cs" />
