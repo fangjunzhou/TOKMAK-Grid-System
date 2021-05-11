@@ -12,28 +12,28 @@ namespace FinTOKMAK.GridSystem.Core.Test
         [Button("Test the default constructor for Vertex")]
         private void TestBasicConstructor()
         {
-            Vertex<string> vertex = new Vertex<string>();
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>();
             Debug.Log(vertex);
         }
 
         [Button("Test the constructor with coordinate for Vetex")]
         private void TestCoordinateConstructor()
         {
-            Vertex<string> vertex = new Vertex<string>(new GridCoordinate(1, 5));
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(1, 5));
             Debug.Log(vertex);
         }
 
         [Button("Test the constructor with cost for Vertex")]
         private void TestCostConstructor()
         {
-            Vertex<string> vertex = new Vertex<string>(5f);
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(5f);
             Debug.Log(vertex);
         }
 
         [Button("Test the constructor with cost and coordinate for Vertex")]
         private void TestDoubleConstructor()
         {
-            Vertex<string> vertex = new Vertex<string>(new GridCoordinate(2, 5), 10f);
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(2, 5), 10f);
             Debug.Log(vertex);
         }
 
@@ -41,14 +41,15 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestDataConstructor()
         {
 
-            Vertex<string> vertex = new Vertex<string>(new GridCoordinate(2, 5), 10f, "Test vertex data");
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(2, 5), 10f,
+                new GridDataContainer());
             Debug.Log(vertex);
         }
 
         [Button("Test the AddConnectionDir func for Vertex")]
         private void TestAddDirection()
         {
-            Vertex<string> vertex1 = new Vertex<string>();
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>();
 
             Debug.Log("Vertex 1:");
             Debug.Log(vertex1);
@@ -64,8 +65,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestSetConnection()
         {
             // create two verticies
-            Vertex<string> vertex1 = new Vertex<string>(new GridCoordinate(0, 0));
-            Vertex<string> vertex2 = new Vertex<string>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
 
             Debug.Log("Vertex 1:");
             Debug.Log(vertex1);
@@ -97,8 +98,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestSetDoubleConnection()
         {
             // create two verticies
-            Vertex<string> vertex1 = new Vertex<string>(new GridCoordinate(0, 0));
-            Vertex<string> vertex2 = new Vertex<string>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
 
             Debug.Log("Vertex 1:");
             Debug.Log(vertex1);
@@ -134,11 +135,14 @@ namespace FinTOKMAK.GridSystem.Core.Test
         [Button("Test using Coordinate as key nevigate Vertex in a hash table")]
         private void TestHashTable()
         {
-            Dictionary<GridCoordinate, Vertex<string>> verticies = new Dictionary<GridCoordinate, Vertex<string>>();
+            Dictionary<GridCoordinate, Vertex<GridDataContainer>> verticies = 
+                new Dictionary<GridCoordinate, Vertex<GridDataContainer>>();
 
-            Vertex<string> ver1 = new Vertex<string>(new GridCoordinate(0, 1), 0, "ver1");
+            Vertex<GridDataContainer> ver1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 1), 0,
+                new GridDataContainer());
             verticies.Add(ver1.coordinate, ver1);
-            Vertex<string> ver2 = new Vertex<string>(new GridCoordinate(0, 2), 0, "ver2");
+            Vertex<GridDataContainer> ver2 = new Vertex<GridDataContainer>(new GridCoordinate(0, 2), 0,
+                new GridDataContainer());
             verticies.Add(ver2.coordinate, ver2);
             //Vertex<string> ver3 = new Vertex<string>(new GridCoordinate(0, 1));
             //verticies.Add(ver3.coordinate, ver3);                                 // failed

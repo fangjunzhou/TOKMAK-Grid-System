@@ -18,6 +18,7 @@ namespace FinTOKMAK.GridSystem
         /// <param name="path">the file path to write</param>
         /// <typeparam name="DataType">the data type of Vertex</typeparam>
         public static void Serialize<DataType>(List<VertexData<DataType>> dataList, string path)
+            where DataType : GridDataContainer
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             // if the file exists, delete the original file
@@ -39,6 +40,7 @@ namespace FinTOKMAK.GridSystem
         /// <typeparam name="DataType">the data type of Vertex</typeparam>
         /// <returns>the VertexData list</returns>
         public static List<VertexData<DataType>> Deserialize<DataType>(string path)
+            where DataType : GridDataContainer
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             // Open and read the file

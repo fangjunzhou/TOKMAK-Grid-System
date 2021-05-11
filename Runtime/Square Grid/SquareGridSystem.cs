@@ -8,7 +8,7 @@ using FinTOKMAK.PriorityQueue;
 
 namespace FinTOKMAK.GridSystem.Square
 {
-    public class SquareGridSystem<DataType> : IGridSystem<DataType>
+    public class SquareGridSystem<DataType> : IGridSystem<DataType> where DataType : GridDataContainer
     {
 
         #region Public Field

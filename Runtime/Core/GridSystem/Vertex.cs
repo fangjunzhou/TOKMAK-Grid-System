@@ -8,7 +8,7 @@ namespace FinTOKMAK.GridSystem
     /// The base class for a Vertex
     /// </summary>
     /// <typeparam name="DataType">The data type of data stored in the Vertex</typeparam>
-    public class Vertex<DataType>
+    public class Vertex<DataType> where DataType : GridDataContainer
     {
         #region Private Field
 

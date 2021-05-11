@@ -10,7 +10,7 @@ namespace FinTOKMAK.GridSystem
     /// adding and removing edges
     /// </summary>
     /// <typeparam name="DataType">The data type of data that stores in each vertices</typeparam>
-    public interface IGridSystem<DataType>
+    public interface IGridSystem<DataType> where DataType : GridDataContainer
     {
         #region Public Field
 

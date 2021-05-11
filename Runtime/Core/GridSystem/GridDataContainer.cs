@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 namespace FinTOKMAK.GridSystem
@@ -53,6 +54,11 @@ namespace FinTOKMAK.GridSystem
                 return _gridElement;
             }
         }
+
+        /// <summary>
+        /// Serializable data that stores in the GridDataContainer
+        /// </summary>
+        public ISerializable serializableData;
 
         #endregion
 
