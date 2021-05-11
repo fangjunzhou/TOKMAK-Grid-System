@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{267DDD27-3B99-1F0D-010E-0F97A6C81877}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Tests", "FinTOKMAK.GridSystem.Tests.csproj", "{5E9AB197-345A-0BDC-801D-45D874E4A63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Samples", "FinTOKMAK.GridSystem.Samples.csproj", "{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Runtime", "FinTOKMAK.GridSystem.Runtime.csproj", "{25B9190E-5B57-C6D7-C55A-CF3680071560}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{267DDD27-3B99-1F0D-010E-0F97A6C81877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
