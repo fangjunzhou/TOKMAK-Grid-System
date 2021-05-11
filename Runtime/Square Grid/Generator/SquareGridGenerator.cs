@@ -180,7 +180,55 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         public void GenerateMap<ElementType>(string filePath, GridGenerationDirection direction) 
             where ElementType : GridElement
         {
-            throw new NotImplementedException();
+            // get the list of VertexData
+            List<VertexData<GridDataContainer>> vertexDatas = VertexSerializer.Deserialize<GridDataContainer>(filePath);
+            // add Vertices
+            foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
+            {
+                int x = vertexData.coordinate[0];
+                int y = vertexData.coordinate[1];
+                // current coordinate
+                GridCoordinate coordinate = new GridCoordinate(x, y);
+                    
+                // Generate a GridElement GameObject
+                Vector3 position;
+                // Vertical generation
+                if (direction == GridGenerationDirection.Vertical)
+                {
+                    position = new Vector3(x * squareGridElementPrefab.width, 
+                        y * squareGridElementPrefab.width, 0);
+                }
+                else
+                {
+                    position = new Vector3(x * squareGridElementPrefab.width, 
+                        0, y * squareGridElementPrefab.width);
+                }
+                ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position,
+                    Quaternion.identity, sceneObjectRoot.transform);
+                squareGridElement.gridCoordinate = coordinate;
+                squareGridElement.gridEventHandler = _squareGridEventHandler;
+                
+                // add the grid element to the _gridElements
+                _gridElements.Add(squareGridElement.gridCoordinate, squareGridElement);
+                    
+                // add the Vertex to the GridSystem
+                _squareGridSystem.AddVertex(coordinate, vertexData.cost, new GridDataContainer(squareGridElement));
+            }
+            // add Edges
+            foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
+            {
+                GridCoordinate currentCoordinate = new GridCoordinate(vertexData.coordinate[0],
+                    vertexData.coordinate[1]);
+                for (int i = 0; i < vertexData.edgeCost.Length; i++)
+                {
+                    if (vertexData.edgeCost[i] != -1)
+                    {
+                        _squareGridSystem.SetEdge(currentCoordinate, 
+                            new GridCoordinate(vertexData.edgeTargets[i][0], vertexData.edgeTargets[i][1]), 
+                            vertexData.edgeCost[i]);
+                    }
+                }
+            }
         }
 
         public void ClearMap()
