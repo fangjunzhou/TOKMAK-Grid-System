@@ -1,0 +1,17 @@
+{
+    "name": "FinTOKMAK.GridSystem.Runtime",
+    "references": [
+        "NaughtyAttributes.Core",
+        "UnityInterfaceSupport",
+        "FinTOKMAK.PriorityQueue.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

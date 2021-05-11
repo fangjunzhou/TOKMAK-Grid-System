@@ -1,0 +1,17 @@
+{
+    "name": "FinTOKMAK.GridSystem.Tests",
+    "references": [
+        "FinTOKMAK.GridSystem.Runtime",
+        "FinTOKMAK.GridSystem.Samples",
+        "NaughtyAttributes.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
