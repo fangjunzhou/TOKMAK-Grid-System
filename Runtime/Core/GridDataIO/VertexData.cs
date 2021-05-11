@@ -111,6 +111,15 @@ namespace FinTOKMAK.GridSystem
                     res += cost + "\n";
             }
 
+            if (serializableData != null)
+            {
+                res += "Serialized data: " + serializableData;
+            }
+            else
+            {
+                res += "Serialized data: null";
+            }
+
             return res;
         }
     }
