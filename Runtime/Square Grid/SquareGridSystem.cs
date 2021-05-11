@@ -13,6 +13,14 @@ namespace FinTOKMAK.GridSystem.Square
 
         #region Public Field
 
+        public List<Vertex<DataType>> vertices
+        {
+            get
+            {
+                return _vertices.Values.Cast<Vertex<DataType>>().ToList();
+            }
+        }
+
         #endregion
 
         #region Private Field
