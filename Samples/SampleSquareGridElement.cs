@@ -87,21 +87,6 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         }
 
         /// <summary>
-        /// the GridEventHandler of the current grid element
-        /// </summary>
-        public SquareGridEventHandler gridEventHandler
-        {
-            get
-            {
-                return (SquareGridEventHandler)_gridEventHandler;
-            }
-            set
-            {
-                _gridEventHandler = value;
-            }
-        }
-
-        /// <summary>
         /// The text that display the coordinate of current grid
         /// </summary>
         public TMP_Text coordinateText;
@@ -207,7 +192,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// </summary>
         public void SetCurrentObject()
         {
-            _gridEventHandler.currentGridObject = gameObject;
+            gridEventHandler.currentGridObject = gameObject;
         }
 
         #endregion
@@ -216,7 +201,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
 
         protected override void OnCoordinateChange()
         {
-            coordinateText.text = _coordinate.ToString();
+            coordinateText.text = gridCoordinate.ToString();
         }
 
         #endregion
