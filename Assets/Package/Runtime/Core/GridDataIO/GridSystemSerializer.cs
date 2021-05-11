@@ -12,6 +12,7 @@ namespace FinTOKMAK.GridSystem
         /// <param name="filePath">the target file path</param>
         /// <typeparam name="DataType">the data type of Vertex</typeparam>
         public static void Serialize<DataType>(IGridSystem<DataType> gridSystem, string filePath)
+            where DataType : GridDataContainer
         {
             // get all the vertices in the GridSystem
             List<Vertex<DataType>> vertices = gridSystem.vertices;

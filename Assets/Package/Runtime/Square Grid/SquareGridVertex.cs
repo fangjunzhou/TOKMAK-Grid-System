@@ -10,7 +10,7 @@ namespace FinTOKMAK.GridSystem.Square
     /// up, down, left, and right
     /// upLeft, upRight, downLeft, and downRight
     /// </summary>
-    public class SquareGridVertex<DataType> : Vertex<DataType>
+    public class SquareGridVertex<DataType> : Vertex<DataType> where DataType : GridDataContainer
     {
         #region Constructor
 

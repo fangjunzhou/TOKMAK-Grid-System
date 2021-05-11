@@ -19,8 +19,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestVertexDataWrite()
         {
             // create two vertices and connect them
-            Vertex<string> vertex1 = new Vertex<string>(new GridCoordinate(0, 0));
-            Vertex<string> vertex2 = new Vertex<string>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
             vertex1.AddConnectionDir("right");
             vertex2.AddConnectionDir("left");
             vertex1.SetDoubleConnection("right", vertex2, "left", 10);
@@ -30,13 +30,13 @@ namespace FinTOKMAK.GridSystem.Core.Test
             Debug.Log("Vertex 2:");
             Debug.Log(vertex2);
 
-            VertexData<string> vertexData1 = new VertexData<string>(vertex1);
+            VertexData<GridDataContainer> vertexData1 = new VertexData<GridDataContainer>(vertex1);
             Debug.Log("VertexData1: " + vertexData1);
 
-            VertexData<string> vertexData2 = new VertexData<string>(vertex2);
+            VertexData<GridDataContainer> vertexData2 = new VertexData<GridDataContainer>(vertex2);
             Debug.Log("VertexData2: " + vertexData2);
 
-            List<VertexData<string>> vertexDatas = new List<VertexData<string>>();
+            List<VertexData<GridDataContainer>> vertexDatas = new List<VertexData<GridDataContainer>>();
             vertexDatas.Add(vertexData1);
             vertexDatas.Add(vertexData2);
             
@@ -47,9 +47,9 @@ namespace FinTOKMAK.GridSystem.Core.Test
         [Button("Test the Deserialize method in the VertexSerializer")]
         private void TestDeserialize()
         {
-            List<VertexData<string>> vertexDatas = 
-                VertexSerializer.Deserialize<string>(Application.dataPath + "\\TestData\\" + filePath);
-            foreach (VertexData<string> vertexData in vertexDatas)
+            List<VertexData<GridDataContainer>> vertexDatas = 
+                VertexSerializer.Deserialize<GridDataContainer>(Application.dataPath + "\\TestData\\" + filePath);
+            foreach (VertexData<GridDataContainer> vertexData in vertexDatas)
             {
                 Debug.Log(vertexData);
             }

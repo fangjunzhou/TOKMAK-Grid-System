@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace FinTOKMAK.GridSystem
 {
@@ -7,7 +8,7 @@ namespace FinTOKMAK.GridSystem
     /// </summary>
     /// <typeparam name="DataType">the data type of Vertex</typeparam>
     [System.Serializable]
-    public class VertexData<DataType>
+    public class VertexData<DataType> where DataType : GridDataContainer
     {
         #region Public Field
         
@@ -32,6 +33,11 @@ namespace FinTOKMAK.GridSystem
         /// -1 if there's no connection in certain direction
         /// </summary>
         public float[] edgeCost;
+
+        /// <summary>
+        /// Serializable data that stores in the GridDataContainer
+        /// </summary>
+        public ISerializable serializableData;
 
         #endregion
 
@@ -76,6 +82,8 @@ namespace FinTOKMAK.GridSystem
 
                 index++;
             }
+
+            serializableData = vertex.data.serializableData;
         }
 
         #endregion
