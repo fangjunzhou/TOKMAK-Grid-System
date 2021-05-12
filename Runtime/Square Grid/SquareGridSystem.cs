@@ -611,7 +611,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the bottom right of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            else if (end.x == start.x + 1 && end.y == start.y - 1)
             {
                 if (startVertex.connection["downRight"] != null)
                     startVertex.connection["downRight"] = null;
@@ -620,6 +620,8 @@ namespace FinTOKMAK.GridSystem.Square
             }
             else
             {
+                Debug.LogError("Start coordinate: " + start);
+                Debug.LogError("End coordinate: " + end);
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
             }
         }
