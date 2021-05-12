@@ -14,6 +14,8 @@ namespace FinTOKMAK.GridSystem.Square.Test
         public bool useMapFile;
         [BoxGroup("Generate Method")]
         public string filePath;
+        [BoxGroup("Generate Method")]
+        public GridGenerationDirection direction;
         
         [BoxGroup("Generator")]
         public SquareGridGenerator squareGridGenerator;
@@ -29,14 +31,14 @@ namespace FinTOKMAK.GridSystem.Square.Test
         private void TestGenerateVertical()
         {
             squareGridGenerator.GenerateMap<SampleSquareGridElement>(width, height, 1, 
-                GridGenerationDirection.Vertical);
+                direction);
         }
 
         [Button("Test the GenerateMap method with map data file")]
         private void TestGenerateVerticalFromFile()
         {
             squareGridGenerator.GenerateMap<SampleSquareGridElement>
-                (Application.dataPath + "\\TestData\\" + filePath, GridGenerationDirection.Vertical);
+                (Application.dataPath + "\\TestData\\" + filePath, direction);
         }
 
         [Button("Test the Clear method")]

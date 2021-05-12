@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 2021-5-12
+### Changed
+- User can choose which direction to generate in the TestGridGenerator MonoBehavior.
+- Fixed the error that the edge between current Vertex and bottom right Vertex cannot be removed.
+
 ## [0.0.4] - 2021-05-12
 ### Added
 - Add GridDataIO system to store and read data in a .griddat file
@@ -36,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#upm-gridsystem...HEAD
+[0.0.5]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.5
 [0.0.4]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.4
 [0.0.3]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.3
 [0.0.2]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.2
