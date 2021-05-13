@@ -1,4 +1,5 @@
-﻿using FinTOKMAK.GridSystem.Square.Generator;
+﻿using System.Collections.Generic;
+using FinTOKMAK.GridSystem.Square.Generator;
 
 namespace FinTOKMAK.GridSystem.Square.Generator
 {
@@ -10,7 +11,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// The squareGridEventHandler which stored the selected GameObject and GridElement
         /// initialized by the EventView
         /// </summary>
-        SquareGridEventHandler squareGridEventHandler { get; set; }
+        Dictionary<int, SquareGridEventHandler> squareGridEventHandler { get; set; }
 
         #endregion
 
@@ -18,8 +19,9 @@ namespace FinTOKMAK.GridSystem.Square.Generator
     
         /// <summary>
         /// Call when the selected GridElement and the GameObject in SquareGridEventHandler changes
+        /// <param name="ID">the ID of the event handler that raise the event</param>
         /// </summary>
-        void OnSelectedGridUpdated();
+        void OnSelectedGridUpdated(int ID);
 
         #endregion
     }

@@ -37,24 +37,34 @@ namespace FinTOKMAK.GridSystem.Square.Sample
 
         public void OnFindPath()
         {
-            if (chooseStart.selectedGridElement == null || chooseEnd.selectedGridElement == null)
-                return;
-            
-            // find the path
-            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instance.squareGridSystem.FindShortestPath(
-                chooseStart.selectedGridElement.gridCoordinate,
-                chooseEnd.selectedGridElement.gridCoordinate);
-            
             // Clear
             foreach (Vertex<GridDataContainer> vertex in _lastPath)
             {
-                ((SampleSquareGridElement) SquareGridGenerator.Instance.gridElements[vertex.coordinate]).isPath = false;
+                // get the generator id of specific vertex
+                int id = vertex.data.gridElement.generatorID;
+                ((SampleSquareGridElement) SquareGridGenerator.Instances[id].gridElements[vertex.coordinate]).isPath = false;
             }
+            
+            if (chooseStart.selectedGridElement == null || chooseEnd.selectedGridElement == null)
+                return;
+            
+            if (chooseStart.selectedGridElement.generatorID != chooseEnd.selectedGridElement.generatorID)
+                return;
+
+            int generatorID = chooseStart.selectedGridElement.generatorID;
+            
+            // find the path
+            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instances[generatorID].
+                squareGridSystem.FindShortestPath(
+                chooseStart.selectedGridElement.gridCoordinate,
+                chooseEnd.selectedGridElement.gridCoordinate);
+            
             
             // Display
             foreach (Vertex<GridDataContainer> vertex in path)
             {
-                ((SampleSquareGridElement) SquareGridGenerator.Instance.gridElements[vertex.coordinate]).isPath = true;
+                ((SampleSquareGridElement) SquareGridGenerator.Instances[generatorID]
+                    .gridElements[vertex.coordinate]).isPath = true;
             }
             
             // record

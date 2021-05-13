@@ -13,7 +13,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// <summary>
         /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
         /// </summary>
-        private SquareGridEventHandler _squareGridEventHandler;
+        private Dictionary<int, SquareGridEventHandler> _squareGridEventHandler;
         
         /// <summary>
         /// The GameObject which is currently selected
@@ -38,7 +38,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// <summary>
         /// The SquareGridEventHandler for the ChooseEnd class to get the selected GameObject and handle event
         /// </summary>
-        public SquareGridEventHandler squareGridEventHandler
+        public Dictionary<int, SquareGridEventHandler> squareGridEventHandler
         {
             get
             {
@@ -83,7 +83,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
 
         #region ISquareGridEventResponsor Interface
 
-        public void OnSelectedGridUpdated()
+        public void OnSelectedGridUpdated(int ID)
         {
             // if the start button is waiting for the newly selected Grid
             if (_isWaitingSelect)
@@ -93,8 +93,8 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                     _selectedGridElement.isEnd = false;
                 
                 // update the selected GameObject
-                _selectedGameObject = _squareGridEventHandler.currentGridObject;
-                _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler.currentGridElement;
+                _selectedGameObject = _squareGridEventHandler[ID].currentGridObject;
+                _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler[ID].currentGridElement;
                 
                 // change the select state of new Object
                 _selectedGridElement.isEnd = true;

@@ -20,7 +20,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// <summary>
         /// The singleton of SquareGridEventHandler
         /// </summary>
-        private SquareGridEventHandler _squareGridEventHandler;
+        private Dictionary<int, SquareGridEventHandler> _squareGridEventHandler;
             
         /// <summary>
         /// The GameObject which is currently selected
@@ -49,7 +49,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// </summary>
         public Text showText;
 
-        public SquareGridEventHandler squareGridEventHandler
+        public Dictionary<int, SquareGridEventHandler> squareGridEventHandler
         {
             get
             {
@@ -75,21 +75,22 @@ namespace FinTOKMAK.GridSystem.Square.Sample
             
         }
 
-        public void OnSelectedGridUpdated()
+        public void OnSelectedGridUpdated(int ID)
         {
             // if the start button is waiting for the newly selected Grid
             if (_isDrawing)
             {
                 // update the selected GameObject
-                _selectedGameObject = _squareGridEventHandler.currentGridObject;
-                _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler.currentGridElement;
+                _selectedGameObject = _squareGridEventHandler[ID].currentGridObject;
+                _selectedGridElement = (SampleSquareGridElement)_squareGridEventHandler[ID].currentGridElement;
                 
                 // change the select state of new Object
                 _selectedGridElement.isObstacle = !_selectedGridElement.isObstacle;
                 if (_selectedGridElement.isObstacle)
                 {
                     SquareGridVertex<GridDataContainer> currentVertex = 
-                        (SquareGridVertex<GridDataContainer>)SquareGridGenerator.Instance.squareGridSystem.
+                        (SquareGridVertex<GridDataContainer>)SquareGridGenerator.
+                            Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
                             GetVertex(_selectedGridElement.gridCoordinate);
                     // change the cost of current selected Vertex
                     currentVertex.cost = obstacleCost;
@@ -134,7 +135,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                                     edgeTargetB = new GridCoordinate(currentCoordinate.x + 1, currentCoordinate.y);
                                     break;
                             }
-                            SquareGridGenerator.Instance.squareGridSystem.
+                            SquareGridGenerator.Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
                                 SetDoubleEdge(edgeTargetA, edgeTargetB, obstacleCost * SQRT_2);
                         }
                     }
@@ -142,7 +143,8 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                 else
                 {
                     SquareGridVertex<GridDataContainer> currentVertex = 
-                        (SquareGridVertex<GridDataContainer>)SquareGridGenerator.Instance.squareGridSystem.
+                        (SquareGridVertex<GridDataContainer>)SquareGridGenerator.
+                            Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
                             GetVertex(_selectedGridElement.gridCoordinate);
                     // change the cost of current selected Vertex
                     currentVertex.cost = 1;
@@ -187,7 +189,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                                     edgeTargetB = new GridCoordinate(currentCoordinate.x - 1, currentCoordinate.y);
                                     break;
                             }
-                            SquareGridGenerator.Instance.squareGridSystem.
+                            SquareGridGenerator.Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
                                 SetDoubleEdge(edgeTargetA, edgeTargetB, 1 * SQRT_2);
                         }
                     }
