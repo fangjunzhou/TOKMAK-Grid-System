@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using FinTOKMAK.GridSystem;
 using FinTOKMAK.GridSystem.Square;
@@ -20,11 +21,21 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// <summary>
         /// The singleton of SquareGridGenerator
         /// </summary>
-        public static SquareGridGenerator Instance;
+        public static Dictionary<int, SquareGridGenerator> Instances = new Dictionary<int, SquareGridGenerator>();
+
+        /// <summary>
+        /// The next generated GridGenerator ID
+        /// </summary>
+        public static int nextGenerateID;
 
         #endregion
         
         #region Private Field
+
+        /// <summary>
+        /// The unique ID of current GridGenerator
+        /// </summary>
+        private int generatorID;
         
         /// <summary>
         /// Square root of 2
@@ -93,10 +104,16 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         private void Awake()
         {
             // initialize the singleton
-            Instance = this;
+            if (!Instances.Values.Contains(this))
+            {
+                generatorID = nextGenerateID;
+                nextGenerateID++;
+                Instances.Add(generatorID, this);
+            }
             
             // create and initialize GridEventHandler
             _squareGridEventHandler = gameObject.AddComponent<SquareGridEventHandler>();
+            _squareGridEventHandler.generatorID = generatorID;
             // call the finishInitialize delegate
             finishInitialize?.Invoke();
         }
@@ -139,7 +156,10 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                         position = new Vector3(x * squareGridElementPrefab.width, 
                             0, y * squareGridElementPrefab.width);
                     }
-                    ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position, Quaternion.identity, sceneObjectRoot.transform);
+                    ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position,
+                        Quaternion.identity, sceneObjectRoot.transform);
+                    squareGridElement.gameObject.transform.localPosition = position;
+                    squareGridElement.generatorID = generatorID;
                     squareGridElement.gridCoordinate = coordinate;
                     squareGridElement.gridEventHandler = _squareGridEventHandler;
                     squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement);
@@ -206,6 +226,8 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                 }
                 ElementType squareGridElement = (ElementType)Instantiate(squareGridElementPrefab, position,
                     Quaternion.identity, sceneObjectRoot.transform);
+                squareGridElement.gameObject.transform.localPosition = position;
+                squareGridElement.generatorID = generatorID;
                 squareGridElement.gridCoordinate = coordinate;
                 squareGridElement.gridEventHandler = _squareGridEventHandler;
                 squareGridElement.gridDataContainer = new GridDataContainer(squareGridElement, vertexData.serializableData);

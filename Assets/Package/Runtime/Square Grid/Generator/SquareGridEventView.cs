@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 using NaughtyAttributes;
@@ -12,8 +13,9 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         
         /// <summary>
         /// The singleton of SquareGridEventHandler
+        /// This dictionary contains all the event handlers in the scene
         /// </summary>
-        private SquareGridEventHandler _squareGridEventHandler;
+        private Dictionary<int, SquareGridEventHandler> _squareGridEventHandler;
         
         /// <summary>
         /// The GameObject which is currently selected
@@ -40,7 +42,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         private void Start()
         {
             // get the singleton of the SquareGridEventHandler
-            _squareGridEventHandler = SquareGridEventHandler.Instance;
+            _squareGridEventHandler = SquareGridEventHandler.Instances;
             
             // initialize all the ISquareGridEventResponsors
             EventResponsorsInit();
@@ -48,7 +50,10 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             // add all the callback functions to the delegate
             foreach (ISquareGridEventResponsor eventResponsor in squareGridEventResponsors)
             {
-                _squareGridEventHandler.updateSelectedGrid += eventResponsor.OnSelectedGridUpdated;
+                foreach (SquareGridEventHandler eventHandler in _squareGridEventHandler.Values.ToList())
+                {
+                    eventHandler.updateSelectedGrid += eventResponsor.OnSelectedGridUpdated;
+                }
             }
         }
 
