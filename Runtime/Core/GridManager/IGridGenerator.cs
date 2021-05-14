@@ -86,7 +86,7 @@ namespace FinTOKMAK.GridSystem
         /// <param name="currentFrom">the start coordinate of the edge of current GridSystem</param>
         /// <param name="currentTo">the end coordinate of the edge of current GridSystem</param>
         /// <param name="direction">the separate direction</param>
-        void Separate(IGridGenerator<DataType> target, GridCoordinate currentFrom, GridCoordinate currentTo,  MergeDirection direction, float weight);
+        void Separate(IGridGenerator<DataType> target, GridCoordinate currentFrom, GridCoordinate currentTo,  MergeDirection direction);
 
         /// <summary>
         /// Remove all the vertices in the GridSystem
