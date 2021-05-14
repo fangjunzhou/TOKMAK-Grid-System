@@ -30,4 +30,10 @@ public class TestMergeGenerator : MonoBehaviour
     {
         currentGenerator.Merge(targetGenerator, currentFrom, currentTo, direction, weight);
     }
+
+    [Button("Test the separate method in the SquareGridGenerator")]
+    private void TestSeparate()
+    {
+        currentGenerator.Separate(targetGenerator, currentFrom, currentTo, direction);
+    }
 }

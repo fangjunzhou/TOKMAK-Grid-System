@@ -463,9 +463,143 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// <param name="currentTo">the end coordinate of the edge of current GridSystem</param>
         /// <param name="direction">the separate direction</param>
         public void Separate(IGridGenerator<GridDataContainer> target, GridCoordinate currentFrom, GridCoordinate currentTo,
-            MergeDirection direction, float weight)
+            MergeDirection direction)
         {
-            throw new NotImplementedException();
+            int currentPos;
+            int endPos;
+            // if the MergeDirection is up or down, use the horizontal coordinate
+            if (direction == MergeDirection.Down || direction == MergeDirection.Up)
+            {
+                currentPos = currentFrom.x;
+                endPos = currentTo.x;
+            }
+            // if the MergeDirection is left or right, use the vertical coordinate
+            else
+            {
+                currentPos = currentFrom.y;
+                endPos = currentTo.y;
+            }
+
+            while (currentPos <= endPos)
+            {
+                // construct the current coordinate position
+                GridCoordinate currentCoordinate;
+                if (direction == MergeDirection.Down || direction == MergeDirection.Up)
+                {
+                    currentCoordinate = new GridCoordinate(currentPos, currentFrom.y);
+                }
+                else
+                {
+                    currentCoordinate = new GridCoordinate(currentFrom.x, currentPos);
+                }
+                
+                // find the relative coordinate of current coordinate to the target GridSystem
+                int relativeX = currentCoordinate.x + squareGridSystem.globalCoordinateOffset.x -
+                                target.gridSystem.globalCoordinateOffset.x;
+                int relativeY = currentCoordinate.y + squareGridSystem.globalCoordinateOffset.y -
+                                target.gridSystem.globalCoordinateOffset.y;
+                GridCoordinate relativeCoordinate = new GridCoordinate(relativeX, relativeY);
+                GridCoordinate targetCoordinate;
+
+                switch (direction)
+                {
+                    case MergeDirection.Up:
+                        // merge the current Vertex and top left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the top Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the top right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        break;
+                    case MergeDirection.Down:
+                        // merge the current Vertex and bottom left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the bottom Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the bottom right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        break;
+                    case MergeDirection.Left:
+                        // merge the current Vertex and top left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the bottom left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        break;
+                    case MergeDirection.Right:
+                        // merge the current Vertex and top right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        // merge the current Vertex and the bottom right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.RemoveDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID);
+                        }
+                        break;
+                }
+
+                // self increment current position until it reached the end position
+                currentPos++;
+            }
         }
         
         /// <summary>

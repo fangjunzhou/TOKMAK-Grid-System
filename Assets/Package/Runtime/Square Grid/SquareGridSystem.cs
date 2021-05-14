@@ -669,9 +669,16 @@ namespace FinTOKMAK.GridSystem.Square
             // Get the start Vertex
             SquareGridVertex<DataType> startVertex = (SquareGridVertex<DataType>)_instances[startGridSystemID].GetVertex(start);
             Edge<DataType> edge;
+
+            GridCoordinate globalStart =
+                new GridCoordinate(start.x + _instances[startGridSystemID].globalCoordinateOffset.x,
+                    start.y + _instances[startGridSystemID].globalCoordinateOffset.y);
+            GridCoordinate globalEnd =
+                new GridCoordinate(end.x + _instances[endGridSystemID].globalCoordinateOffset.x,
+                    end.y + _instances[endGridSystemID].globalCoordinateOffset.y);
             
             // end Vertex is on the right of start Vertex
-            if (end.x == start.x + 1 && end.y == start.y)
+            if (globalEnd.x == globalStart.x + 1 && globalEnd.y == globalStart.y)
             {
                 // remove the right connection of start
                 if (startVertex.connection["right"] != null)
@@ -680,7 +687,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the left of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y)
+            else if (globalEnd.x == globalStart.x - 1 && globalEnd.y == globalStart.y)
             {
                 if (startVertex.connection["left"] != null)
                     startVertex.connection["left"] = null;
@@ -688,7 +695,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the top of start Vertex
-            else if (end.x == start.x && end.y == start.y + 1)
+            else if (globalEnd.x == globalStart.x && globalEnd.y == globalStart.y + 1)
             {
                 if (startVertex.connection["up"] != null)
                     startVertex.connection["up"] = null;
@@ -696,7 +703,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the bottom of start Vertex
-            else if (end.x == start.x && end.y == start.y - 1)
+            else if (globalEnd.x == globalStart.x && globalEnd.y == globalStart.y - 1)
             {
                 if (startVertex.connection["down"] != null)
                     startVertex.connection["down"] = null;
@@ -704,7 +711,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the top left of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            else if (globalEnd.x == globalStart.x - 1 && globalEnd.y == globalStart.y + 1)
             {
                 if (startVertex.connection["upLeft"] != null)
                     startVertex.connection["upLeft"] = null;
@@ -712,7 +719,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the top right of start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            else if (globalEnd.x == globalStart.x + 1 && globalEnd.y == globalStart.y + 1)
             {
                 if (startVertex.connection["upRight"] != null)
                     startVertex.connection["upRight"] = null;
@@ -720,7 +727,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the bottom left of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            else if (globalEnd.x == globalStart.x - 1 && globalEnd.y == globalStart.y - 1)
             {
                 if (startVertex.connection["downLeft"] != null)
                     startVertex.connection["downLeft"] = null;
@@ -728,7 +735,7 @@ namespace FinTOKMAK.GridSystem.Square
                     throw new NullReferenceException("There's no connection between start Vertex and end Vertex.");
             }
             // end Vertex is on the bottom right of start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y - 1)
+            else if (globalEnd.x == globalStart.x + 1 && globalEnd.y == globalStart.y - 1)
             {
                 if (startVertex.connection["downRight"] != null)
                     startVertex.connection["downRight"] = null;
@@ -737,8 +744,8 @@ namespace FinTOKMAK.GridSystem.Square
             }
             else
             {
-                Debug.LogError("Start coordinate: " + start);
-                Debug.LogError("End coordinate: " + end);
+                Debug.LogError("Start coordinate: " + globalStart);
+                Debug.LogError("End coordinate: " + globalEnd);
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
             }
         }
