@@ -12,6 +12,20 @@ namespace FinTOKMAK.GridSystem
     /// </summary>
     public interface IGridGenerator
     {
+        #region Public Field
+
+        /// <summary>
+        /// the unique ID of the GridGenerator
+        /// </summary>
+        int generatorID { get; }
+        
+        /// <summary>
+        /// The global offset of all the Vertices in the GridSystem in current GirdGenerator
+        /// </summary>
+        GridCoordinate globalOffset { get; }
+
+        #endregion
+        
         /// <summary>
         /// Method to generate an empty map with the generator
         /// </summary>
@@ -33,6 +47,18 @@ namespace FinTOKMAK.GridSystem
         /// <typeparam name="ElementType">The Generic type of GridElement for method to cast</typeparam>
         void GenerateMap<ElementType>(string filePath, GridGenerationDirection direction) 
             where ElementType : GridElement;
+
+        /// <summary>
+        /// Merge the GridSystem in current GridGenerator with GridSystem in another generator
+        /// </summary>
+        /// <param name="target">the target generator to merge</param>
+        void Merge(IGridGenerator target);
+
+        /// <summary>
+        /// Separate the GridSystem in current Grid Generate with GridSystem in another generator
+        /// </summary>
+        /// <param name="target">the target generator to separate</param>
+        void Separate(IGridGenerator target);
 
         /// <summary>
         /// Remove all the vertices in the GridSystem
