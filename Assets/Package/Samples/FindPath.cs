@@ -51,20 +51,20 @@ namespace FinTOKMAK.GridSystem.Square.Sample
             if (chooseStart.selectedGridElement.generatorID != chooseEnd.selectedGridElement.generatorID)
                 return;
 
-            int generatorID = chooseStart.selectedGridElement.generatorID;
+            int startID = chooseStart.selectedGridElement.generatorID;
+            int endID = chooseEnd.selectedGridElement.generatorID;
             
             // find the path
-            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instances[generatorID].
+            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instances[startID].
                 squareGridSystem.FindShortestPath(
-                chooseStart.selectedGridElement.gridCoordinate,
-                chooseEnd.selectedGridElement.gridCoordinate);
+                chooseStart.selectedGridElement.gridCoordinate, startID,
+                chooseEnd.selectedGridElement.gridCoordinate, endID);
             
             
             // Display
             foreach (Vertex<GridDataContainer> vertex in path)
             {
-                ((SampleSquareGridElement) SquareGridGenerator.Instances[generatorID]
-                    .gridElements[vertex.coordinate]).isPath = true;
+                ((SampleSquareGridElement) vertex.data.gridElement).isPath = true;
             }
             
             // record

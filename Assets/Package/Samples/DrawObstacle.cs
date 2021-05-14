@@ -136,7 +136,8 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                                     break;
                             }
                             SquareGridGenerator.Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
-                                SetDoubleEdge(edgeTargetA, edgeTargetB, obstacleCost * SQRT_2);
+                                SetDoubleEdge(edgeTargetA, _squareGridEventHandler[ID].generatorID, 
+                                    edgeTargetB, _squareGridEventHandler[ID].generatorID, obstacleCost * SQRT_2);
                         }
                     }
                 }
@@ -190,7 +191,8 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                                     break;
                             }
                             SquareGridGenerator.Instances[_squareGridEventHandler[ID].generatorID].squareGridSystem.
-                                SetDoubleEdge(edgeTargetA, edgeTargetB, 1 * SQRT_2);
+                                SetDoubleEdge(edgeTargetA, _squareGridEventHandler[ID].generatorID, 
+                                    edgeTargetB, _squareGridEventHandler[ID].generatorID, 1 * SQRT_2);
                         }
                     }
                 }

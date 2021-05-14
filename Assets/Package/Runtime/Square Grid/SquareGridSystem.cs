@@ -10,6 +10,23 @@ namespace FinTOKMAK.GridSystem.Square
 {
     public class SquareGridSystem<DataType> : IGridSystem<DataType> where DataType : GridDataContainer
     {
+        #region Singleton
+
+        /// <summary>
+        /// The singleton of the SquareGridSystem
+        /// </summary>
+        private static Dictionary<int, SquareGridSystem<DataType>> _instances = 
+            new Dictionary<int, SquareGridSystem<DataType>>();
+
+        public static Dictionary<int, SquareGridSystem<DataType>> Instances
+        {
+            get
+            {
+                return _instances;
+            }
+        }
+
+        #endregion
 
         #region Public Field
 
@@ -21,12 +38,38 @@ namespace FinTOKMAK.GridSystem.Square
             }
         }
 
+        public GridCoordinate globalCoordinateOffset
+        {
+            get
+            {
+                return _globalCoordinateOffset;
+            }
+        }
+
+        public int gridSystemID
+        {
+            get
+            {
+                return _gridSystemID;
+            }
+        }
+
         #endregion
 
         #region Private Field
 
         // a dictionary that stores all the Coordinate-Vertex pairs
         private Dictionary<GridCoordinate, SquareGridVertex<DataType>> _vertices;
+
+        /// <summary>
+        /// The global offset of all the Vertices in the grid system
+        /// </summary>
+        private GridCoordinate _globalCoordinateOffset;
+
+        /// <summary>
+        /// the unique ID of current grid system
+        /// </summary>
+        private int _gridSystemID;
 
         #region Pathfinding
 
@@ -53,11 +96,23 @@ namespace FinTOKMAK.GridSystem.Square
 
         /// <summary>
         /// The default constructor of SquareGridSystem
+        /// <param name="ID">the unique ID of the square grid system, can be the id of the generator</param>
+        /// <param name="globalOffset">the global offset of all the Vertex in the grid system</param>
         /// </summary>
-        public SquareGridSystem()
+        public SquareGridSystem(int ID, GridCoordinate globalOffset)
         {
+            // initialize the ID and offset
+            _gridSystemID = ID;
+            _globalCoordinateOffset = globalOffset;
+            
             // initialize vertices as empty dic
             _vertices = new Dictionary<GridCoordinate, SquareGridVertex<DataType>>();
+            
+            // add the current GridSystem into the singleton
+            if (!_instances.Values.Contains(this))
+            {
+                _instances.Add(_gridSystemID, this);
+            }
         }
         
         #endregion
@@ -301,7 +356,8 @@ namespace FinTOKMAK.GridSystem.Square
             // if the nextVertex is not the nearby Vertex of currentVertex,
             // a exception will be raised
             float edgeCost =
-                GetEdge(currentVertex.vertex.coordinate, nextVertex.coordinate);
+                GetEdge(currentVertex.vertex.coordinate, currentVertex.vertex.gridSystemID,
+                    nextVertex.coordinate, nextVertex.gridSystemID);
             // the cost in the new Vertex
             float vertexCost = nextVertex.cost;
 
@@ -317,8 +373,11 @@ namespace FinTOKMAK.GridSystem.Square
         /// <returns></returns>
         private float CalculateHCost(Vertex<DataType> currentVertex, Vertex<DataType> endVertex)
         {
-            int xDiff = Math.Abs(endVertex.coordinate.x - currentVertex.coordinate.x);
-            int yDiff = Math.Abs(endVertex.coordinate.y - currentVertex.coordinate.y);
+            GridCoordinate currentOffset = _instances[currentVertex.gridSystemID].globalCoordinateOffset;
+            GridCoordinate endOffset = _instances[endVertex.gridSystemID].globalCoordinateOffset;
+            
+            int xDiff = Math.Abs((endVertex.coordinate.x + endOffset.x) - (currentVertex.coordinate.x + currentOffset.x));
+            int yDiff = Math.Abs((endVertex.coordinate.y + endOffset.y) - (currentVertex.coordinate.y + currentOffset.y));
 
             float res = (float)Math.Sqrt(Math.Pow((float) xDiff, 2) + Math.Pow((float) yDiff, 2));
             return res;
@@ -338,67 +397,83 @@ namespace FinTOKMAK.GridSystem.Square
         #region IGridSystem interface
 
         /// <summary>
-        /// Set a non-directional Edge between coordinate1 and coordinate2
+        /// Add a new edge between two vertecies
         /// </summary>
-        /// <param name="coordinate1">the coordinate of first Vertex</param>
-        /// <param name="coordinate2">the coordinate of second Vertex</param>
-        /// <param name="weight">the weight of Edge between two vertices</param>
-        public void SetDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight)
+        /// <param name="coordinate1">coordinate of one vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="coordinate2">coordinate of another vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
+        public void SetDoubleEdge(GridCoordinate coordinate1, int startGridSystemID,
+            GridCoordinate coordinate2, int endGridSystemID, float weight)
         {
-            SetEdge(coordinate1, coordinate2, weight);
-            SetEdge(coordinate2, coordinate1, weight);
+            SetEdge(coordinate1, startGridSystemID, coordinate2, endGridSystemID, weight);
+            SetEdge(coordinate2, endGridSystemID, coordinate1, startGridSystemID, weight);
         }
 
         /// <summary>
-        /// Set a directional Edge from start coordinate to end coordinate
+        /// Add a new edge from the start vertex to the end vertex
         /// </summary>
-        /// <param name="start">the coordinate of start Vertex</param>
-        /// <param name="end">the coordinate of end Vertex</param>
-        /// <param name="weight">the weight of Edge between two vertices</param>
-        /// <exception cref="ArgumentException">if the start coordinate and the end coordinate are not neighbor</exception>
-        public void SetEdge(GridCoordinate start, GridCoordinate end, float weight)
+        /// <param name="start">the coordinate of star vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="end">the coordinate of end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
+        public void SetEdge(GridCoordinate start, int startGridSystemID, 
+            GridCoordinate end, int endGridSystemID, float weight)
         {
             // Get the start and end Vertex
-            SquareGridVertex<DataType> startVertex = _vertices[start];
-            SquareGridVertex<DataType> endVertex = _vertices[end];
+            SquareGridVertex<DataType> startVertex = (SquareGridVertex<DataType>)_instances[startGridSystemID].GetVertex(start);
+            SquareGridVertex<DataType> endVertex = (SquareGridVertex<DataType>)_instances[endGridSystemID].GetVertex(end);
 
+            GridCoordinate startOffset = _instances[startGridSystemID].globalCoordinateOffset;
+            GridCoordinate endOffset = _instances[endGridSystemID].globalCoordinateOffset;
+            
             // end Vertex is on the right of start Vertex
-            if (end.x == start.x + 1 && end.y == start.y)
+            if (end.x + endOffset.x == start.x + startOffset.x + 1 && 
+                end.y + endOffset.y == start.y + startOffset.y)
             {
                 startVertex.SetConnection("right", endVertex, weight);
             }
             // end Vertex is on the left of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y)
             {
                 startVertex.SetConnection("left", endVertex, weight);
             }
             // end Vertex is on the top of start Vertex
-            else if (end.x == start.x && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 startVertex.SetConnection("up", endVertex, weight);
             }
             // end Vertex is on the bottom of start Vertex
-            else if (end.x == start.x && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 startVertex.SetConnection("down", endVertex, weight);
             }
             // end Vertex is on the top left of the start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 startVertex.SetConnection("upLeft", endVertex, weight);
             }
             // end Vertex is on the top right of the start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x + 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 startVertex.SetConnection("upRight", endVertex, weight);
             }
             // end Vertex is on the bottom left of the start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 startVertex.SetConnection("downLeft", endVertex, weight);
             }
             // end Vertex is on the bottom right of the start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x + 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 startVertex.SetConnection("downRight", endVertex, weight);
             }
@@ -420,7 +495,7 @@ namespace FinTOKMAK.GridSystem.Square
             if (_vertices.ContainsKey(coordinate))
                 throw new ArgumentException("Vertex with specific coordinate already exist in the dictionary");
             
-            SquareGridVertex<DataType> vertex = new SquareGridVertex<DataType>(coordinate, cost, data);
+            SquareGridVertex<DataType> vertex = new SquareGridVertex<DataType>(_gridSystemID, coordinate, cost, data);
             // add the Coordinate-Vertex pair into the _vertices dict
             _vertices.Add(coordinate, vertex);
         }
@@ -429,16 +504,18 @@ namespace FinTOKMAK.GridSystem.Square
         /// Find the shortest path from the start vertex to the end vertex
         /// </summary>
         /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="end">the coordinate of the end vertex</param>
-        /// <returns>a list of vertices that lies on the shortest path from the start vertex to the end vertex.
-        /// Return null when path not found</returns>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        /// <returns>a list of verticies that lies on the shortest path from the start vertex to the end vertex</returns>
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
-        public LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, GridCoordinate end)
+        public LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
+            GridCoordinate end, int endGridSystemID)
         {
             // try get the startVertex
-            Vertex<DataType> startVertex = GetVertex(start);
-            Vertex<DataType> endVertex = GetVertex(end);
+            Vertex<DataType> startVertex = _instances[startGridSystemID].GetVertex(start);
+            Vertex<DataType> endVertex = _instances[endGridSystemID].GetVertex(end);
 
             if (startVertex == null)
             {
@@ -452,59 +529,70 @@ namespace FinTOKMAK.GridSystem.Square
 
             return PathfindingHelper(startVertex, endVertex);
         }
-
+        
         /// <summary>
-        /// Get the weight of the edge from the start to end
+        /// Get the weight of the edge from the start vertex to the end vertex
         /// </summary>
-        /// <param name="start">the coordinate of start Vertex</param>
-        /// <param name="end">the coordinate of end Vertex</param>
-        /// <returns>the weight of the edge</returns>
-        /// <exception cref="ArgumentException">if the start Vertex and end Vertex are not neighbor
-        /// or there is not connection between start Vertex and end Vertex</exception>
-        public float GetEdge(GridCoordinate start, GridCoordinate end)
+        /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="end">the coordinate of the end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        /// <returns>the weight of the edge that get</returns>
+        public float GetEdge(GridCoordinate start, int startGridSystemID, GridCoordinate end, int endGridSystemID)
         {
             // Get the start Vertex
-            SquareGridVertex<DataType> startVertex = _vertices[start];
+            SquareGridVertex<DataType> startVertex = (SquareGridVertex<DataType>)_instances[startGridSystemID].GetVertex(start);
             Dictionary<string, Edge<DataType>> startConnections = startVertex.connection;
             Edge<DataType> edge;
             
+            GridCoordinate startOffset = _instances[startGridSystemID].globalCoordinateOffset;
+            GridCoordinate endOffset = _instances[endGridSystemID].globalCoordinateOffset;
+            
             // end Vertex is on the right of start Vertex
-            if (end.x == start.x + 1 && end.y == start.y)
+            if (end.x + endOffset.x == start.x + startOffset.x + 1 && 
+                end.y + endOffset.y == start.y + startOffset.y)
             {
                 edge = startConnections["right"];
             }
             // end Vertex is on the left of start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y)
             {
                 edge = startConnections["left"];
             }
             // end Vertex is on the top of start Vertex
-            else if (end.x == start.x && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 edge = startConnections["up"];
             }
             // end Vertex is on the bottom of start Vertex
-            else if (end.x == start.x && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 edge = startConnections["down"];
             }
             // end Vertex is on the top left of the start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 edge = startConnections["upLeft"];
             }
             // end Vertex is on the top right of the start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y + 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x + 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y + 1)
             {
                 edge = startConnections["upRight"];
             }
             // end Vertex is on the Bottom left of the start Vertex
-            else if (end.x == start.x - 1 && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x - 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 edge = startConnections["downLeft"];
             }
             // end Vertex is on the Bottom right of the start Vertex
-            else if (end.x == start.x + 1 && end.y == start.y - 1)
+            else if (end.x + endOffset.x == start.x + startOffset.x + 1 &&
+                     end.y + endOffset.y == start.y + startOffset.y - 1)
             {
                 edge = startConnections["downRight"];
             }
@@ -537,20 +625,31 @@ namespace FinTOKMAK.GridSystem.Square
         }
 
         /// <summary>
-        /// Remove the edge both from coordinate1 to coordinate2 and coordinate2 to coordinate1
+        /// Remove an edge between two verticies
         /// </summary>
-        /// <param name="coordinate1">the coordinate of first Vertex</param>
-        /// <param name="coordinate2">the coordinate of second Vertex</param>
-        public void RemoveDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2)
+        /// <param name="coordinate1">coordiante of one vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="coordinate2">coordiante of another vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        public void RemoveDoubleEdge(GridCoordinate coordinate1, int startGridSystemID, 
+            GridCoordinate coordinate2, int endGridSystemID)
         {
-            RemoveEdge(coordinate1, coordinate2);
-            RemoveEdge(coordinate2, coordinate1);
+            RemoveEdge(coordinate1, startGridSystemID, coordinate2, endGridSystemID);
+            RemoveEdge(coordinate2, endGridSystemID, coordinate1, startGridSystemID);
         }
 
-        public void RemoveEdge(GridCoordinate start, GridCoordinate end)
+        /// <summary>
+        /// Remove an edge from the start vertex to the end vertex
+        /// </summary>
+        /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="end">the coordinate of the end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        public void RemoveEdge(GridCoordinate start, int startGridSystemID, 
+            GridCoordinate end, int endGridSystemID)
         {
             // Get the start Vertex
-            SquareGridVertex<DataType> startVertex = _vertices[start];
+            SquareGridVertex<DataType> startVertex = (SquareGridVertex<DataType>)_instances[startGridSystemID].GetVertex(start);
             Edge<DataType> edge;
             
             // end Vertex is on the right of start Vertex
@@ -644,36 +743,68 @@ namespace FinTOKMAK.GridSystem.Square
             
             // remove the connection with top Vertex
             GridCoordinate targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y + 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["up"] != null)
+            {
+                int targetID = currentVertex.connection["up"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with bottom Vertex
             targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y - 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["down"] != null)
+            {
+                int targetID = currentVertex.connection["down"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with left Vertex
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["left"] != null)
+            {
+                int targetID = currentVertex.connection["left"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with the right Vertex
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["right"] != null)
+            {
+                int targetID = currentVertex.connection["right"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with the top left Vertex
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y + 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["upLeft"] != null)
+            {
+                int targetID = currentVertex.connection["upLeft"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with top right Vertex
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y + 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["upRight"] != null)
+            {
+                int targetID = currentVertex.connection["upRight"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with bottom left Vertex
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y - 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["downLeft"] != null)
+            {
+                int targetID = currentVertex.connection["downLeft"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
             // remove the connection with bottom right Vertex
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y - 1);
-            if (GetVertex(targetCoordinate) != null)
-                RemoveDoubleEdge(coordinate, targetCoordinate);
+            if (currentVertex.connection["downRight"] != null)
+            {
+                int targetID = currentVertex.connection["downRight"].to.gridSystemID;
+                RemoveDoubleEdge(coordinate, _gridSystemID,
+                    targetCoordinate, targetID);
+            }
 
             // if the target exist, remove the target
             _vertices.Remove(coordinate);

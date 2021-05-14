@@ -34,6 +34,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
 
         /// <summary>
         /// The unique ID of current GridGenerator
+        /// also the unique ID of the grid system
         /// </summary>
         private int generatorID;
         
@@ -45,7 +46,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// <summary>
         /// The SquareGridSystem in this generator
         /// </summary>
-        private SquareGridSystem<GridDataContainer> _squareGridSystem = new SquareGridSystem<GridDataContainer>();
+        private SquareGridSystem<GridDataContainer> _squareGridSystem;
 
         /// <summary>
         /// The SquareGridEventHandler which will be instantiate in current object
@@ -67,6 +68,9 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         /// </summary>
         [BoxGroup("Grid generation prefab & root")]
         public GameObject sceneObjectRoot;
+        
+        [BoxGroup("Grid generation prefab & root")]
+        public GridCoordinate offset;
 
         /// <summary>
         /// The GridElement prefab for all the grid to be generate
@@ -110,6 +114,9 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                 nextGenerateID++;
                 Instances.Add(generatorID, this);
             }
+            
+            // initialize the grid system
+            _squareGridSystem = new SquareGridSystem<GridDataContainer>(generatorID, offset);
             
             // create and initialize GridEventHandler
             _squareGridEventHandler = gameObject.AddComponent<SquareGridEventHandler>();
@@ -172,28 +179,36 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     
                     // add the connection with the right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate,_squareGridSystem.gridSystemID,
+                            new GridCoordinate(x + 1, y),_squareGridSystem.gridSystemID, cost);
                     // add the connection with the left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x - 1, y), _squareGridSystem.gridSystemID, cost);
                     // add the connection with top grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x, y + 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x, y + 1), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID,
+                            new GridCoordinate(x, y + 1), _squareGridSystem.gridSystemID, cost);
                     // add the connection with bottom grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x, y - 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x, y - 1), cost);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x, y - 1), _squareGridSystem.gridSystemID, cost);
                     // add the connection with the top left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y + 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y + 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x - 1, y + 1), _squareGridSystem.gridSystemID, cost * SQRT_2);
                     // add the connection with the top right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y + 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y + 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x + 1, y + 1), _squareGridSystem.gridSystemID, cost * SQRT_2);
                     // add the connection with the down left grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x - 1, y - 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x - 1, y - 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x - 1, y - 1), _squareGridSystem.gridSystemID, cost * SQRT_2);
                     // add the connection with the down right grid
                     if (_squareGridSystem.GetVertex(new GridCoordinate(x + 1, y - 1)) != null)
-                        _squareGridSystem.SetDoubleEdge(coordinate, new GridCoordinate(x + 1, y - 1), cost * SQRT_2);
+                        _squareGridSystem.SetDoubleEdge(coordinate, _squareGridSystem.gridSystemID, 
+                            new GridCoordinate(x + 1, y - 1), _squareGridSystem.gridSystemID, cost * SQRT_2);
                 }
             }
         }
@@ -249,7 +264,9 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                     if (vertexData.edgeCost[i] != -1)
                     {
                         _squareGridSystem.SetEdge(currentCoordinate, 
+                            _squareGridSystem.gridSystemID,
                             new GridCoordinate(vertexData.edgeTargets[i][0], vertexData.edgeTargets[i][1]), 
+                            _squareGridSystem.gridSystemID,
                             vertexData.edgeCost[i]);
                     }
                 }

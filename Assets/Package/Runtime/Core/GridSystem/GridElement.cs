@@ -31,7 +31,7 @@ namespace FinTOKMAK.GridSystem
         #region Public Field
 
         /// <summary>
-        /// The generator ID of GridGenerator current Grid is in;
+        /// The generator ID of GridGenerator current Grid is in
         /// </summary>
         [HideInInspector]
         public int generatorID;

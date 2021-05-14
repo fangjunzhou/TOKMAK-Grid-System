@@ -18,14 +18,14 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [Button("Test the constructor of SquareGridSystem")]
         private void TestConstructor()
         {
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             Debug.Log("Constructor working.");
         }
         
         [Button("Test AddVertex and GetVertex")]
         private void TestAddandGetVertex()
         {
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10,
                 new GridDataContainer());
             squareGridSystem.AddVertex(new GridCoordinate(10, 2), 12,
@@ -54,12 +54,12 @@ namespace FinTOKMAK.GridSystem.Square.Test
         private void TestRemoveVertex()
         {
             // add two vertices and edge between them
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10,
                 new GridDataContainer());
             squareGridSystem.AddVertex(new GridCoordinate(0, 2), 12,
                 new GridDataContainer());
-            squareGridSystem.SetDoubleEdge(new GridCoordinate(0, 1), new GridCoordinate(0, 2), 1);
+            squareGridSystem.SetDoubleEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(0, 2), 0, 1);
             
             // print out the info of two vertices
             Debug.Log("Vertex (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
@@ -75,7 +75,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [Button("Test AddEdge and AddDoubleEdge")]
         private void TestAddEdge()
         {
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10,
                 new GridDataContainer());
             squareGridSystem.AddVertex(new GridCoordinate(1, 1), 12,
@@ -87,7 +87,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
             
             Debug.LogWarning("ADD EDGE");
             // add edge
-            squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+            squareGridSystem.SetEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(1, 1), 0, 2);
             
             Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
             Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
@@ -102,7 +102,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
             
             Debug.LogWarning("ADD DOUBLE EDGE");
             // add double edge
-            squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
+            squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), 0, new GridCoordinate(3, 5), 0, 2);
             
             Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
             Debug.Log("Get (3, 5): " + squareGridSystem.GetVertex(new GridCoordinate(3, 5)));
@@ -111,7 +111,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [Button("Test GetEdge")]
         private void TestGetEdge()
         {
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10,
                 new GridDataContainer());
             squareGridSystem.AddVertex(new GridCoordinate(1, 1), 12,
@@ -123,19 +123,19 @@ namespace FinTOKMAK.GridSystem.Square.Test
             
             Debug.LogWarning("ADD EDGE");
             // add edge
-            squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+            squareGridSystem.SetEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(1, 1), 0, 2);
             
             Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
             Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
             
             Debug.LogWarning("Get Edge from (0, 1) to (1, 1): "  + 
-                             squareGridSystem.GetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1)));
+                             squareGridSystem.GetEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(1, 1), 0));
         }
 
         [Button("Test RemoveEdge and RemoveDoubleEdge")]
         private void TestRemoveEdge()
         {
-            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>();
+            SquareGridSystem<GridDataContainer> squareGridSystem = new SquareGridSystem<GridDataContainer>(0, new GridCoordinate(0, 0));
             squareGridSystem.AddVertex(new GridCoordinate(0, 1), 10,
                 new GridDataContainer());
             squareGridSystem.AddVertex(new GridCoordinate(1, 1), 12,
@@ -147,7 +147,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
             
             Debug.LogWarning("ADD EDGE");
             // add edge
-            squareGridSystem.SetEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1), 2);
+            squareGridSystem.SetEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(1, 1), 0, 2);
             
             Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
             Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
@@ -162,20 +162,20 @@ namespace FinTOKMAK.GridSystem.Square.Test
             
             Debug.LogWarning("ADD DOUBLE EDGE");
             // add double edge
-            squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5), 2);
+            squareGridSystem.SetDoubleEdge(new GridCoordinate(3, 4), 0, new GridCoordinate(3, 5), 0, 2);
             
             Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
             Debug.Log("Get (3, 5): " + squareGridSystem.GetVertex(new GridCoordinate(3, 5)));
             
             // remove edge
-            squareGridSystem.RemoveEdge(new GridCoordinate(0, 1), new GridCoordinate(1, 1));
+            squareGridSystem.RemoveEdge(new GridCoordinate(0, 1), 0, new GridCoordinate(1, 1), 0);
             Debug.LogWarning("Removed edge from (0, 1) to (1, 1)");
             
             Debug.Log("Get (0, 1): " + squareGridSystem.GetVertex(new GridCoordinate(0, 1)));
             Debug.Log("Get (1, 1): " + squareGridSystem.GetVertex(new GridCoordinate(1, 1)));
             
             // remove double edge
-            squareGridSystem.RemoveDoubleEdge(new GridCoordinate(3, 4), new GridCoordinate(3, 5));
+            squareGridSystem.RemoveDoubleEdge(new GridCoordinate(3, 4), 0, new GridCoordinate(3, 5), 0);
             Debug.LogWarning("Removed double edge from (3, 4) to (3, 5)");
             
             Debug.Log("Get (3, 4): " + squareGridSystem.GetVertex(new GridCoordinate(3, 4)));
@@ -186,7 +186,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
         private void TestPathfinding()
         {
             LinkedList<Vertex<GridDataContainer>> path = generator.squareGridSystem.
-                FindShortestPath(startCoordinate, endCoordinate);
+                FindShortestPath(startCoordinate, 0, endCoordinate, 0);
             foreach (Vertex<GridDataContainer> vertex in path)
             {
                 Debug.Log(vertex);
