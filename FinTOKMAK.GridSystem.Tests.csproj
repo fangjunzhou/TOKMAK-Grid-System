@@ -64,6 +64,7 @@
      <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestGridSystemSerialization.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexData.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\Core\VertexDataIO\TestVertexDataSerialization.cs" />
+     <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestMergeGenerator.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridElement.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridGenerator.cs" />
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridSystem.cs" />
