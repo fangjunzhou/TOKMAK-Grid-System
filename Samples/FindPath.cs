@@ -37,24 +37,33 @@ namespace FinTOKMAK.GridSystem.Square.Sample
 
         public void OnFindPath()
         {
-            if (chooseStart.selectedGridElement == null || chooseEnd.selectedGridElement == null)
-                return;
-            
-            // find the path
-            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instance.squareGridSystem.FindShortestPath(
-                chooseStart.selectedGridElement.gridCoordinate,
-                chooseEnd.selectedGridElement.gridCoordinate);
-            
             // Clear
             foreach (Vertex<GridDataContainer> vertex in _lastPath)
             {
-                ((SampleSquareGridElement) SquareGridGenerator.Instance.gridElements[vertex.coordinate]).isPath = false;
+                // get the generator id of specific vertex
+                int id = vertex.data.gridElement.generatorID;
+                ((SampleSquareGridElement) SquareGridGenerator.Instances[id].gridElements[vertex.coordinate]).isPath = false;
             }
+            
+            if (chooseStart.selectedGridElement == null || chooseEnd.selectedGridElement == null)
+                return;
+
+            int startID = chooseStart.selectedGridElement.generatorID;
+            int endID = chooseEnd.selectedGridElement.generatorID;
+            
+            // find the path
+            LinkedList<Vertex<GridDataContainer>> path = SquareGridGenerator.Instances[startID].
+                squareGridSystem.FindShortestPath(
+                chooseStart.selectedGridElement.gridCoordinate, startID,
+                chooseEnd.selectedGridElement.gridCoordinate, endID);
+            
+            if (path == null)
+                return;
             
             // Display
             foreach (Vertex<GridDataContainer> vertex in path)
             {
-                ((SampleSquareGridElement) SquareGridGenerator.Instance.gridElements[vertex.coordinate]).isPath = true;
+                ((SampleSquareGridElement) vertex.data.gridElement).isPath = true;
             }
             
             // record

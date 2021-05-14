@@ -29,6 +29,12 @@ namespace FinTOKMAK.GridSystem
         #endregion
 
         #region Public Field
+
+        /// <summary>
+        /// The generator ID of GridGenerator current Grid is in
+        /// </summary>
+        [HideInInspector]
+        public int generatorID;
         
         /// <summary>
         /// The coordinate of current grid
@@ -94,6 +100,7 @@ namespace FinTOKMAK.GridSystem
 
         /// <summary>
         /// Call this method when the coordinate changes
+        /// Suggest only use when the gridCoordinate initialize
         /// </summary>
         protected virtual void OnCoordinateChange()
         {
@@ -102,6 +109,7 @@ namespace FinTOKMAK.GridSystem
 
         /// <summary>
         /// Call this method when gridDataContainer changes
+        /// Suggest only use when the gridCoordinate initialize
         /// </summary>
         protected virtual void OnGridDataContainerChange()
         {

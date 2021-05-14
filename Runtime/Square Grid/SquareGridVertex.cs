@@ -17,8 +17,10 @@ namespace FinTOKMAK.GridSystem.Square
         /// <summary>
         /// The basic constructor of SquareGridVertex
         /// </summary>
-        public SquareGridVertex()
+        public SquareGridVertex(int id)
         {
+            // initialize the id
+            _gridSystemID = id;
             // set the coordinate to (0, 0)
             _coordinate = new GridCoordinate();
             // set the cost to 0
@@ -34,9 +36,10 @@ namespace FinTOKMAK.GridSystem.Square
         /// The constructor with coordinate initialized
         /// </summary>
         /// <param name="coordinate">the coordinate of current vertex</param>
-        public SquareGridVertex(GridCoordinate coordinate)
+        public SquareGridVertex(int id, GridCoordinate coordinate)
         {
-
+            // initialize the id
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost to 0
@@ -52,8 +55,10 @@ namespace FinTOKMAK.GridSystem.Square
         /// The constructor with cost initialized
         /// </summary>
         /// <param name="cost">the cost of current vertex</param>
-        public SquareGridVertex(float cost)
+        public SquareGridVertex(int id, float cost)
         {
+            // initialize the id
+            _gridSystemID = id;
             // set the coordinate to (0, 0)
             _coordinate = new GridCoordinate();
             // set the cost
@@ -70,8 +75,10 @@ namespace FinTOKMAK.GridSystem.Square
         /// </summary>
         /// <param name="coordinate">the coordinate of current vertex</param>
         /// <param name="cost">the cost of current vertex</param>
-        public SquareGridVertex(GridCoordinate coordinate, float cost)
+        public SquareGridVertex(int id, GridCoordinate coordinate, float cost)
         {
+            // initialize the id
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost
@@ -89,8 +96,10 @@ namespace FinTOKMAK.GridSystem.Square
         /// <param name="coordinate">the coordinate of current vertex</param>
         /// <param name="cost">the cost of passing current vertex</param>
         /// <param name="data">the data stored in current vertex</param>
-        public SquareGridVertex(GridCoordinate coordinate, float cost, DataType data)
+        public SquareGridVertex(int id, GridCoordinate coordinate, float cost, DataType data)
         {
+            // initialize the id
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost

@@ -15,8 +15,9 @@ namespace FinTOKMAK.GridSystem
         
         /// <summary>
         /// The action triggered when currentGridObject changes
+        /// will get the ID of the event handler in the callback function
         /// </summary>
-        Action updateSelectedGrid { get; set; }
+        Action<int> updateSelectedGrid { get; set; }
 
         #endregion
     }
