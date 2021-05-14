@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2021-5-14
+### Changed
+- Now support multiple GridGenerator and GridSystem can merge different generator and system dynamically
+- Each GridGenerator has a global offset to shift the local GridCooridnate to a global coordinate
+- Now support pathfinding across different GridSystem if they are merged
+
 ## [0.0.5] - 2021-5-12
 ### Changed
 - User can choose which direction to generate in the TestGridGenerator MonoBehavior.
@@ -41,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#upm-gridsystem...HEAD
+[0.0.6]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.6
 [0.0.5]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.5
 [0.0.4]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.4
 [0.0.3]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.3
