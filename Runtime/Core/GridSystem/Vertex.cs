@@ -13,6 +13,10 @@ namespace FinTOKMAK.GridSystem
         #region Private Field
 
         /// <summary>
+        /// The grid system current Vertex belong to
+        /// </summary>
+        private protected int _gridSystemID;
+        /// <summary>
         /// The coordinate of the grid
         /// </summary>
         private protected GridCoordinate _coordinate;
@@ -34,6 +38,17 @@ namespace FinTOKMAK.GridSystem
 
         #region Public Field
 
+        /// <summary>
+        /// The grid system current Vertex belong to
+        /// </summary>
+        public int gridSystemID
+        {
+            get
+            {
+                return _gridSystemID;
+            }
+        }
+        
         /// <summary>
         /// All the connections between current Vertex and other verticies
         /// </summary>
@@ -92,12 +107,29 @@ namespace FinTOKMAK.GridSystem
         #region Constructor
 
         /// <summary>
+        /// The default parameterless constructor required for compile
+        /// </summary>
+        public Vertex()
+        {
+            // initialize the ID
+            _gridSystemID = 0;
+            // set the coordinate to (0, 0)
+            _coordinate = new GridCoordinate();
+            // set the cost to 0
+            _cost = 0;
+            // initialize the connection dic to be empty
+            _connection = new Dictionary<string, Edge<DataType>>();
+        }
+
+        /// <summary>
         /// The default constructor of Vertex base class
         /// coordinate will be set to (0, 0)
         /// cost will be set to 0
         /// </summary>
-        public Vertex()
+        public Vertex(int id)
         {
+            // initialize the ID
+            _gridSystemID = id;
             // set the coordinate to (0, 0)
             _coordinate = new GridCoordinate();
             // set the cost to 0
@@ -111,8 +143,10 @@ namespace FinTOKMAK.GridSystem
         /// cost will be set to 0
         /// </summary>
         /// <param name="coordinate">the coordinate of current vertex</param>
-        public Vertex(GridCoordinate coordinate)
+        public Vertex(int id, GridCoordinate coordinate)
         {
+            // initialize the ID
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost to 0
@@ -126,8 +160,10 @@ namespace FinTOKMAK.GridSystem
         /// coordinate will be set to (0, 0)
         /// </summary>
         /// <param name="cost">The cost that will take to pass current vertex</param>
-        public Vertex(float cost)
+        public Vertex(int id, float cost)
         {
+            // initialize the ID
+            _gridSystemID = id;
             // set the coordinate to (0, 0)
             _coordinate = new GridCoordinate();
             // set the cost
@@ -141,8 +177,10 @@ namespace FinTOKMAK.GridSystem
         /// </summary>
         /// <param name="coordinate">the coordinate of current vertex</param>
         /// <param name="cost">The cost that will take to pass current vertex</param>
-        public Vertex(GridCoordinate coordinate, float cost)
+        public Vertex(int id, GridCoordinate coordinate, float cost)
         {
+            // initialize the ID
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost
@@ -158,8 +196,10 @@ namespace FinTOKMAK.GridSystem
         /// <param name="coordinate">the coordinate of current Vertex</param>
         /// <param name="cost">the cost of current Vertex</param>
         /// <param name="data">the data stored in current Vertex</param>
-        public Vertex(GridCoordinate coordinate, float cost, DataType data)
+        public Vertex(int id, GridCoordinate coordinate, float cost, DataType data)
         {
+            // initialize the ID
+            _gridSystemID = id;
             // set the coordinate
             this._coordinate = coordinate;
             // set the cost

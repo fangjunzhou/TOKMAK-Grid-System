@@ -19,21 +19,21 @@ namespace FinTOKMAK.GridSystem.Core.Test
         [Button("Test the constructor with coordinate for Vetex")]
         private void TestCoordinateConstructor()
         {
-            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(1, 5));
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(0, new GridCoordinate(1, 5));
             Debug.Log(vertex);
         }
 
         [Button("Test the constructor with cost for Vertex")]
         private void TestCostConstructor()
         {
-            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(5f);
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(0, 5f);
             Debug.Log(vertex);
         }
 
         [Button("Test the constructor with cost and coordinate for Vertex")]
         private void TestDoubleConstructor()
         {
-            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(2, 5), 10f);
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(0, new GridCoordinate(2, 5), 10f);
             Debug.Log(vertex);
         }
 
@@ -41,7 +41,7 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestDataConstructor()
         {
 
-            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(new GridCoordinate(2, 5), 10f,
+            Vertex<GridDataContainer> vertex = new Vertex<GridDataContainer>(0, new GridCoordinate(2, 5), 10f,
                 new GridDataContainer());
             Debug.Log(vertex);
         }
@@ -65,8 +65,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestSetConnection()
         {
             // create two verticies
-            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
-            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(0, new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(0, new GridCoordinate(1, 0));
 
             Debug.Log("Vertex 1:");
             Debug.Log(vertex1);
@@ -98,8 +98,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestSetDoubleConnection()
         {
             // create two verticies
-            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
-            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(0, new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(0, new GridCoordinate(1, 0));
 
             Debug.Log("Vertex 1:");
             Debug.Log(vertex1);
@@ -138,10 +138,10 @@ namespace FinTOKMAK.GridSystem.Core.Test
             Dictionary<GridCoordinate, Vertex<GridDataContainer>> verticies = 
                 new Dictionary<GridCoordinate, Vertex<GridDataContainer>>();
 
-            Vertex<GridDataContainer> ver1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 1), 0,
+            Vertex<GridDataContainer> ver1 = new Vertex<GridDataContainer>(0, new GridCoordinate(0, 1), 0,
                 new GridDataContainer());
             verticies.Add(ver1.coordinate, ver1);
-            Vertex<GridDataContainer> ver2 = new Vertex<GridDataContainer>(new GridCoordinate(0, 2), 0,
+            Vertex<GridDataContainer> ver2 = new Vertex<GridDataContainer>(0, new GridCoordinate(0, 2), 0,
                 new GridDataContainer());
             verticies.Add(ver2.coordinate, ver2);
             //Vertex<string> ver3 = new Vertex<string>(new GridCoordinate(0, 1));

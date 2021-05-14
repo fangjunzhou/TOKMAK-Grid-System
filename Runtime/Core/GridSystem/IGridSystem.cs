@@ -19,6 +19,16 @@ namespace FinTOKMAK.GridSystem
         /// </summary>
         List<Vertex<DataType>> vertices { get; }
 
+        /// <summary>
+        /// the global offset of all the Vertex in the grid system
+        /// </summary>
+        GridCoordinate globalCoordinateOffset { get; }
+        
+        /// <summary>
+        /// The unique ID of the gridSystem
+        /// </summary>
+        int gridSystemID { get; }
+
         #endregion
         
         #region Vertext Operation
@@ -53,39 +63,53 @@ namespace FinTOKMAK.GridSystem
         /// Add a new edge from the start vertex to the end vertex
         /// </summary>
         /// <param name="start">the coordinate of star vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="end">the coordinate of end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
         /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
-        void SetEdge(GridCoordinate start, GridCoordinate end, float weight);
+        void SetEdge(GridCoordinate start, int startGridSystemID,
+            GridCoordinate end, int endGridSystemID, float weight);
 
         /// <summary>
         /// Add a new edge between two vertecies
         /// </summary>
-        /// <param name="coordinate1">coordiante of one vertex</param>
-        /// <param name="coordinate2">coordiante of another vertex</param>
+        /// <param name="coordinate1">coordinate of one vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
+        /// <param name="coordinate2">coordinate of another vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
         /// <param name="weight">the weight of the edge from the start vertex to the end vertex</param>
-        void SetDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2, float weight);
+        void SetDoubleEdge(GridCoordinate coordinate1, int startGridSystemID, 
+            GridCoordinate coordinate2, int endGridSystemID, float weight);
 
         /// <summary>
         /// Remove an edge from the start vertex to the end vertex
         /// </summary>
         /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="end">the coordinate of the end vertex</param>
-        void RemoveEdge(GridCoordinate start, GridCoordinate end);
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        void RemoveEdge(GridCoordinate start, int startGridSystemID, 
+            GridCoordinate end, int endGridSystemID);
 
         /// <summary>
         /// Remove an edge between two verticies
         /// </summary>
         /// <param name="coordinate1">coordiante of one vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="coordinate2">coordiante of another vertex</param>
-        void RemoveDoubleEdge(GridCoordinate coordinate1, GridCoordinate coordinate2);
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
+        void RemoveDoubleEdge(GridCoordinate coordinate1, int startGridSystemID, 
+            GridCoordinate coordinate2, int endGridSystemID);
 
         /// <summary>
         /// Get the weight of the edge from the start vertex to the end vertex
         /// </summary>
         /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="end">the coordinate of the end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
         /// <returns>the weight of the edge that get</returns>
-        float GetEdge(GridCoordinate start, GridCoordinate end);
+        float GetEdge(GridCoordinate start, int startGridSystemID, GridCoordinate end, int endGridSystemID);
 
         #endregion
 
@@ -95,11 +119,14 @@ namespace FinTOKMAK.GridSystem
         /// Find the shortest path from the start vertex to the end vertex
         /// </summary>
         /// <param name="start">the coordinate of the start vertex</param>
+        /// <param name="startGridSystemID">the ID of the grid system of the start Vertex</param>
         /// <param name="end">the coordinate of the end vertex</param>
+        /// <param name="endGridSystemID">the ID of the grid system of the end Vertex</param>
         /// <returns>a list of verticies that lies on the shortest path from the start vertex to the end vertex</returns>
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
-        LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, GridCoordinate end);
+        LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
+            GridCoordinate end, int endGridSystemID);
 
         #endregion
     }

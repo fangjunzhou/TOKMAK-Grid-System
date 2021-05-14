@@ -9,8 +9,8 @@ namespace FinTOKMAK.GridSystem.Core.Test
         private void TestVertexDataConstructor()
         {
             // create two vertices and connect them
-            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(new GridCoordinate(0, 0));
-            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(new GridCoordinate(1, 0));
+            Vertex<GridDataContainer> vertex1 = new Vertex<GridDataContainer>(0, new GridCoordinate(0, 0));
+            Vertex<GridDataContainer> vertex2 = new Vertex<GridDataContainer>(0, new GridCoordinate(1, 0));
             vertex1.AddConnectionDir("right");
             vertex2.AddConnectionDir("left");
             vertex1.SetDoubleConnection("right", vertex2, "left", 10);

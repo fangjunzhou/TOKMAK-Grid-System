@@ -12,7 +12,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [Button("Test the default constructor of SquareGridVertex")]
         private void TestDefaultConstructor()
         {
-            SquareGridVertex<GridDataContainer> squareGridVertex = new SquareGridVertex<GridDataContainer>();
+            SquareGridVertex<GridDataContainer> squareGridVertex = new SquareGridVertex<GridDataContainer>(0, new GridCoordinate(0, 0));
             Debug.Log(squareGridVertex);
         }
 
@@ -20,9 +20,9 @@ namespace FinTOKMAK.GridSystem.Square.Test
         private void TestDictionary()
         {
             SquareGridVertex<GridDataContainer> squareGridVertex1 = 
-                new SquareGridVertex<GridDataContainer>(new GridCoordinate(1, 5), 10, new GridDataContainer());
+                new SquareGridVertex<GridDataContainer>(0, new GridCoordinate(1, 5), 10, new GridDataContainer());
             SquareGridVertex<GridDataContainer> squareGridVertex2 = 
-                new SquareGridVertex<GridDataContainer>(new GridCoordinate(2, 10), 5, new GridDataContainer());
+                new SquareGridVertex<GridDataContainer>(0, new GridCoordinate(2, 10), 5, new GridDataContainer());
             Dictionary<GridCoordinate, Vertex<GridDataContainer>> dictionary = 
                 new Dictionary<GridCoordinate, Vertex<GridDataContainer>>();
         
