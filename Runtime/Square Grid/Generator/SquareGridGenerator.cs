@@ -14,7 +14,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
     /// <summary>
     /// The square grid generator that uses SquareGridSystem
     /// </summary>
-    public class SquareGridGenerator : MonoBehaviour, IGridGenerator
+    public class SquareGridGenerator : MonoBehaviour, IGridGenerator<GridDataContainer>
     {
         #region Singleton
 
@@ -72,6 +72,28 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         #region Public Field
 
         /// <summary>
+        /// the unique ID of the GridGenerator
+        /// </summary>
+        public int generatorID
+        {
+            get
+            {
+                return _generatorID;
+            }
+        }
+
+        /// <summary>
+        /// The GridSystem of the generator
+        /// </summary>
+        public IGridSystem<GridDataContainer> gridSystem
+        {
+            get
+            {
+                return _squareGridSystem;
+            }
+        }
+
+        /// <summary>
         /// The global offset of all the Vertices in the GridSystem in current GirdGenerator
         /// </summary>
         public GridCoordinate globalOffset
@@ -82,16 +104,6 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             }
         }
 
-        /// <summary>
-        /// the unique ID of the GridGenerator
-        /// </summary>
-        public int generatorID
-        {
-            get
-            {
-                return _generatorID;
-            }
-        }
 
         /// <summary>
         /// The root object that all the GridElements will be generate in
@@ -296,18 +308,162 @@ namespace FinTOKMAK.GridSystem.Square.Generator
 
         /// <summary>
         /// Merge the GridSystem in current GridGenerator with GridSystem in another generator
+        /// If the merge direction is up or down, the from should be on the left and to should be on the right
+        /// If the merge direction is left or right, the from should be on the bottom and to should be on the top
         /// </summary>
-        /// <param name="target">the target generator to merge</param>
-        public void Merge(IGridGenerator target)
+        /// <param name="target">The target generator to merge</param>
+        /// <param name="currentFrom">the start coordinate of the edge of current GridSystem</param>
+        /// <param name="currentTo">the end coordinate of the edge of current GridSystem</param>
+        /// <param name="direction">the merge direction</param>
+        public void Merge(IGridGenerator<GridDataContainer> target, GridCoordinate currentFrom, GridCoordinate currentTo,
+            MergeDirection direction, float weight)
         {
-            throw new NotImplementedException();
+            int currentPos;
+            int endPos;
+            // if the MergeDirection is up or down, use the horizontal coordinate
+            if (direction == MergeDirection.Down || direction == MergeDirection.Up)
+            {
+                currentPos = currentFrom.x;
+                endPos = currentTo.x;
+            }
+            // if the MergeDirection is left or right, use the vertical coordinate
+            else
+            {
+                currentPos = currentFrom.y;
+                endPos = currentTo.y;
+            }
+
+            while (currentPos <= endPos)
+            {
+                // construct the current coordinate position
+                GridCoordinate currentCoordinate;
+                if (direction == MergeDirection.Down || direction == MergeDirection.Up)
+                {
+                    currentCoordinate = new GridCoordinate(currentPos, currentFrom.y);
+                }
+                else
+                {
+                    currentCoordinate = new GridCoordinate(currentFrom.x, currentPos);
+                }
+                
+                // find the relative coordinate of current coordinate to the target GridSystem
+                int relativeX = currentCoordinate.x + squareGridSystem.globalCoordinateOffset.x -
+                                target.gridSystem.globalCoordinateOffset.x;
+                int relativeY = currentCoordinate.y + squareGridSystem.globalCoordinateOffset.y -
+                                target.gridSystem.globalCoordinateOffset.y;
+                GridCoordinate relativeCoordinate = new GridCoordinate(relativeX, relativeY);
+                GridCoordinate targetCoordinate;
+
+                switch (direction)
+                {
+                    case MergeDirection.Up:
+                        // merge the current Vertex and top left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the top Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the top right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        break;
+                    case MergeDirection.Down:
+                        // merge the current Vertex and bottom left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the bottom Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the bottom right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        break;
+                    case MergeDirection.Left:
+                        // merge the current Vertex and top left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the bottom left Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x - 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        break;
+                    case MergeDirection.Right:
+                        // merge the current Vertex and top right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y + 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        // merge the current Vertex and the bottom right Vertex
+                        targetCoordinate = new GridCoordinate(relativeCoordinate.x + 1, relativeCoordinate.y - 1);
+                        if (target.gridSystem.GetVertex(targetCoordinate) != null)
+                        {
+                            squareGridSystem.SetDoubleEdge(currentCoordinate, squareGridSystem.gridSystemID,
+                                targetCoordinate, target.gridSystem.gridSystemID, weight);
+                        }
+                        break;
+                }
+
+                // self increment current position until it reached the end position
+                currentPos++;
+            }
         }
         
         /// <summary>
-        /// Separate the GridSystem in current Grid Generate with GridSystem in another generator
+        /// Separate the GridSystem in current GridGenerator with GridSystem in another generator
         /// </summary>
-        /// <param name="target">the target generator to separate</param>
-        public void Separate(IGridGenerator target)
+        /// <param name="target">The target generator to separate</param>
+        /// <param name="currentFrom">the start coordinate of the edge of current GridSystem</param>
+        /// <param name="currentTo">the end coordinate of the edge of current GridSystem</param>
+        /// <param name="direction">the separate direction</param>
+        public void Separate(IGridGenerator<GridDataContainer> target, GridCoordinate currentFrom, GridCoordinate currentTo,
+            MergeDirection direction, float weight)
         {
             throw new NotImplementedException();
         }

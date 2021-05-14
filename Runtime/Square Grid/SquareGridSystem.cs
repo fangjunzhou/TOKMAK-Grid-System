@@ -286,14 +286,32 @@ namespace FinTOKMAK.GridSystem.Square
 
                 #endregion
 
-                closeList.Add(currentVertex.vertex.coordinate, currentVertex.vertex);
+                GridCoordinate globalCoordinate = new GridCoordinate(
+                    currentVertex.vertex.coordinate.x +
+                    _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.x,
+                    currentVertex.vertex.coordinate.y +
+                    _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.y);
+                closeList.Add(globalCoordinate, currentVertex.vertex);
                 // pop the front of the openQueue
                 currentVertex = openQueue.Pop();
                 // find all the possible Vertices currentVertex can get to and add them to the openQueue
                 foreach (Edge<DataType> edge in currentVertex.vertex.connection.Values)
                 {
+                    GridCoordinate toGlobalCoordinate;
+                    if (edge != null) {
+                        toGlobalCoordinate = new GridCoordinate(
+                            edge.to.coordinate.x +
+                            _instances[edge.to.gridSystemID].globalCoordinateOffset.x,
+                            edge.to.coordinate.y +
+                            _instances[edge.to.gridSystemID].globalCoordinateOffset.y);
+                    }
+                    // if edge is null, assign toGlobalCoordinate to (0, 0) is OK
+                    else
+                    {
+                        toGlobalCoordinate = new GridCoordinate(0, 0);
+                    }
                     // if the Vertex is accessible and not in the closeList, calculate the F cost
-                    if (edge != null && !closeList.ContainsKey(edge.to.coordinate))
+                    if (edge != null && !closeList.ContainsKey(toGlobalCoordinate))
                     {
                         Vertex<DataType> to = edge.to;
                         float hCost = CalculateHCost(to, endVertex);

@@ -47,9 +47,6 @@ namespace FinTOKMAK.GridSystem.Square.Sample
             
             if (chooseStart.selectedGridElement == null || chooseEnd.selectedGridElement == null)
                 return;
-            
-            if (chooseStart.selectedGridElement.generatorID != chooseEnd.selectedGridElement.generatorID)
-                return;
 
             int startID = chooseStart.selectedGridElement.generatorID;
             int endID = chooseEnd.selectedGridElement.generatorID;
@@ -60,6 +57,8 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                 chooseStart.selectedGridElement.gridCoordinate, startID,
                 chooseEnd.selectedGridElement.gridCoordinate, endID);
             
+            if (path == null)
+                return;
             
             // Display
             foreach (Vertex<GridDataContainer> vertex in path)
