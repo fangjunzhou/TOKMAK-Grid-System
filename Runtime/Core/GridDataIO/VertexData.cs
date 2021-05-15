@@ -75,8 +75,8 @@ namespace FinTOKMAK.GridSystem
                     // set the edgeDirection
                     this.edgeTargets[index] = new[]
                     {
-                        vertex.connection[direction].to.coordinate.x,
-                        vertex.connection[direction].to.coordinate.y
+                        vertex.connection[direction].to.x,
+                        vertex.connection[direction].to.y
                     };
                 }
 
