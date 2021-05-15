@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2021-5-15
+### Changed
+- IGridGenerator now can make change to the global offset in the IGridSystem
+
 ## [0.0.6] - 2021-5-14
 ### Changed
 - Now support multiple GridGenerator and GridSystem can merge different generator and system dynamically
@@ -47,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#upm-gridsystem...HEAD
+[0.0.7]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.7
 [0.0.6]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.6
 [0.0.5]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.5
 [0.0.4]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.4
