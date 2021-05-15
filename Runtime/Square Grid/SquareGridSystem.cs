@@ -259,7 +259,7 @@ namespace FinTOKMAK.GridSystem.Square
                 // if the Vertex is accessible, calculate the F cost
                 if (edge != null)
                 {
-                    Vertex<DataType> to = _instances[edge.toGridSystemID].GetVertex(edge.to);
+                    Vertex<DataType> to = edge.toVertex;
                     float hCost = CalculateHCost(to, endVertex);
                     float gCost = CalculateGCostForward(currentVertex, to);
                     PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
@@ -290,11 +290,13 @@ namespace FinTOKMAK.GridSystem.Square
 
                 #endregion
 
+                // the global coordinate of current Vertex
                 GridCoordinate globalCoordinate = new GridCoordinate(
                     currentVertex.vertex.coordinate.x +
                     _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.x,
                     currentVertex.vertex.coordinate.y +
                     _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.y);
+                // add the current vertex into the close list
                 closeList.Add(globalCoordinate, currentVertex.vertex);
                 // pop the front of the openQueue
                 currentVertex = openQueue.Pop();
@@ -309,15 +311,15 @@ namespace FinTOKMAK.GridSystem.Square
                             edge.to.y +
                             _instances[edge.toGridSystemID].globalCoordinateOffset.y);
                     }
-                    // if edge is null, assign toGlobalCoordinate to (0, 0) is OK
+                    // if edge is null, continue to the next loop
                     else
                     {
-                        toGlobalCoordinate = new GridCoordinate(0, 0);
+                        continue;
                     }
                     // if the Vertex is accessible and not in the closeList, calculate the F cost
-                    if (edge != null && !closeList.ContainsKey(toGlobalCoordinate))
+                    if (!closeList.ContainsKey(toGlobalCoordinate))
                     {
-                        Vertex<DataType> to = _instances[edge.toGridSystemID].GetVertex(edge.to);
+                        Vertex<DataType> to = edge.toVertex;
                         float hCost = CalculateHCost(to, endVertex);
                         float gCost = CalculateGCostForward(currentVertex, to);
                         PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
