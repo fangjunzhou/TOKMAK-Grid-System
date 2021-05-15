@@ -45,19 +45,5 @@ namespace FinTOKMAK.GridSystem.Core.Test
             Debug.Log("Get x: " + gridCoordinate.x.ToString());
             Debug.Log("Get y: " + gridCoordinate.y.ToString());
         }
-
-        [Button("Test the Equals method of GridCoordinate")]
-        private void TestEquals()
-        {
-            GridCoordinate gridCoordinate1 = new GridCoordinate(0, 1);
-            GridCoordinate gridCoordinate2 = new GridCoordinate(2, 3);
-            Debug.Log("Equals 1: " + gridCoordinate1.Equals(gridCoordinate2));
-            Debug.Log("= 1: " + (gridCoordinate1 == gridCoordinate2));
-
-            GridCoordinate gridCoordinate3 = new GridCoordinate(0, 1);
-
-            Debug.Log("Equals 2: " + gridCoordinate1.Equals(gridCoordinate3));  // true
-            Debug.Log("= 2: " + (gridCoordinate1 == gridCoordinate3));          // false
-        }
     }
 }
