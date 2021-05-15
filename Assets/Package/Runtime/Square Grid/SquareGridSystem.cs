@@ -259,7 +259,7 @@ namespace FinTOKMAK.GridSystem.Square
                 // if the Vertex is accessible, calculate the F cost
                 if (edge != null)
                 {
-                    Vertex<DataType> to = edge.to;
+                    Vertex<DataType> to = _instances[edge.toGridSystemID].GetVertex(edge.to);
                     float hCost = CalculateHCost(to, endVertex);
                     float gCost = CalculateGCostForward(currentVertex, to);
                     PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
@@ -304,10 +304,10 @@ namespace FinTOKMAK.GridSystem.Square
                     GridCoordinate toGlobalCoordinate;
                     if (edge != null) {
                         toGlobalCoordinate = new GridCoordinate(
-                            edge.to.coordinate.x +
-                            _instances[edge.to.gridSystemID].globalCoordinateOffset.x,
-                            edge.to.coordinate.y +
-                            _instances[edge.to.gridSystemID].globalCoordinateOffset.y);
+                            edge.to.x +
+                            _instances[edge.toGridSystemID].globalCoordinateOffset.x,
+                            edge.to.y +
+                            _instances[edge.toGridSystemID].globalCoordinateOffset.y);
                     }
                     // if edge is null, assign toGlobalCoordinate to (0, 0) is OK
                     else
@@ -317,7 +317,7 @@ namespace FinTOKMAK.GridSystem.Square
                     // if the Vertex is accessible and not in the closeList, calculate the F cost
                     if (edge != null && !closeList.ContainsKey(toGlobalCoordinate))
                     {
-                        Vertex<DataType> to = edge.to;
+                        Vertex<DataType> to = _instances[edge.toGridSystemID].GetVertex(edge.to);
                         float hCost = CalculateHCost(to, endVertex);
                         float gCost = CalculateGCostForward(currentVertex, to);
                         PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
@@ -377,9 +377,7 @@ namespace FinTOKMAK.GridSystem.Square
             // try get the edge from currentVertex to the nextVertex
             // if the nextVertex is not the nearby Vertex of currentVertex,
             // a exception will be raised
-            float edgeCost =
-                GetEdge(currentVertex.vertex.coordinate, currentVertex.vertex.gridSystemID,
-                    nextVertex.coordinate, nextVertex.gridSystemID);
+            float edgeCost = GetEdge(currentVertex.vertex, nextVertex);
             // the cost in the new Vertex
             float vertexCost = nextVertex.cost;
 
@@ -620,6 +618,91 @@ namespace FinTOKMAK.GridSystem.Square
             }
             else
             {
+                Debug.LogError("Start: (" + (start.x + startOffset.x) + ", " + (start.y + startOffset.y) + ")");
+                Debug.LogError("Start: (" + (end.x + endOffset.x) + ", " + (end.y + endOffset.y) + ")");
+                throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
+            }
+
+            if (edge == null)
+                throw new ArgumentException("There's no connection between start Vertex and end Vertex");
+
+            // get the cost of the edge
+            return edge.cost;
+        }
+
+        /// <summary>
+        /// The overload method of GetEdge with coordinate
+        /// can save the time of looking the vertex in the hash table
+        /// </summary>
+        /// <param name="startVertex">the "from" Vertex of the Edge</param>
+        /// <param name="endVertex">the "to" Vertex of the Edge</param>
+        /// <returns>the weight of the Edge between the startVertex and the endVertex</returns>
+        public float GetEdge(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
+        {
+            // get the offset of the GridSystem of startVertex and the endVertex
+            GridCoordinate startOffset = _instances[startVertex.gridSystemID].globalCoordinateOffset;
+            GridCoordinate endOffset = _instances[endVertex.gridSystemID].globalCoordinateOffset;
+
+            // calculate the global coordinate of the start Vertex and the end Vertex
+            GridCoordinate startGlobal = new GridCoordinate(startVertex.coordinate.x + startOffset.x,
+                startVertex.coordinate.y + startOffset.y);
+            GridCoordinate endGloabal = new GridCoordinate(endVertex.coordinate.x + endOffset.x,
+                endVertex.coordinate.y + endOffset.y);
+
+            Edge<DataType> edge;
+            
+            // end Vertex is on the right of start Vertex
+            if (endGloabal.x == startGlobal.x + 1 && 
+                endGloabal.y == startGlobal.y)
+            {
+                edge = startVertex.connection["right"];
+            }
+            // end Vertex is on the left of start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y)
+            {
+                edge = startVertex.connection["left"];
+            }
+            // end Vertex is on the top of start Vertex
+            else if (endGloabal.x == startGlobal.x &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["up"];
+            }
+            // end Vertex is on the bottom of start Vertex
+            else if (endGloabal.x == startGlobal.x &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["down"];
+            }
+            // end Vertex is on the top left of the start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["upLeft"];
+            }
+            // end Vertex is on the top right of the start Vertex
+            else if (endGloabal.x == startGlobal.x + 1 &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["upRight"];
+            }
+            // end Vertex is on the Bottom left of the start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["downLeft"];
+            }
+            // end Vertex is on the Bottom right of the start Vertex
+            else if (endGloabal.x == startGlobal.x + 1 &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["downRight"];
+            }
+            else
+            {
+                Debug.LogError("Start: (" + startGlobal.x + ", " + startGlobal.y + ")");
+                Debug.LogError("Start: (" + endGloabal.x + ", " + endGloabal.y + ")");
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
             }
 
@@ -774,7 +857,7 @@ namespace FinTOKMAK.GridSystem.Square
             GridCoordinate targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y + 1);
             if (currentVertex.connection["up"] != null)
             {
-                int targetID = currentVertex.connection["up"].to.gridSystemID;
+                int targetID = currentVertex.connection["up"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -782,7 +865,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y - 1);
             if (currentVertex.connection["down"] != null)
             {
-                int targetID = currentVertex.connection["down"].to.gridSystemID;
+                int targetID = currentVertex.connection["down"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -790,7 +873,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y);
             if (currentVertex.connection["left"] != null)
             {
-                int targetID = currentVertex.connection["left"].to.gridSystemID;
+                int targetID = currentVertex.connection["left"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -798,7 +881,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y);
             if (currentVertex.connection["right"] != null)
             {
-                int targetID = currentVertex.connection["right"].to.gridSystemID;
+                int targetID = currentVertex.connection["right"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -806,7 +889,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y + 1);
             if (currentVertex.connection["upLeft"] != null)
             {
-                int targetID = currentVertex.connection["upLeft"].to.gridSystemID;
+                int targetID = currentVertex.connection["upLeft"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -814,7 +897,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y + 1);
             if (currentVertex.connection["upRight"] != null)
             {
-                int targetID = currentVertex.connection["upRight"].to.gridSystemID;
+                int targetID = currentVertex.connection["upRight"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -822,7 +905,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y - 1);
             if (currentVertex.connection["downLeft"] != null)
             {
-                int targetID = currentVertex.connection["downLeft"].to.gridSystemID;
+                int targetID = currentVertex.connection["downLeft"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -830,7 +913,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y - 1);
             if (currentVertex.connection["downRight"] != null)
             {
-                int targetID = currentVertex.connection["downRight"].to.gridSystemID;
+                int targetID = currentVertex.connection["downRight"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
