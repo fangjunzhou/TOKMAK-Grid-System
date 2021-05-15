@@ -15,8 +15,10 @@ namespace FinTOKMAK.GridSystem
         // the basic info of the edge
         private GridCoordinate _from;
         private int _fromGridSystemID;
+        private Vertex<DataType> _fromVertex;
         private GridCoordinate _to;
         private int _toGridSystemID;
+        private Vertex<DataType> _toVertex;
         private float _cost;
 
         #endregion
@@ -54,6 +56,21 @@ namespace FinTOKMAK.GridSystem
         }
 
         /// <summary>
+        /// the from Vertex object
+        /// </summary>
+        public Vertex<DataType> fromVertex
+        {
+            get
+            {
+                return _fromVertex;
+            }
+            set
+            {
+                _fromVertex = value;
+            }
+        }
+
+        /// <summary>
         /// The coordinate of end vertex of the edge
         /// </summary>
         public GridCoordinate to
@@ -84,6 +101,21 @@ namespace FinTOKMAK.GridSystem
         }
 
         /// <summary>
+        /// The to Vertex object
+        /// </summary>
+        public Vertex<DataType> toVertex
+        {
+            get
+            {
+                return _toVertex;
+            }
+            set
+            {
+                _toVertex = value;
+            }
+        }
+
+        /// <summary>
         /// The cost of this edge
         /// </summary>
         public float cost
@@ -108,12 +140,14 @@ namespace FinTOKMAK.GridSystem
         /// <param name="from">The start vertex of the edge</param>
         /// <param name="to">The end vertex of the edge</param>
         /// <param name="cost">the cost of current edge</param>
-        public Edge(GridCoordinate from, int fromID, GridCoordinate to, int toID, float cost)
+        public Edge(Vertex<DataType> fromVertex, Vertex<DataType> toVertex, float cost)
         {
-            _from = from;
-            _fromGridSystemID = fromID;
-            _to = to;
-            _toGridSystemID = toID;
+            _fromVertex = fromVertex;
+            _from = fromVertex.coordinate;
+            _fromGridSystemID = fromVertex.gridSystemID;
+            _toVertex = toVertex;
+            _to = toVertex.coordinate;
+            _toGridSystemID = toVertex.gridSystemID;
             _cost = cost;
         }
 
