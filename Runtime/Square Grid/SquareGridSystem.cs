@@ -138,6 +138,8 @@ namespace FinTOKMAK.GridSystem.Square
                 this.vertex = vertex;
                 hCost = 0;
                 gCost = 0;
+
+                path = new LinkedList<Vertex<DataType>>();
             }
 
             /// <summary>
@@ -151,6 +153,31 @@ namespace FinTOKMAK.GridSystem.Square
                 this.vertex = vertex;
                 this.hCost = hCost;
                 this.gCost = gCost;
+                
+                path = new LinkedList<Vertex<DataType>>();
+            }
+
+            /// <summary>
+            /// The overload of three parameter PathFindingVertex constructor
+            /// take an extra originalPath LinkedList and make a deep copy of it
+            /// </summary>
+            /// <param name="originalPath">the path that need to be deep copied into current path LinkedList</param>
+            /// <param name="vertex">the wrapped Vertex in current PathFindingVertex class</param>
+            /// <param name="hCost">the H cost of current Vertex</param>
+            /// <param name="gCost">the G cost of current Vertex</param>
+            public PathFindingVertex(LinkedList<Vertex<DataType>> originalPath, Vertex<DataType> vertex, float hCost,
+                float gCost)
+            {
+                this.vertex = vertex;
+                this.hCost = hCost;
+                this.gCost = gCost;
+                
+                // deep copy
+                path = new LinkedList<Vertex<DataType>>();
+                foreach (Vertex<DataType> originalVertex in originalPath)
+                {
+                    path.AddLast(originalVertex);
+                }
             }
             
             /// <summary>
@@ -210,7 +237,7 @@ namespace FinTOKMAK.GridSystem.Square
             /// start Vertex is the first Vertex in the LinkedList
             /// current Vertex is the last Vertex in the LinkedList
             /// </summary>
-            public LinkedList<Vertex<DataType>> path = new LinkedList<Vertex<DataType>>();
+            public LinkedList<Vertex<DataType>> path;
 
             /// <summary>
             /// The override Equals method that compares the two vertices instead of the wrapper class
@@ -262,13 +289,8 @@ namespace FinTOKMAK.GridSystem.Square
                     Vertex<DataType> to = edge.toVertex;
                     float hCost = CalculateHCost(to, endVertex);
                     float gCost = CalculateGCostForward(currentVertex, to);
-                    PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
-                    // deep copy of current path
-                    newVertex.path = new LinkedList<Vertex<DataType>>();
-                    foreach (Vertex<DataType> vertex in currentVertex.path)
-                    {
-                        newVertex.path.AddLast(vertex);
-                    }
+                    PathFindingVertex newVertex = new PathFindingVertex(currentVertex.path, to, hCost, gCost);
+                    // add the new vertex to the path
                     newVertex.path.AddLast(to);
                     // push the newVertex into the openQueue
                     openQueue.Push(newVertex, -newVertex.fCost);
@@ -322,13 +344,7 @@ namespace FinTOKMAK.GridSystem.Square
                         Vertex<DataType> to = edge.toVertex;
                         float hCost = CalculateHCost(to, endVertex);
                         float gCost = CalculateGCostForward(currentVertex, to);
-                        PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
-                        // deep copy of current path
-                        newVertex.path = new LinkedList<Vertex<DataType>>();
-                        foreach (Vertex<DataType> vertex in currentVertex.path)
-                        {
-                            newVertex.path.AddLast(vertex);
-                        }
+                        PathFindingVertex newVertex = new PathFindingVertex(currentVertex.path, to, hCost, gCost);
                         // add the new Vertex to the path
                         newVertex.path.AddLast(to);
                         
