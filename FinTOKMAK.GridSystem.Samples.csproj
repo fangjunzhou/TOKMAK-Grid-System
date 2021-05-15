@@ -64,8 +64,6 @@
      <Compile Include="Assets\Package\Samples\DrawObstacle.cs" />
      <Compile Include="Assets\Package\Samples\FindPath.cs" />
      <Compile Include="Assets\Package\Samples\SampleSquareGridElement.cs" />
-     <Compile Include="Assets\Package\Samples\SampleSquareGridElement3D.cs" />
-     <Compile Include="Assets\Package\Samples\SampleSquareGridElementGenerator.cs" />
      <None Include="Assets\Package\Samples\FinTOKMAK.GridSystem.Samples.asmdef" />
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

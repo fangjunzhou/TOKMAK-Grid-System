@@ -69,7 +69,6 @@
      <Compile Include="Assets\Package\Runtime\Core\GridSystem\GridElement.cs" />
      <Compile Include="Assets\Package\Runtime\Core\GridSystem\IGridSystem.cs" />
      <Compile Include="Assets\Package\Runtime\Core\GridSystem\Vertex.cs" />
-     <Compile Include="Assets\Package\Runtime\GridElementRaycastManager.cs" />
      <Compile Include="Assets\Package\Runtime\Square Grid\Generator\ISquareGridEventResponsor.cs" />
      <Compile Include="Assets\Package\Runtime\Square Grid\Generator\SquareGridEventHandler.cs" />
      <Compile Include="Assets\Package\Runtime\Square Grid\Generator\SquareGridEventView.cs" />
