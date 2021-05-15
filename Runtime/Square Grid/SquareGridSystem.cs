@@ -77,21 +77,6 @@ namespace FinTOKMAK.GridSystem.Square
 
         #region Pathfinding
 
-        /// <summary>
-        /// The openQueue stores all the available nodes in a PriorityQueue
-        /// the priority of PathFindingVertex should be -fCost
-        /// because the larger number means higher priority
-        /// </summary>
-        private PriorityQueue<PathFindingVertex> openQueue = new PriorityQueue<PathFindingVertex>();
-
-        /// <summary>
-        /// closeList stores all the history nodes in a dictionary
-        /// Key is the coordinate of the Vertex
-        /// Value is the Vertex
-        /// </summary>
-        private Dictionary<GridCoordinate, Vertex<DataType>> closeList =
-            new Dictionary<GridCoordinate, Vertex<DataType>>();
-
         #endregion
         
         #endregion
@@ -271,6 +256,17 @@ namespace FinTOKMAK.GridSystem.Square
         /// Return null when path not found</returns>
         private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
         {
+            // The openQueue stores all the available nodes in a PriorityQueue
+            // the priority of PathFindingVertex should be -fCost
+            // because the larger number means higher priority
+            PriorityQueue<PathFindingVertex> openQueue = new PriorityQueue<PathFindingVertex>();
+
+            // closeList stores all the history nodes in a dictionary
+            // Key is the coordinate of the Vertex
+            // Value is the Vertex
+            Dictionary<GridCoordinate, Vertex<DataType>> closeList =
+                new Dictionary<GridCoordinate, Vertex<DataType>>();
+            
             // Calculate the G cost and H cost of the start Vertex
             float currnetHCost = CalculateHCost(startVertex, endVertex);
             // the start G cost is 0
@@ -368,8 +364,6 @@ namespace FinTOKMAK.GridSystem.Square
                     }
                 }
             }
-            
-            ClearPathfindingMemory();
 
             // if the current vertex is not the target vertex, path not found
             if (currentVertex.vertex != endVertex)
@@ -419,15 +413,6 @@ namespace FinTOKMAK.GridSystem.Square
 
             float res = (float)Math.Sqrt(Math.Pow((float) xDiff, 2) + Math.Pow((float) yDiff, 2));
             return res;
-        }
-
-        /// <summary>
-        /// Clear openQueue and closeList after pathfinding
-        /// </summary>
-        private void ClearPathfindingMemory()
-        {
-            openQueue = new PriorityQueue<PathFindingVertex>();
-            closeList = new Dictionary<GridCoordinate, Vertex<DataType>>();
         }
 
         #endregion
