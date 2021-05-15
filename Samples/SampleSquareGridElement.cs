@@ -252,7 +252,7 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         /// <summary>
         /// Set the current object 
         /// </summary>
-        public void SetCurrentObject()
+        public override void SelectCurrentGridElement()
         {
             gridEventHandler.currentGridObject = gameObject;
         }

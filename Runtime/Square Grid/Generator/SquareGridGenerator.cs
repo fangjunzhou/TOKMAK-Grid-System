@@ -10,7 +10,6 @@ using UnityEngine.Serialization;
 
 namespace FinTOKMAK.GridSystem.Square.Generator
 {
-    
     /// <summary>
     /// The square grid generator that uses SquareGridSystem
     /// </summary>
@@ -101,6 +100,12 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             get
             {
                 return _globalOffset;
+            }
+            set
+            {
+                _globalOffset = value;
+                // reset the globalOffset of the GridSystem
+                _squareGridSystem.globalCoordinateOffset = value;
             }
         }
 
