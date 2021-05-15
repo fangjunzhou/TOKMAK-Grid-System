@@ -2,7 +2,8 @@
     "name": "FinTOKMAK.GridSystem.Samples",
     "references": [
         "FinTOKMAK.GridSystem.Runtime",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "NaughtyAttributes.Core"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -97,7 +97,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6234018355921635541}
-        m_MethodName: SetCurrentObject
+        m_MethodName: SelectCurrentGridElement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
