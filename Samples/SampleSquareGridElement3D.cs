@@ -1,70 +1,11 @@
-using System;
-using System.Runtime.Serialization;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-
-using FinTOKMAK.GridSystem;
-using FinTOKMAK.GridSystem.Square;
-using FinTOKMAK.GridSystem.Square.Generator;
+using NaughtyAttributes;
 
 namespace FinTOKMAK.GridSystem.Square.Sample
 {
-    public enum SampleSquareGridSelectState
-    {
-        Blank,
-        Start,
-        End,
-        Start_End,
-        Obstacle,
-        Path
-    }
-
-    [Serializable]
-    public class SampleSquareGridElementData : ISerializable
-    {
-        #region Public Field
-        
-        public bool isObstacle;
-
-        #endregion
-        
-        #region Constructor
-
-        /// <summary>
-        /// The default constructor needed for compile
-        /// </summary>
-        public SampleSquareGridElementData()
-        {
-            
-        }
-
-        #endregion
-
-        #region ISerializable
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("obstacle", isObstacle);
-        }
-
-        public SampleSquareGridElementData(SerializationInfo info, StreamingContext context)
-        {
-            isObstacle = info.GetBoolean("obstacle");
-        }
-
-        #endregion
-
-        public override string ToString()
-        {
-            string res = "";
-            res += "isObstacle: " + isObstacle + "\n";
-
-            return res;
-        }
-    }
-
-    public class SampleSquareGridElement : GridElement
+    public class SampleSquareGridElement3D : GridElement
     {
         #region Private Field
 
@@ -78,7 +19,37 @@ namespace FinTOKMAK.GridSystem.Square.Sample
         #endregion
         
         #region Public Field
+        
+        /// <summary>
+        /// The text that display the coordinate of current grid
+        /// </summary>
+        [BoxGroup("Display")]
+        public TextMesh coordinateText;
 
+        /// <summary>
+        /// The mesh renderer of current GameObject
+        /// </summary>
+        [BoxGroup("Display")]
+        public MeshRenderer meshRenderer;
+
+        [BoxGroup("State Material")]
+        public Material blankMat;
+        [BoxGroup("State Material")]
+        public Material startMat;
+        [BoxGroup("State Material")]
+        public Material endMat;
+        [BoxGroup("State Material")]
+        public Material startEndMat;
+        [BoxGroup("State Material")]
+        public Material pathMat;
+
+        [BoxGroup("Obstacle")]
+        public GameObject obstacleRepresentation;
+
+        #endregion
+
+        #region Hide Public Field
+        
         public bool isStart
         {
             get
@@ -131,16 +102,6 @@ namespace FinTOKMAK.GridSystem.Square.Sample
             }
         }
 
-        /// <summary>
-        /// The text that display the coordinate of current grid
-        /// </summary>
-        public TMP_Text coordinateText;
-
-        /// <summary>
-        /// The background image of the GridElement
-        /// </summary>
-        public Image backgroundImg;
-
         #endregion
         
         #region Hide Public Field
@@ -174,22 +135,21 @@ namespace FinTOKMAK.GridSystem.Square.Sample
             switch (_selectState)
             {
                 case SampleSquareGridSelectState.Blank:
-                    backgroundImg.color = Color.white;
+                    meshRenderer.material = blankMat;
                     break;
                 case SampleSquareGridSelectState.Start:
-                    backgroundImg.color = Color.yellow;
+                    meshRenderer.material = startMat;
                     break;
                 case SampleSquareGridSelectState.End:
-                    backgroundImg.color = Color.green;
+                    meshRenderer.material = endMat;
                     break;
                 case SampleSquareGridSelectState.Start_End:
-                    backgroundImg.color = Color.blue;
+                    meshRenderer.material = startEndMat;
                     break;
                 case SampleSquareGridSelectState.Obstacle:
-                    backgroundImg.color = Color.black;
                     break;
                 case SampleSquareGridSelectState.Path:
-                    backgroundImg.color = Color.magenta;
+                    meshRenderer.material = pathMat;
                     break;
             }
         }
@@ -217,14 +177,20 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                 {
                     selectState = SampleSquareGridSelectState.Path;
                 }
-                else if (_isObstacle)
-                {
-                    selectState = SampleSquareGridSelectState.Obstacle;
-                }
                 else
                 {
                     selectState = SampleSquareGridSelectState.Blank;
                 }
+            }
+            
+            // Obstacle
+            if (_isObstacle)
+            {
+                obstacleRepresentation.SetActive(true);
+            }
+            else
+            {
+                obstacleRepresentation.SetActive(false);
             }
 
             CreateOrChangeSerializedData();

@@ -96,6 +96,15 @@ namespace FinTOKMAK.GridSystem
         
         #endregion
 
+        #region Public Field
+
+        public virtual void SelectCurrentGridElement()
+        {
+            
+        }
+
+        #endregion
+
         #region Proteced Methods
 
         /// <summary>
