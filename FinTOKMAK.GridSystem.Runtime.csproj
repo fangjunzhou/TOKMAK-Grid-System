@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{25B9190E-5B57-C6D7-C55A-CF3680071560}</ProjectGuid>
+    <ProjectGuid>{B64CB975-7EED-3710-80F3-58D1DB9BC1D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>FinTOKMAK.GridSystem.Runtime</AssemblyName>
@@ -77,19 +77,19 @@
      <Compile Include="Assets\Package\Runtime\Square Grid\SquareGridVertex.cs" />
      <None Include="Assets\Package\Runtime\FinTOKMAK.GridSystem.Runtime.asmdef" />
  <Reference Include="NaughtyAttributes.Core">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
  </Reference>
  <Reference Include="FinTOKMAK.PriorityQueue.Runtime">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/FinTOKMAK.PriorityQueue.Runtime.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/FinTOKMAK.PriorityQueue.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

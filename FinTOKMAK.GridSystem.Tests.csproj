@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5E9AB197-345A-0BDC-801D-45D874E4A63F}</ProjectGuid>
+    <ProjectGuid>{1AB834F8-0B44-32CA-BF27-4E0A3C93EB4A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>FinTOKMAK.GridSystem.Tests</AssemblyName>
@@ -71,16 +71,16 @@
      <Compile Include="Assets\Package\Tests\Runtime\SquareGrid\TestSquareGridVertex.cs" />
      <None Include="Assets\Package\Tests\FinTOKMAK.GridSystem.Tests.asmdef" />
  <Reference Include="NaughtyAttributes.Core">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity_Project/GridSystem/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity_Project/Grid_System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -616,11 +616,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="FinTOKMAK.GridSystem.Runtime.csproj">
-      <Project>{25B9190E-5B57-C6D7-C55A-CF3680071560}</Project>
+      <Project>{B64CB975-7EED-3710-80F3-58D1DB9BC1D8}</Project>
       <Name>FinTOKMAK.GridSystem.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="FinTOKMAK.GridSystem.Samples.csproj">
-      <Project>{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}</Project>
+      <Project>{4367B9DF-3640-436C-D60C-AE27EF062F00}</Project>
       <Name>FinTOKMAK.GridSystem.Samples</Name>
     </ProjectReference>
   </ItemGroup>
