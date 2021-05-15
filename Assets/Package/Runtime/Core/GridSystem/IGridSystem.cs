@@ -22,7 +22,7 @@ namespace FinTOKMAK.GridSystem
         /// <summary>
         /// the global offset of all the Vertex in the grid system
         /// </summary>
-        GridCoordinate globalCoordinateOffset { get; }
+        GridCoordinate globalCoordinateOffset { get; set; }
         
         /// <summary>
         /// The unique ID of the gridSystem

@@ -44,7 +44,7 @@ namespace FinTOKMAK.GridSystem
         /// <summary>
         /// The global offset of all the Vertices in the GridSystem in current GirdGenerator
         /// </summary>
-        GridCoordinate globalOffset { get; }
+        GridCoordinate globalOffset { get; set; }
 
         #endregion
         

@@ -25,6 +25,9 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [BoxGroup("Map size")]
         public int height;
 
+        [BoxGroup("Global Offset")]
+        public GridCoordinate globalOffset;
+
         #endregion
 
         [Button("Test the GenerateMap method")]
@@ -49,6 +52,8 @@ namespace FinTOKMAK.GridSystem.Square.Test
 
         private void Start()
         {
+            // set the global offset
+            squareGridGenerator.globalOffset = globalOffset;
             if (!useMapFile)
                 TestGenerateVertical();
             else

@@ -44,6 +44,10 @@ namespace FinTOKMAK.GridSystem.Square
             {
                 return _globalCoordinateOffset;
             }
+            set
+            {
+                _globalCoordinateOffset = value;
+            }
         }
 
         public int gridSystemID
