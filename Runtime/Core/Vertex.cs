@@ -243,8 +243,7 @@ namespace FinTOKMAK.GridSystem
             
             // if the connection does not exist
             // set the connection of the specific direction to the new target
-            _connection[direction] = new Edge<DataType>(this.coordinate, _gridSystemID, target.coordinate,
-                target._gridSystemID, cost);
+            _connection[direction] = new Edge<DataType>(this, target, cost);
         }
 
         /// <summary>
@@ -273,10 +272,8 @@ namespace FinTOKMAK.GridSystem
                 throw new ArgumentOutOfRangeException("targetDirection", "The targetDirection is not in the connection dictionary of target vertex, try AddConnectionDir()");
 
             // set the double connection between current vertex and target vertex
-            _connection[direction] = new Edge<DataType>(this.coordinate, _gridSystemID, target.coordinate,
-                target._gridSystemID, cost);
-            target._connection[targetDirection] = new Edge<DataType>(target.coordinate, target._gridSystemID,
-                this.coordinate, _gridSystemID, cost);
+            _connection[direction] = new Edge<DataType>(this, target, cost);
+            target._connection[targetDirection] = new Edge<DataType>(target, this, cost);
         }
 
         /// <summary>
@@ -313,7 +310,7 @@ namespace FinTOKMAK.GridSystem
             if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
             _connection.Add(direction,
-                new Edge<DataType>(this.coordinate, _gridSystemID, target.coordinate, target._gridSystemID, cost));
+                new Edge<DataType>(this, target, cost));
         }
 
         /// <summary>
@@ -338,7 +335,7 @@ namespace FinTOKMAK.GridSystem
             if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
             _connection.Add(direction,
-                new Edge<DataType>(this.coordinate, _gridSystemID, target.coordinate, target._gridSystemID, cost));
+                new Edge<DataType>(this, target, cost));
             // try to add connection to the target vertex
             try
             {
