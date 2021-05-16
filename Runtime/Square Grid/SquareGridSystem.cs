@@ -269,6 +269,8 @@ namespace FinTOKMAK.GridSystem.Square
         {
             #region Public Field
 
+            public bool ableToFindPath = true;
+
             /// <summary>
             /// The acceleration path for the pathfinding algorithm to accelerate pathfinding
             /// The key is the startVertex, the value is the path from the startVertex to the endVertex
@@ -286,7 +288,7 @@ namespace FinTOKMAK.GridSystem.Square
         /// <param name="endVertex">the target vertex of pathfinding</param>
         /// <returns>the path from the start Vertex to the end Vertex.
         /// Return null when path not found</returns>
-        private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
+        private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex, bool useAccelerationTable)
         {
             PathFindingRecord accelerationRecord = null;
             bool useAcceleration = false;
@@ -350,11 +352,18 @@ namespace FinTOKMAK.GridSystem.Square
                 #endregion
                 
                 // if current pathfinding process can be accelerated
-                if (accelerationRecord != null)
+                if (accelerationRecord != null && useAccelerationTable)
                 {
+                    // if the endVertex is not accessable
+                    if (!accelerationRecord.ableToFindPath)
+                    {
+                        return null;
+                    }
                     // check if current Vertex can be accelerated
                     if (accelerationRecord.accelerationPath.ContainsKey(currentVertex.vertex))
                     {
+                        // remove the last Vertex in the path
+                        currentVertex.path.RemoveLast();
                         // add all the Vertices in the acceleration path to current PathfindingVertex.path
                         foreach (Vertex<DataType> vertex in accelerationRecord.accelerationPath[currentVertex.vertex])
                         {
@@ -426,6 +435,17 @@ namespace FinTOKMAK.GridSystem.Square
             // if the current vertex is not the target vertex, path not found
             if (currentVertex.vertex != endVertex && !useAcceleration)
             {
+                // The path from the startVertex to the endVertex has been found
+                // add the acceleration PathFindingRecords of all the Vertices in the path to the globalAccelerationRecords
+            
+                // check if the PathFindingRecord to the current endVertex exist
+                if (!_globalAccelerationRecords.ContainsKey(endVertex))
+                {
+                    _globalAccelerationRecords.Add(endVertex, new PathFindingRecord());
+                }
+            
+                _globalAccelerationRecords[endVertex].ableToFindPath = false;
+                
                 return null;
             }
             
@@ -448,7 +468,14 @@ namespace FinTOKMAK.GridSystem.Square
             {
                 // if the start Vertex already exist in the record, continue
                 if (currentEndVertexRecord.accelerationPath.ContainsKey(vertex))
+                {
+                    // add current Vertex to each acceleration path in the list (deep copy)
+                    foreach (LinkedList<Vertex<DataType>> vertices in accelerationPaths)
+                    {
+                        vertices.AddLast(vertex);
+                    }
                     continue;
+                }
                     
                 // if the accelerationPath dictionary in the current record does not contain specific start Vertex
                     
@@ -456,7 +483,7 @@ namespace FinTOKMAK.GridSystem.Square
                 LinkedList<Vertex<DataType>> accelerationPath = new LinkedList<Vertex<DataType>>();
                 accelerationPaths.Add(accelerationPath);
                 currentEndVertexRecord.accelerationPath.Add(vertex, accelerationPath);
-                    
+                
                 // add current Vertex to each acceleration path in the list (deep copy)
                 foreach (LinkedList<Vertex<DataType>> vertices in accelerationPaths)
                 {
@@ -642,7 +669,7 @@ namespace FinTOKMAK.GridSystem.Square
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
         public LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
-            GridCoordinate end, int endGridSystemID)
+            GridCoordinate end, int endGridSystemID, bool useAccelerationTable)
         {
             // try get the startVertex
             Vertex<DataType> startVertex = _instances[startGridSystemID].GetVertex(start);
@@ -658,7 +685,7 @@ namespace FinTOKMAK.GridSystem.Square
                 throw new ArgumentNullException("The endVertex with certain coordinate do not exist.");
             }
 
-            return PathfindingHelper(startVertex, endVertex);
+            return PathfindingHelper(startVertex, endVertex, useAccelerationTable);
         }
         
         /// <summary>

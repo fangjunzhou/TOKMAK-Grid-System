@@ -135,7 +135,7 @@ namespace FinTOKMAK.GridSystem
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
         LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
-            GridCoordinate end, int endGridSystemID);
+            GridCoordinate end, int endGridSystemID, bool useAccelerationTable);
 
         #endregion
     }
