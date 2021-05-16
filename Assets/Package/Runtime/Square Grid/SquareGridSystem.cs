@@ -75,10 +75,21 @@ namespace FinTOKMAK.GridSystem.Square
         /// </summary>
         private int _gridSystemID;
 
+        #endregion
+
+        #region Private Static Field
+        
         #region Pathfinding
 
+        /// <summary>
+        /// The global acceleration records for a certain endVertex
+        /// the key is the endVertex
+        /// the Value is the PathFindingRecord for that endVertex
+        /// </summary>
+        private static Dictionary<Vertex<DataType>, PathFindingRecord> _globalAccelerationRecords;
+
         #endregion
-        
+
         #endregion
 
         #region Consttuctor
@@ -102,6 +113,9 @@ namespace FinTOKMAK.GridSystem.Square
             {
                 _instances.Add(_gridSystemID, this);
             }
+            
+            // initialize global pathfinding acceleration records every time a new SqareGridSystem has been constructed
+            ClearGlobalAccelerationRecordMemory();
         }
         
         #endregion
@@ -248,6 +262,24 @@ namespace FinTOKMAK.GridSystem.Square
         }
 
         /// <summary>
+        /// A set of pathfinding records
+        /// Contains only one endVertex and multiple startVertices
+        /// </summary>
+        private class PathFindingRecord
+        {
+            #region Public Field
+
+            /// <summary>
+            /// The acceleration path for the pathfinding algorithm to accelerate pathfinding
+            /// The key is the startVertex, the value is the path from the startVertex to the endVertex
+            /// </summary>
+            public Dictionary<Vertex<DataType>, LinkedList<Vertex<DataType>>> accelerationPath =
+                new Dictionary<Vertex<DataType>, LinkedList<Vertex<DataType>>>();
+
+            #endregion
+        }
+
+        /// <summary>
         /// The helper method to find the shortest path using A* algorithm
         /// </summary>
         /// <param name="startVertex">the start vertex of pathfinding</param>
@@ -256,6 +288,15 @@ namespace FinTOKMAK.GridSystem.Square
         /// Return null when path not found</returns>
         private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
         {
+            PathFindingRecord accelerationRecord = null;
+            bool useAcceleration = false;
+            
+            // Check if the endVertex in the globalAccelerationRecord
+            if (_globalAccelerationRecords.ContainsKey(endVertex))
+            {
+                accelerationRecord = _globalAccelerationRecords[endVertex];
+            }
+            
             // The openQueue stores all the available nodes in a PriorityQueue
             // the priority of PathFindingVertex should be -fCost
             // because the larger number means higher priority
@@ -307,6 +348,23 @@ namespace FinTOKMAK.GridSystem.Square
                 //           "Path: " + pathStr);
 
                 #endregion
+                
+                // if current pathfinding process can be accelerated
+                if (accelerationRecord != null)
+                {
+                    // check if current Vertex can be accelerated
+                    if (accelerationRecord.accelerationPath.ContainsKey(currentVertex.vertex))
+                    {
+                        // add all the Vertices in the acceleration path to current PathfindingVertex.path
+                        foreach (Vertex<DataType> vertex in accelerationRecord.accelerationPath[currentVertex.vertex])
+                        {
+                            currentVertex.path.AddLast(vertex);
+                        }
+                        // finish pathfinding.
+                        useAcceleration = true;
+                        break;
+                    }
+                }
 
                 // the global coordinate of current Vertex
                 GridCoordinate globalCoordinate = new GridCoordinate(
@@ -366,9 +424,44 @@ namespace FinTOKMAK.GridSystem.Square
             }
 
             // if the current vertex is not the target vertex, path not found
-            if (currentVertex.vertex != endVertex)
+            if (currentVertex.vertex != endVertex && !useAcceleration)
             {
                 return null;
+            }
+            
+            // The path from the startVertex to the endVertex has been found
+            // add the acceleration PathFindingRecords of all the Vertices in the path to the globalAccelerationRecords
+            
+            // check if the PathFindingRecord to the current endVertex exist
+            if (!_globalAccelerationRecords.ContainsKey(endVertex))
+            {
+                _globalAccelerationRecords.Add(endVertex, new PathFindingRecord());
+            }
+            
+            PathFindingRecord currentEndVertexRecord = _globalAccelerationRecords[endVertex];
+                
+            // a list of acceleration path, add new Vertex to each LinkedList in this list each loop
+            List<LinkedList<Vertex<DataType>>> accelerationPaths = new List<LinkedList<Vertex<DataType>>>();
+                
+            // add all the sub-path in the path to the record
+            foreach (Vertex<DataType> vertex in currentVertex.path)
+            {
+                // if the start Vertex already exist in the record, continue
+                if (currentEndVertexRecord.accelerationPath.ContainsKey(vertex))
+                    continue;
+                    
+                // if the accelerationPath dictionary in the current record does not contain specific start Vertex
+                    
+                // add the correspond path to the acceleration path of PathFindingRecord
+                LinkedList<Vertex<DataType>> accelerationPath = new LinkedList<Vertex<DataType>>();
+                accelerationPaths.Add(accelerationPath);
+                currentEndVertexRecord.accelerationPath.Add(vertex, accelerationPath);
+                    
+                // add current Vertex to each acceleration path in the list (deep copy)
+                foreach (LinkedList<Vertex<DataType>> vertices in accelerationPaths)
+                {
+                    vertices.AddLast(vertex);
+                }
             }
 
             return currentVertex.path;
@@ -413,6 +506,21 @@ namespace FinTOKMAK.GridSystem.Square
 
             float res = (float)Math.Sqrt(Math.Pow((float) xDiff, 2) + Math.Pow((float) yDiff, 2));
             return res;
+        }
+
+        #endregion
+
+        #region Public Static Methods
+        
+        /// <summary>
+        /// Call this method to clear the memory of global pathfinding acceleration records
+        /// By default all the records in the acceleration Dictionary is reliable
+        /// if the environment changed, need to call this method to clear the record
+        /// so that the algorithm can generate a new acceleration record
+        /// </summary>
+        public static void ClearGlobalAccelerationRecordMemory()
+        {
+            _globalAccelerationRecords = new Dictionary<Vertex<DataType>, PathFindingRecord>();
         }
 
         #endregion
