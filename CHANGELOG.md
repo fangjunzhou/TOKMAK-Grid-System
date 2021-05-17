@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2021-5-18
+### Added
+- Use acceleration table to accelerate pathfinding. Decrease the average pathfinding time from 0.001 seconds to 2*10^-5 seconds
+
 ## [0.0.7] - 2021-5-15
 ### Changed
 - IGridGenerator now can make change to the global offset in the IGridSystem
@@ -51,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#upm-gridsystem...HEAD
+[0.1.0]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.1.0
 [0.0.7]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.7
 [0.0.6]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.6
 [0.0.5]: http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#gridsystem-0.0.5
