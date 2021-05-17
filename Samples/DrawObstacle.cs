@@ -103,9 +103,12 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                         // if the Edge to the certain direction do not exist
                         if (currentVertex.connection[direction] == null)
                             continue;
-                        
-                        SampleSquareGridElement traverseElement = (SampleSquareGridElement)currentVertex.
-                            connection[direction].to.data.gridElement;
+
+                        GridCoordinate toCoordinate = currentVertex.connection[direction].to;
+                        int toID = currentVertex.connection[direction].toGridSystemID;
+                        SampleSquareGridElement traverseElement =
+                            (SampleSquareGridElement) SquareGridSystem<GridDataContainer>.Instances[toID]
+                                .GetVertex(toCoordinate).data.gridElement;
                         // if the traverseGridElement is also an obstacle
                         if (traverseElement.isObstacle)
                         {
@@ -159,8 +162,11 @@ namespace FinTOKMAK.GridSystem.Square.Sample
                         if (currentVertex.connection[direction] == null)
                             continue;
                         
-                        SampleSquareGridElement traverseElement = (SampleSquareGridElement)currentVertex.
-                            connection[direction].to.data.gridElement;
+                        GridCoordinate toCoordinate = currentVertex.connection[direction].to;
+                        int toID = currentVertex.connection[direction].toGridSystemID;
+                        SampleSquareGridElement traverseElement =
+                            (SampleSquareGridElement) SquareGridSystem<GridDataContainer>.Instances[toID]
+                                .GetVertex(toCoordinate).data.gridElement;
                         // if the traverseGridElement is also an obstacle
                         if (traverseElement.isObstacle)
                         {

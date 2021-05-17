@@ -75,25 +75,21 @@ namespace FinTOKMAK.GridSystem.Square
         /// </summary>
         private int _gridSystemID;
 
+        #endregion
+
+        #region Private Static Field
+        
         #region Pathfinding
 
         /// <summary>
-        /// The openQueue stores all the available nodes in a PriorityQueue
-        /// the priority of PathFindingVertex should be -fCost
-        /// because the larger number means higher priority
+        /// The global acceleration records for a certain endVertex
+        /// the key is the endVertex
+        /// the Value is the PathFindingRecord for that endVertex
         /// </summary>
-        private PriorityQueue<PathFindingVertex> openQueue = new PriorityQueue<PathFindingVertex>();
-
-        /// <summary>
-        /// closeList stores all the history nodes in a dictionary
-        /// Key is the coordinate of the Vertex
-        /// Value is the Vertex
-        /// </summary>
-        private Dictionary<GridCoordinate, Vertex<DataType>> closeList =
-            new Dictionary<GridCoordinate, Vertex<DataType>>();
+        private static Dictionary<Vertex<DataType>, PathFindingRecord> _globalAccelerationRecords;
 
         #endregion
-        
+
         #endregion
 
         #region Consttuctor
@@ -117,6 +113,9 @@ namespace FinTOKMAK.GridSystem.Square
             {
                 _instances.Add(_gridSystemID, this);
             }
+            
+            // initialize global pathfinding acceleration records every time a new SqareGridSystem has been constructed
+            ClearGlobalAccelerationRecordMemory();
         }
         
         #endregion
@@ -138,6 +137,8 @@ namespace FinTOKMAK.GridSystem.Square
                 this.vertex = vertex;
                 hCost = 0;
                 gCost = 0;
+
+                path = new LinkedList<Vertex<DataType>>();
             }
 
             /// <summary>
@@ -151,6 +152,31 @@ namespace FinTOKMAK.GridSystem.Square
                 this.vertex = vertex;
                 this.hCost = hCost;
                 this.gCost = gCost;
+                
+                path = new LinkedList<Vertex<DataType>>();
+            }
+
+            /// <summary>
+            /// The overload of three parameter PathFindingVertex constructor
+            /// take an extra originalPath LinkedList and make a deep copy of it
+            /// </summary>
+            /// <param name="originalPath">the path that need to be deep copied into current path LinkedList</param>
+            /// <param name="vertex">the wrapped Vertex in current PathFindingVertex class</param>
+            /// <param name="hCost">the H cost of current Vertex</param>
+            /// <param name="gCost">the G cost of current Vertex</param>
+            public PathFindingVertex(LinkedList<Vertex<DataType>> originalPath, Vertex<DataType> vertex, float hCost,
+                float gCost)
+            {
+                this.vertex = vertex;
+                this.hCost = hCost;
+                this.gCost = gCost;
+                
+                // deep copy
+                path = new LinkedList<Vertex<DataType>>();
+                foreach (Vertex<DataType> originalVertex in originalPath)
+                {
+                    path.AddLast(originalVertex);
+                }
             }
             
             /// <summary>
@@ -210,7 +236,7 @@ namespace FinTOKMAK.GridSystem.Square
             /// start Vertex is the first Vertex in the LinkedList
             /// current Vertex is the last Vertex in the LinkedList
             /// </summary>
-            public LinkedList<Vertex<DataType>> path = new LinkedList<Vertex<DataType>>();
+            public LinkedList<Vertex<DataType>> path;
 
             /// <summary>
             /// The override Equals method that compares the two vertices instead of the wrapper class
@@ -236,14 +262,54 @@ namespace FinTOKMAK.GridSystem.Square
         }
 
         /// <summary>
+        /// A set of pathfinding records
+        /// Contains only one endVertex and multiple startVertices
+        /// </summary>
+        private class PathFindingRecord
+        {
+            #region Public Field
+
+            public bool ableToFindPath = true;
+
+            /// <summary>
+            /// The acceleration path for the pathfinding algorithm to accelerate pathfinding
+            /// The key is the startVertex, the value is the path from the startVertex to the endVertex
+            /// </summary>
+            public Dictionary<Vertex<DataType>, LinkedList<Vertex<DataType>>> accelerationPath =
+                new Dictionary<Vertex<DataType>, LinkedList<Vertex<DataType>>>();
+
+            #endregion
+        }
+
+        /// <summary>
         /// The helper method to find the shortest path using A* algorithm
         /// </summary>
         /// <param name="startVertex">the start vertex of pathfinding</param>
         /// <param name="endVertex">the target vertex of pathfinding</param>
         /// <returns>the path from the start Vertex to the end Vertex.
         /// Return null when path not found</returns>
-        private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
+        private LinkedList<Vertex<DataType>> PathfindingHelper(Vertex<DataType> startVertex, Vertex<DataType> endVertex, bool useAccelerationTable)
         {
+            PathFindingRecord accelerationRecord = null;
+            bool useAcceleration = false;
+            
+            // Check if the endVertex in the globalAccelerationRecord
+            if (_globalAccelerationRecords.ContainsKey(endVertex))
+            {
+                accelerationRecord = _globalAccelerationRecords[endVertex];
+            }
+            
+            // The openQueue stores all the available nodes in a PriorityQueue
+            // the priority of PathFindingVertex should be -fCost
+            // because the larger number means higher priority
+            PriorityQueue<PathFindingVertex> openQueue = new PriorityQueue<PathFindingVertex>();
+
+            // closeList stores all the history nodes in a dictionary
+            // Key is the coordinate of the Vertex
+            // Value is the Vertex
+            Dictionary<GridCoordinate, Vertex<DataType>> closeList =
+                new Dictionary<GridCoordinate, Vertex<DataType>>();
+            
             // Calculate the G cost and H cost of the start Vertex
             float currnetHCost = CalculateHCost(startVertex, endVertex);
             // the start G cost is 0
@@ -259,16 +325,11 @@ namespace FinTOKMAK.GridSystem.Square
                 // if the Vertex is accessible, calculate the F cost
                 if (edge != null)
                 {
-                    Vertex<DataType> to = edge.to;
+                    Vertex<DataType> to = edge.toVertex;
                     float hCost = CalculateHCost(to, endVertex);
                     float gCost = CalculateGCostForward(currentVertex, to);
-                    PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
-                    // deep copy of current path
-                    newVertex.path = new LinkedList<Vertex<DataType>>();
-                    foreach (Vertex<DataType> vertex in currentVertex.path)
-                    {
-                        newVertex.path.AddLast(vertex);
-                    }
+                    PathFindingVertex newVertex = new PathFindingVertex(currentVertex.path, to, hCost, gCost);
+                    // add the new vertex to the path
                     newVertex.path.AddLast(to);
                     // push the newVertex into the openQueue
                     openQueue.Push(newVertex, -newVertex.fCost);
@@ -289,12 +350,38 @@ namespace FinTOKMAK.GridSystem.Square
                 //           "Path: " + pathStr);
 
                 #endregion
+                
+                // if current pathfinding process can be accelerated
+                if (accelerationRecord != null && useAccelerationTable)
+                {
+                    // if the endVertex is not accessable
+                    if (!accelerationRecord.ableToFindPath)
+                    {
+                        return null;
+                    }
+                    // check if current Vertex can be accelerated
+                    if (accelerationRecord.accelerationPath.ContainsKey(currentVertex.vertex))
+                    {
+                        // remove the last Vertex in the path
+                        currentVertex.path.RemoveLast();
+                        // add all the Vertices in the acceleration path to current PathfindingVertex.path
+                        foreach (Vertex<DataType> vertex in accelerationRecord.accelerationPath[currentVertex.vertex])
+                        {
+                            currentVertex.path.AddLast(vertex);
+                        }
+                        // finish pathfinding.
+                        useAcceleration = true;
+                        break;
+                    }
+                }
 
+                // the global coordinate of current Vertex
                 GridCoordinate globalCoordinate = new GridCoordinate(
                     currentVertex.vertex.coordinate.x +
                     _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.x,
                     currentVertex.vertex.coordinate.y +
                     _instances[currentVertex.vertex.gridSystemID].globalCoordinateOffset.y);
+                // add the current vertex into the close list
                 closeList.Add(globalCoordinate, currentVertex.vertex);
                 // pop the front of the openQueue
                 currentVertex = openQueue.Pop();
@@ -304,29 +391,23 @@ namespace FinTOKMAK.GridSystem.Square
                     GridCoordinate toGlobalCoordinate;
                     if (edge != null) {
                         toGlobalCoordinate = new GridCoordinate(
-                            edge.to.coordinate.x +
-                            _instances[edge.to.gridSystemID].globalCoordinateOffset.x,
-                            edge.to.coordinate.y +
-                            _instances[edge.to.gridSystemID].globalCoordinateOffset.y);
+                            edge.to.x +
+                            _instances[edge.toGridSystemID].globalCoordinateOffset.x,
+                            edge.to.y +
+                            _instances[edge.toGridSystemID].globalCoordinateOffset.y);
                     }
-                    // if edge is null, assign toGlobalCoordinate to (0, 0) is OK
+                    // if edge is null, continue to the next loop
                     else
                     {
-                        toGlobalCoordinate = new GridCoordinate(0, 0);
+                        continue;
                     }
                     // if the Vertex is accessible and not in the closeList, calculate the F cost
-                    if (edge != null && !closeList.ContainsKey(toGlobalCoordinate))
+                    if (!closeList.ContainsKey(toGlobalCoordinate))
                     {
-                        Vertex<DataType> to = edge.to;
+                        Vertex<DataType> to = edge.toVertex;
                         float hCost = CalculateHCost(to, endVertex);
                         float gCost = CalculateGCostForward(currentVertex, to);
-                        PathFindingVertex newVertex = new PathFindingVertex(to, hCost, gCost);
-                        // deep copy of current path
-                        newVertex.path = new LinkedList<Vertex<DataType>>();
-                        foreach (Vertex<DataType> vertex in currentVertex.path)
-                        {
-                            newVertex.path.AddLast(vertex);
-                        }
+                        PathFindingVertex newVertex = new PathFindingVertex(currentVertex.path, to, hCost, gCost);
                         // add the new Vertex to the path
                         newVertex.path.AddLast(to);
                         
@@ -350,13 +431,64 @@ namespace FinTOKMAK.GridSystem.Square
                     }
                 }
             }
-            
-            ClearPathfindingMemory();
 
             // if the current vertex is not the target vertex, path not found
-            if (currentVertex.vertex != endVertex)
+            if (currentVertex.vertex != endVertex && !useAcceleration)
             {
+                // The path from the startVertex to the endVertex has been found
+                // add the acceleration PathFindingRecords of all the Vertices in the path to the globalAccelerationRecords
+            
+                // check if the PathFindingRecord to the current endVertex exist
+                if (!_globalAccelerationRecords.ContainsKey(endVertex))
+                {
+                    _globalAccelerationRecords.Add(endVertex, new PathFindingRecord());
+                }
+            
+                _globalAccelerationRecords[endVertex].ableToFindPath = false;
+                
                 return null;
+            }
+            
+            // The path from the startVertex to the endVertex has been found
+            // add the acceleration PathFindingRecords of all the Vertices in the path to the globalAccelerationRecords
+            
+            // check if the PathFindingRecord to the current endVertex exist
+            if (!_globalAccelerationRecords.ContainsKey(endVertex))
+            {
+                _globalAccelerationRecords.Add(endVertex, new PathFindingRecord());
+            }
+            
+            PathFindingRecord currentEndVertexRecord = _globalAccelerationRecords[endVertex];
+                
+            // a list of acceleration path, add new Vertex to each LinkedList in this list each loop
+            List<LinkedList<Vertex<DataType>>> accelerationPaths = new List<LinkedList<Vertex<DataType>>>();
+                
+            // add all the sub-path in the path to the record
+            foreach (Vertex<DataType> vertex in currentVertex.path)
+            {
+                // if the start Vertex already exist in the record, continue
+                if (currentEndVertexRecord.accelerationPath.ContainsKey(vertex))
+                {
+                    // add current Vertex to each acceleration path in the list (deep copy)
+                    foreach (LinkedList<Vertex<DataType>> vertices in accelerationPaths)
+                    {
+                        vertices.AddLast(vertex);
+                    }
+                    continue;
+                }
+                    
+                // if the accelerationPath dictionary in the current record does not contain specific start Vertex
+                    
+                // add the correspond path to the acceleration path of PathFindingRecord
+                LinkedList<Vertex<DataType>> accelerationPath = new LinkedList<Vertex<DataType>>();
+                accelerationPaths.Add(accelerationPath);
+                currentEndVertexRecord.accelerationPath.Add(vertex, accelerationPath);
+                
+                // add current Vertex to each acceleration path in the list (deep copy)
+                foreach (LinkedList<Vertex<DataType>> vertices in accelerationPaths)
+                {
+                    vertices.AddLast(vertex);
+                }
             }
 
             return currentVertex.path;
@@ -377,9 +509,7 @@ namespace FinTOKMAK.GridSystem.Square
             // try get the edge from currentVertex to the nextVertex
             // if the nextVertex is not the nearby Vertex of currentVertex,
             // a exception will be raised
-            float edgeCost =
-                GetEdge(currentVertex.vertex.coordinate, currentVertex.vertex.gridSystemID,
-                    nextVertex.coordinate, nextVertex.gridSystemID);
+            float edgeCost = GetEdge(currentVertex.vertex, nextVertex);
             // the cost in the new Vertex
             float vertexCost = nextVertex.cost;
 
@@ -405,13 +535,19 @@ namespace FinTOKMAK.GridSystem.Square
             return res;
         }
 
+        #endregion
+
+        #region Public Static Methods
+        
         /// <summary>
-        /// Clear openQueue and closeList after pathfinding
+        /// Call this method to clear the memory of global pathfinding acceleration records
+        /// By default all the records in the acceleration Dictionary is reliable
+        /// if the environment changed, need to call this method to clear the record
+        /// so that the algorithm can generate a new acceleration record
         /// </summary>
-        private void ClearPathfindingMemory()
+        public static void ClearGlobalAccelerationRecordMemory()
         {
-            openQueue = new PriorityQueue<PathFindingVertex>();
-            closeList = new Dictionary<GridCoordinate, Vertex<DataType>>();
+            _globalAccelerationRecords = new Dictionary<Vertex<DataType>, PathFindingRecord>();
         }
 
         #endregion
@@ -533,7 +669,7 @@ namespace FinTOKMAK.GridSystem.Square
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
         public LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
-            GridCoordinate end, int endGridSystemID)
+            GridCoordinate end, int endGridSystemID, bool useAccelerationTable)
         {
             // try get the startVertex
             Vertex<DataType> startVertex = _instances[startGridSystemID].GetVertex(start);
@@ -549,7 +685,7 @@ namespace FinTOKMAK.GridSystem.Square
                 throw new ArgumentNullException("The endVertex with certain coordinate do not exist.");
             }
 
-            return PathfindingHelper(startVertex, endVertex);
+            return PathfindingHelper(startVertex, endVertex, useAccelerationTable);
         }
         
         /// <summary>
@@ -620,6 +756,91 @@ namespace FinTOKMAK.GridSystem.Square
             }
             else
             {
+                Debug.LogError("Start: (" + (start.x + startOffset.x) + ", " + (start.y + startOffset.y) + ")");
+                Debug.LogError("Start: (" + (end.x + endOffset.x) + ", " + (end.y + endOffset.y) + ")");
+                throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
+            }
+
+            if (edge == null)
+                throw new ArgumentException("There's no connection between start Vertex and end Vertex");
+
+            // get the cost of the edge
+            return edge.cost;
+        }
+
+        /// <summary>
+        /// The overload method of GetEdge with coordinate
+        /// can save the time of looking the vertex in the hash table
+        /// </summary>
+        /// <param name="startVertex">the "from" Vertex of the Edge</param>
+        /// <param name="endVertex">the "to" Vertex of the Edge</param>
+        /// <returns>the weight of the Edge between the startVertex and the endVertex</returns>
+        public float GetEdge(Vertex<DataType> startVertex, Vertex<DataType> endVertex)
+        {
+            // get the offset of the GridSystem of startVertex and the endVertex
+            GridCoordinate startOffset = _instances[startVertex.gridSystemID].globalCoordinateOffset;
+            GridCoordinate endOffset = _instances[endVertex.gridSystemID].globalCoordinateOffset;
+
+            // calculate the global coordinate of the start Vertex and the end Vertex
+            GridCoordinate startGlobal = new GridCoordinate(startVertex.coordinate.x + startOffset.x,
+                startVertex.coordinate.y + startOffset.y);
+            GridCoordinate endGloabal = new GridCoordinate(endVertex.coordinate.x + endOffset.x,
+                endVertex.coordinate.y + endOffset.y);
+
+            Edge<DataType> edge;
+            
+            // end Vertex is on the right of start Vertex
+            if (endGloabal.x == startGlobal.x + 1 && 
+                endGloabal.y == startGlobal.y)
+            {
+                edge = startVertex.connection["right"];
+            }
+            // end Vertex is on the left of start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y)
+            {
+                edge = startVertex.connection["left"];
+            }
+            // end Vertex is on the top of start Vertex
+            else if (endGloabal.x == startGlobal.x &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["up"];
+            }
+            // end Vertex is on the bottom of start Vertex
+            else if (endGloabal.x == startGlobal.x &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["down"];
+            }
+            // end Vertex is on the top left of the start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["upLeft"];
+            }
+            // end Vertex is on the top right of the start Vertex
+            else if (endGloabal.x == startGlobal.x + 1 &&
+                     endGloabal.y == startGlobal.y + 1)
+            {
+                edge = startVertex.connection["upRight"];
+            }
+            // end Vertex is on the Bottom left of the start Vertex
+            else if (endGloabal.x == startGlobal.x - 1 &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["downLeft"];
+            }
+            // end Vertex is on the Bottom right of the start Vertex
+            else if (endGloabal.x == startGlobal.x + 1 &&
+                     endGloabal.y == startGlobal.y - 1)
+            {
+                edge = startVertex.connection["downRight"];
+            }
+            else
+            {
+                Debug.LogError("Start: (" + startGlobal.x + ", " + startGlobal.y + ")");
+                Debug.LogError("Start: (" + endGloabal.x + ", " + endGloabal.y + ")");
                 throw new ArgumentException("The start Vertex and end Vertex are not neighbor, they cannot be connected");
             }
 
@@ -774,7 +995,7 @@ namespace FinTOKMAK.GridSystem.Square
             GridCoordinate targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y + 1);
             if (currentVertex.connection["up"] != null)
             {
-                int targetID = currentVertex.connection["up"].to.gridSystemID;
+                int targetID = currentVertex.connection["up"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -782,7 +1003,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x, coordinate.y - 1);
             if (currentVertex.connection["down"] != null)
             {
-                int targetID = currentVertex.connection["down"].to.gridSystemID;
+                int targetID = currentVertex.connection["down"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -790,7 +1011,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y);
             if (currentVertex.connection["left"] != null)
             {
-                int targetID = currentVertex.connection["left"].to.gridSystemID;
+                int targetID = currentVertex.connection["left"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -798,7 +1019,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y);
             if (currentVertex.connection["right"] != null)
             {
-                int targetID = currentVertex.connection["right"].to.gridSystemID;
+                int targetID = currentVertex.connection["right"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -806,7 +1027,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y + 1);
             if (currentVertex.connection["upLeft"] != null)
             {
-                int targetID = currentVertex.connection["upLeft"].to.gridSystemID;
+                int targetID = currentVertex.connection["upLeft"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -814,7 +1035,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y + 1);
             if (currentVertex.connection["upRight"] != null)
             {
-                int targetID = currentVertex.connection["upRight"].to.gridSystemID;
+                int targetID = currentVertex.connection["upRight"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -822,7 +1043,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x - 1, coordinate.y - 1);
             if (currentVertex.connection["downLeft"] != null)
             {
-                int targetID = currentVertex.connection["downLeft"].to.gridSystemID;
+                int targetID = currentVertex.connection["downLeft"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }
@@ -830,7 +1051,7 @@ namespace FinTOKMAK.GridSystem.Square
             targetCoordinate = new GridCoordinate(coordinate.x + 1, coordinate.y - 1);
             if (currentVertex.connection["downRight"] != null)
             {
-                int targetID = currentVertex.connection["downRight"].to.gridSystemID;
+                int targetID = currentVertex.connection["downRight"].toGridSystemID;
                 RemoveDoubleEdge(coordinate, _gridSystemID,
                     targetCoordinate, targetID);
             }

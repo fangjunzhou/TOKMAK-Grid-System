@@ -4,7 +4,7 @@ using UnityEngine;
 namespace FinTOKMAK.GridSystem
 {
     [System.Serializable]
-    public class GridCoordinate
+    public struct GridCoordinate
     {
         #region Private Field
 
@@ -51,16 +51,6 @@ namespace FinTOKMAK.GridSystem
         #endregion
 
         #region Constructor
-
-        /// <summary>
-        /// Default constructor for GridCoordinate
-        /// the initial x and y in this constructor is all 0
-        /// </summary>
-        public GridCoordinate()
-        {
-            this._x = 0;
-            this._y = 0;
-        }
 
         /// <summary>
         /// Initialize the GridCoordinate with value

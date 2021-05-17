@@ -186,7 +186,7 @@ namespace FinTOKMAK.GridSystem.Square.Test
         private void TestPathfinding()
         {
             LinkedList<Vertex<GridDataContainer>> path = generator.squareGridSystem.
-                FindShortestPath(startCoordinate, 0, endCoordinate, 0);
+                FindShortestPath(startCoordinate, 0, endCoordinate, 0, true);
             foreach (Vertex<GridDataContainer> vertex in path)
             {
                 Debug.Log(vertex);

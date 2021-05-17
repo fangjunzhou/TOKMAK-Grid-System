@@ -111,6 +111,15 @@ namespace FinTOKMAK.GridSystem
         /// <returns>the weight of the edge that get</returns>
         float GetEdge(GridCoordinate start, int startGridSystemID, GridCoordinate end, int endGridSystemID);
 
+        /// <summary>
+        /// The overload method of GetEdge with coordinate
+        /// can save the time of looking the vertex in the hash table
+        /// </summary>
+        /// <param name="startVertex">the "from" Vertex of the Edge</param>
+        /// <param name="endVertex">the "to" Vertex of the Edge</param>
+        /// <returns>the weight of the Edge between the startVertex and the endVertex</returns>
+        float GetEdge(Vertex<DataType> startVertex, Vertex<DataType> endVertex);
+
         #endregion
 
         #region Path Finding
@@ -126,7 +135,7 @@ namespace FinTOKMAK.GridSystem
         /// <exception cref="ArgumentNullException">if the startVertex with the start coordinate
         /// or the endVertex with the end coordinate do not exist</exception>
         LinkedList<Vertex<DataType>> FindShortestPath(GridCoordinate start, int startGridSystemID, 
-            GridCoordinate end, int endGridSystemID);
+            GridCoordinate end, int endGridSystemID, bool useAccelerationTable);
 
         #endregion
     }

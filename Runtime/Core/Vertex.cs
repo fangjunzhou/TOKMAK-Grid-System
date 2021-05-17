@@ -236,7 +236,7 @@ namespace FinTOKMAK.GridSystem
             if (_connection[direction] != null)
             {
                 // change the property of the old Edge
-                _connection[direction].to = target;
+                _connection[direction].to = target.coordinate;
                 _connection[direction].cost = cost;
                 return;
             }
@@ -309,7 +309,8 @@ namespace FinTOKMAK.GridSystem
 
             if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
-            _connection.Add(direction, new Edge<DataType>(this, target, cost));
+            _connection.Add(direction,
+                new Edge<DataType>(this, target, cost));
         }
 
         /// <summary>
@@ -333,7 +334,8 @@ namespace FinTOKMAK.GridSystem
 
             if (_connection.ContainsKey(direction))
                 throw new ArgumentException("direction", "The connection to certain direction already exist, try use SetConnection()");
-            _connection.Add(direction, new Edge<DataType>(this, target, cost));
+            _connection.Add(direction,
+                new Edge<DataType>(this, target, cost));
             // try to add connection to the target vertex
             try
             {
