@@ -56,6 +56,11 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         private SquareGridSystem<GridDataContainer> _squareGridSystem;
 
         /// <summary>
+        /// The SquareGridEventHandler of the current generator
+        /// </summary>
+        private SquareGridEventHandler _eventHandler;
+
+        /// <summary>
         /// The SquareGridEventHandler which will be instantiate in current object
         /// This MonoBehavior component will be added to the current MapGenerator GameObject
         /// </summary>
@@ -89,6 +94,18 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             get
             {
                 return _squareGridSystem;
+            }
+        }
+
+        
+        /// <summary>
+        /// The GridEventHandler of the generator
+        /// </summary>
+        public IGridEventHandler gridEventHandler
+        {
+            get
+            {
+                return _eventHandler;
             }
         }
 
