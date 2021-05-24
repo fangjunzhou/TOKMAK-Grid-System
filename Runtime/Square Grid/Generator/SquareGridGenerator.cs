@@ -186,6 +186,23 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             finishInitialize?.Invoke();
         }
 
+        /// <summary>
+        /// The initialize method for editor scripts
+        /// </summary>
+        public void EditorInitialize()
+        {
+            // initialize the singleton
+            if (!Instances.Values.Contains(this))
+            {
+                _generatorID = nextGenerateID;
+                nextGenerateID++;
+                Instances.Add(_generatorID, this);
+            }
+            
+            // initialize the grid system
+            _squareGridSystem = new SquareGridSystem<GridDataContainer>(_generatorID, globalOffset);
+        }
+
         #region Private Methods
 
         
