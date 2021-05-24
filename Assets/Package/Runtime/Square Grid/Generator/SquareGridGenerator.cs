@@ -654,7 +654,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                 _squareGridSystem.RemoveVertex(gridElement.gridCoordinate);
                 
                 // destroy the GameObject
-                Destroy(gridElement.gameObject);
+                DestroyImmediate(gridElement.gameObject);
             }
             // Clear the _gridElement List
             _gridElements.Clear();
