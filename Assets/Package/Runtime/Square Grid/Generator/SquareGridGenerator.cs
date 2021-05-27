@@ -56,6 +56,11 @@ namespace FinTOKMAK.GridSystem.Square.Generator
         private SquareGridSystem<GridDataContainer> _squareGridSystem;
 
         /// <summary>
+        /// The SquareGridEventHandler of the current generator
+        /// </summary>
+        private SquareGridEventHandler _eventHandler;
+
+        /// <summary>
         /// The SquareGridEventHandler which will be instantiate in current object
         /// This MonoBehavior component will be added to the current MapGenerator GameObject
         /// </summary>
@@ -89,6 +94,18 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             get
             {
                 return _squareGridSystem;
+            }
+        }
+
+        
+        /// <summary>
+        /// The GridEventHandler of the generator
+        /// </summary>
+        public IGridEventHandler gridEventHandler
+        {
+            get
+            {
+                return _eventHandler;
             }
         }
 
@@ -167,6 +184,23 @@ namespace FinTOKMAK.GridSystem.Square.Generator
             _squareGridEventHandler.generatorID = _generatorID;
             // call the finishInitialize delegate
             finishInitialize?.Invoke();
+        }
+
+        /// <summary>
+        /// The initialize method for editor scripts
+        /// </summary>
+        public void EditorInitialize()
+        {
+            // initialize the singleton
+            if (!Instances.Values.Contains(this))
+            {
+                _generatorID = nextGenerateID;
+                nextGenerateID++;
+                Instances.Add(_generatorID, this);
+            }
+            
+            // initialize the grid system
+            _squareGridSystem = new SquareGridSystem<GridDataContainer>(_generatorID, globalOffset);
         }
 
         #region Private Methods
@@ -620,7 +654,7 @@ namespace FinTOKMAK.GridSystem.Square.Generator
                 _squareGridSystem.RemoveVertex(gridElement.gridCoordinate);
                 
                 // destroy the GameObject
-                Destroy(gridElement.gameObject);
+                DestroyImmediate(gridElement.gameObject);
             }
             // Clear the _gridElement List
             _gridElements.Clear();

@@ -40,6 +40,11 @@ namespace FinTOKMAK.GridSystem
         /// The GridSystem of the generator
         /// </summary>
         IGridSystem<DataType> gridSystem { get; }
+        
+        /// <summary>
+        /// The GridEventHandler of the generator
+        /// </summary>
+        IGridEventHandler gridEventHandler { get; }
 
         /// <summary>
         /// The global offset of all the Vertices in the GridSystem in current GirdGenerator

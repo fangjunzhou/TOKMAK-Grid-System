@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Tests", "FinTOKMAK.GridSystem.Tests.csproj", "{5E9AB197-345A-0BDC-801D-45D874E4A63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Tests", "FinTOKMAK.GridSystem.Tests.csproj", "{608EE23E-F7DE-72D4-3AE1-2F8E247AB54E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Samples", "FinTOKMAK.GridSystem.Samples.csproj", "{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Samples", "FinTOKMAK.GridSystem.Samples.csproj", "{AD5326FA-1903-DF5F-DF4F-59ECB0FF1F2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Runtime", "FinTOKMAK.GridSystem.Runtime.csproj", "{25B9190E-5B57-C6D7-C55A-CF3680071560}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTOKMAK.GridSystem.Runtime", "FinTOKMAK.GridSystem.Runtime.csproj", "{5BCA2605-8442-EFA2-3EF7-F6E32486364E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E9AB197-345A-0BDC-801D-45D874E4A63F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7C510F1-8E03-A77D-8A58-0DD564C4DE71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25B9190E-5B57-C6D7-C55A-CF3680071560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608EE23E-F7DE-72D4-3AE1-2F8E247AB54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608EE23E-F7DE-72D4-3AE1-2F8E247AB54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608EE23E-F7DE-72D4-3AE1-2F8E247AB54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608EE23E-F7DE-72D4-3AE1-2F8E247AB54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5326FA-1903-DF5F-DF4F-59ECB0FF1F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5326FA-1903-DF5F-DF4F-59ECB0FF1F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5326FA-1903-DF5F-DF4F-59ECB0FF1F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5326FA-1903-DF5F-DF4F-59ECB0FF1F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCA2605-8442-EFA2-3EF7-F6E32486364E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCA2605-8442-EFA2-3EF7-F6E32486364E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCA2605-8442-EFA2-3EF7-F6E32486364E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCA2605-8442-EFA2-3EF7-F6E32486364E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
