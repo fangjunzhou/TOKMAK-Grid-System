@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2021-5-28
+### Changed
+- SquareGridGenerator use DestroyImmediate instead of Destroy for Editor destroy support
+- Added GridEventHandler into GridGenerator
+- Added EditorInitialize for editor scripts to initialize the generator
+
 ## [0.1.0] - 2021-5-18
 ### Added
 - Use acceleration table to accelerate pathfinding. Decrease the average pathfinding time from 0.001 seconds to 2*10^-5 seconds

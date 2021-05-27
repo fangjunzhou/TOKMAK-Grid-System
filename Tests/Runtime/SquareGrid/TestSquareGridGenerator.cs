@@ -40,8 +40,13 @@ namespace FinTOKMAK.GridSystem.Square.Test
         [Button("Test the GenerateMap method with map data file")]
         private void TestGenerateVerticalFromFile()
         {
+            #if UNITY_EDITOR_OSX
+            squareGridGenerator.GenerateMap<SampleSquareGridElement>
+                (Application.dataPath + "/TestData/" + filePath, direction);
+            #else
             squareGridGenerator.GenerateMap<SampleSquareGridElement>
                 (Application.dataPath + "\\TestData\\" + filePath, direction);
+            #endif
         }
 
         [Button("Test the Clear method")]
