@@ -1,6 +1,6 @@
 {
   "name": "com.fintokmak.gridsystem",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Grid System",
   "description": "This is the Grid System developed by FinTOKMAK Studio. Grid System provide basic function of generating grids and pathfinding",
   "unity": "2019.4",
