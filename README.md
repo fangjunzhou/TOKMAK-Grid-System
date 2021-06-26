@@ -12,8 +12,8 @@
 
 Use the Package Manager to install from url
 
-`http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git`
+`https://github.com/Fangjun-Zhou/Grid-System.git`
 
 or add in the manifest.json
 
-`"com.fintokmak.gridsystem": "http://anw.noip.cn:8010/Fangjun_Zhou/gridsystem.git#upm-gridsystem"`
+`"com.fintokmak.gridsystem": "https://github.com/Fangjun-Zhou/Grid-System.git#upm-gridsystem"`
