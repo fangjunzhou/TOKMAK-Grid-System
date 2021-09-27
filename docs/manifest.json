@@ -1,0 +1,510 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Unity Projects/gridsystem/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate.html",
+          "hash": "tqyoVId02+PiLvRU9JV/qZol+MYA2ROO3UTtbqAisgU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.html",
+          "hash": "wKKCoChf+UwnXmWxMeOr+Lz8LVVfNNzmTr4pTcCilmk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.html",
+          "hash": "Hx4nkuFuNGZSkKlJAfwtBN8gf0USJbZgMCZlQQFOcX0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertex.html",
+          "hash": "PvXyWfRjp6KQ19buWbBmNBy5w/tDn3us4iIGVPihimU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertexData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertexData.html",
+          "hash": "ntt84tGuako0wP8i7F4RbhLTPamIm5n1dBaxEq9Ngo0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.html",
+          "hash": "dQM1Uo3TJ3silVzhYOMxpwfgMbdnEYkJstNT8j3fo0Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Core.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Core.Test.html",
+          "hash": "5sbysCD6AzXNDAsL4TJeYQsKOocyoVUvXS/b19TXpXg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Edge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Edge-1.html",
+          "hash": "MS3X6DxiT27luXIs70mokWLLvljApwRsRGWQSpYyhgE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.GridCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.GridCoordinate.html",
+          "hash": "NWk3D2dJlLG33q/bQHNgWLDM8KXnnUp82BePwyx1+g4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.GridDataContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.GridDataContainer.html",
+          "hash": "RwlULkmUkG9Big95AEn+3MWTqtZEbm7Hm/OZwfKZnqw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.GridElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.GridElement.html",
+          "hash": "dtV6p686cLMhICL6FGn6gBpNIquVG+FVClJhWQmTFs0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.GridGenerationDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.GridGenerationDirection.html",
+          "hash": "X2mPJ/3+kLbnLZcrvqx2IbGV9HeUSywtXxfDjQA4ijI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.GridSystemSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.GridSystemSerializer.html",
+          "hash": "sCUiqz/SgESoUumW3JHDax1yzXfJs7ifp0AwAUGFv/E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.IGridEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.IGridEventHandler.html",
+          "hash": "XDXt7UsfNhJoa2quN/fQTiAGWly92EsvsZuNCKdhRKI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.IGridGenerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.IGridGenerator-1.html",
+          "hash": "2T8tD0hIlZidnEChoYpKRBRIOLCSNxLj3yDozBdZWJw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.IGridSystem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.IGridSystem-1.html",
+          "hash": "LShdlKwVP9MiKL8fIyrTcB1NM8VKaDOjIMCeJ9TaHts="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.MergeDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.MergeDirection.html",
+          "hash": "oROTzkyVPQ2E0AkG3LZC8qXEJZAVOBXShh+Gx5euDKY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html",
+          "hash": "kWSeOSgChVMTv4A7jjP1QhoisGUwcvEgf5zAWBXtncQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html",
+          "hash": "+3KxCMgwQaHZgfnMnCMcT1NSgd4sRsez6VKiv7hw8Q4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.html",
+          "hash": "rvGsBrNlL4oXZlLGmgqyGRVhiEYfdgdPYqQ9GCCQigo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html",
+          "hash": "7gIrWKGick8BqrhK1kDC7vnwZRp5Wz+XaCFwITS5NL0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Generator.html",
+          "hash": "g5xErzfvBbEHPmIC5G1OrJMzXs82MItyEHR/5WNdU2s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html",
+          "hash": "2SEPR0COQ1jvcEsDka5/ft7D9ZXIvM6DMLv2fDjTaAM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html",
+          "hash": "KmX2P3a6cQqAN7tI3nZndfDqCeY58Cct75ITKQLUssY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html",
+          "hash": "9LPPkvE2MEvVO9NduyWWWFYUsTPzfN4c5JxrMAvJrb0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html",
+          "hash": "JH0eN2Ju08zgeIcYxnZhGzjgwMyRs/kBYq2buavYjVw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html",
+          "hash": "xkQrs7mDkDtjs4pYFISxHVynvKbu/JXu2QL7fp7sAKM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.html",
+          "hash": "jmNKV/ekEahRvJDWL8fIgEwQF3VbLAy6xpD3ywigwHE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex.html",
+          "hash": "KgQBJVbP17N5TmTZSebmvmCKoPRGW5sgEaMDVWmGeko="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.Test.html",
+          "hash": "wWu6/tSc1ODPl6Feu7iyBvFUzdOtWcAC+aXl91pNdm8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Square.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Square.html",
+          "hash": "LHPHFmeSq0hTqkptWxlmxkdBNseL69RUGlfhhWZCtcw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.Vertex-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.Vertex-1.html",
+          "hash": "DmWZPFPpb0CXgv3aasmYJE7qsnY/RgOJjHS9lLe6s2Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.VertexData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.VertexData-1.html",
+          "hash": "L95obqE/WxorHedkeswg4QJuPVanpv91HR6F8NKRh8Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.VertexSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.VertexSerializer.html",
+          "hash": "PZ4OIC8dOg1EC2NcPqIgdfUtM8OcSqkyBSG6rvLXDlU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GridSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GridSystem.html",
+          "hash": "8UU1W873h76BJehlOA+PufxzsyJS1XQ0Lw0cBRfnoAI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "RlUtIh4Ya5IOEoQBES6rN3co3P6jdvzRERlmvEK2iM8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "3jKz5bTEgebRxAJ17e6W1alXufcweqZCt36QSqwsbLA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "nwP3ujAvTTFrSlATVlpTlMO61wZondLdx3MWi9+CWJQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 35,
+          "skipped_file_count": 35
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

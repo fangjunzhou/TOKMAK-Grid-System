@@ -1,0 +1,2183 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: FinTOKMAK.GridSystem
+  name: FinTOKMAK.GridSystem
+  href: api/FinTOKMAK.GridSystem.html
+  commentId: N:FinTOKMAK.GridSystem
+  fullName: FinTOKMAK.GridSystem
+  nameWithType: FinTOKMAK.GridSystem
+- uid: FinTOKMAK.GridSystem.Core.Test
+  name: FinTOKMAK.GridSystem.Core.Test
+  href: api/FinTOKMAK.GridSystem.Core.Test.html
+  commentId: N:FinTOKMAK.GridSystem.Core.Test
+  fullName: FinTOKMAK.GridSystem.Core.Test
+  nameWithType: FinTOKMAK.GridSystem.Core.Test
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate
+  name: TestGridCoordinate
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridCoordinate
+  nameWithType: TestGridCoordinate
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer
+  name: TestGridDataContainer
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer
+  nameWithType: TestGridDataContainer
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.testObject
+  name: testObject
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.html#FinTOKMAK_GridSystem_Core_Test_TestGridDataContainer_testObject
+  commentId: F:FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.testObject
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridDataContainer.testObject
+  nameWithType: TestGridDataContainer.testObject
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization
+  name: TestGridSystemSerialization
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization
+  nameWithType: TestGridSystemSerialization
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.filePath
+  name: filePath
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.html#FinTOKMAK_GridSystem_Core_Test_TestGridSystemSerialization_filePath
+  commentId: F:FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.filePath
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.filePath
+  nameWithType: TestGridSystemSerialization.filePath
+- uid: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.gridGenerator
+  name: gridGenerator
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.html#FinTOKMAK_GridSystem_Core_Test_TestGridSystemSerialization_gridGenerator
+  commentId: F:FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.gridGenerator
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestGridSystemSerialization.gridGenerator
+  nameWithType: TestGridSystemSerialization.gridGenerator
+- uid: FinTOKMAK.GridSystem.Core.Test.TestVertex
+  name: TestVertex
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestVertex.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestVertex
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestVertex
+  nameWithType: TestVertex
+- uid: FinTOKMAK.GridSystem.Core.Test.TestVertexData
+  name: TestVertexData
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestVertexData.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestVertexData
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestVertexData
+  nameWithType: TestVertexData
+- uid: FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization
+  name: TestVertexDataSerialization
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.html
+  commentId: T:FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization
+  nameWithType: TestVertexDataSerialization
+- uid: FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.filePath
+  name: filePath
+  href: api/FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.html#FinTOKMAK_GridSystem_Core_Test_TestVertexDataSerialization_filePath
+  commentId: F:FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.filePath
+  fullName: FinTOKMAK.GridSystem.Core.Test.TestVertexDataSerialization.filePath
+  nameWithType: TestVertexDataSerialization.filePath
+- uid: FinTOKMAK.GridSystem.Edge`1
+  name: Edge<DataType>
+  href: api/FinTOKMAK.GridSystem.Edge-1.html
+  commentId: T:FinTOKMAK.GridSystem.Edge`1
+  name.vb: Edge(Of DataType)
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType)
+  nameWithType: Edge<DataType>
+  nameWithType.vb: Edge(Of DataType)
+- uid: FinTOKMAK.GridSystem.Edge`1.#ctor(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name: Edge(Vertex<DataType>, Vertex<DataType>, Single)
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1__ctor_FinTOKMAK_GridSystem_Vertex__0__FinTOKMAK_GridSystem_Vertex__0__System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Edge`1.#ctor(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name.vb: Edge(Vertex(Of DataType), Vertex(Of DataType), Single)
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.Edge(FinTOKMAK.GridSystem.Vertex<DataType>, FinTOKMAK.GridSystem.Vertex<DataType>, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).Edge(FinTOKMAK.GridSystem.Vertex(Of DataType), FinTOKMAK.GridSystem.Vertex(Of DataType), System.Single)
+  nameWithType: Edge<DataType>.Edge(Vertex<DataType>, Vertex<DataType>, Single)
+  nameWithType.vb: Edge(Of DataType).Edge(Vertex(Of DataType), Vertex(Of DataType), Single)
+- uid: FinTOKMAK.GridSystem.Edge`1.#ctor*
+  name: Edge
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.Edge
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).Edge
+  nameWithType: Edge<DataType>.Edge
+  nameWithType.vb: Edge(Of DataType).Edge
+- uid: FinTOKMAK.GridSystem.Edge`1.cost
+  name: cost
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_cost
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.cost
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.cost
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).cost
+  nameWithType: Edge<DataType>.cost
+  nameWithType.vb: Edge(Of DataType).cost
+- uid: FinTOKMAK.GridSystem.Edge`1.cost*
+  name: cost
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_cost_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.cost
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.cost
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).cost
+  nameWithType: Edge<DataType>.cost
+  nameWithType.vb: Edge(Of DataType).cost
+- uid: FinTOKMAK.GridSystem.Edge`1.from
+  name: from
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_from
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.from
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.from
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).from
+  nameWithType: Edge<DataType>.from
+  nameWithType.vb: Edge(Of DataType).from
+- uid: FinTOKMAK.GridSystem.Edge`1.from*
+  name: from
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_from_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.from
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.from
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).from
+  nameWithType: Edge<DataType>.from
+  nameWithType.vb: Edge(Of DataType).from
+- uid: FinTOKMAK.GridSystem.Edge`1.fromGridSystemID
+  name: fromGridSystemID
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_fromGridSystemID
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.fromGridSystemID
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.fromGridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).fromGridSystemID
+  nameWithType: Edge<DataType>.fromGridSystemID
+  nameWithType.vb: Edge(Of DataType).fromGridSystemID
+- uid: FinTOKMAK.GridSystem.Edge`1.fromGridSystemID*
+  name: fromGridSystemID
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_fromGridSystemID_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.fromGridSystemID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.fromGridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).fromGridSystemID
+  nameWithType: Edge<DataType>.fromGridSystemID
+  nameWithType.vb: Edge(Of DataType).fromGridSystemID
+- uid: FinTOKMAK.GridSystem.Edge`1.fromVertex
+  name: fromVertex
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_fromVertex
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.fromVertex
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.fromVertex
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).fromVertex
+  nameWithType: Edge<DataType>.fromVertex
+  nameWithType.vb: Edge(Of DataType).fromVertex
+- uid: FinTOKMAK.GridSystem.Edge`1.fromVertex*
+  name: fromVertex
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_fromVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.fromVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.fromVertex
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).fromVertex
+  nameWithType: Edge<DataType>.fromVertex
+  nameWithType.vb: Edge(Of DataType).fromVertex
+- uid: FinTOKMAK.GridSystem.Edge`1.to
+  name: to
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_to
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.to
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.to
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).to
+  nameWithType: Edge<DataType>.to
+  nameWithType.vb: Edge(Of DataType).to
+- uid: FinTOKMAK.GridSystem.Edge`1.to*
+  name: to
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_to_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.to
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.to
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).to
+  nameWithType: Edge<DataType>.to
+  nameWithType.vb: Edge(Of DataType).to
+- uid: FinTOKMAK.GridSystem.Edge`1.toGridSystemID
+  name: toGridSystemID
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_toGridSystemID
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.toGridSystemID
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.toGridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).toGridSystemID
+  nameWithType: Edge<DataType>.toGridSystemID
+  nameWithType.vb: Edge(Of DataType).toGridSystemID
+- uid: FinTOKMAK.GridSystem.Edge`1.toGridSystemID*
+  name: toGridSystemID
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_toGridSystemID_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.toGridSystemID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.toGridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).toGridSystemID
+  nameWithType: Edge<DataType>.toGridSystemID
+  nameWithType.vb: Edge(Of DataType).toGridSystemID
+- uid: FinTOKMAK.GridSystem.Edge`1.ToString
+  name: ToString()
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_ToString
+  commentId: M:FinTOKMAK.GridSystem.Edge`1.ToString
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.ToString()
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).ToString()
+  nameWithType: Edge<DataType>.ToString()
+  nameWithType.vb: Edge(Of DataType).ToString()
+- uid: FinTOKMAK.GridSystem.Edge`1.ToString*
+  name: ToString
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_ToString_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.ToString
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).ToString
+  nameWithType: Edge<DataType>.ToString
+  nameWithType.vb: Edge(Of DataType).ToString
+- uid: FinTOKMAK.GridSystem.Edge`1.toVertex
+  name: toVertex
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_toVertex
+  commentId: P:FinTOKMAK.GridSystem.Edge`1.toVertex
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.toVertex
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).toVertex
+  nameWithType: Edge<DataType>.toVertex
+  nameWithType.vb: Edge(Of DataType).toVertex
+- uid: FinTOKMAK.GridSystem.Edge`1.toVertex*
+  name: toVertex
+  href: api/FinTOKMAK.GridSystem.Edge-1.html#FinTOKMAK_GridSystem_Edge_1_toVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.Edge`1.toVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Edge<DataType>.toVertex
+  fullName.vb: FinTOKMAK.GridSystem.Edge(Of DataType).toVertex
+  nameWithType: Edge<DataType>.toVertex
+  nameWithType.vb: Edge(Of DataType).toVertex
+- uid: FinTOKMAK.GridSystem.GridCoordinate
+  name: GridCoordinate
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html
+  commentId: T:FinTOKMAK.GridSystem.GridCoordinate
+  fullName: FinTOKMAK.GridSystem.GridCoordinate
+  nameWithType: GridCoordinate
+- uid: FinTOKMAK.GridSystem.GridCoordinate.#ctor(System.Int32,System.Int32)
+  name: GridCoordinate(Int32, Int32)
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate__ctor_System_Int32_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.GridCoordinate.#ctor(System.Int32,System.Int32)
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.GridCoordinate(System.Int32, System.Int32)
+  nameWithType: GridCoordinate.GridCoordinate(Int32, Int32)
+- uid: FinTOKMAK.GridSystem.GridCoordinate.#ctor*
+  name: GridCoordinate
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.GridCoordinate
+  nameWithType: GridCoordinate.GridCoordinate
+- uid: FinTOKMAK.GridSystem.GridCoordinate.Equals(System.Object)
+  name: Equals(Object)
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_Equals_System_Object_
+  commentId: M:FinTOKMAK.GridSystem.GridCoordinate.Equals(System.Object)
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.Equals(System.Object)
+  nameWithType: GridCoordinate.Equals(Object)
+- uid: FinTOKMAK.GridSystem.GridCoordinate.Equals*
+  name: Equals
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_Equals_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.Equals
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.Equals
+  nameWithType: GridCoordinate.Equals
+- uid: FinTOKMAK.GridSystem.GridCoordinate.GetHashCode
+  name: GetHashCode()
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_GetHashCode
+  commentId: M:FinTOKMAK.GridSystem.GridCoordinate.GetHashCode
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.GetHashCode()
+  nameWithType: GridCoordinate.GetHashCode()
+- uid: FinTOKMAK.GridSystem.GridCoordinate.GetHashCode*
+  name: GetHashCode
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_GetHashCode_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.GetHashCode
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.GetHashCode
+  nameWithType: GridCoordinate.GetHashCode
+- uid: FinTOKMAK.GridSystem.GridCoordinate.ToString
+  name: ToString()
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_ToString
+  commentId: M:FinTOKMAK.GridSystem.GridCoordinate.ToString
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.ToString()
+  nameWithType: GridCoordinate.ToString()
+- uid: FinTOKMAK.GridSystem.GridCoordinate.ToString*
+  name: ToString
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_ToString_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.ToString
+  nameWithType: GridCoordinate.ToString
+- uid: FinTOKMAK.GridSystem.GridCoordinate.x
+  name: x
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_x
+  commentId: P:FinTOKMAK.GridSystem.GridCoordinate.x
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.x
+  nameWithType: GridCoordinate.x
+- uid: FinTOKMAK.GridSystem.GridCoordinate.x*
+  name: x
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_x_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.x
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.x
+  nameWithType: GridCoordinate.x
+- uid: FinTOKMAK.GridSystem.GridCoordinate.y
+  name: y
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_y
+  commentId: P:FinTOKMAK.GridSystem.GridCoordinate.y
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.y
+  nameWithType: GridCoordinate.y
+- uid: FinTOKMAK.GridSystem.GridCoordinate.y*
+  name: y
+  href: api/FinTOKMAK.GridSystem.GridCoordinate.html#FinTOKMAK_GridSystem_GridCoordinate_y_
+  commentId: Overload:FinTOKMAK.GridSystem.GridCoordinate.y
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridCoordinate.y
+  nameWithType: GridCoordinate.y
+- uid: FinTOKMAK.GridSystem.GridDataContainer
+  name: GridDataContainer
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html
+  commentId: T:FinTOKMAK.GridSystem.GridDataContainer
+  fullName: FinTOKMAK.GridSystem.GridDataContainer
+  nameWithType: GridDataContainer
+- uid: FinTOKMAK.GridSystem.GridDataContainer.#ctor
+  name: GridDataContainer()
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer__ctor
+  commentId: M:FinTOKMAK.GridSystem.GridDataContainer.#ctor
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.GridDataContainer()
+  nameWithType: GridDataContainer.GridDataContainer()
+- uid: FinTOKMAK.GridSystem.GridDataContainer.#ctor(FinTOKMAK.GridSystem.GridElement)
+  name: GridDataContainer(GridElement)
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer__ctor_FinTOKMAK_GridSystem_GridElement_
+  commentId: M:FinTOKMAK.GridSystem.GridDataContainer.#ctor(FinTOKMAK.GridSystem.GridElement)
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.GridDataContainer(FinTOKMAK.GridSystem.GridElement)
+  nameWithType: GridDataContainer.GridDataContainer(GridElement)
+- uid: FinTOKMAK.GridSystem.GridDataContainer.#ctor(FinTOKMAK.GridSystem.GridElement,ISerializable)
+  name: GridDataContainer(GridElement, ISerializable)
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer__ctor_FinTOKMAK_GridSystem_GridElement_ISerializable_
+  commentId: M:FinTOKMAK.GridSystem.GridDataContainer.#ctor(FinTOKMAK.GridSystem.GridElement,ISerializable)
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.GridDataContainer(FinTOKMAK.GridSystem.GridElement, ISerializable)
+  nameWithType: GridDataContainer.GridDataContainer(GridElement, ISerializable)
+- uid: FinTOKMAK.GridSystem.GridDataContainer.#ctor(GameObject)
+  name: GridDataContainer(GameObject)
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer__ctor_GameObject_
+  commentId: M:FinTOKMAK.GridSystem.GridDataContainer.#ctor(GameObject)
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.GridDataContainer(GameObject)
+  nameWithType: GridDataContainer.GridDataContainer(GameObject)
+- uid: FinTOKMAK.GridSystem.GridDataContainer.#ctor*
+  name: GridDataContainer
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.GridDataContainer.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.GridDataContainer
+  nameWithType: GridDataContainer.GridDataContainer
+- uid: FinTOKMAK.GridSystem.GridDataContainer.gameObject
+  name: gameObject
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_gameObject
+  commentId: P:FinTOKMAK.GridSystem.GridDataContainer.gameObject
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.gameObject
+  nameWithType: GridDataContainer.gameObject
+- uid: FinTOKMAK.GridSystem.GridDataContainer.gameObject*
+  name: gameObject
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_gameObject_
+  commentId: Overload:FinTOKMAK.GridSystem.GridDataContainer.gameObject
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.gameObject
+  nameWithType: GridDataContainer.gameObject
+- uid: FinTOKMAK.GridSystem.GridDataContainer.gridElement
+  name: gridElement
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_gridElement
+  commentId: P:FinTOKMAK.GridSystem.GridDataContainer.gridElement
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.gridElement
+  nameWithType: GridDataContainer.gridElement
+- uid: FinTOKMAK.GridSystem.GridDataContainer.gridElement*
+  name: gridElement
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_gridElement_
+  commentId: Overload:FinTOKMAK.GridSystem.GridDataContainer.gridElement
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.gridElement
+  nameWithType: GridDataContainer.gridElement
+- uid: FinTOKMAK.GridSystem.GridDataContainer.serializableData
+  name: serializableData
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_serializableData
+  commentId: P:FinTOKMAK.GridSystem.GridDataContainer.serializableData
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.serializableData
+  nameWithType: GridDataContainer.serializableData
+- uid: FinTOKMAK.GridSystem.GridDataContainer.serializableData*
+  name: serializableData
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_serializableData_
+  commentId: Overload:FinTOKMAK.GridSystem.GridDataContainer.serializableData
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.serializableData
+  nameWithType: GridDataContainer.serializableData
+- uid: FinTOKMAK.GridSystem.GridDataContainer.ToString
+  name: ToString()
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_ToString
+  commentId: M:FinTOKMAK.GridSystem.GridDataContainer.ToString
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.ToString()
+  nameWithType: GridDataContainer.ToString()
+- uid: FinTOKMAK.GridSystem.GridDataContainer.ToString*
+  name: ToString
+  href: api/FinTOKMAK.GridSystem.GridDataContainer.html#FinTOKMAK_GridSystem_GridDataContainer_ToString_
+  commentId: Overload:FinTOKMAK.GridSystem.GridDataContainer.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridDataContainer.ToString
+  nameWithType: GridDataContainer.ToString
+- uid: FinTOKMAK.GridSystem.GridElement
+  name: GridElement
+  href: api/FinTOKMAK.GridSystem.GridElement.html
+  commentId: T:FinTOKMAK.GridSystem.GridElement
+  fullName: FinTOKMAK.GridSystem.GridElement
+  nameWithType: GridElement
+- uid: FinTOKMAK.GridSystem.GridElement.generatorID
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_generatorID
+  commentId: F:FinTOKMAK.GridSystem.GridElement.generatorID
+  fullName: FinTOKMAK.GridSystem.GridElement.generatorID
+  nameWithType: GridElement.generatorID
+- uid: FinTOKMAK.GridSystem.GridElement.gridCoordinate
+  name: gridCoordinate
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridCoordinate
+  commentId: P:FinTOKMAK.GridSystem.GridElement.gridCoordinate
+  fullName: FinTOKMAK.GridSystem.GridElement.gridCoordinate
+  nameWithType: GridElement.gridCoordinate
+- uid: FinTOKMAK.GridSystem.GridElement.gridCoordinate*
+  name: gridCoordinate
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridCoordinate_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.gridCoordinate
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.gridCoordinate
+  nameWithType: GridElement.gridCoordinate
+- uid: FinTOKMAK.GridSystem.GridElement.gridDataContainer
+  name: gridDataContainer
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridDataContainer
+  commentId: P:FinTOKMAK.GridSystem.GridElement.gridDataContainer
+  fullName: FinTOKMAK.GridSystem.GridElement.gridDataContainer
+  nameWithType: GridElement.gridDataContainer
+- uid: FinTOKMAK.GridSystem.GridElement.gridDataContainer*
+  name: gridDataContainer
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridDataContainer_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.gridDataContainer
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.gridDataContainer
+  nameWithType: GridElement.gridDataContainer
+- uid: FinTOKMAK.GridSystem.GridElement.gridEventHandler
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridEventHandler
+  commentId: P:FinTOKMAK.GridSystem.GridElement.gridEventHandler
+  fullName: FinTOKMAK.GridSystem.GridElement.gridEventHandler
+  nameWithType: GridElement.gridEventHandler
+- uid: FinTOKMAK.GridSystem.GridElement.gridEventHandler*
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_gridEventHandler_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.gridEventHandler
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.gridEventHandler
+  nameWithType: GridElement.gridEventHandler
+- uid: FinTOKMAK.GridSystem.GridElement.OnCoordinateChange
+  name: OnCoordinateChange()
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_OnCoordinateChange
+  commentId: M:FinTOKMAK.GridSystem.GridElement.OnCoordinateChange
+  fullName: FinTOKMAK.GridSystem.GridElement.OnCoordinateChange()
+  nameWithType: GridElement.OnCoordinateChange()
+- uid: FinTOKMAK.GridSystem.GridElement.OnCoordinateChange*
+  name: OnCoordinateChange
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_OnCoordinateChange_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.OnCoordinateChange
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.OnCoordinateChange
+  nameWithType: GridElement.OnCoordinateChange
+- uid: FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange
+  name: OnGridDataContainerChange()
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_OnGridDataContainerChange
+  commentId: M:FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange
+  fullName: FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange()
+  nameWithType: GridElement.OnGridDataContainerChange()
+- uid: FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange*
+  name: OnGridDataContainerChange
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_OnGridDataContainerChange_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.OnGridDataContainerChange
+  nameWithType: GridElement.OnGridDataContainerChange
+- uid: FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement
+  name: SelectCurrentGridElement()
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_SelectCurrentGridElement
+  commentId: M:FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement
+  fullName: FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement()
+  nameWithType: GridElement.SelectCurrentGridElement()
+- uid: FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement*
+  name: SelectCurrentGridElement
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_SelectCurrentGridElement_
+  commentId: Overload:FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridElement.SelectCurrentGridElement
+  nameWithType: GridElement.SelectCurrentGridElement
+- uid: FinTOKMAK.GridSystem.GridElement.width
+  name: width
+  href: api/FinTOKMAK.GridSystem.GridElement.html#FinTOKMAK_GridSystem_GridElement_width
+  commentId: F:FinTOKMAK.GridSystem.GridElement.width
+  fullName: FinTOKMAK.GridSystem.GridElement.width
+  nameWithType: GridElement.width
+- uid: FinTOKMAK.GridSystem.GridGenerationDirection
+  name: GridGenerationDirection
+  href: api/FinTOKMAK.GridSystem.GridGenerationDirection.html
+  commentId: T:FinTOKMAK.GridSystem.GridGenerationDirection
+  fullName: FinTOKMAK.GridSystem.GridGenerationDirection
+  nameWithType: GridGenerationDirection
+- uid: FinTOKMAK.GridSystem.GridGenerationDirection.Horizontal
+  name: Horizontal
+  href: api/FinTOKMAK.GridSystem.GridGenerationDirection.html#FinTOKMAK_GridSystem_GridGenerationDirection_Horizontal
+  commentId: F:FinTOKMAK.GridSystem.GridGenerationDirection.Horizontal
+  fullName: FinTOKMAK.GridSystem.GridGenerationDirection.Horizontal
+  nameWithType: GridGenerationDirection.Horizontal
+- uid: FinTOKMAK.GridSystem.GridGenerationDirection.Vertical
+  name: Vertical
+  href: api/FinTOKMAK.GridSystem.GridGenerationDirection.html#FinTOKMAK_GridSystem_GridGenerationDirection_Vertical
+  commentId: F:FinTOKMAK.GridSystem.GridGenerationDirection.Vertical
+  fullName: FinTOKMAK.GridSystem.GridGenerationDirection.Vertical
+  nameWithType: GridGenerationDirection.Vertical
+- uid: FinTOKMAK.GridSystem.GridSystemSerializer
+  name: GridSystemSerializer
+  href: api/FinTOKMAK.GridSystem.GridSystemSerializer.html
+  commentId: T:FinTOKMAK.GridSystem.GridSystemSerializer
+  fullName: FinTOKMAK.GridSystem.GridSystemSerializer
+  nameWithType: GridSystemSerializer
+- uid: FinTOKMAK.GridSystem.GridSystemSerializer.Serialize*
+  name: Serialize
+  href: api/FinTOKMAK.GridSystem.GridSystemSerializer.html#FinTOKMAK_GridSystem_GridSystemSerializer_Serialize_
+  commentId: Overload:FinTOKMAK.GridSystem.GridSystemSerializer.Serialize
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.GridSystemSerializer.Serialize
+  nameWithType: GridSystemSerializer.Serialize
+- uid: FinTOKMAK.GridSystem.GridSystemSerializer.Serialize``1(FinTOKMAK.GridSystem.IGridSystem{``0},System.String)
+  name: Serialize<DataType>(IGridSystem<DataType>, String)
+  href: api/FinTOKMAK.GridSystem.GridSystemSerializer.html#FinTOKMAK_GridSystem_GridSystemSerializer_Serialize__1_FinTOKMAK_GridSystem_IGridSystem___0__System_String_
+  commentId: M:FinTOKMAK.GridSystem.GridSystemSerializer.Serialize``1(FinTOKMAK.GridSystem.IGridSystem{``0},System.String)
+  name.vb: Serialize(Of DataType)(IGridSystem(Of DataType), String)
+  fullName: FinTOKMAK.GridSystem.GridSystemSerializer.Serialize<DataType>(FinTOKMAK.GridSystem.IGridSystem<DataType>, System.String)
+  fullName.vb: FinTOKMAK.GridSystem.GridSystemSerializer.Serialize(Of DataType)(FinTOKMAK.GridSystem.IGridSystem(Of DataType), System.String)
+  nameWithType: GridSystemSerializer.Serialize<DataType>(IGridSystem<DataType>, String)
+  nameWithType.vb: GridSystemSerializer.Serialize(Of DataType)(IGridSystem(Of DataType), String)
+- uid: FinTOKMAK.GridSystem.IGridEventHandler
+  name: IGridEventHandler
+  href: api/FinTOKMAK.GridSystem.IGridEventHandler.html
+  commentId: T:FinTOKMAK.GridSystem.IGridEventHandler
+  fullName: FinTOKMAK.GridSystem.IGridEventHandler
+  nameWithType: IGridEventHandler
+- uid: FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject
+  name: currentGridObject
+  href: api/FinTOKMAK.GridSystem.IGridEventHandler.html#FinTOKMAK_GridSystem_IGridEventHandler_currentGridObject
+  commentId: P:FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject
+  fullName: FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject
+  nameWithType: IGridEventHandler.currentGridObject
+- uid: FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject*
+  name: currentGridObject
+  href: api/FinTOKMAK.GridSystem.IGridEventHandler.html#FinTOKMAK_GridSystem_IGridEventHandler_currentGridObject_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridEventHandler.currentGridObject
+  nameWithType: IGridEventHandler.currentGridObject
+- uid: FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid
+  name: updateSelectedGrid
+  href: api/FinTOKMAK.GridSystem.IGridEventHandler.html#FinTOKMAK_GridSystem_IGridEventHandler_updateSelectedGrid
+  commentId: P:FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid
+  fullName: FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid
+  nameWithType: IGridEventHandler.updateSelectedGrid
+- uid: FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid*
+  name: updateSelectedGrid
+  href: api/FinTOKMAK.GridSystem.IGridEventHandler.html#FinTOKMAK_GridSystem_IGridEventHandler_updateSelectedGrid_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridEventHandler.updateSelectedGrid
+  nameWithType: IGridEventHandler.updateSelectedGrid
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1
+  name: IGridGenerator<DataType>
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html
+  commentId: T:FinTOKMAK.GridSystem.IGridGenerator`1
+  name.vb: IGridGenerator(Of DataType)
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType)
+  nameWithType: IGridGenerator<DataType>
+  nameWithType.vb: IGridGenerator(Of DataType)
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.ClearMap
+  name: ClearMap()
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_ClearMap
+  commentId: M:FinTOKMAK.GridSystem.IGridGenerator`1.ClearMap
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.ClearMap()
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).ClearMap()
+  nameWithType: IGridGenerator<DataType>.ClearMap()
+  nameWithType.vb: IGridGenerator(Of DataType).ClearMap()
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.ClearMap*
+  name: ClearMap
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_ClearMap_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.ClearMap
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.ClearMap
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).ClearMap
+  nameWithType: IGridGenerator<DataType>.ClearMap
+  nameWithType.vb: IGridGenerator(Of DataType).ClearMap
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap*
+  name: GenerateMap
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_GenerateMap_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.GenerateMap
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).GenerateMap
+  nameWithType: IGridGenerator<DataType>.GenerateMap
+  nameWithType.vb: IGridGenerator(Of DataType).GenerateMap
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap``1(System.Int32,System.Int32,System.Single,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name: GenerateMap<ElementType>(Int32, Int32, Single, GridGenerationDirection)
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_GenerateMap__1_System_Int32_System_Int32_System_Single_FinTOKMAK_GridSystem_GridGenerationDirection_
+  commentId: M:FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap``1(System.Int32,System.Int32,System.Single,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name.vb: GenerateMap(Of ElementType)(Int32, Int32, Single, GridGenerationDirection)
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.GenerateMap<ElementType>(System.Int32, System.Int32, System.Single, FinTOKMAK.GridSystem.GridGenerationDirection)
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).GenerateMap(Of ElementType)(System.Int32, System.Int32, System.Single, FinTOKMAK.GridSystem.GridGenerationDirection)
+  nameWithType: IGridGenerator<DataType>.GenerateMap<ElementType>(Int32, Int32, Single, GridGenerationDirection)
+  nameWithType.vb: IGridGenerator(Of DataType).GenerateMap(Of ElementType)(Int32, Int32, Single, GridGenerationDirection)
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap``1(System.String,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name: GenerateMap<ElementType>(String, GridGenerationDirection)
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_GenerateMap__1_System_String_FinTOKMAK_GridSystem_GridGenerationDirection_
+  commentId: M:FinTOKMAK.GridSystem.IGridGenerator`1.GenerateMap``1(System.String,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name.vb: GenerateMap(Of ElementType)(String, GridGenerationDirection)
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.GenerateMap<ElementType>(System.String, FinTOKMAK.GridSystem.GridGenerationDirection)
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).GenerateMap(Of ElementType)(System.String, FinTOKMAK.GridSystem.GridGenerationDirection)
+  nameWithType: IGridGenerator<DataType>.GenerateMap<ElementType>(String, GridGenerationDirection)
+  nameWithType.vb: IGridGenerator(Of DataType).GenerateMap(Of ElementType)(String, GridGenerationDirection)
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.generatorID
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_generatorID
+  commentId: P:FinTOKMAK.GridSystem.IGridGenerator`1.generatorID
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.generatorID
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).generatorID
+  nameWithType: IGridGenerator<DataType>.generatorID
+  nameWithType.vb: IGridGenerator(Of DataType).generatorID
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.generatorID*
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_generatorID_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.generatorID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.generatorID
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).generatorID
+  nameWithType: IGridGenerator<DataType>.generatorID
+  nameWithType.vb: IGridGenerator(Of DataType).generatorID
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.globalOffset
+  name: globalOffset
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_globalOffset
+  commentId: P:FinTOKMAK.GridSystem.IGridGenerator`1.globalOffset
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.globalOffset
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).globalOffset
+  nameWithType: IGridGenerator<DataType>.globalOffset
+  nameWithType.vb: IGridGenerator(Of DataType).globalOffset
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.globalOffset*
+  name: globalOffset
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_globalOffset_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.globalOffset
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.globalOffset
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).globalOffset
+  nameWithType: IGridGenerator<DataType>.globalOffset
+  nameWithType.vb: IGridGenerator(Of DataType).globalOffset
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.gridEventHandler
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_gridEventHandler
+  commentId: P:FinTOKMAK.GridSystem.IGridGenerator`1.gridEventHandler
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.gridEventHandler
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).gridEventHandler
+  nameWithType: IGridGenerator<DataType>.gridEventHandler
+  nameWithType.vb: IGridGenerator(Of DataType).gridEventHandler
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.gridEventHandler*
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_gridEventHandler_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.gridEventHandler
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.gridEventHandler
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).gridEventHandler
+  nameWithType: IGridGenerator<DataType>.gridEventHandler
+  nameWithType.vb: IGridGenerator(Of DataType).gridEventHandler
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.gridSystem
+  name: gridSystem
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_gridSystem
+  commentId: P:FinTOKMAK.GridSystem.IGridGenerator`1.gridSystem
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.gridSystem
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).gridSystem
+  nameWithType: IGridGenerator<DataType>.gridSystem
+  nameWithType.vb: IGridGenerator(Of DataType).gridSystem
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.gridSystem*
+  name: gridSystem
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_gridSystem_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.gridSystem
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.gridSystem
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).gridSystem
+  nameWithType: IGridGenerator<DataType>.gridSystem
+  nameWithType.vb: IGridGenerator(Of DataType).gridSystem
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.Merge(FinTOKMAK.GridSystem.IGridGenerator{`0},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection,System.Single)
+  name: Merge(IGridGenerator<DataType>, GridCoordinate, GridCoordinate, MergeDirection, Single)
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_Merge_FinTOKMAK_GridSystem_IGridGenerator__0__FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_MergeDirection_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.IGridGenerator`1.Merge(FinTOKMAK.GridSystem.IGridGenerator{`0},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection,System.Single)
+  name.vb: Merge(IGridGenerator(Of DataType), GridCoordinate, GridCoordinate, MergeDirection, Single)
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.Merge(FinTOKMAK.GridSystem.IGridGenerator<DataType>, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).Merge(FinTOKMAK.GridSystem.IGridGenerator(Of DataType), FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection, System.Single)
+  nameWithType: IGridGenerator<DataType>.Merge(IGridGenerator<DataType>, GridCoordinate, GridCoordinate, MergeDirection, Single)
+  nameWithType.vb: IGridGenerator(Of DataType).Merge(IGridGenerator(Of DataType), GridCoordinate, GridCoordinate, MergeDirection, Single)
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.Merge*
+  name: Merge
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_Merge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.Merge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.Merge
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).Merge
+  nameWithType: IGridGenerator<DataType>.Merge
+  nameWithType.vb: IGridGenerator(Of DataType).Merge
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.Separate(FinTOKMAK.GridSystem.IGridGenerator{`0},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection)
+  name: Separate(IGridGenerator<DataType>, GridCoordinate, GridCoordinate, MergeDirection)
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_Separate_FinTOKMAK_GridSystem_IGridGenerator__0__FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_MergeDirection_
+  commentId: M:FinTOKMAK.GridSystem.IGridGenerator`1.Separate(FinTOKMAK.GridSystem.IGridGenerator{`0},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection)
+  name.vb: Separate(IGridGenerator(Of DataType), GridCoordinate, GridCoordinate, MergeDirection)
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.Separate(FinTOKMAK.GridSystem.IGridGenerator<DataType>, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection)
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).Separate(FinTOKMAK.GridSystem.IGridGenerator(Of DataType), FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection)
+  nameWithType: IGridGenerator<DataType>.Separate(IGridGenerator<DataType>, GridCoordinate, GridCoordinate, MergeDirection)
+  nameWithType.vb: IGridGenerator(Of DataType).Separate(IGridGenerator(Of DataType), GridCoordinate, GridCoordinate, MergeDirection)
+- uid: FinTOKMAK.GridSystem.IGridGenerator`1.Separate*
+  name: Separate
+  href: api/FinTOKMAK.GridSystem.IGridGenerator-1.html#FinTOKMAK_GridSystem_IGridGenerator_1_Separate_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridGenerator`1.Separate
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridGenerator<DataType>.Separate
+  fullName.vb: FinTOKMAK.GridSystem.IGridGenerator(Of DataType).Separate
+  nameWithType: IGridGenerator<DataType>.Separate
+  nameWithType.vb: IGridGenerator(Of DataType).Separate
+- uid: FinTOKMAK.GridSystem.IGridSystem`1
+  name: IGridSystem<DataType>
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html
+  commentId: T:FinTOKMAK.GridSystem.IGridSystem`1
+  name.vb: IGridSystem(Of DataType)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType)
+  nameWithType: IGridSystem<DataType>
+  nameWithType.vb: IGridSystem(Of DataType)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.AddVertex(FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  name: AddVertex(GridCoordinate, Single, DataType)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_AddVertex_FinTOKMAK_GridSystem_GridCoordinate_System_Single__0_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.AddVertex(FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.AddVertex(FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).AddVertex(FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  nameWithType: IGridSystem<DataType>.AddVertex(GridCoordinate, Single, DataType)
+  nameWithType.vb: IGridSystem(Of DataType).AddVertex(GridCoordinate, Single, DataType)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.AddVertex*
+  name: AddVertex
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_AddVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.AddVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.AddVertex
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).AddVertex
+  nameWithType: IGridSystem<DataType>.AddVertex
+  nameWithType.vb: IGridSystem(Of DataType).AddVertex
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Boolean)
+  name: FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_FindShortestPath_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Boolean_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Boolean)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Boolean)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Boolean)
+  nameWithType: IGridSystem<DataType>.FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+  nameWithType.vb: IGridSystem(Of DataType).FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.FindShortestPath*
+  name: FindShortestPath
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_FindShortestPath_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.FindShortestPath
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.FindShortestPath
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).FindShortestPath
+  nameWithType: IGridSystem<DataType>.FindShortestPath
+  nameWithType.vb: IGridSystem(Of DataType).FindShortestPath
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.GetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_GetEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.GetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.GetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).GetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: IGridSystem<DataType>.GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: IGridSystem(Of DataType).GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.GetEdge(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0})
+  name: GetEdge(Vertex<DataType>, Vertex<DataType>)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_GetEdge_FinTOKMAK_GridSystem_Vertex__0__FinTOKMAK_GridSystem_Vertex__0__
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.GetEdge(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0})
+  name.vb: GetEdge(Vertex(Of DataType), Vertex(Of DataType))
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.GetEdge(FinTOKMAK.GridSystem.Vertex<DataType>, FinTOKMAK.GridSystem.Vertex<DataType>)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).GetEdge(FinTOKMAK.GridSystem.Vertex(Of DataType), FinTOKMAK.GridSystem.Vertex(Of DataType))
+  nameWithType: IGridSystem<DataType>.GetEdge(Vertex<DataType>, Vertex<DataType>)
+  nameWithType.vb: IGridSystem(Of DataType).GetEdge(Vertex(Of DataType), Vertex(Of DataType))
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.GetEdge*
+  name: GetEdge
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_GetEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.GetEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.GetEdge
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).GetEdge
+  nameWithType: IGridSystem<DataType>.GetEdge
+  nameWithType.vb: IGridSystem(Of DataType).GetEdge
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  name: GetVertex(GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_GetVertex_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: IGridSystem<DataType>.GetVertex(GridCoordinate)
+  nameWithType.vb: IGridSystem(Of DataType).GetVertex(GridCoordinate)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.GetVertex*
+  name: GetVertex
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_GetVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.GetVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.GetVertex
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).GetVertex
+  nameWithType: IGridSystem<DataType>.GetVertex
+  nameWithType.vb: IGridSystem(Of DataType).GetVertex
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.globalCoordinateOffset
+  name: globalCoordinateOffset
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_globalCoordinateOffset
+  commentId: P:FinTOKMAK.GridSystem.IGridSystem`1.globalCoordinateOffset
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.globalCoordinateOffset
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).globalCoordinateOffset
+  nameWithType: IGridSystem<DataType>.globalCoordinateOffset
+  nameWithType.vb: IGridSystem(Of DataType).globalCoordinateOffset
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.globalCoordinateOffset*
+  name: globalCoordinateOffset
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_globalCoordinateOffset_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.globalCoordinateOffset
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.globalCoordinateOffset
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).globalCoordinateOffset
+  nameWithType: IGridSystem<DataType>.globalCoordinateOffset
+  nameWithType.vb: IGridSystem(Of DataType).globalCoordinateOffset
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.gridSystemID
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_gridSystemID
+  commentId: P:FinTOKMAK.GridSystem.IGridSystem`1.gridSystemID
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).gridSystemID
+  nameWithType: IGridSystem<DataType>.gridSystemID
+  nameWithType.vb: IGridSystem(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.gridSystemID*
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_gridSystemID_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.gridSystemID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).gridSystemID
+  nameWithType: IGridSystem<DataType>.gridSystemID
+  nameWithType.vb: IGridSystem(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveDoubleEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: IGridSystem<DataType>.RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: IGridSystem(Of DataType).RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveDoubleEdge*
+  name: RemoveDoubleEdge
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveDoubleEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.RemoveDoubleEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveDoubleEdge
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveDoubleEdge
+  nameWithType: IGridSystem<DataType>.RemoveDoubleEdge
+  nameWithType.vb: IGridSystem(Of DataType).RemoveDoubleEdge
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: IGridSystem<DataType>.RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: IGridSystem(Of DataType).RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveEdge*
+  name: RemoveEdge
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.RemoveEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveEdge
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveEdge
+  nameWithType: IGridSystem<DataType>.RemoveEdge
+  nameWithType.vb: IGridSystem(Of DataType).RemoveEdge
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  name: RemoveVertex(GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveVertex_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: IGridSystem<DataType>.RemoveVertex(GridCoordinate)
+  nameWithType.vb: IGridSystem(Of DataType).RemoveVertex(GridCoordinate)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.RemoveVertex*
+  name: RemoveVertex
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_RemoveVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.RemoveVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.RemoveVertex
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).RemoveVertex
+  nameWithType: IGridSystem<DataType>.RemoveVertex
+  nameWithType.vb: IGridSystem(Of DataType).RemoveVertex
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  name: SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_SetDoubleEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  nameWithType: IGridSystem<DataType>.SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  nameWithType.vb: IGridSystem(Of DataType).SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.SetDoubleEdge*
+  name: SetDoubleEdge
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_SetDoubleEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.SetDoubleEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.SetDoubleEdge
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).SetDoubleEdge
+  nameWithType: IGridSystem<DataType>.SetDoubleEdge
+  nameWithType.vb: IGridSystem(Of DataType).SetDoubleEdge
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.SetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  name: SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_SetEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.IGridSystem`1.SetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.SetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).SetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  nameWithType: IGridSystem<DataType>.SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  nameWithType.vb: IGridSystem(Of DataType).SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.SetEdge*
+  name: SetEdge
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_SetEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.SetEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.SetEdge
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).SetEdge
+  nameWithType: IGridSystem<DataType>.SetEdge
+  nameWithType.vb: IGridSystem(Of DataType).SetEdge
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.vertices
+  name: vertices
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_vertices
+  commentId: P:FinTOKMAK.GridSystem.IGridSystem`1.vertices
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.vertices
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).vertices
+  nameWithType: IGridSystem<DataType>.vertices
+  nameWithType.vb: IGridSystem(Of DataType).vertices
+- uid: FinTOKMAK.GridSystem.IGridSystem`1.vertices*
+  name: vertices
+  href: api/FinTOKMAK.GridSystem.IGridSystem-1.html#FinTOKMAK_GridSystem_IGridSystem_1_vertices_
+  commentId: Overload:FinTOKMAK.GridSystem.IGridSystem`1.vertices
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.IGridSystem<DataType>.vertices
+  fullName.vb: FinTOKMAK.GridSystem.IGridSystem(Of DataType).vertices
+  nameWithType: IGridSystem<DataType>.vertices
+  nameWithType.vb: IGridSystem(Of DataType).vertices
+- uid: FinTOKMAK.GridSystem.MergeDirection
+  name: MergeDirection
+  href: api/FinTOKMAK.GridSystem.MergeDirection.html
+  commentId: T:FinTOKMAK.GridSystem.MergeDirection
+  fullName: FinTOKMAK.GridSystem.MergeDirection
+  nameWithType: MergeDirection
+- uid: FinTOKMAK.GridSystem.MergeDirection.Down
+  name: Down
+  href: api/FinTOKMAK.GridSystem.MergeDirection.html#FinTOKMAK_GridSystem_MergeDirection_Down
+  commentId: F:FinTOKMAK.GridSystem.MergeDirection.Down
+  fullName: FinTOKMAK.GridSystem.MergeDirection.Down
+  nameWithType: MergeDirection.Down
+- uid: FinTOKMAK.GridSystem.MergeDirection.Left
+  name: Left
+  href: api/FinTOKMAK.GridSystem.MergeDirection.html#FinTOKMAK_GridSystem_MergeDirection_Left
+  commentId: F:FinTOKMAK.GridSystem.MergeDirection.Left
+  fullName: FinTOKMAK.GridSystem.MergeDirection.Left
+  nameWithType: MergeDirection.Left
+- uid: FinTOKMAK.GridSystem.MergeDirection.Right
+  name: Right
+  href: api/FinTOKMAK.GridSystem.MergeDirection.html#FinTOKMAK_GridSystem_MergeDirection_Right
+  commentId: F:FinTOKMAK.GridSystem.MergeDirection.Right
+  fullName: FinTOKMAK.GridSystem.MergeDirection.Right
+  nameWithType: MergeDirection.Right
+- uid: FinTOKMAK.GridSystem.MergeDirection.Up
+  name: Up
+  href: api/FinTOKMAK.GridSystem.MergeDirection.html#FinTOKMAK_GridSystem_MergeDirection_Up
+  commentId: F:FinTOKMAK.GridSystem.MergeDirection.Up
+  fullName: FinTOKMAK.GridSystem.MergeDirection.Up
+  nameWithType: MergeDirection.Up
+- uid: FinTOKMAK.GridSystem.Square
+  name: FinTOKMAK.GridSystem.Square
+  href: api/FinTOKMAK.GridSystem.Square.html
+  commentId: N:FinTOKMAK.GridSystem.Square
+  fullName: FinTOKMAK.GridSystem.Square
+  nameWithType: FinTOKMAK.GridSystem.Square
+- uid: FinTOKMAK.GridSystem.Square.Generator
+  name: FinTOKMAK.GridSystem.Square.Generator
+  href: api/FinTOKMAK.GridSystem.Square.Generator.html
+  commentId: N:FinTOKMAK.GridSystem.Square.Generator
+  fullName: FinTOKMAK.GridSystem.Square.Generator
+  nameWithType: FinTOKMAK.GridSystem.Square.Generator
+- uid: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor
+  name: ISquareGridEventResponsor
+  href: api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor
+  fullName: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor
+  nameWithType: ISquareGridEventResponsor
+- uid: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated(System.Int32)
+  name: OnSelectedGridUpdated(Int32)
+  href: api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html#FinTOKMAK_GridSystem_Square_Generator_ISquareGridEventResponsor_OnSelectedGridUpdated_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated(System.Int32)
+  fullName: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated(System.Int32)
+  nameWithType: ISquareGridEventResponsor.OnSelectedGridUpdated(Int32)
+- uid: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated*
+  name: OnSelectedGridUpdated
+  href: api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html#FinTOKMAK_GridSystem_Square_Generator_ISquareGridEventResponsor_OnSelectedGridUpdated_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.OnSelectedGridUpdated
+  nameWithType: ISquareGridEventResponsor.OnSelectedGridUpdated
+- uid: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler
+  name: squareGridEventHandler
+  href: api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html#FinTOKMAK_GridSystem_Square_Generator_ISquareGridEventResponsor_squareGridEventHandler
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler
+  fullName: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler
+  nameWithType: ISquareGridEventResponsor.squareGridEventHandler
+- uid: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler*
+  name: squareGridEventHandler
+  href: api/FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.html#FinTOKMAK_GridSystem_Square_Generator_ISquareGridEventResponsor_squareGridEventHandler_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.ISquareGridEventResponsor.squareGridEventHandler
+  nameWithType: ISquareGridEventResponsor.squareGridEventHandler
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler
+  name: SquareGridEventHandler
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler
+  nameWithType: SquareGridEventHandler
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement
+  name: currentGridElement
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_currentGridElement
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement
+  nameWithType: SquareGridEventHandler.currentGridElement
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement*
+  name: currentGridElement
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_currentGridElement_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridElement
+  nameWithType: SquareGridEventHandler.currentGridElement
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject
+  name: currentGridObject
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_currentGridObject
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject
+  nameWithType: SquareGridEventHandler.currentGridObject
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject*
+  name: currentGridObject
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_currentGridObject_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.currentGridObject
+  nameWithType: SquareGridEventHandler.currentGridObject
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.generatorID
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_generatorID
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.generatorID
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.generatorID
+  nameWithType: SquareGridEventHandler.generatorID
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances
+  name: Instances
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_Instances
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances
+  nameWithType: SquareGridEventHandler.Instances
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances*
+  name: Instances
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_Instances_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.Instances
+  nameWithType: SquareGridEventHandler.Instances
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.maxRayLength
+  name: maxRayLength
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_maxRayLength
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.maxRayLength
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.maxRayLength
+  nameWithType: SquareGridEventHandler.maxRayLength
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.nextGenerateID
+  name: nextGenerateID
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_nextGenerateID
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.nextGenerateID
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.nextGenerateID
+  nameWithType: SquareGridEventHandler.nextGenerateID
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid
+  name: updateSelectedGrid
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_updateSelectedGrid
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid
+  nameWithType: SquareGridEventHandler.updateSelectedGrid
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid*
+  name: updateSelectedGrid
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventHandler_updateSelectedGrid_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventHandler.updateSelectedGrid
+  nameWithType: SquareGridEventHandler.updateSelectedGrid
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView
+  name: SquareGridEventView
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView
+  nameWithType: SquareGridEventView
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.squareGridEventResponsors
+  name: squareGridEventResponsors
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridEventView_squareGridEventResponsors
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.squareGridEventResponsors
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridEventView.squareGridEventResponsors
+  nameWithType: SquareGridEventView.squareGridEventResponsors
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator
+  name: SquareGridGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator
+  nameWithType: SquareGridGenerator
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap
+  name: ClearMap()
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_ClearMap
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap()
+  nameWithType: SquareGridGenerator.ClearMap()
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap*
+  name: ClearMap
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_ClearMap_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.ClearMap
+  nameWithType: SquareGridGenerator.ClearMap
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize
+  name: EditorInitialize()
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_EditorInitialize
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize()
+  nameWithType: SquareGridGenerator.EditorInitialize()
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize*
+  name: EditorInitialize
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_EditorInitialize_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.EditorInitialize
+  nameWithType: SquareGridGenerator.EditorInitialize
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.finishInitialize
+  name: finishInitialize
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_finishInitialize
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.finishInitialize
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.finishInitialize
+  nameWithType: SquareGridGenerator.finishInitialize
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap*
+  name: GenerateMap
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_GenerateMap_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap
+  nameWithType: SquareGridGenerator.GenerateMap
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap``1(System.Int32,System.Int32,System.Single,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name: GenerateMap<ElementType>(Int32, Int32, Single, GridGenerationDirection)
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_GenerateMap__1_System_Int32_System_Int32_System_Single_FinTOKMAK_GridSystem_GridGenerationDirection_
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap``1(System.Int32,System.Int32,System.Single,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name.vb: GenerateMap(Of ElementType)(Int32, Int32, Single, GridGenerationDirection)
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap<ElementType>(System.Int32, System.Int32, System.Single, FinTOKMAK.GridSystem.GridGenerationDirection)
+  fullName.vb: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap(Of ElementType)(System.Int32, System.Int32, System.Single, FinTOKMAK.GridSystem.GridGenerationDirection)
+  nameWithType: SquareGridGenerator.GenerateMap<ElementType>(Int32, Int32, Single, GridGenerationDirection)
+  nameWithType.vb: SquareGridGenerator.GenerateMap(Of ElementType)(Int32, Int32, Single, GridGenerationDirection)
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap``1(System.String,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name: GenerateMap<ElementType>(String, GridGenerationDirection)
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_GenerateMap__1_System_String_FinTOKMAK_GridSystem_GridGenerationDirection_
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap``1(System.String,FinTOKMAK.GridSystem.GridGenerationDirection)
+  name.vb: GenerateMap(Of ElementType)(String, GridGenerationDirection)
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap<ElementType>(System.String, FinTOKMAK.GridSystem.GridGenerationDirection)
+  fullName.vb: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.GenerateMap(Of ElementType)(System.String, FinTOKMAK.GridSystem.GridGenerationDirection)
+  nameWithType: SquareGridGenerator.GenerateMap<ElementType>(String, GridGenerationDirection)
+  nameWithType.vb: SquareGridGenerator.GenerateMap(Of ElementType)(String, GridGenerationDirection)
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_generatorID
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID
+  nameWithType: SquareGridGenerator.generatorID
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID*
+  name: generatorID
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_generatorID_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.generatorID
+  nameWithType: SquareGridGenerator.generatorID
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset
+  name: globalOffset
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_globalOffset
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset
+  nameWithType: SquareGridGenerator.globalOffset
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset*
+  name: globalOffset
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_globalOffset_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.globalOffset
+  nameWithType: SquareGridGenerator.globalOffset
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements
+  name: gridElements
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridElements
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements
+  nameWithType: SquareGridGenerator.gridElements
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements*
+  name: gridElements
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridElements_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridElements
+  nameWithType: SquareGridGenerator.gridElements
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridEventHandler
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler
+  nameWithType: SquareGridGenerator.gridEventHandler
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler*
+  name: gridEventHandler
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridEventHandler_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridEventHandler
+  nameWithType: SquareGridGenerator.gridEventHandler
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem
+  name: gridSystem
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridSystem
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem
+  nameWithType: SquareGridGenerator.gridSystem
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem*
+  name: gridSystem
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_gridSystem_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.gridSystem
+  nameWithType: SquareGridGenerator.gridSystem
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Instances
+  name: Instances
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_Instances
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Instances
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Instances
+  nameWithType: SquareGridGenerator.Instances
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge(FinTOKMAK.GridSystem.IGridGenerator{FinTOKMAK.GridSystem.GridDataContainer},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection,System.Single)
+  name: Merge(IGridGenerator<GridDataContainer>, GridCoordinate, GridCoordinate, MergeDirection, Single)
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_Merge_FinTOKMAK_GridSystem_IGridGenerator_FinTOKMAK_GridSystem_GridDataContainer__FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_MergeDirection_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge(FinTOKMAK.GridSystem.IGridGenerator{FinTOKMAK.GridSystem.GridDataContainer},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection,System.Single)
+  name.vb: Merge(IGridGenerator(Of GridDataContainer), GridCoordinate, GridCoordinate, MergeDirection, Single)
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge(FinTOKMAK.GridSystem.IGridGenerator<FinTOKMAK.GridSystem.GridDataContainer>, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge(FinTOKMAK.GridSystem.IGridGenerator(Of FinTOKMAK.GridSystem.GridDataContainer), FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection, System.Single)
+  nameWithType: SquareGridGenerator.Merge(IGridGenerator<GridDataContainer>, GridCoordinate, GridCoordinate, MergeDirection, Single)
+  nameWithType.vb: SquareGridGenerator.Merge(IGridGenerator(Of GridDataContainer), GridCoordinate, GridCoordinate, MergeDirection, Single)
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge*
+  name: Merge
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_Merge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Merge
+  nameWithType: SquareGridGenerator.Merge
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.nextGenerateID
+  name: nextGenerateID
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_nextGenerateID
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.nextGenerateID
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.nextGenerateID
+  nameWithType: SquareGridGenerator.nextGenerateID
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.sceneObjectRoot
+  name: sceneObjectRoot
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_sceneObjectRoot
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.sceneObjectRoot
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.sceneObjectRoot
+  nameWithType: SquareGridGenerator.sceneObjectRoot
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate(FinTOKMAK.GridSystem.IGridGenerator{FinTOKMAK.GridSystem.GridDataContainer},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection)
+  name: Separate(IGridGenerator<GridDataContainer>, GridCoordinate, GridCoordinate, MergeDirection)
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_Separate_FinTOKMAK_GridSystem_IGridGenerator_FinTOKMAK_GridSystem_GridDataContainer__FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_GridCoordinate_FinTOKMAK_GridSystem_MergeDirection_
+  commentId: M:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate(FinTOKMAK.GridSystem.IGridGenerator{FinTOKMAK.GridSystem.GridDataContainer},FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.GridCoordinate,FinTOKMAK.GridSystem.MergeDirection)
+  name.vb: Separate(IGridGenerator(Of GridDataContainer), GridCoordinate, GridCoordinate, MergeDirection)
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate(FinTOKMAK.GridSystem.IGridGenerator<FinTOKMAK.GridSystem.GridDataContainer>, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection)
+  fullName.vb: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate(FinTOKMAK.GridSystem.IGridGenerator(Of FinTOKMAK.GridSystem.GridDataContainer), FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.GridCoordinate, FinTOKMAK.GridSystem.MergeDirection)
+  nameWithType: SquareGridGenerator.Separate(IGridGenerator<GridDataContainer>, GridCoordinate, GridCoordinate, MergeDirection)
+  nameWithType.vb: SquareGridGenerator.Separate(IGridGenerator(Of GridDataContainer), GridCoordinate, GridCoordinate, MergeDirection)
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate*
+  name: Separate
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_Separate_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.Separate
+  nameWithType: SquareGridGenerator.Separate
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridElementPrefab
+  name: squareGridElementPrefab
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_squareGridElementPrefab
+  commentId: F:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridElementPrefab
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridElementPrefab
+  nameWithType: SquareGridGenerator.squareGridElementPrefab
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem
+  name: squareGridSystem
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_squareGridSystem
+  commentId: P:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem
+  nameWithType: SquareGridGenerator.squareGridSystem
+- uid: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem*
+  name: squareGridSystem
+  href: api/FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Generator_SquareGridGenerator_squareGridSystem_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.Generator.SquareGridGenerator.squareGridSystem
+  nameWithType: SquareGridGenerator.squareGridSystem
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1
+  name: SquareGridSystem<DataType>
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html
+  commentId: T:FinTOKMAK.GridSystem.Square.SquareGridSystem`1
+  name.vb: SquareGridSystem(Of DataType)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType)
+  nameWithType: SquareGridSystem<DataType>
+  nameWithType.vb: SquareGridSystem(Of DataType)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  name: SquareGridSystem(Int32, GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SquareGridSystem(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SquareGridSystem(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: SquareGridSystem<DataType>.SquareGridSystem(Int32, GridCoordinate)
+  nameWithType.vb: SquareGridSystem(Of DataType).SquareGridSystem(Int32, GridCoordinate)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.#ctor*
+  name: SquareGridSystem
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SquareGridSystem
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SquareGridSystem
+  nameWithType: SquareGridSystem<DataType>.SquareGridSystem
+  nameWithType.vb: SquareGridSystem(Of DataType).SquareGridSystem
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.AddVertex(FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  name: AddVertex(GridCoordinate, Single, DataType)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_AddVertex_FinTOKMAK_GridSystem_GridCoordinate_System_Single__0_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.AddVertex(FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.AddVertex(FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).AddVertex(FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  nameWithType: SquareGridSystem<DataType>.AddVertex(GridCoordinate, Single, DataType)
+  nameWithType.vb: SquareGridSystem(Of DataType).AddVertex(GridCoordinate, Single, DataType)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.AddVertex*
+  name: AddVertex
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_AddVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.AddVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.AddVertex
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).AddVertex
+  nameWithType: SquareGridSystem<DataType>.AddVertex
+  nameWithType.vb: SquareGridSystem(Of DataType).AddVertex
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.ClearGlobalAccelerationRecordMemory
+  name: ClearGlobalAccelerationRecordMemory()
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_ClearGlobalAccelerationRecordMemory
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.ClearGlobalAccelerationRecordMemory
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.ClearGlobalAccelerationRecordMemory()
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).ClearGlobalAccelerationRecordMemory()
+  nameWithType: SquareGridSystem<DataType>.ClearGlobalAccelerationRecordMemory()
+  nameWithType.vb: SquareGridSystem(Of DataType).ClearGlobalAccelerationRecordMemory()
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.ClearGlobalAccelerationRecordMemory*
+  name: ClearGlobalAccelerationRecordMemory
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_ClearGlobalAccelerationRecordMemory_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.ClearGlobalAccelerationRecordMemory
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.ClearGlobalAccelerationRecordMemory
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).ClearGlobalAccelerationRecordMemory
+  nameWithType: SquareGridSystem<DataType>.ClearGlobalAccelerationRecordMemory
+  nameWithType.vb: SquareGridSystem(Of DataType).ClearGlobalAccelerationRecordMemory
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Boolean)
+  name: FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_FindShortestPath_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Boolean_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Boolean)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Boolean)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).FindShortestPath(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Boolean)
+  nameWithType: SquareGridSystem<DataType>.FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+  nameWithType.vb: SquareGridSystem(Of DataType).FindShortestPath(GridCoordinate, Int32, GridCoordinate, Int32, Boolean)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.FindShortestPath*
+  name: FindShortestPath
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_FindShortestPath_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.FindShortestPath
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.FindShortestPath
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).FindShortestPath
+  nameWithType: SquareGridSystem<DataType>.FindShortestPath
+  nameWithType.vb: SquareGridSystem(Of DataType).FindShortestPath
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_GetEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.GetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).GetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: SquareGridSystem<DataType>.GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: SquareGridSystem(Of DataType).GetEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0})
+  name: GetEdge(Vertex<DataType>, Vertex<DataType>)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_GetEdge_FinTOKMAK_GridSystem_Vertex__0__FinTOKMAK_GridSystem_Vertex__0__
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge(FinTOKMAK.GridSystem.Vertex{`0},FinTOKMAK.GridSystem.Vertex{`0})
+  name.vb: GetEdge(Vertex(Of DataType), Vertex(Of DataType))
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.GetEdge(FinTOKMAK.GridSystem.Vertex<DataType>, FinTOKMAK.GridSystem.Vertex<DataType>)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).GetEdge(FinTOKMAK.GridSystem.Vertex(Of DataType), FinTOKMAK.GridSystem.Vertex(Of DataType))
+  nameWithType: SquareGridSystem<DataType>.GetEdge(Vertex<DataType>, Vertex<DataType>)
+  nameWithType.vb: SquareGridSystem(Of DataType).GetEdge(Vertex(Of DataType), Vertex(Of DataType))
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge*
+  name: GetEdge
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_GetEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.GetEdge
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).GetEdge
+  nameWithType: SquareGridSystem<DataType>.GetEdge
+  nameWithType.vb: SquareGridSystem(Of DataType).GetEdge
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  name: GetVertex(GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_GetVertex_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).GetVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: SquareGridSystem<DataType>.GetVertex(GridCoordinate)
+  nameWithType.vb: SquareGridSystem(Of DataType).GetVertex(GridCoordinate)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetVertex*
+  name: GetVertex
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_GetVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.GetVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.GetVertex
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).GetVertex
+  nameWithType: SquareGridSystem<DataType>.GetVertex
+  nameWithType.vb: SquareGridSystem(Of DataType).GetVertex
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.globalCoordinateOffset
+  name: globalCoordinateOffset
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_globalCoordinateOffset
+  commentId: P:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.globalCoordinateOffset
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.globalCoordinateOffset
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).globalCoordinateOffset
+  nameWithType: SquareGridSystem<DataType>.globalCoordinateOffset
+  nameWithType.vb: SquareGridSystem(Of DataType).globalCoordinateOffset
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.globalCoordinateOffset*
+  name: globalCoordinateOffset
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_globalCoordinateOffset_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.globalCoordinateOffset
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.globalCoordinateOffset
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).globalCoordinateOffset
+  nameWithType: SquareGridSystem<DataType>.globalCoordinateOffset
+  nameWithType.vb: SquareGridSystem(Of DataType).globalCoordinateOffset
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.gridSystemID
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_gridSystemID
+  commentId: P:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.gridSystemID
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).gridSystemID
+  nameWithType: SquareGridSystem<DataType>.gridSystemID
+  nameWithType.vb: SquareGridSystem(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.gridSystemID*
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_gridSystemID_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.gridSystemID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).gridSystemID
+  nameWithType: SquareGridSystem<DataType>.gridSystemID
+  nameWithType.vb: SquareGridSystem(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.Instances
+  name: Instances
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_Instances
+  commentId: P:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.Instances
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.Instances
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).Instances
+  nameWithType: SquareGridSystem<DataType>.Instances
+  nameWithType.vb: SquareGridSystem(Of DataType).Instances
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.Instances*
+  name: Instances
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_Instances_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.Instances
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.Instances
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).Instances
+  nameWithType: SquareGridSystem<DataType>.Instances
+  nameWithType.vb: SquareGridSystem(Of DataType).Instances
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveDoubleEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: SquareGridSystem<DataType>.RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveDoubleEdge*
+  name: RemoveDoubleEdge
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveDoubleEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveDoubleEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveDoubleEdge
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveDoubleEdge
+  nameWithType: SquareGridSystem<DataType>.RemoveDoubleEdge
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveDoubleEdge
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  name: RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32)
+  nameWithType: SquareGridSystem<DataType>.RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveEdge(GridCoordinate, Int32, GridCoordinate, Int32)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveEdge*
+  name: RemoveEdge
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveEdge
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveEdge
+  nameWithType: SquareGridSystem<DataType>.RemoveEdge
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveEdge
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  name: RemoveVertex(GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveVertex_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveVertex(FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: SquareGridSystem<DataType>.RemoveVertex(GridCoordinate)
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveVertex(GridCoordinate)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveVertex*
+  name: RemoveVertex
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_RemoveVertex_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.RemoveVertex
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.RemoveVertex
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).RemoveVertex
+  nameWithType: SquareGridSystem<DataType>.RemoveVertex
+  nameWithType.vb: SquareGridSystem(Of DataType).RemoveVertex
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  name: SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_SetDoubleEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SetDoubleEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  nameWithType: SquareGridSystem<DataType>.SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  nameWithType.vb: SquareGridSystem(Of DataType).SetDoubleEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetDoubleEdge*
+  name: SetDoubleEdge
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_SetDoubleEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetDoubleEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SetDoubleEdge
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SetDoubleEdge
+  nameWithType: SquareGridSystem<DataType>.SetDoubleEdge
+  nameWithType.vb: SquareGridSystem(Of DataType).SetDoubleEdge
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  name: SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_SetEdge_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetEdge(FinTOKMAK.GridSystem.GridCoordinate,System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SetEdge(FinTOKMAK.GridSystem.GridCoordinate, System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Int32, System.Single)
+  nameWithType: SquareGridSystem<DataType>.SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+  nameWithType.vb: SquareGridSystem(Of DataType).SetEdge(GridCoordinate, Int32, GridCoordinate, Int32, Single)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetEdge*
+  name: SetEdge
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_SetEdge_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.SetEdge
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.SetEdge
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).SetEdge
+  nameWithType: SquareGridSystem<DataType>.SetEdge
+  nameWithType.vb: SquareGridSystem(Of DataType).SetEdge
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.vertices
+  name: vertices
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_vertices
+  commentId: P:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.vertices
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.vertices
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).vertices
+  nameWithType: SquareGridSystem<DataType>.vertices
+  nameWithType.vb: SquareGridSystem(Of DataType).vertices
+- uid: FinTOKMAK.GridSystem.Square.SquareGridSystem`1.vertices*
+  name: vertices
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridSystem-1.html#FinTOKMAK_GridSystem_Square_SquareGridSystem_1_vertices_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridSystem`1.vertices
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridSystem<DataType>.vertices
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridSystem(Of DataType).vertices
+  nameWithType: SquareGridSystem<DataType>.vertices
+  nameWithType.vb: SquareGridSystem(Of DataType).vertices
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1
+  name: SquareGridVertex<DataType>
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html
+  commentId: T:FinTOKMAK.GridSystem.Square.SquareGridVertex`1
+  name.vb: SquareGridVertex(Of DataType)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType)
+  nameWithType: SquareGridVertex<DataType>
+  nameWithType.vb: SquareGridVertex(Of DataType)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32)
+  name: SquareGridVertex(Int32)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex(System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex(System.Int32)
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex(Int32)
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex(Int32)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  name: SquareGridVertex(Int32, GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex(Int32, GridCoordinate)
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex(Int32, GridCoordinate)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single)
+  name: SquareGridVertex(Int32, GridCoordinate, Single)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single)
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex(Int32, GridCoordinate, Single)
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex(Int32, GridCoordinate, Single)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  name: SquareGridVertex(Int32, GridCoordinate, Single, DataType)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Single__0_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex(Int32, GridCoordinate, Single, DataType)
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex(Int32, GridCoordinate, Single, DataType)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,System.Single)
+  name: SquareGridVertex(Int32, Single)
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor(System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex(System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex(System.Int32, System.Single)
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex(Int32, Single)
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex(Int32, Single)
+- uid: FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor*
+  name: SquareGridVertex
+  href: api/FinTOKMAK.GridSystem.Square.SquareGridVertex-1.html#FinTOKMAK_GridSystem_Square_SquareGridVertex_1__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.Square.SquareGridVertex`1.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Square.SquareGridVertex<DataType>.SquareGridVertex
+  fullName.vb: FinTOKMAK.GridSystem.Square.SquareGridVertex(Of DataType).SquareGridVertex
+  nameWithType: SquareGridVertex<DataType>.SquareGridVertex
+  nameWithType.vb: SquareGridVertex(Of DataType).SquareGridVertex
+- uid: FinTOKMAK.GridSystem.Square.Test
+  name: FinTOKMAK.GridSystem.Square.Test
+  href: api/FinTOKMAK.GridSystem.Square.Test.html
+  commentId: N:FinTOKMAK.GridSystem.Square.Test
+  fullName: FinTOKMAK.GridSystem.Square.Test
+  nameWithType: FinTOKMAK.GridSystem.Square.Test
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator
+  name: TestMergeGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator
+  nameWithType: TestMergeGenerator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentFrom
+  name: currentFrom
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_currentFrom
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentFrom
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentFrom
+  nameWithType: TestMergeGenerator.currentFrom
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentGenerator
+  name: currentGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_currentGenerator
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentGenerator
+  nameWithType: TestMergeGenerator.currentGenerator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentTo
+  name: currentTo
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_currentTo
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentTo
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.currentTo
+  nameWithType: TestMergeGenerator.currentTo
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.direction
+  name: direction
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_direction
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.direction
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.direction
+  nameWithType: TestMergeGenerator.direction
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.targetGenerator
+  name: targetGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_targetGenerator
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.targetGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.targetGenerator
+  nameWithType: TestMergeGenerator.targetGenerator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.weight
+  name: weight
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestMergeGenerator_weight
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.weight
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestMergeGenerator.weight
+  nameWithType: TestMergeGenerator.weight
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement
+  name: TestSquareGridElement
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement
+  nameWithType: TestSquareGridElement
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.prefab
+  name: prefab
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridElement_prefab
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.prefab
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.prefab
+  nameWithType: TestSquareGridElement.prefab
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.root
+  name: root
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridElement_root
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.root
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.root
+  nameWithType: TestSquareGridElement.root
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.x
+  name: x
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridElement_x
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.x
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.x
+  nameWithType: TestSquareGridElement.x
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.y
+  name: y
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridElement_y
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.y
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridElement.y
+  nameWithType: TestSquareGridElement.y
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator
+  name: TestSquareGridGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator
+  nameWithType: TestSquareGridGenerator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.direction
+  name: direction
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_direction
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.direction
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.direction
+  nameWithType: TestSquareGridGenerator.direction
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.filePath
+  name: filePath
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_filePath
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.filePath
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.filePath
+  nameWithType: TestSquareGridGenerator.filePath
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.globalOffset
+  name: globalOffset
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_globalOffset
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.globalOffset
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.globalOffset
+  nameWithType: TestSquareGridGenerator.globalOffset
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.height
+  name: height
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_height
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.height
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.height
+  nameWithType: TestSquareGridGenerator.height
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.squareGridGenerator
+  name: squareGridGenerator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_squareGridGenerator
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.squareGridGenerator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.squareGridGenerator
+  nameWithType: TestSquareGridGenerator.squareGridGenerator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.useMapFile
+  name: useMapFile
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_useMapFile
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.useMapFile
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.useMapFile
+  nameWithType: TestSquareGridGenerator.useMapFile
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.width
+  name: width
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridGenerator_width
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.width
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridGenerator.width
+  nameWithType: TestSquareGridGenerator.width
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem
+  name: TestSquareGridSystem
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem
+  nameWithType: TestSquareGridSystem
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.endCoordinate
+  name: endCoordinate
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridSystem_endCoordinate
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.endCoordinate
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.endCoordinate
+  nameWithType: TestSquareGridSystem.endCoordinate
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.generator
+  name: generator
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridSystem_generator
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.generator
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.generator
+  nameWithType: TestSquareGridSystem.generator
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.startCoordinate
+  name: startCoordinate
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.html#FinTOKMAK_GridSystem_Square_Test_TestSquareGridSystem_startCoordinate
+  commentId: F:FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.startCoordinate
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridSystem.startCoordinate
+  nameWithType: TestSquareGridSystem.startCoordinate
+- uid: FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex
+  name: TestSquareGridVertex
+  href: api/FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex.html
+  commentId: T:FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex
+  fullName: FinTOKMAK.GridSystem.Square.Test.TestSquareGridVertex
+  nameWithType: TestSquareGridVertex
+- uid: FinTOKMAK.GridSystem.Vertex`1
+  name: Vertex<DataType>
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html
+  commentId: T:FinTOKMAK.GridSystem.Vertex`1
+  name.vb: Vertex(Of DataType)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType)
+  nameWithType: Vertex<DataType>
+  nameWithType.vb: Vertex(Of DataType)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor
+  name: Vertex()
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex()
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex()
+  nameWithType: Vertex<DataType>.Vertex()
+  nameWithType.vb: Vertex(Of DataType).Vertex()
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32)
+  name: Vertex(Int32)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_System_Int32_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex(System.Int32)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex(System.Int32)
+  nameWithType: Vertex<DataType>.Vertex(Int32)
+  nameWithType.vb: Vertex(Of DataType).Vertex(Int32)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  name: Vertex(Int32, GridCoordinate)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate)
+  nameWithType: Vertex<DataType>.Vertex(Int32, GridCoordinate)
+  nameWithType.vb: Vertex(Of DataType).Vertex(Int32, GridCoordinate)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single)
+  name: Vertex(Int32, GridCoordinate, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single)
+  nameWithType: Vertex<DataType>.Vertex(Int32, GridCoordinate, Single)
+  nameWithType.vb: Vertex(Of DataType).Vertex(Int32, GridCoordinate, Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  name: Vertex(Int32, GridCoordinate, Single, DataType)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_System_Int32_FinTOKMAK_GridSystem_GridCoordinate_System_Single__0_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,FinTOKMAK.GridSystem.GridCoordinate,System.Single,`0)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex(System.Int32, FinTOKMAK.GridSystem.GridCoordinate, System.Single, DataType)
+  nameWithType: Vertex<DataType>.Vertex(Int32, GridCoordinate, Single, DataType)
+  nameWithType.vb: Vertex(Of DataType).Vertex(Int32, GridCoordinate, Single, DataType)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,System.Single)
+  name: Vertex(Int32, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_System_Int32_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.#ctor(System.Int32,System.Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex(System.Int32, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex(System.Int32, System.Single)
+  nameWithType: Vertex<DataType>.Vertex(Int32, Single)
+  nameWithType.vb: Vertex(Of DataType).Vertex(Int32, Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.#ctor*
+  name: Vertex
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.Vertex
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).Vertex
+  nameWithType: Vertex<DataType>.Vertex
+  nameWithType.vb: Vertex(Of DataType).Vertex
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name: AddConnection(String, Vertex<DataType>, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddConnection_System_String_FinTOKMAK_GridSystem_Vertex__0__System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.AddConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name.vb: AddConnection(String, Vertex(Of DataType), Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddConnection(System.String, FinTOKMAK.GridSystem.Vertex<DataType>, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddConnection(System.String, FinTOKMAK.GridSystem.Vertex(Of DataType), System.Single)
+  nameWithType: Vertex<DataType>.AddConnection(String, Vertex<DataType>, Single)
+  nameWithType.vb: Vertex(Of DataType).AddConnection(String, Vertex(Of DataType), Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddConnection*
+  name: AddConnection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddConnection_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.AddConnection
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddConnection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddConnection
+  nameWithType: Vertex<DataType>.AddConnection
+  nameWithType.vb: Vertex(Of DataType).AddConnection
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddConnectionDir(System.String)
+  name: AddConnectionDir(String)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddConnectionDir_System_String_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.AddConnectionDir(System.String)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddConnectionDir(System.String)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddConnectionDir(System.String)
+  nameWithType: Vertex<DataType>.AddConnectionDir(String)
+  nameWithType.vb: Vertex(Of DataType).AddConnectionDir(String)
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddConnectionDir*
+  name: AddConnectionDir
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddConnectionDir_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.AddConnectionDir
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddConnectionDir
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddConnectionDir
+  nameWithType: Vertex<DataType>.AddConnectionDir
+  nameWithType.vb: Vertex(Of DataType).AddConnectionDir
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddDoubleConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.String,System.Single)
+  name: AddDoubleConnection(String, Vertex<DataType>, String, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddDoubleConnection_System_String_FinTOKMAK_GridSystem_Vertex__0__System_String_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.AddDoubleConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.String,System.Single)
+  name.vb: AddDoubleConnection(String, Vertex(Of DataType), String, Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddDoubleConnection(System.String, FinTOKMAK.GridSystem.Vertex<DataType>, System.String, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddDoubleConnection(System.String, FinTOKMAK.GridSystem.Vertex(Of DataType), System.String, System.Single)
+  nameWithType: Vertex<DataType>.AddDoubleConnection(String, Vertex<DataType>, String, Single)
+  nameWithType.vb: Vertex(Of DataType).AddDoubleConnection(String, Vertex(Of DataType), String, Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.AddDoubleConnection*
+  name: AddDoubleConnection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_AddDoubleConnection_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.AddDoubleConnection
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.AddDoubleConnection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).AddDoubleConnection
+  nameWithType: Vertex<DataType>.AddDoubleConnection
+  nameWithType.vb: Vertex(Of DataType).AddDoubleConnection
+- uid: FinTOKMAK.GridSystem.Vertex`1.connection
+  name: connection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_connection
+  commentId: P:FinTOKMAK.GridSystem.Vertex`1.connection
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.connection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).connection
+  nameWithType: Vertex<DataType>.connection
+  nameWithType.vb: Vertex(Of DataType).connection
+- uid: FinTOKMAK.GridSystem.Vertex`1.connection*
+  name: connection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_connection_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.connection
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.connection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).connection
+  nameWithType: Vertex<DataType>.connection
+  nameWithType.vb: Vertex(Of DataType).connection
+- uid: FinTOKMAK.GridSystem.Vertex`1.coordinate
+  name: coordinate
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_coordinate
+  commentId: P:FinTOKMAK.GridSystem.Vertex`1.coordinate
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.coordinate
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).coordinate
+  nameWithType: Vertex<DataType>.coordinate
+  nameWithType.vb: Vertex(Of DataType).coordinate
+- uid: FinTOKMAK.GridSystem.Vertex`1.coordinate*
+  name: coordinate
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_coordinate_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.coordinate
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.coordinate
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).coordinate
+  nameWithType: Vertex<DataType>.coordinate
+  nameWithType.vb: Vertex(Of DataType).coordinate
+- uid: FinTOKMAK.GridSystem.Vertex`1.cost
+  name: cost
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_cost
+  commentId: P:FinTOKMAK.GridSystem.Vertex`1.cost
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.cost
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).cost
+  nameWithType: Vertex<DataType>.cost
+  nameWithType.vb: Vertex(Of DataType).cost
+- uid: FinTOKMAK.GridSystem.Vertex`1.cost*
+  name: cost
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_cost_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.cost
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.cost
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).cost
+  nameWithType: Vertex<DataType>.cost
+  nameWithType.vb: Vertex(Of DataType).cost
+- uid: FinTOKMAK.GridSystem.Vertex`1.data
+  name: data
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_data
+  commentId: P:FinTOKMAK.GridSystem.Vertex`1.data
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.data
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).data
+  nameWithType: Vertex<DataType>.data
+  nameWithType.vb: Vertex(Of DataType).data
+- uid: FinTOKMAK.GridSystem.Vertex`1.data*
+  name: data
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_data_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.data
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.data
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).data
+  nameWithType: Vertex<DataType>.data
+  nameWithType.vb: Vertex(Of DataType).data
+- uid: FinTOKMAK.GridSystem.Vertex`1.gridSystemID
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_gridSystemID
+  commentId: P:FinTOKMAK.GridSystem.Vertex`1.gridSystemID
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).gridSystemID
+  nameWithType: Vertex<DataType>.gridSystemID
+  nameWithType.vb: Vertex(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.Vertex`1.gridSystemID*
+  name: gridSystemID
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_gridSystemID_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.gridSystemID
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.gridSystemID
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).gridSystemID
+  nameWithType: Vertex<DataType>.gridSystemID
+  nameWithType.vb: Vertex(Of DataType).gridSystemID
+- uid: FinTOKMAK.GridSystem.Vertex`1.SetConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name: SetConnection(String, Vertex<DataType>, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_SetConnection_System_String_FinTOKMAK_GridSystem_Vertex__0__System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.SetConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.Single)
+  name.vb: SetConnection(String, Vertex(Of DataType), Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.SetConnection(System.String, FinTOKMAK.GridSystem.Vertex<DataType>, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).SetConnection(System.String, FinTOKMAK.GridSystem.Vertex(Of DataType), System.Single)
+  nameWithType: Vertex<DataType>.SetConnection(String, Vertex<DataType>, Single)
+  nameWithType.vb: Vertex(Of DataType).SetConnection(String, Vertex(Of DataType), Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.SetConnection*
+  name: SetConnection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_SetConnection_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.SetConnection
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.SetConnection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).SetConnection
+  nameWithType: Vertex<DataType>.SetConnection
+  nameWithType.vb: Vertex(Of DataType).SetConnection
+- uid: FinTOKMAK.GridSystem.Vertex`1.SetDoubleConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.String,System.Single)
+  name: SetDoubleConnection(String, Vertex<DataType>, String, Single)
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_SetDoubleConnection_System_String_FinTOKMAK_GridSystem_Vertex__0__System_String_System_Single_
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.SetDoubleConnection(System.String,FinTOKMAK.GridSystem.Vertex{`0},System.String,System.Single)
+  name.vb: SetDoubleConnection(String, Vertex(Of DataType), String, Single)
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.SetDoubleConnection(System.String, FinTOKMAK.GridSystem.Vertex<DataType>, System.String, System.Single)
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).SetDoubleConnection(System.String, FinTOKMAK.GridSystem.Vertex(Of DataType), System.String, System.Single)
+  nameWithType: Vertex<DataType>.SetDoubleConnection(String, Vertex<DataType>, String, Single)
+  nameWithType.vb: Vertex(Of DataType).SetDoubleConnection(String, Vertex(Of DataType), String, Single)
+- uid: FinTOKMAK.GridSystem.Vertex`1.SetDoubleConnection*
+  name: SetDoubleConnection
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_SetDoubleConnection_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.SetDoubleConnection
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.SetDoubleConnection
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).SetDoubleConnection
+  nameWithType: Vertex<DataType>.SetDoubleConnection
+  nameWithType.vb: Vertex(Of DataType).SetDoubleConnection
+- uid: FinTOKMAK.GridSystem.Vertex`1.ToString
+  name: ToString()
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_ToString
+  commentId: M:FinTOKMAK.GridSystem.Vertex`1.ToString
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.ToString()
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).ToString()
+  nameWithType: Vertex<DataType>.ToString()
+  nameWithType.vb: Vertex(Of DataType).ToString()
+- uid: FinTOKMAK.GridSystem.Vertex`1.ToString*
+  name: ToString
+  href: api/FinTOKMAK.GridSystem.Vertex-1.html#FinTOKMAK_GridSystem_Vertex_1_ToString_
+  commentId: Overload:FinTOKMAK.GridSystem.Vertex`1.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.Vertex<DataType>.ToString
+  fullName.vb: FinTOKMAK.GridSystem.Vertex(Of DataType).ToString
+  nameWithType: Vertex<DataType>.ToString
+  nameWithType.vb: Vertex(Of DataType).ToString
+- uid: FinTOKMAK.GridSystem.VertexData`1
+  name: VertexData<DataType>
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html
+  commentId: T:FinTOKMAK.GridSystem.VertexData`1
+  name.vb: VertexData(Of DataType)
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType)
+  nameWithType: VertexData<DataType>
+  nameWithType.vb: VertexData(Of DataType)
+- uid: FinTOKMAK.GridSystem.VertexData`1.#ctor(FinTOKMAK.GridSystem.Vertex{`0})
+  name: VertexData(Vertex<DataType>)
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1__ctor_FinTOKMAK_GridSystem_Vertex__0__
+  commentId: M:FinTOKMAK.GridSystem.VertexData`1.#ctor(FinTOKMAK.GridSystem.Vertex{`0})
+  name.vb: VertexData(Vertex(Of DataType))
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.VertexData(FinTOKMAK.GridSystem.Vertex<DataType>)
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).VertexData(FinTOKMAK.GridSystem.Vertex(Of DataType))
+  nameWithType: VertexData<DataType>.VertexData(Vertex<DataType>)
+  nameWithType.vb: VertexData(Of DataType).VertexData(Vertex(Of DataType))
+- uid: FinTOKMAK.GridSystem.VertexData`1.#ctor*
+  name: VertexData
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1__ctor_
+  commentId: Overload:FinTOKMAK.GridSystem.VertexData`1.#ctor
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.VertexData
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).VertexData
+  nameWithType: VertexData<DataType>.VertexData
+  nameWithType.vb: VertexData(Of DataType).VertexData
+- uid: FinTOKMAK.GridSystem.VertexData`1.coordinate
+  name: coordinate
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_coordinate
+  commentId: F:FinTOKMAK.GridSystem.VertexData`1.coordinate
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.coordinate
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).coordinate
+  nameWithType: VertexData<DataType>.coordinate
+  nameWithType.vb: VertexData(Of DataType).coordinate
+- uid: FinTOKMAK.GridSystem.VertexData`1.cost
+  name: cost
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_cost
+  commentId: F:FinTOKMAK.GridSystem.VertexData`1.cost
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.cost
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).cost
+  nameWithType: VertexData<DataType>.cost
+  nameWithType.vb: VertexData(Of DataType).cost
+- uid: FinTOKMAK.GridSystem.VertexData`1.edgeCost
+  name: edgeCost
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_edgeCost
+  commentId: F:FinTOKMAK.GridSystem.VertexData`1.edgeCost
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.edgeCost
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).edgeCost
+  nameWithType: VertexData<DataType>.edgeCost
+  nameWithType.vb: VertexData(Of DataType).edgeCost
+- uid: FinTOKMAK.GridSystem.VertexData`1.edgeTargets
+  name: edgeTargets
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_edgeTargets
+  commentId: F:FinTOKMAK.GridSystem.VertexData`1.edgeTargets
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.edgeTargets
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).edgeTargets
+  nameWithType: VertexData<DataType>.edgeTargets
+  nameWithType.vb: VertexData(Of DataType).edgeTargets
+- uid: FinTOKMAK.GridSystem.VertexData`1.serializableData
+  name: serializableData
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_serializableData
+  commentId: F:FinTOKMAK.GridSystem.VertexData`1.serializableData
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.serializableData
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).serializableData
+  nameWithType: VertexData<DataType>.serializableData
+  nameWithType.vb: VertexData(Of DataType).serializableData
+- uid: FinTOKMAK.GridSystem.VertexData`1.ToString
+  name: ToString()
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_ToString
+  commentId: M:FinTOKMAK.GridSystem.VertexData`1.ToString
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.ToString()
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).ToString()
+  nameWithType: VertexData<DataType>.ToString()
+  nameWithType.vb: VertexData(Of DataType).ToString()
+- uid: FinTOKMAK.GridSystem.VertexData`1.ToString*
+  name: ToString
+  href: api/FinTOKMAK.GridSystem.VertexData-1.html#FinTOKMAK_GridSystem_VertexData_1_ToString_
+  commentId: Overload:FinTOKMAK.GridSystem.VertexData`1.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.VertexData<DataType>.ToString
+  fullName.vb: FinTOKMAK.GridSystem.VertexData(Of DataType).ToString
+  nameWithType: VertexData<DataType>.ToString
+  nameWithType.vb: VertexData(Of DataType).ToString
+- uid: FinTOKMAK.GridSystem.VertexSerializer
+  name: VertexSerializer
+  href: api/FinTOKMAK.GridSystem.VertexSerializer.html
+  commentId: T:FinTOKMAK.GridSystem.VertexSerializer
+  fullName: FinTOKMAK.GridSystem.VertexSerializer
+  nameWithType: VertexSerializer
+- uid: FinTOKMAK.GridSystem.VertexSerializer.Deserialize*
+  name: Deserialize
+  href: api/FinTOKMAK.GridSystem.VertexSerializer.html#FinTOKMAK_GridSystem_VertexSerializer_Deserialize_
+  commentId: Overload:FinTOKMAK.GridSystem.VertexSerializer.Deserialize
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.VertexSerializer.Deserialize
+  nameWithType: VertexSerializer.Deserialize
+- uid: FinTOKMAK.GridSystem.VertexSerializer.Deserialize``1(System.String)
+  name: Deserialize<DataType>(String)
+  href: api/FinTOKMAK.GridSystem.VertexSerializer.html#FinTOKMAK_GridSystem_VertexSerializer_Deserialize__1_System_String_
+  commentId: M:FinTOKMAK.GridSystem.VertexSerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of DataType)(String)
+  fullName: FinTOKMAK.GridSystem.VertexSerializer.Deserialize<DataType>(System.String)
+  fullName.vb: FinTOKMAK.GridSystem.VertexSerializer.Deserialize(Of DataType)(System.String)
+  nameWithType: VertexSerializer.Deserialize<DataType>(String)
+  nameWithType.vb: VertexSerializer.Deserialize(Of DataType)(String)
+- uid: FinTOKMAK.GridSystem.VertexSerializer.Serialize*
+  name: Serialize
+  href: api/FinTOKMAK.GridSystem.VertexSerializer.html#FinTOKMAK_GridSystem_VertexSerializer_Serialize_
+  commentId: Overload:FinTOKMAK.GridSystem.VertexSerializer.Serialize
+  isSpec: "True"
+  fullName: FinTOKMAK.GridSystem.VertexSerializer.Serialize
+  nameWithType: VertexSerializer.Serialize
+- uid: FinTOKMAK.GridSystem.VertexSerializer.Serialize``1(System.Collections.Generic.List{FinTOKMAK.GridSystem.VertexData{``0}},System.String)
+  name: Serialize<DataType>(List<VertexData<DataType>>, String)
+  href: api/FinTOKMAK.GridSystem.VertexSerializer.html#FinTOKMAK_GridSystem_VertexSerializer_Serialize__1_System_Collections_Generic_List_FinTOKMAK_GridSystem_VertexData___0___System_String_
+  commentId: M:FinTOKMAK.GridSystem.VertexSerializer.Serialize``1(System.Collections.Generic.List{FinTOKMAK.GridSystem.VertexData{``0}},System.String)
+  name.vb: Serialize(Of DataType)(List(Of VertexData(Of DataType)), String)
+  fullName: FinTOKMAK.GridSystem.VertexSerializer.Serialize<DataType>(System.Collections.Generic.List<FinTOKMAK.GridSystem.VertexData<DataType>>, System.String)
+  fullName.vb: FinTOKMAK.GridSystem.VertexSerializer.Serialize(Of DataType)(System.Collections.Generic.List(Of FinTOKMAK.GridSystem.VertexData(Of DataType)), System.String)
+  nameWithType: VertexSerializer.Serialize<DataType>(List<VertexData<DataType>>, String)
+  nameWithType.vb: VertexSerializer.Serialize(Of DataType)(List(Of VertexData(Of DataType)), String)
