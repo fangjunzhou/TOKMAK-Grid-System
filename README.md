@@ -45,4 +45,4 @@ Unity Priority-Queue的使用文档在[这里](https://fangjun-zhou.github.io/Un
 
 # 文档
 
-TOKMAK Grid System的使用文档请看[这里](https://fangjun-zhou.github.io/Unity-Grid-System/)
+TOKMAK Grid System的使用文档请看[这里](https://fangjun-zhou.github.io/TOKMAK-Grid-System/)
