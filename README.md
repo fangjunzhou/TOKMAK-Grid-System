@@ -1,6 +1,6 @@
 # TOKMAK Grid System
 
-**ATTENTION: ** for easier maintenance, this repo page is no longer updated, view the latest source code [here](https://github.com/Fangjun-Zhou/TOKMAK-Grid-System-Release). However, the install instruction here is still valid.
+**ATTENTION:  for easier maintenance, this repo page is no longer updated, view the latest source code [here](https://github.com/Fangjun-Zhou/TOKMAK-Grid-System-Release). However, the install instruction here is still valid.**
 
 TOKMAK Grid System is a framework to develop grid based games like tower defense games and RTS games.
 
