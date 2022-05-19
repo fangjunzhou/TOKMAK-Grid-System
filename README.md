@@ -1,6 +1,6 @@
 # TOKMAK Grid System
 
-![Grid System](https://user-images.githubusercontent.com/79500078/169205635-d1a33283-95ad-4bdb-85dc-8b9ea46b828c.png)
+![Grid System](https://user-images.githubusercontent.com/79500078/169205839-0d0c9ed0-88f7-4983-9dd9-675371f25237.png)
 
 **ATTENTION:  for easier maintenance, this repo page is no longer updated, view the latest source code [here](https://github.com/Fangjun-Zhou/TOKMAK-Grid-System-Release). However, the install instruction here is still valid.**
 
